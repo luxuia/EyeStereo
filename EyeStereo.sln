@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Express 2013 for Windows Desktop
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RandomDotProject", "Applications\RandomDot\RandomDotProject.vcxproj", "{1072A187-6213-479A-A13E-E6E19E4E646B}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PingPangProject", "Applications\PingPangProject\PingPangProject.vcxproj", "{24B1288A-2E65-48F3-B9C5-7C45AEC52464}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		ForDX|Win32 = ForDX|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1072A187-6213-479A-A13E-E6E19E4E646B}.Debug|Win32.ActiveCfg = Debug|Win32
+		{1072A187-6213-479A-A13E-E6E19E4E646B}.Debug|Win32.Build.0 = Debug|Win32
+		{1072A187-6213-479A-A13E-E6E19E4E646B}.ForDX|Win32.ActiveCfg = ForDX|Win32
+		{1072A187-6213-479A-A13E-E6E19E4E646B}.ForDX|Win32.Build.0 = ForDX|Win32
+		{1072A187-6213-479A-A13E-E6E19E4E646B}.Release|Win32.ActiveCfg = Release|Win32
+		{1072A187-6213-479A-A13E-E6E19E4E646B}.Release|Win32.Build.0 = Release|Win32
+		{24B1288A-2E65-48F3-B9C5-7C45AEC52464}.Debug|Win32.ActiveCfg = Debug|Win32
+		{24B1288A-2E65-48F3-B9C5-7C45AEC52464}.Debug|Win32.Build.0 = Debug|Win32
+		{24B1288A-2E65-48F3-B9C5-7C45AEC52464}.ForDX|Win32.ActiveCfg = Release|Win32
+		{24B1288A-2E65-48F3-B9C5-7C45AEC52464}.ForDX|Win32.Build.0 = Release|Win32
+		{24B1288A-2E65-48F3-B9C5-7C45AEC52464}.Release|Win32.ActiveCfg = Release|Win32
+		{24B1288A-2E65-48F3-B9C5-7C45AEC52464}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

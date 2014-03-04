@@ -1,0 +1,69 @@
+﻿Build started 2014/3/3 14:31:43.
+     1>Project "E:\Project\EyeStereo\Applications\BlendStereo\BlendStereo.vcxproj" on node 2 (build target(s)).
+     1>PrepareForBuild:
+         Creating directory "E:\Project\EyeStereo\Debug\".
+       InitializeBuildStatus:
+         Creating "Debug\BlendStereo.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       ClCompile:
+         D:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /IE:\Project\EyeStereo\Source /IE:\Project\EyeStereo\Dependencies\DXUT\Optional /IE:\Project\EyeStereo\Dependencies\DXUT\Core /IE:\Project\EyeStereo\Dependencies\DXUT /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt RandDoter.cpp RandomDotRender.cpp
+         RandomDotRender.cpp
+     1>e:\project\eyestereo\source\utility\pch.h(64): warning C4005: 'SAFE_RELEASE' : macro redefinition
+                 e:\project\eyestereo\dependencies\dxut\core\dxut.h(124) : see previous definition of 'SAFE_RELEASE'
+     1>e:\project\eyestereo\source\utility\pch.h(65): warning C4005: 'SAFE_DELETE' : macro redefinition
+                 e:\project\eyestereo\dependencies\dxut\core\dxut.h(118) : see previous definition of 'SAFE_DELETE'
+     1>e:\project\eyestereo\source\utility\pch.h(66): warning C4005: 'SAFE_DELETE_ARRAY' : macro redefinition
+                 e:\project\eyestereo\dependencies\dxut\core\dxut.h(121) : see previous definition of 'SAFE_DELETE_ARRAY'
+     1>e:\project\eyestereo\source\stereo\stereosetting.h(31): warning C4305: '=' : truncation from 'double' to 'float'
+     1>e:\project\eyestereo\source\stereo\stereosetting.h(119): warning C4305: '*=' : truncation from 'double' to 'float'
+     1>e:\project\eyestereo\applications\blendstereo\randomdotrender.hpp(58): warning C4305: 'argument' : truncation from 'double' to 'float'
+     1>e:\project\eyestereo\applications\blendstereo\randomdotrender.hpp(58): warning C4305: 'argument' : truncation from 'double' to 'float'
+     1>e:\project\eyestereo\applications\blendstereo\randomdotrender.hpp(59): warning C4305: 'argument' : truncation from 'double' to 'float'
+     1>e:\project\eyestereo\applications\blendstereo\randomdotrender.hpp(59): warning C4305: 'argument' : truncation from 'double' to 'float'
+     1>e:\project\eyestereo\applications\blendstereo\randomdotrender.hpp(60): warning C4305: 'argument' : truncation from 'double' to 'float'
+     1>e:\project\eyestereo\applications\blendstereo\randomdotrender.hpp(85): warning C4101: 'fxpath' : unreferenced local variable
+     1>e:\project\eyestereo\applications\blendstereo\randomdotrender.hpp(84): warning C4101: 'hr' : unreferenced local variable
+     1>e:\project\eyestereo\applications\blendstereo\randomdotrender.hpp(218): warning C4244: '-=' : conversion from 'double' to 'float', possible loss of data
+     1>e:\project\eyestereo\applications\blendstereo\randomdotrender.hpp(220): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+     1>e:\project\eyestereo\applications\blendstereo\randomdotrender.hpp(222): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+     1>e:\project\eyestereo\applications\blendstereo\randomdotrender.hpp(224): warning C4244: '-=' : conversion from 'double' to 'float', possible loss of data
+     1>e:\project\eyestereo\applications\blendstereo\randomdotrender.hpp(259): warning C4101: 'lt' : unreferenced local variable
+     1>e:\project\eyestereo\applications\blendstereo\randomdotrender.cpp(201): warning C4345: behavior change: an object of POD type constructed with an initializer of the form () will be default-initialized
+     1>e:\project\eyestereo\applications\blendstereo\randomdotrender.cpp(257): warning C4305: 'argument' : truncation from 'double' to 'float'
+     1>e:\project\eyestereo\applications\blendstereo\randomdotrender.cpp(542): warning C4996: 'swprintf': swprintf has been changed to conform with the ISO C standard, adding an extra character count parameter. To use traditional Microsoft swprintf, set _CRT_NON_CONFORMING_SWPRINTFS.
+                 d:\program files (x86)\microsoft visual studio 10.0\vc\include\swprintf.inl(85) : see declaration of 'swprintf'
+     1>e:\project\eyestereo\applications\blendstereo\randomdotrender.cpp(557): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+     1>e:\project\eyestereo\applications\blendstereo\randomdotrender.cpp(574): warning C4996: 'swprintf': swprintf has been changed to conform with the ISO C standard, adding an extra character count parameter. To use traditional Microsoft swprintf, set _CRT_NON_CONFORMING_SWPRINTFS.
+                 d:\program files (x86)\microsoft visual studio 10.0\vc\include\swprintf.inl(85) : see declaration of 'swprintf'
+         RandDoter.cpp
+     1>e:\project\eyestereo\source\utility\pch.h(64): warning C4005: 'SAFE_RELEASE' : macro redefinition
+                 e:\project\eyestereo\dependencies\dxut\core\dxut.h(124) : see previous definition of 'SAFE_RELEASE'
+     1>e:\project\eyestereo\source\utility\pch.h(65): warning C4005: 'SAFE_DELETE' : macro redefinition
+                 e:\project\eyestereo\dependencies\dxut\core\dxut.h(118) : see previous definition of 'SAFE_DELETE'
+     1>e:\project\eyestereo\source\utility\pch.h(66): warning C4005: 'SAFE_DELETE_ARRAY' : macro redefinition
+                 e:\project\eyestereo\dependencies\dxut\core\dxut.h(121) : see previous definition of 'SAFE_DELETE_ARRAY'
+     1>e:\project\eyestereo\applications\blendstereo\randdoter.cpp(10): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>e:\project\eyestereo\applications\blendstereo\randdoter.cpp(261): warning C4800: 'HRESULT' : forcing value to bool 'true' or 'false' (performance warning)
+     1>e:\project\eyestereo\applications\blendstereo\randdoter.cpp(266): warning C4800: 'HRESULT' : forcing value to bool 'true' or 'false' (performance warning)
+         Generating Code...
+       ManifestResourceCompile:
+         All outputs are up-to-date.
+       Link:
+         D:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\Project\EyeStereo\Debug\BlendStereo.exe" /INCREMENTAL /NOLOGO d3dx10.lib d3dx9.lib dxerr.lib dxguid.lib winmm.lib comctl32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\BlendStereo.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"E:\Project\EyeStereo\Debug\BlendStereo.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\Project\EyeStereo\Debug\BlendStereo.lib" /MACHINE:X86 Debug\BlendStereo.exe.embed.manifest.res
+         Debug\DXUT.obj
+         Debug\DXUTenum.obj
+         Debug\DXUTmisc.obj
+         Debug\DXUTcamera.obj
+         Debug\DXUTgui.obj
+         Debug\DXUTres.obj
+         Debug\DXUTsettingsdlg.obj
+         Debug\SDKmesh.obj
+         Debug\SDKmisc.obj
+         Debug\SDKwavefile.obj
+         Debug\RandDoter.obj
+         Debug\RandomDotRender.obj
+     1>LINK : fatal error LNK1104: cannot open file 'nvapi.lib'
+     1>Done Building Project "E:\Project\EyeStereo\Applications\BlendStereo\BlendStereo.vcxproj" (build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:03.70
