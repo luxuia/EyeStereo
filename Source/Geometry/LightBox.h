@@ -6,7 +6,9 @@
 #include "Geometry\Vertex.h"
 
 namespace EyeStereo {
-	class  LightBox {
+	enum {FOREVER, LIVE, DIE};
+
+	class  DiffSpecularBox {
 	public:
 		DWORD mNumVertices;
 		DWORD mNumFaces;
@@ -25,15 +27,23 @@ namespace EyeStereo {
 		ID3D10Device*	pd3dDevice;
 		ID3DX10Mesh*	pmesh;
 
+		int live;
 		float w, h, l;
 		float x, y, z;
 
-		LightBox() {}
+		DiffSpecularBox() {}
 
-		LightBox(float ll, float hh, float ww, D3DXCOLOR diff, D3DXCOLOR spec = YELLOW) {
+		DiffSpecularBox(float ll, float hh, float ww, D3DXCOLOR diff, D3DXCOLOR spec = YELLOW) {
 			mDiffColor = diff;
 			mSpecColor = spec;
 			w = ww, h = hh, l = ll;
+		}
+
+		~DiffSpecularBox() {
+			SAFE_RELEASE(pd3dDevice);
+
+			SAFE_RELEASE(mIB);
+			SAFE_RELEASE(mVB);
 		}
 
 		void updatePlane(D3DXMATRIX &matWorld) {
@@ -96,6 +106,7 @@ namespace EyeStereo {
 			//SAFE_RELEASE( mIB );
 
 			pd3dDevice = md3dDevice;
+			pd3dDevice->AddRef();
 			mNumVertices = 24;
 			mNumFaces = 12; // 2 per quad
 
@@ -209,11 +220,7 @@ namespace EyeStereo {
 			pd3dDevice->DrawIndexed(mNumFaces * 3, 0, 0);
 		}
 
-		void destory()
-		{
-			SAFE_RELEASE(mIB);
-			SAFE_RELEASE(mVB);
-		}
+		
 
 		bool CreateMesh(const D3D10_INPUT_ELEMENT_DESC* layout) {
 			if (D3DX10CreateMesh(pd3dDevice,
@@ -249,4 +256,4 @@ namespace EyeStereo {
 
 }
 
-#endif //__LIGHTBOX_H__
+#endif //__DiffSpecularBox_H__

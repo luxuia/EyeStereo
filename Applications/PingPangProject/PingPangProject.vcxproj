@@ -97,7 +97,7 @@
     <ClCompile Include="..\..\Dependencies\DXUT\Optional\SDKmesh.cpp" />
     <ClCompile Include="..\..\Dependencies\DXUT\Optional\SDKmisc.cpp" />
     <ClCompile Include="..\..\Dependencies\DXUT\Optional\SDKwavefile.cpp" />
-    <ClCompile Include="..\..\Source\Geometry\Sphere.cpp" />
+    <ClCompile Include="..\..\Source\Geometry\DiffSpecularSphere.cpp" />
     <ClCompile Include="..\..\Source\Utility\Log.cpp" />
     <ClCompile Include="App.cpp" />
     <ClCompile Include="PingPang.cpp" />
@@ -113,7 +113,7 @@
     <ClInclude Include="..\..\Dependencies\DXUT\Optional\SDKmesh.h" />
     <ClInclude Include="..\..\Dependencies\DXUT\Optional\SDKmisc.h" />
     <ClInclude Include="..\..\Dependencies\DXUT\Optional\SDKwavefile.h" />
-    <ClInclude Include="..\..\Source\Geometry\Sphere.hpp" />
+    <ClInclude Include="..\..\Source\Geometry\DiffSpecularSphere.hpp" />
     <ClInclude Include="..\..\Source\Geometry\Vertex.h" />
     <ClInclude Include="PingPang.hpp" />
   </ItemGroup>

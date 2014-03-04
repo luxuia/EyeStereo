@@ -1,11 +1,13 @@
-//--------------------------------------------------------------------------------------
-// File: Eye_Project.cpp
+//--------------------------------------------------------------------------------
+// This file is a portion of the Eye Stereo Project.  It is distributed
+// under the MIT License, available in the root of this distribution and 
+// at the following URL:
 //
-// Starting point for new Direct3D 10 samples.  For a more basic starting point, 
-// use the EmptyProject10 sample instead.
+// http://www.opensource.org/licenses/mit-license.php
 //
-// Copyright (c) Microsoft Corporation. All rights reserved.
-//--------------------------------------------------------------------------------------
+// Copyright (c) Luxuia
+//---------------------------------------------------------------------------------
+
 
 
 
@@ -353,8 +355,6 @@ void CALLBACK OnD3D10DestroyDevice( void* pUserContext )
 	SAFE_DELETE( g_pPingPang );
 	SAFE_DELETE( g_pStereoSetting );
 
-	SAFE_RELEASE(g_pd3dDevice);
-	//_CrtDumpMemoryLeaks();
 }
 
 

@@ -32,11 +32,11 @@
       <Filter>DXUT</Filter>
     </ClCompile>
     <ClCompile Include="App.cpp" />
-    <ClCompile Include="..\..\Source\Geometry\Sphere.cpp" />
     <ClCompile Include="..\..\Source\Utility\Log.cpp">
       <Filter>Lib</Filter>
     </ClCompile>
     <ClCompile Include="PingPang.cpp" />
+    <ClCompile Include="..\..\Source\Geometry\DiffSpecularSphere.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\Dependencies\DXUT\Optional\DXUTsettingsdlg.h">
@@ -69,11 +69,11 @@
     <ClInclude Include="..\..\Dependencies\DXUT\Optional\SDKmisc.h">
       <Filter>DXUT</Filter>
     </ClInclude>
-    <ClInclude Include="PingPang.hpp" />
-    <ClInclude Include="..\..\Source\Geometry\Sphere.hpp" />
     <ClInclude Include="..\..\Source\Geometry\Vertex.h">
       <Filter>Lib</Filter>
     </ClInclude>
+    <ClInclude Include="PingPang.hpp" />
+    <ClInclude Include="..\..\Source\Geometry\DiffSpecularSphere.hpp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="DXUT">

@@ -8,10 +8,10 @@
 // Copyright (c) Luxuia
 //---------------------------------------------------------------------------------
 
-
 #include "PingPang.hpp"
-#include "Utility\Log.h"
+
 using namespace EyeStereo;
+
 
 bool PingPang::init(ID3D10Device* pdevice, StereoSetting* stereo, CModelViewerCamera* pcamera, KeyBoard* key) {
 	pd3dDevice = pdevice;
@@ -20,11 +20,9 @@ bool PingPang::init(ID3D10Device* pdevice, StereoSetting* stereo, CModelViewerCa
 	pStereoSetting = stereo;
 	pKeyBoard = key;
 
-	if (FAILED(D3DX10CreateEffectFromFile(L"../Data/Shader/DiffSpecular.fx", NULL, NULL, "fx_4_0",
+	D3DX10CreateEffectFromFile(L"../Data/Shader/DiffSpecular.fx", NULL, NULL, "fx_4_0",
 		D3D10_SHADER_ENABLE_STRICTNESS | D3D10_SHADER_DEBUG, 0,
-		pd3dDevice, NULL, NULL, &pEffect, NULL, NULL))) {
-		Log::Get().Write(L"Can't find DiffSpecular.fx");
-	}
+		pd3dDevice, NULL, NULL, &pEffect, NULL, NULL);
 
 	pTech = pEffect->GetTechniqueByName("RenderScene");
 
@@ -45,6 +43,8 @@ bool PingPang::init(ID3D10Device* pdevice, StereoSetting* stereo, CModelViewerCa
 		{ "SPECULAR", 0, DXGI_FORMAT_R32G32B32A32_FLOAT, 0, 40, D3D10_INPUT_PER_VERTEX_DATA, 0 },
 	};
 
+	//glutSolidSphere()
+
 	UINT numElements = sizeof(layout) / sizeof(layout[0]);
 
 	D3D10_PASS_DESC PassDesc;
@@ -61,19 +61,16 @@ bool PingPang::init(ID3D10Device* pdevice, StereoSetting* stereo, CModelViewerCa
 	pBall->v = D3DXVECTOR3(RandF() / 5, 0, 2);
 
 
-	blockNumH = 3;
-	blockNumL = 4;
-
-	LifeTimeBox* box = new LifeTimeBox(0.5, 0.2, 0.1, WHITE);
+	DiffSpecularBox* box = new DiffSpecularBox(0.5, 0.2, 0.1, WHITE);
 	box->init(pd3dDevice);
-	box->liveState = LifeTimeBox::EVER;
+	box->live = FOREVER;
 	pBoxVector.push_back(box);
 
-	for (int i = 0; i < blockNumH*blockNumL / 2; i++) {
-		LifeTimeBox *box1 = new LifeTimeBox(0.5, 0.2, 0.1, RED);
+	for (int i = 0; i < heightStack*lengthStack / 2; i++) {
+		DiffSpecularBox *box1 = new DiffSpecularBox(0.5, 0.2, 0.1, RED);
 		box1->init(pd3dDevice);
 		pBoxVector.push_back(box1);
-		LifeTimeBox *box2 = new LifeTimeBox(0.5, 0.2, 0.1, YELLOW);
+		DiffSpecularBox *box2 = new DiffSpecularBox(0.5, 0.2, 0.1, YELLOW);
 		box2->init(pd3dDevice);
 		pBoxVector.push_back(box2);
 	}
@@ -82,17 +79,17 @@ bool PingPang::init(ID3D10Device* pdevice, StereoSetting* stereo, CModelViewerCa
 	pBoxVector[0]->x = 0;
 	pBoxVector[0]->y = -2;
 	pBoxVector[0]->z = 0;
-	for (int i = 0; i < blockNumH; i++) {
-		for (int j = 0; j < blockNumL; j++) {
-			D3DXMatrixTranslation(&(matBlockWorld[i*blockNumL + j + 1]),
+	for (int i = 0; i < heightStack; i++) {
+		for (int j = 0; j < lengthStack; j++) {
+			D3DXMatrixTranslation(&(matBlockWorld[i*lengthStack + j + 1]),
 				-2 + j, -2, 0.2f*i + 4);
 
-			pBoxVector[i*blockNumL + j + 1]->x = -2 + j;
-			pBoxVector[i*blockNumL + j + 1]->y = -2;
-			pBoxVector[i*blockNumL + j + 1]->z = 0.2*i + 4;
-			pBoxVector[i*blockNumL + j + 1]->liveState = LifeTimeBox::LIVE;
-			pBoxVector[i*blockNumL + j + 1]->CaculateWorldAxis(matBlockWorld[i*blockNumL + j + 1]);
-			pBoxVector[i*blockNumL + j + 1]->updatePlane(matBlockWorld[i*blockNumL + j + 1]);
+			pBoxVector[i*lengthStack + j + 1]->x = -2 + j;
+			pBoxVector[i*lengthStack + j + 1]->y = -2;
+			pBoxVector[i*lengthStack + j + 1]->z = 0.2*i + 4;
+			pBoxVector[i*lengthStack + j + 1]->live = LIVE;
+			pBoxVector[i*lengthStack + j + 1]->CaculateWorldAxis(matBlockWorld[i*lengthStack + j + 1]);
+			pBoxVector[i*lengthStack + j + 1]->updatePlane(matBlockWorld[i*lengthStack + j + 1]);
 
 		}
 	}
@@ -133,10 +130,10 @@ bool PingPang::init(ID3D10Device* pdevice, StereoSetting* stereo, CModelViewerCa
 
 
 void PingPang::CreateBounds() {
-	LifeTimeBox *left = new LifeTimeBox(0.1, 0.1, 10, GREEN);
-	LifeTimeBox *right = new LifeTimeBox(0.1, 0.1, 10, GREEN);
-	LifeTimeBox *top = new LifeTimeBox(10, 0.1, 0.1, GREEN);
-	LifeTimeBox *down = new LifeTimeBox(10, 0.1, 0.1, GREEN);
+	DiffSpecularBox *left = new DiffSpecularBox(0.1, 0.1, 10, GREEN);
+	DiffSpecularBox *right = new DiffSpecularBox(0.1, 0.1, 10, GREEN);
+	DiffSpecularBox *top = new DiffSpecularBox(10, 0.1, 0.1, GREEN);
+	DiffSpecularBox *down = new DiffSpecularBox(10, 0.1, 0.1, GREEN);
 
 
 	D3DXMATRIX mat;
@@ -148,7 +145,7 @@ void PingPang::CreateBounds() {
 	left->init(pd3dDevice);
 	left->CaculateWorldAxis(mat);
 	left->updatePlane(mat);
-	left->liveState = LifeTimeBox::EVER;
+	left->live = FOREVER;
 	pBoxVector.push_back(left);
 
 
@@ -160,7 +157,7 @@ void PingPang::CreateBounds() {
 	right->init(pd3dDevice);
 	right->CaculateWorldAxis(mat);
 	right->updatePlane(mat);
-	right->liveState = LifeTimeBox::EVER;
+	right->live = FOREVER;
 	pBoxVector.push_back(right);
 
 	D3DXMatrixTranslation(&mat,
@@ -171,7 +168,7 @@ void PingPang::CreateBounds() {
 	top->init(pd3dDevice);
 	top->CaculateWorldAxis(mat);
 	top->updatePlane(mat);
-	top->liveState = LifeTimeBox::EVER;
+	top->live = FOREVER;
 	pBoxVector.push_back(top);
 
 	D3DXMatrixTranslation(&mat,
@@ -182,7 +179,7 @@ void PingPang::CreateBounds() {
 	down->init(pd3dDevice);
 	down->CaculateWorldAxis(mat);
 	down->updatePlane(mat);
-	down->liveState = LifeTimeBox::EVER;
+	down->live = FOREVER;
 	pBoxVector.push_back(down);
 
 
@@ -230,8 +227,8 @@ void PingPang::Restart() {
 
 
 	for (UINT i = 0; i < pBoxVector.size(); i++) {
-		if (pBoxVector[i]->liveState == LifeTimeBox::DIE)
-			pBoxVector[i]->liveState = LifeTimeBox::LIVE;
+		if (pBoxVector[i]->live == DIE)
+			pBoxVector[i]->live = LIVE;
 	}
 
 	pBall->pos = D3DXVECTOR3(0, -2, 1);
@@ -264,10 +261,10 @@ D3DXVECTOR3 PingPang::RefectBall(D3DXVECTOR3 v, D3DXVECTOR3 normal) {
 void PingPang::CaculateBallV(float fTime) {
 	//printf("dist from left to %0.2f\n", boxVector[boxVector.size()-1].getDist(5, pBall->pos));
 
-	for (UINT i = 0; i < pBoxVector.size(); i++) {
-		if (pBoxVector[i]->liveState == LifeTimeBox::DIE)
+	for (int i = 0; i < pBoxVector.size(); i++) {
+		if (pBoxVector[i]->live == DIE)
 			continue;
-		for (UINT j = 0; j < 6; j++) {
+		for (int j = 0; j < 6; j++) {
 			float dis = pBoxVector[i]->getDist(j, pBall->pos);
 
 			if (dis <= Elapse || dis > pBall->r - Elapse) {
@@ -296,8 +293,8 @@ void PingPang::CaculateBallV(float fTime) {
 						//pBall->v.z = -pBall->v.z ; ///////////////////TODO fanshe
 						//pBall->v.x += RandF()/10-0.2;
 						//	printf("v %0.2f\n", pBall->v.x);
-						if (pBoxVector[i]->liveState != LifeTimeBox::EVER) {
-							pBoxVector[i]->liveState = LifeTimeBox::DIE;
+						if (pBoxVector[i]->live != FOREVER) {
+							pBoxVector[i]->live = DIE;
 						}
 						return;
 					}
@@ -361,25 +358,22 @@ void PingPang::stereoRender(float fTime) {
 	matWorldViewProjection = matWorld * mView * mPorject;
 
 	mfxWVP->SetMatrix((float*)&matWorldViewProjection);
-	
+	renderScene(0);
 
 	//////////////////////////////////////////////////
 	//D3DXMatrixTranslation(&matWorld, 2, 2, 2);
 
 	mView = *pCamera->GetViewMatrix();
-	wchar_t boxPos[80];
-	Log::Get().Open();
-	for (UINT i = 0; i < pBoxVector.size(); i++) {
-		if (pBoxVector[i]->liveState == LifeTimeBox::DIE)
+
+	for (int i = 0; i < pBoxVector.size(); i++) {
+		if (pBoxVector[i]->live == DIE)
 			continue;
 		D3DXMatrixTranslation(&matBlockWorld[i], pBoxVector[i]->x, pBoxVector[i]->y, pBoxVector[i]->z);
-		
-		
+
 		mfxWorld->SetMatrix((float*)&matBlockWorld[i]);
 		matWorldViewProjection = matBlockWorld[i] * mView * mPorject;
 
 		mfxWVP->SetMatrix((float*)&matWorldViewProjection);
-		
 		D3D10_TECHNIQUE_DESC techDesc;
 		pTech->GetDesc(&techDesc);
 		for (UINT p = 0; p < techDesc.Passes; p++) {
@@ -387,15 +381,9 @@ void PingPang::stereoRender(float fTime) {
 			pBoxVector[i]->draw();
 
 		}
-		
-		swprintf(boxPos, L"%f, %f, %f", pBoxVector[i]->x, pBoxVector[i]->y, pBoxVector[i]->z);
-		Log::Get().Write(boxPos);
 	}
-	Log::Get().Close();
+
 	pStereoSetting->draw(pd3dDevice, pStereoSetting->LEFT_EYE);
-
-	///------------------------------------------------------------------------------
-
 	ClearScreen(pd3dDevice);
 	mPorject = *(pCamera->GetProjMatrix());
 	mPorject._31 = mPorject._31 - currentSeparaion;
@@ -412,8 +400,8 @@ void PingPang::stereoRender(float fTime) {
 
 	mView = *pCamera->GetViewMatrix();
 
-	for (UINT i = 0; i < pBoxVector.size(); i++) {
-		if (pBoxVector[i]->liveState == LifeTimeBox::DIE)
+	for (int i = 0; i < pBoxVector.size(); i++) {
+		if (pBoxVector[i]->live == DIE)
 			continue;
 		D3DXMatrixTranslation(&matBlockWorld[i], pBoxVector[i]->x, pBoxVector[i]->y, pBoxVector[i]->z);
 
@@ -426,6 +414,7 @@ void PingPang::stereoRender(float fTime) {
 		for (UINT p = 0; p < techDesc.Passes; p++) {
 			pTech->GetPassByIndex(p)->Apply(0);
 			pBoxVector[i]->draw();
+
 		}
 	}
 
@@ -462,3 +451,14 @@ void PingPang::ClearScreen(ID3D10Device *pd3dDevice)
 	return;
 }
 
+PingPang::~PingPang() {
+	SAFE_RELEASE(pEffect);
+	SAFE_RELEASE(pInputLayout);
+	SAFE_RELEASE(pSwapChain);
+	/*		SAFE_DELETE(pSolidState);*/
+	if (pBall != NULL)
+		delete pBall;
+
+	pBoxVector.clear();
+
+}

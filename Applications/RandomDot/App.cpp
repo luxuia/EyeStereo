@@ -364,9 +364,9 @@ void CALLBACK OnD3D10DestroyDevice( void* pUserContext )
     SAFE_RELEASE( g_pSprite10 );
     SAFE_DELETE( g_pTxtHelper );
 	
-	delete	g_pRandomDotRender;
+	SAFE_DELETE( g_pRandomDotRender );
 
-	delete	g_pStereoSetting;
+	SAFE_DELETE( g_pStereoSetting );
 	//_CrtDumpMemoryLeaks();
 }
 
