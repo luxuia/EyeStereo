@@ -7,6 +7,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RandomDotProject", "Applica
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PingPangProject", "Applications\PingPangProject\PingPangProject.vcxproj", "{24B1288A-2E65-48F3-B9C5-7C45AEC52464}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TetrisProject", "Applications\TetrisProject\TetrisProject.vcxproj", "{154F5DE2-9E57-4407-A950-EABE3034DF07}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -26,6 +28,12 @@ Global
 		{24B1288A-2E65-48F3-B9C5-7C45AEC52464}.ForDX|Win32.Build.0 = Release|Win32
 		{24B1288A-2E65-48F3-B9C5-7C45AEC52464}.Release|Win32.ActiveCfg = Release|Win32
 		{24B1288A-2E65-48F3-B9C5-7C45AEC52464}.Release|Win32.Build.0 = Release|Win32
+		{154F5DE2-9E57-4407-A950-EABE3034DF07}.Debug|Win32.ActiveCfg = Debug|Win32
+		{154F5DE2-9E57-4407-A950-EABE3034DF07}.Debug|Win32.Build.0 = Debug|Win32
+		{154F5DE2-9E57-4407-A950-EABE3034DF07}.ForDX|Win32.ActiveCfg = Release|Win32
+		{154F5DE2-9E57-4407-A950-EABE3034DF07}.ForDX|Win32.Build.0 = Release|Win32
+		{154F5DE2-9E57-4407-A950-EABE3034DF07}.Release|Win32.ActiveCfg = Release|Win32
+		{154F5DE2-9E57-4407-A950-EABE3034DF07}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
