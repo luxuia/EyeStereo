@@ -309,11 +309,9 @@ void CALLBACK OnD3D10FrameRender( ID3D10Device* pd3dDevice, double fTime, float 
         return;
     }
 	
-	bool flgStereo = false;
 
 	if (g_pPingPang->bactive == true) {
 		g_pPingPang->stereoRender(fElapsedTime);
-		flgStereo = true;
 	}
 
 	if (g_bShareChanged == true) {

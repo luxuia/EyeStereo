@@ -3,7 +3,7 @@
 
 #include "Utility/PCH.h"
 
-#include "Geometry\Vertex.h"
+#include "Geometry/Vertex.h"
 
 namespace EyeStereo {
 	enum {FOREVER, LIVE, DIE};

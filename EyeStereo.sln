@@ -9,6 +9,12 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PingPangProject", "Applicat
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TetrisProject", "Applications\TetrisProject\TetrisProject.vcxproj", "{154F5DE2-9E57-4407-A950-EABE3034DF07}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DepthTestProject", "Applications\DepthTestProject\DepthTest.vcxproj", "{E8FF1F9D-D792-46E9-A335-EE018C3C3730}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LemniscusProject", "Applications\LemniscusProject\LemniscusProject.vcxproj", "{189F7D18-8DD4-4AB1-BFDB-F5DA323FE1A4}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ChooseItProject", "Applications\ChooseItProject\ChooseItProject.vcxproj", "{FC679B57-3695-43B4-81DE-412FCA1277B3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -34,6 +40,24 @@ Global
 		{154F5DE2-9E57-4407-A950-EABE3034DF07}.ForDX|Win32.Build.0 = Release|Win32
 		{154F5DE2-9E57-4407-A950-EABE3034DF07}.Release|Win32.ActiveCfg = Release|Win32
 		{154F5DE2-9E57-4407-A950-EABE3034DF07}.Release|Win32.Build.0 = Release|Win32
+		{E8FF1F9D-D792-46E9-A335-EE018C3C3730}.Debug|Win32.ActiveCfg = Debug|Win32
+		{E8FF1F9D-D792-46E9-A335-EE018C3C3730}.Debug|Win32.Build.0 = Debug|Win32
+		{E8FF1F9D-D792-46E9-A335-EE018C3C3730}.ForDX|Win32.ActiveCfg = Release|Win32
+		{E8FF1F9D-D792-46E9-A335-EE018C3C3730}.ForDX|Win32.Build.0 = Release|Win32
+		{E8FF1F9D-D792-46E9-A335-EE018C3C3730}.Release|Win32.ActiveCfg = Release|Win32
+		{E8FF1F9D-D792-46E9-A335-EE018C3C3730}.Release|Win32.Build.0 = Release|Win32
+		{189F7D18-8DD4-4AB1-BFDB-F5DA323FE1A4}.Debug|Win32.ActiveCfg = Debug|Win32
+		{189F7D18-8DD4-4AB1-BFDB-F5DA323FE1A4}.Debug|Win32.Build.0 = Debug|Win32
+		{189F7D18-8DD4-4AB1-BFDB-F5DA323FE1A4}.ForDX|Win32.ActiveCfg = Release|Win32
+		{189F7D18-8DD4-4AB1-BFDB-F5DA323FE1A4}.ForDX|Win32.Build.0 = Release|Win32
+		{189F7D18-8DD4-4AB1-BFDB-F5DA323FE1A4}.Release|Win32.ActiveCfg = Release|Win32
+		{189F7D18-8DD4-4AB1-BFDB-F5DA323FE1A4}.Release|Win32.Build.0 = Release|Win32
+		{FC679B57-3695-43B4-81DE-412FCA1277B3}.Debug|Win32.ActiveCfg = Debug|Win32
+		{FC679B57-3695-43B4-81DE-412FCA1277B3}.Debug|Win32.Build.0 = Debug|Win32
+		{FC679B57-3695-43B4-81DE-412FCA1277B3}.ForDX|Win32.ActiveCfg = Release|Win32
+		{FC679B57-3695-43B4-81DE-412FCA1277B3}.ForDX|Win32.Build.0 = Release|Win32
+		{FC679B57-3695-43B4-81DE-412FCA1277B3}.Release|Win32.ActiveCfg = Release|Win32
+		{FC679B57-3695-43B4-81DE-412FCA1277B3}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
