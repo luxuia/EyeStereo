@@ -36,6 +36,7 @@ namespace EyeStereo {
 		ID3D10EffectMatrixVariable*		pMatWorldVarible;
 		ID3D10EffectMatrixVariable*		pMatView;
 		ID3D10EffectMatrixVariable*		pMatProjection;
+		ID3D10EffectScalarVariable*		pFloatPointSize;
 		D3DXMATRIX						matWorld;
 
 		ID3D10RasterizerState*			pWireFrameRS;
@@ -45,7 +46,7 @@ namespace EyeStereo {
 
 		KeyBoard*						pKeyBoard;
 
-		static const int x1 = -2, y1 = -2, x2 = 1, y2 = -2;
+		
 
 		RandomDotRender();
 
@@ -56,6 +57,8 @@ namespace EyeStereo {
 		void makeDot(float dotDist);
 
 		bool init(ID3D10Device* pd3d, StereoSetting* pstereo, CModelViewerCamera *pcamera, float dotDist, KeyBoard *key);
+
+		void setOriginPosition(float x1, float y1);
 
 		bool stereoRender(float fTime);
 
@@ -70,6 +73,16 @@ namespace EyeStereo {
 		void ClearScreen(ID3D10Device *pd3dDevice);
 		//new code
 		void callback_data();
+		
+		void setPointSize(float size) { pointSize = size; };
+		void setPointNum(float num) { pointNum = num; };
+		void setMaxPointNum(int num) { maxPointNum = num; };
+
+	protected:
+		float  x1, y1, x2, y2;
+		int pointNum;
+		int maxPointNum;
+		float pointSize;
 	};
 
 

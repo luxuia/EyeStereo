@@ -1,4 +1,3 @@
-
 #include "RandomDotRender.hpp"
 
 using namespace EyeStereo;
@@ -38,11 +37,12 @@ void RandomDotRender::makeDot(float dotDist) {
 	Geometry *Geo = new Geometry(1);
 	getGeometry(Geo);
 
-	pRandomDot = new RandomDot();
+	pRandomDot = new RandomDot(maxPointNum);
 
 	pRandomDot->dotDist = dotDist;
 
-	pRandomDot->init(pd3dDevice, 4, 4, 20000, Geo);
+	// Generate RandomDot BoundX, BoundY, PointNum,  shap to describe 
+	pRandomDot->init(pd3dDevice, 6, 6, pointNum, Geo);
 	//delete Geo;
 }
 
@@ -53,7 +53,7 @@ bool RandomDotRender::init(ID3D10Device* pd3d, StereoSetting* pstereo, CModelVie
 
 	HRESULT hr;
 	WCHAR fxpath[MAX_PATH];
-	if (FAILED( D3DX10CreateEffectFromFile( L"../Data/Shader/Pos4Color4.fx", NULL, NULL, "fx_4_0", 
+	if (FAILED( D3DX10CreateEffectFromFile( L"../Data/Shader/PointToSquare.fx", NULL, NULL, "fx_4_0", 
 		D3D10_SHADER_ENABLE_STRICTNESS | D3D10_SHADER_DEBUG, 0,
 		pd3d, NULL, NULL, &pEffect, NULL, NULL ) ) ) {
 			MessageBox( DXUTGetHWND(), L"Can't find fx file Pos4Color4.fx", DXUTGetWindowTitle(), MB_ICONERROR | MB_OK );
@@ -65,6 +65,7 @@ bool RandomDotRender::init(ID3D10Device* pd3d, StereoSetting* pstereo, CModelVie
 	pMatWorldVarible = pEffect->GetVariableByName("World")->AsMatrix();
 	pMatView = pEffect->GetVariableByName("View")->AsMatrix();
 	pMatProjection = pEffect->GetVariableByName("Projection")->AsMatrix();
+	pFloatPointSize = pEffect->GetVariableByName("PointSize")->AsScalar();
 
 	D3D10_INPUT_ELEMENT_DESC layout[] = {
 
@@ -98,7 +99,7 @@ bool RandomDotRender::init(ID3D10Device* pd3d, StereoSetting* pstereo, CModelVie
 	D3D10_RASTERIZER_DESC rsDesc;
 	ZeroMemory(&rsDesc, sizeof(D3D10_RASTERIZER_DESC));
 
-	rsDesc.FillMode = D3D10_FILL_WIREFRAME;
+	rsDesc.FillMode = D3D10_FILL_SOLID;
 	rsDesc.CullMode = D3D10_CULL_NONE;
 	rsDesc.FrontCounterClockwise = false;
 
@@ -110,21 +111,26 @@ bool RandomDotRender::init(ID3D10Device* pd3d, StereoSetting* pstereo, CModelVie
 	return true;
 
 }
+
+void RandomDotRender::setOriginPosition(float x1, float y1) {
+	this->x1 = x1;
+	this->y1 = y1;
+}
+ 
 bool RandomDotRender::stereoRender(float fTime) {
 
 
 	//printf("Time: %f\n", fTime);
 	//	NvAPI_Stereo_SetActiveEye(pStereoSetting->g_StereoHandle, NVAPI_STEREO_EYE_LEFT);
 	//
-
-	pCamera->SetViewParams(&D3DXVECTOR3(0, 0, -5), &D3DXVECTOR3(0, 0, 0));
-
-
+	pRandomDot->iVertexNum = pointNum;
 	pRandomDot->updateVertex(fTime);
 	
 	updatePosition(fTime);
 
+	pFloatPointSize->SetFloat(pointSize);
 	//pRandomDot->updateBuffer();
+
 	ClearScreen(pd3dDevice);
 	renderLeft();
 	pStereoSetting->draw(pd3dDevice, pStereoSetting->LEFT_EYE);
@@ -163,7 +169,7 @@ bool RandomDotRender::renderLeft() {
 	pd3dDevice->IASetInputLayout(pInputLayout);
 	pd3dDevice->IASetPrimitiveTopology(D3D10_PRIMITIVE_TOPOLOGY_POINTLIST);
 
-	D3DXMatrixTranslation(&matWorld, -1-x, -2-y, 0);
+	D3DXMatrixTranslation(&matWorld, 0, 0, 0);
 
 
 	pMatWorldVarible->SetMatrix((float *)matWorld);
@@ -200,7 +206,9 @@ bool RandomDotRender::renderRight(float fTime) {
 	pd3dDevice->IASetInputLayout(pInputLayout);
 	pd3dDevice->IASetPrimitiveTopology(D3D10_PRIMITIVE_TOPOLOGY_POINTLIST);
 
-	D3DXMatrixTranslation(&matWorld, 0+x, -2+y, 0);
+//	updatePosition(fTime);
+
+	D3DXMatrixTranslation(&matWorld, x1+x, y1+y, 0);
 
 	pMatWorldVarible->SetMatrix((float *)matWorld);
 	pMatView->SetMatrix((float*)pCamera->GetViewMatrix());

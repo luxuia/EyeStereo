@@ -137,6 +137,7 @@
     <ClCompile Include="..\..\Dependencies\DXUT\Optional\SDKmisc.cpp" />
     <ClCompile Include="..\..\Dependencies\DXUT\Optional\SDKwavefile.cpp" />
     <ClCompile Include="App.cpp" />
+    <ClCompile Include="digit_numbers.cpp" />
     <ClCompile Include="RandDoter.cpp" />
     <ClCompile Include="RandomDotRender.cpp" />
   </ItemGroup>
@@ -151,6 +152,7 @@
     <ClInclude Include="..\..\Dependencies\DXUT\Optional\SDKmesh.h" />
     <ClInclude Include="..\..\Dependencies\DXUT\Optional\SDKmisc.h" />
     <ClInclude Include="..\..\Dependencies\DXUT\Optional\SDKwavefile.h" />
+    <ClInclude Include="digit_numbers.h" />
     <ClInclude Include="RandDoter.hpp" />
     <ClInclude Include="RandomDotRender.hpp" />
   </ItemGroup>

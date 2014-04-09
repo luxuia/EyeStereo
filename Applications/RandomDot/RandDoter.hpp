@@ -17,6 +17,7 @@
 #ifndef __RANDOMDOT__
 #define __RANDOMDOT__
 
+
 #include "Utility/PCH.h"
 #include "Geometry/vertex.h"
 #include "Geometry/Geometry.h"
@@ -28,12 +29,14 @@ namespace EyeStereo {
 	class RandomDot {
 
 	public:
-		RandomDot();
+		RandomDot(int maxbound);
 		~RandomDot();
 
 		bool init(ID3D10Device *pDevice, float x, float y, int cnt, Geometry* gout);
 		void draw();
+		void insert_number(Vertex** vertices);
 		void makeRandomDot(Vertex** vertices, float x, float y);
+		void makeRandomDotTest(Vertex** vertices, float x, float y);
 		bool inGeometry(Vertex &p, Geometry *g);
 		bool inGeometry(float x, float y, float z, Geometry *g);
 		bool updateVertex(float ftime);
@@ -48,7 +51,7 @@ namespace EyeStereo {
 		Vector3*		pointStat;
 		Vertex*			vertices[2];
 		Vector3*		velocity;
-		Vector3		velocityL;
+		Vector3		    velocityL;
 		Geometry*		pGeo;
 		int iVertexNum;
 
@@ -56,6 +59,7 @@ namespace EyeStereo {
 		float boundX, boundY;
 		float dotDist;
 		float pointSize ;
+		int maxPointNum;
 
 	};
 
