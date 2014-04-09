@@ -8,19 +8,20 @@
 
 #pragma once
 
-const int digitnum[] = {16, 4, 20, 16, 12, 20, 20, 8, 20, 20};
-
 namespace EyeStereo {
-
-	class digit_numbers {
+	static const int digitnum[] = {16, 4, 20, 16, 12, 20, 20, 8, 20, 20};
+	class digit_numbers: public Geometry{
 
 	public:
 		digit_numbers();
 		~digit_numbers();
 		void random_number();
 
-		int tmp;
+		virtual float distanceShiftDot(float x, float y);
+		int ChoosedNumber;
 		Vertex*		ver[10];
+		float scale;
+		
 	};
 }
 #endif // __DIGITAL_NUMBER__

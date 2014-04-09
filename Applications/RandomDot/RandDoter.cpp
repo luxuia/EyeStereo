@@ -28,7 +28,7 @@ bool RandomDot::inGeometry(Vertex &p, Geometry *g) {
 }
 
 bool RandomDot::inGeometry(float x, float y, float z, Geometry *g) {
-	
+	/*
 	Vector3	P(x, y, z);
 	//printf("check\n");
 	for (int i = 0; i < g->cnt; i++) {
@@ -66,9 +66,13 @@ bool RandomDot::inGeometry(float x, float y, float z, Geometry *g) {
 		}
 	}
 	return false;
+	*/
+	return false;
 }
 
 
+
+// do create Dot then shift these.
 void RandomDot::makeRandomDot(Vertex** vertices, float x, float y) {
 
 	srand(1);
@@ -81,23 +85,6 @@ void RandomDot::makeRandomDot(Vertex** vertices, float x, float y) {
 			vertices[1][i] = vertices[0][i];
 			vertices[1][i].color = WHITE;
 			binGeometry[i] = false;
-
-
-			if (inGeometry(vertices[0][i], pGeo)) {// && vertices[0][i].pos.x >= dotDist && vertices[0][i].pos.x <= x+dotDist) {
-				vertices[0][i].pos.x -= dotDist; //init as 0.2
-				binGeometry[i] = true;
-				//printf("new Point (%0.2f, %0.2f)\n", vertices[0][i].pos.x, vertices[0][i].pos.y);
-			} else if (inGeometry(vertices[0][i].pos.x+dotDist, vertices[0][i].pos.y, 0, pGeo)) {
-				do {
-					vertices[0][i] = Vertex(RandF(0, x), RandF(0, y), 0, WHITE);
-				//	printf("new Point (%0.2f, %0.2f)\n", vertices[0][i].pos.x, vertices[0][i].pos.y);
-					if (inGeometry(vertices[0][i], pGeo) && (!inGeometry(vertices[0][i].pos.x+dotDist, vertices[0][i].pos.y, 0, pGeo))) {
-						break;
-					} 
-				}while (1);
-			}
-
-			
 	}
 }
 
@@ -118,31 +105,14 @@ void RandomDot::makeRandomDotTest(Vertex** vertices, float x, float y) {
 	}
 }
 
-void RandomDot::insert_number(Vertex** vertices)
+void RandomDot::dotShiftNumber(Vertex** vertices)
 {
-	srand(1);
 
-	digit_numbers* Dn = new digit_numbers();
-
-	Dn ->random_number();
-
-	for (int i = 0; i <= digitnum[Dn -> tmp]; ++i) {
-		vertices[0][i] = Dn ->ver[Dn -> tmp][i] ;
-
-		vertices[1][i] = vertices[0][i];
-		vertices[1][i].color = WHITE;
-
-		binGeometry[i] = false;
-
-		if (inGeometry(vertices[0][i], pGeo)) {
-			vertices[0][i].pos.x -= dotDist;
-			binGeometry[i] = true;
+	for (UINT i = 0; i < maxPointNum; ++i) {
+		if (pGeo->distanceShiftDot(vertices[1][i].pos.x, vertices[1][i].pos.y) > Elapse) {
+			vertices[1][i].pos.x += dotDist;
 		}
-		//printf("%f %f %f\n", vertices[0][i].pos.x, vertices[0][i].pos.y, vertices[0][i].pos.z);
-
 	}
-
-	
 }
 
 bool RandomDot::init(ID3D10Device *pDevice, float x, float y, const int cnt, Geometry*	gout) {
@@ -155,9 +125,9 @@ bool RandomDot::init(ID3D10Device *pDevice, float x, float y, const int cnt, Geo
 	vertices[0] = new Vertex[maxPointNum];
 	vertices[1] = new Vertex[maxPointNum];
 	binGeometry = new bool[maxPointNum];
-	velocity = new Vector3[maxPointNum];
-	ZeroMemory(velocity, sizeof(Vector3)*maxPointNum);
-	velocityL = Vector3(0, 0, 0);
+	velocity = new Vector3f[maxPointNum];
+	ZeroMemory(velocity, sizeof(Vector3f)*maxPointNum);
+	velocityL = new Vector3f(0, 0, 0);
 	iVertexNum = cnt;
 	
 	pGeo = gout;
@@ -167,11 +137,11 @@ bool RandomDot::init(ID3D10Device *pDevice, float x, float y, const int cnt, Geo
 
 	boundX = x, boundY = y;
 	makeRandomDot(vertices, x, y);
-	insert_number(vertices);
+	dotShiftNumber(vertices);
 	updateBuffer();
 
-	pointStat = new Vector3[maxPointNum];
-	ZeroMemory(pointStat, sizeof(Vector3)*maxPointNum);
+	pointStat = new Vector3f[maxPointNum];
+	ZeroMemory(pointStat, sizeof(Vector3f)*maxPointNum);
 	//updateVertex();
 	//updateBuffer();
 	//delete vertices[0];
@@ -182,7 +152,7 @@ bool RandomDot::init(ID3D10Device *pDevice, float x, float y, const int cnt, Geo
 }
 
 
-bool RandomDot::outBound(Vector3 p, Vector3 &v, int flg) {
+bool RandomDot::outBound(Vector3f p, Vector3f &v, int flg) {
 	if (p.x > boundX && v.x > 0) {
 		v.x = -v.x;
 		return true;
@@ -203,16 +173,9 @@ bool RandomDot::outBound(Vector3 p, Vector3 &v, int flg) {
 }
 
 bool RandomDot::updateVertex(float ftime) {
-	using std::vector;
-
-	vector< Vertex > vtemp;
-	vector< int > itemp;
-
-	vtemp.clear();
-	itemp.clear();
 
 	for (int i = 0; i < maxPointNum; ++i) {
-		Vector3 b = Vector3(RandF(-1,1), RandF(-1,1), 0);
+		Vector3f b = Vector3f(RandF(-1,1), RandF(-1,1), 0);
 		
 		velocity[i] += b*ftime;
 
@@ -223,28 +186,10 @@ bool RandomDot::updateVertex(float ftime) {
 
 		vertices[0][i].pos += velocity[i]*(ftime/2);
 		vertices[1][i].pos = vertices[0][i].pos;
-
-		if (inGeometry(vertices[1][i], pGeo)) {
-			//printf("inGeometry");
-			if (!inGeometry(vertices[1][i].pos.x-dotDist, vertices[1][i].pos.y, vertices[1][i].pos.z, pGeo)) {
-				vtemp.push_back(vertices[1][i]);
-			}
-			vertices[1][i].pos.x += dotDist;
-
-		} else if (inGeometry(vertices[1][i].pos.x - dotDist, vertices[1][i].pos.y, vertices[1][i].pos.z, pGeo)) {
-			itemp.push_back(i);
-		}
-
 	
 	}
 
-	//printf("Then:(%f, %f, %f)\n", t.x, t.y, t.z);
-
-
-	for (UINT i = 0; i < itemp.size() && i < vtemp.size(); i++) {
-		vertices[1][itemp[i]] = vtemp[i];
-	}
-
+	dotShiftNumber(vertices);
 	updateBuffer();
 
 	return true;

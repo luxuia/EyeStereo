@@ -1,4 +1,5 @@
 #include "RandomDotRender.hpp"
+#include "digit_numbers.h"
 
 using namespace EyeStereo;
 
@@ -23,26 +24,22 @@ RandomDotRender:: ~RandomDotRender() {
 Geometry* RandomDotRender::getGeometry(Geometry *newGeo) {
 	//Geometry* newGeo = new Geometry(n);
 
-
-	newGeo->point[0] = Vector3(0.2, 0.2, 0);
-	newGeo->point[1] = Vector3(1.2, 0.2, 0);
-	newGeo->point[2] = Vector3(0.7, 1.0, 0);
-	newGeo->cnt = 1;
-
 	return newGeo;
 }
 
 void RandomDotRender::makeDot(float dotDist) {
 
-	Geometry *Geo = new Geometry(1);
-	getGeometry(Geo);
-
+	//Geometry *Geo = new Geometry(1);
+	/// TODO All Geo should drived from Geometry class and have same interface.
+	digit_numbers* Dn = new digit_numbers();
+	//Dn->random_number();
+	Dn->ChoosedNumber = 0;
 	pRandomDot = new RandomDot(maxPointNum);
 
 	pRandomDot->dotDist = dotDist;
 
 	// Generate RandomDot BoundX, BoundY, PointNum,  shap to describe 
-	pRandomDot->init(pd3dDevice, 6, 6, pointNum, Geo);
+	pRandomDot->init(pd3dDevice, 6, 6, pointNum, Dn);
 	//delete Geo;
 }
 

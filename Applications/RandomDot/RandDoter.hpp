@@ -22,9 +22,9 @@
 #include "Geometry/vertex.h"
 #include "Geometry/Geometry.h"
 
-
-
 namespace EyeStereo {
+	class Vector3f;
+
 
 	class RandomDot {
 
@@ -34,24 +34,24 @@ namespace EyeStereo {
 
 		bool init(ID3D10Device *pDevice, float x, float y, int cnt, Geometry* gout);
 		void draw();
-		void insert_number(Vertex** vertices);
+		void dotShiftNumber(Vertex** vertices);
 		void makeRandomDot(Vertex** vertices, float x, float y);
 		void makeRandomDotTest(Vertex** vertices, float x, float y);
 		bool inGeometry(Vertex &p, Geometry *g);
 		bool inGeometry(float x, float y, float z, Geometry *g);
 		bool updateVertex(float ftime);
 		bool updateBuffer();
-		bool outBound(Vector3, Vector3&, int );
+		bool outBound(Vector3f, Vector3f&, int );
 
 		ID3D10Device*	pd3dDevice;
 		ID3D10Buffer*	vBuffer[2];
 
 		//vector< Vector3 > randomForce;
 		bool*			binGeometry;
-		Vector3*		pointStat;
+		Vector3f*		pointStat;
 		Vertex*			vertices[2];
-		Vector3*		velocity;
-		Vector3		    velocityL;
+		Vector3f*		velocity;
+		Vector3f*		velocityL;
 		Geometry*		pGeo;
 		int iVertexNum;
 

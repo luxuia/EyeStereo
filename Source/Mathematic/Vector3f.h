@@ -13,6 +13,8 @@
 //----------------------------------------------------------------------------------------------------
 #ifndef Vector3f_h
 #define Vector3f_h
+
+#include "Vector2f.h"
 //----------------------------------------------------------------------------------------------------
 
 //----------------------------------------------------------------------------------------------------
@@ -33,6 +35,9 @@ namespace EyeStereo
 		float Magnitude( );
 		void Normalize( );
         Vector3f Perpendicular( );
+
+		Vector2f xy();
+
 
         // static vector ops
         static Vector3f Clamp( const Vector3f& A );

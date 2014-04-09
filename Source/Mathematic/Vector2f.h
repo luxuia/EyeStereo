@@ -30,7 +30,7 @@ namespace EyeStereo
 		void MakeZero( );
 		void Normalize( );
 		float Magnitude( );
-
+		float Dot(Vector2f &v);
 		// assignment
 		Vector2f& operator= ( const Vector2f& Vector );
 

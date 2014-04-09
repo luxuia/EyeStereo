@@ -1,6 +1,21 @@
 #include "digit_numbers.h"
+#include "Mathematic\Vector2f.h"
 
 using namespace EyeStereo;
+
+float digit_numbers::distanceShiftDot(float x, float y) {
+	Vertex* number = ver[ChoosedNumber];
+	Vector2f pos(x, y);
+	for (UINT i = 0; i < digitnum[ChoosedNumber]; i+=4) {
+		if (InGeometry(number[i].pos.xy(), number[i + 1].pos.xy(), number[i + 2].pos.xy(), pos)) {
+			return 1;
+		}
+		if (InGeometry(number[i+1].pos.xy(), number[i + 2].pos.xy(), number[i + 3].pos.xy(), pos)) {
+			return 1;
+		}
+	}
+	return 0;
+}
 
 digit_numbers::digit_numbers() {
 	//digit 0
@@ -221,6 +236,8 @@ digit_numbers::digit_numbers() {
 	ver[9][19] = Vertex(5, 10, 0, WHITE);
 }
 
+
+
 digit_numbers::~digit_numbers() {
 	for (int i = 0; i < 10; ++i) {
 		SAFE_DELETE(ver[i]);
@@ -228,5 +245,6 @@ digit_numbers::~digit_numbers() {
 }
 
 void digit_numbers::random_number() {
-	tmp = rand() % 10;
+	srand(time(0));
+	ChoosedNumber = rand() % 10;
 }
