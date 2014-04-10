@@ -44,6 +44,12 @@
     <ClCompile Include="..\..\Source\Mathematic\Vector4f.cpp">
       <Filter>Lib</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\Utility\Timer.cpp">
+      <Filter>Lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Utility\Log.cpp">
+      <Filter>Lib</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="RandDoter.hpp" />
@@ -86,6 +92,12 @@
       <Filter>Lib</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\Mathematic\Vector4f.h">
+      <Filter>Lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Utility\Timer.h">
+      <Filter>Lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Utility\Log.h">
       <Filter>Lib</Filter>
     </ClInclude>
   </ItemGroup>

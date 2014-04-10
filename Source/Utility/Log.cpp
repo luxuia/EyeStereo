@@ -28,7 +28,7 @@ Log& Log::Get()
 bool Log::Open()
 {
 	std::wstring filename = L"Log.txt";
-	AppLog.open( filename.c_str() );
+	AppLog.open( filename.c_str(), std::fstream::app);
 
 	Write( L"Log file opened." );
 

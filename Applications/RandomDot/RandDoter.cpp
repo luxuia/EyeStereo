@@ -133,6 +133,7 @@ bool RandomDot::init(ID3D10Device *pDevice, float x, float y, const int cnt, Geo
 
 	boundX = x, boundY = y;
 	makeRandomDot(vertices, x, y);
+
 	dotShiftNumber(vertices);
 	updateBuffer();
 

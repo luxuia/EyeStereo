@@ -20,9 +20,12 @@ namespace EyeStereo {
 		void Pos(float x, float y);
 		virtual float distanceShiftDot(float x, float y);
 		virtual void random();
+		virtual int getType();
+		void generate();
 
 		int ChoosedNumber;
 		Vertex*		ver[10];
+		int randomList[10]; 
 	
 		
 	};

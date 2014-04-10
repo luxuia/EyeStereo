@@ -49,6 +49,7 @@ KeyBoard*					g_pKeyBoard = NULL;
 WCHAR						g_pShareMessage[64] = L"双眼视差: ";
 bool						g_bShareChanged = false;
 clock_t                     start = 0,finish;
+Timer*						pTimer;
 
 //// constant variable declare
 
@@ -56,6 +57,7 @@ static const WCHAR* C_PointNum = L"点数量: %d";
 static const WCHAR* C_PointSize = L"点大小: %0.3f";
 static const WCHAR* C_PointDensity = L"点密度: %f (个/平方厘米)";
 static const WCHAR* C_Binoculardisparity = L"双眼视差: %d 度 %d 分 %d 秒";
+static const WCHAR* C_LogStr = L"time used %0.2f sec(s), to recognize  number %d, input %d\n";
 static const int C_MaxPointNum = 5000;
 int g_iPointNum = 2000;
 float g_Binodisp = 0.0;
@@ -71,12 +73,14 @@ enum {
  IDC_RANDOMDOT_SWITCH,
  IDC_RANDOMDOT_SEPERATION_SILDER,
 
+ IDC_RANDOMDOT_SUBMIT,
+
  IDC_RANDOMDOT_POINT_NUM_SHOW,
  IDC_RANDOMDOT_POINT_NUM_SLIDER,
 
  IDC_RANDOMDOT_POINT_SIZE_SHOW,
  IDC_RANDOMDOT_POINT_SIZE_SLIDER,
- IDC_RANDOMDOT_GEOMETRY_BUTTON,
+ IDC_RANDOMDOT_GEOMETRY_NEXT_BUTTON,
  
  IDC_RANDOMDOT_POINT_DENSITY_SHOW,
  IDC_RANDOMDOT_POINT_DENSITY_SLIDER,   // This will change point num meanwhile
@@ -161,7 +165,23 @@ void InitApp()
 	g_HUD.AddButton( IDC_STEREO_OPEN_SWITCH,	L"打开Stereo",	35,	iY+=24, 125, 22);
 	g_HUD.AddButton( IDC_RANDOMDOT_SWITCH,	L"视融合检测",	35, iY+=24, 125, 22);
 	g_HUD.AddButton( IDC_FINISHI_TEST,	L"已经看见了图形",	35, iY+=24, 125, 22);
-	g_HUD.AddButton(IDC_RANDOMDOT_GEOMETRY_BUTTON, L"下一个", 35, iY += 24, 125, 22);
+
+	CDXUTComboBox *pcombo = new CDXUTComboBox();
+	g_HUD.AddComboBox(IDC_RANDOMDOT_SUBMIT, 35, iY += 24, 125, 22, 0, false, &pcombo);
+	pcombo->SetDropHeight(100);
+	pcombo->AddItem(L"你看到了哪个数字?", 0);
+	pcombo->AddItem(L"0", 0);
+	pcombo->AddItem(L"1", 0);
+	pcombo->AddItem(L"2", 0);
+	pcombo->AddItem(L"3", 0);
+	pcombo->AddItem(L"4", 0);
+	pcombo->AddItem(L"5", 0);
+	pcombo->AddItem(L"6", 0);
+	pcombo->AddItem(L"7", 0);
+	pcombo->AddItem(L"8", 0);
+	pcombo->AddItem(L"9", 0);
+	
+	g_HUD.AddButton(IDC_RANDOMDOT_GEOMETRY_NEXT_BUTTON, L"下一个", 35, iY += 24, 125, 22);
 
 	WCHAR tmp[80];
 
@@ -193,6 +213,9 @@ void InitApp()
 
 	g_pKeyBoard = new KeyBoard();
 
+	pTimer = new Timer();
+
+	Log::Get().Open();
 }
 
 
@@ -483,6 +506,7 @@ void CALLBACK OnGUIEvent( UINT nEvent, int nControlID, CDXUTControl* pControl, v
 			g_SampleUI.GetSlider( IDC_RANDOMDOT_SEPERATION_SILDER )->SetVisible( flg );
 
 			if (g_pRandomDotRender->bactive) {
+				pTimer->Reset();
 				g_HUD.GetButton( IDC_RANDOMDOT_SWITCH)->SetText(L"结束点融合");
 			} else {
 				g_HUD.GetButton( IDC_RANDOMDOT_SWITCH)->SetText(L"开始点融合");
@@ -538,12 +562,26 @@ void CALLBACK OnGUIEvent( UINT nEvent, int nControlID, CDXUTControl* pControl, v
 			}
 			break;
 		}
-		case IDC_RANDOMDOT_GEOMETRY_BUTTON: {
+		case IDC_RANDOMDOT_GEOMETRY_NEXT_BUTTON: {
+			pTimer->Update();
+			float seconds = pTimer->Elapsed();
+			WCHAR tmp_str[80];
+			int type = g_pRandomDotRender->pGeo->getType();
+			int inputType = g_HUD.GetComboBox(IDC_RANDOMDOT_SUBMIT)->GetSelectedIndex()-1; /// index zero from query string , then 0..9
+			swprintf(tmp_str, C_LogStr, seconds, type, inputType);
+			Log::Get().Write(tmp_str);
+			Log::Get().WriteSeparater();
 			g_pRandomDotRender->pGeo->random();
+
+			pTimer->Reset();
 		}
 
     }
 }
+
+
+
+
 
 float calcang(float W, float H, float x, float y, float l, float L, float w, float h)
 {

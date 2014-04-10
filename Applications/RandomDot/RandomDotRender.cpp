@@ -33,10 +33,11 @@ void RandomDotRender::makeDot(float dotDist) {
 	pGeo = new digit_numbers();
 	digit_numbers* _geo = (digit_numbers*)pGeo;
 	//Dn->random_number();
-	_geo->random();
+	
 	_geo->Scale(0.5);
 	_geo->Pos(0.5, 0.5);
-
+	_geo->generate();
+	_geo->random();
 	pRandomDot = new RandomDot(maxPointNum);
 
 	pRandomDot->dotDist = dotDist;
