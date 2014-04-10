@@ -4,6 +4,7 @@
 #include "DXUT.h"
 #include "Geometry/vertex.h"
 
+#define __DEBUG__ 1
 
 using namespace EyeStereo;
 
@@ -70,18 +71,12 @@ bool RandomDot::inGeometry(float x, float y, float z, Geometry *g) {
 	return false;
 }
 
-
-
 // do create Dot then shift these.
 void RandomDot::makeRandomDot(Vertex** vertices, float x, float y) {
 
 	srand(1);
-
 	for (int i = 0; i < maxPointNum; ++i) {
 			vertices[0][i] = Vertex(RandF(0, x), RandF(0, y), 0, WHITE);
-		
-		//	printf("Build:(%f, %f, %f)\n", vertices[0][i0].pos.x, vertices[0][i0].pos.y, vertices[0][i0].pos.z);
-
 			vertices[1][i] = vertices[0][i];
 			vertices[1][i].color = WHITE;
 			binGeometry[i] = false;
@@ -98,7 +93,6 @@ void RandomDot::makeRandomDotTest(Vertex** vertices, float x, float y) {
 		while (!inGeometry(vertices[0][i], pGeo)) {
 			vertices[0][i] = Vertex(RandF(0, x), RandF(0, y), 0, WHITE);
 		}
-		//	printf("Build:(%f, %f, %f)\n", vertices[0][i0].pos.x, vertices[0][i0].pos.y, vertices[0][i0].pos.z);
 
 		vertices[1][i] = vertices[0][i];
 		vertices[1][i].color = WHITE;
@@ -107,10 +101,13 @@ void RandomDot::makeRandomDotTest(Vertex** vertices, float x, float y) {
 
 void RandomDot::dotShiftNumber(Vertex** vertices)
 {
-
 	for (UINT i = 0; i < maxPointNum; ++i) {
 		if (pGeo->distanceShiftDot(vertices[1][i].pos.x, vertices[1][i].pos.y) > Elapse) {
+#ifdef __DEBUG__
+			vertices[1][i].color = YELLOW;
+#else
 			vertices[1][i].pos.x += dotDist;
+#endif
 		}
 	}
 }
@@ -134,7 +131,6 @@ bool RandomDot::init(ID3D10Device *pDevice, float x, float y, const int cnt, Geo
 
 	vBuffer[0] = vBuffer[1] = NULL;
 
-
 	boundX = x, boundY = y;
 	makeRandomDot(vertices, x, y);
 	dotShiftNumber(vertices);
@@ -142,13 +138,8 @@ bool RandomDot::init(ID3D10Device *pDevice, float x, float y, const int cnt, Geo
 
 	pointStat = new Vector3f[maxPointNum];
 	ZeroMemory(pointStat, sizeof(Vector3f)*maxPointNum);
-	//updateVertex();
-	//updateBuffer();
-	//delete vertices[0];
-	//delete vertices[1];
 
 	return true;
-
 }
 
 
@@ -179,13 +170,15 @@ bool RandomDot::updateVertex(float ftime) {
 		
 		velocity[i] += b*ftime;
 
+
+		/// Data changed in the procedure
 		if (outBound(vertices[1][i].pos, velocity[i], 0)) {
 			//velocity[i] = -velocity[i];
 		}
 
-
 		vertices[0][i].pos += velocity[i]*(ftime/2);
 		vertices[1][i].pos = vertices[0][i].pos;
+		vertices[1][i].color = WHITE;
 	
 	}
 

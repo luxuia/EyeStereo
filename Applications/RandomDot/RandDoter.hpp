@@ -24,10 +24,7 @@
 
 namespace EyeStereo {
 	class Vector3f;
-
-
 	class RandomDot {
-
 	public:
 		RandomDot(int maxbound);
 		~RandomDot();

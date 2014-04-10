@@ -46,6 +46,8 @@ namespace EyeStereo {
 
 		KeyBoard*						pKeyBoard;
 
+		Geometry*						pGeo;
+
 		
 
 		RandomDotRender();

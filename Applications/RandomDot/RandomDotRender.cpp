@@ -16,7 +16,6 @@ RandomDotRender:: ~RandomDotRender() {
 	SAFE_RELEASE(pSwapChain);
 	SAFE_RELEASE(pWireFrameRS);
 	delete pRandomDot;
-
 }
 
 
@@ -31,15 +30,19 @@ void RandomDotRender::makeDot(float dotDist) {
 
 	//Geometry *Geo = new Geometry(1);
 	/// TODO All Geo should drived from Geometry class and have same interface.
-	digit_numbers* Dn = new digit_numbers();
+	pGeo = new digit_numbers();
+	digit_numbers* _geo = (digit_numbers*)pGeo;
 	//Dn->random_number();
-	Dn->ChoosedNumber = 0;
+	_geo->random();
+	_geo->Scale(0.5);
+	_geo->Pos(0.5, 0.5);
+
 	pRandomDot = new RandomDot(maxPointNum);
 
 	pRandomDot->dotDist = dotDist;
 
 	// Generate RandomDot BoundX, BoundY, PointNum,  shap to describe 
-	pRandomDot->init(pd3dDevice, 6, 6, pointNum, Dn);
+	pRandomDot->init(pd3dDevice, 6, 6, pointNum, _geo);
 	//delete Geo;
 }
 
@@ -115,11 +118,6 @@ void RandomDotRender::setOriginPosition(float x1, float y1) {
 }
  
 bool RandomDotRender::stereoRender(float fTime) {
-
-
-	//printf("Time: %f\n", fTime);
-	//	NvAPI_Stereo_SetActiveEye(pStereoSetting->g_StereoHandle, NVAPI_STEREO_EYE_LEFT);
-	//
 	pRandomDot->iVertexNum = pointNum;
 	pRandomDot->updateVertex(fTime);
 	
@@ -133,8 +131,6 @@ bool RandomDotRender::stereoRender(float fTime) {
 	pStereoSetting->draw(pd3dDevice, pStereoSetting->LEFT_EYE);
 
 	//	NvAPI_Stereo_SetActiveEye(pStereoSetting->g_StereoHandle, NVAPI_STEREO_EYE_RIGHT);
-
-
 	ClearScreen(pd3dDevice);
 	renderRight(fTime);
 	pStereoSetting->draw(pd3dDevice, pStereoSetting->RIGHT_EYE);
@@ -202,8 +198,6 @@ bool RandomDotRender::renderRight(float fTime) {
 
 	pd3dDevice->IASetInputLayout(pInputLayout);
 	pd3dDevice->IASetPrimitiveTopology(D3D10_PRIMITIVE_TOPOLOGY_POINTLIST);
-
-//	updatePosition(fTime);
 
 	D3DXMatrixTranslation(&matWorld, x1+x, y1+y, 0);
 

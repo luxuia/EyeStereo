@@ -76,6 +76,7 @@ enum {
 
  IDC_RANDOMDOT_POINT_SIZE_SHOW,
  IDC_RANDOMDOT_POINT_SIZE_SLIDER,
+ IDC_RANDOMDOT_GEOMETRY_BUTTON,
  
  IDC_RANDOMDOT_POINT_DENSITY_SHOW,
  IDC_RANDOMDOT_POINT_DENSITY_SLIDER,   // This will change point num meanwhile
@@ -160,7 +161,7 @@ void InitApp()
 	g_HUD.AddButton( IDC_STEREO_OPEN_SWITCH,	L"打开Stereo",	35,	iY+=24, 125, 22);
 	g_HUD.AddButton( IDC_RANDOMDOT_SWITCH,	L"视融合检测",	35, iY+=24, 125, 22);
 	g_HUD.AddButton( IDC_FINISHI_TEST,	L"已经看见了图形",	35, iY+=24, 125, 22);
-
+	g_HUD.AddButton(IDC_RANDOMDOT_GEOMETRY_BUTTON, L"下一个", 35, iY += 24, 125, 22);
 
 	WCHAR tmp[80];
 
@@ -536,6 +537,9 @@ void CALLBACK OnGUIEvent( UINT nEvent, int nControlID, CDXUTControl* pControl, v
 				g_HUD.GetButton( IDC_FINISHI_TEST )->SetText(L"可以退出程序");
 			}
 			break;
+		}
+		case IDC_RANDOMDOT_GEOMETRY_BUTTON: {
+			g_pRandomDotRender->pGeo->random();
 		}
 
     }

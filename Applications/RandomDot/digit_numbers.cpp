@@ -244,7 +244,24 @@ digit_numbers::~digit_numbers() {
 	}
 }
 
-void digit_numbers::random_number() {
+void digit_numbers::Scale(float scale) {
+	for (UINT i = 0; i < 10; ++i) {
+		for (UINT j = 0; j < digitnum[i]; ++j) {
+			ver[i][j].pos *= scale;
+		}
+	}
+}
+
+void digit_numbers::Pos(float x, float y) {
+	for (UINT i = 0; i < 10; ++i) {
+		for (UINT j = 0; j < digitnum[i]; ++j) {
+			ver[i][j].pos += Vector3f(x, y, 0);
+		}
+	}
+}
+
+void digit_numbers::random() {
 	srand(time(0));
 	ChoosedNumber = rand() % 10;
 }
+

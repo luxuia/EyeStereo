@@ -33,6 +33,14 @@ Vector3f::Vector3f( const Vector3f& Vector )
 	y = Vector.y;
 	z = Vector.z;
 }
+
+Vector3f::Vector3f(float* list) {
+	x = list[0];
+	y = list[1];
+	z = list[2];
+}
+
+
 //----------------------------------------------------------------------------------------------------
 void Vector3f::MakeZero( )
 {

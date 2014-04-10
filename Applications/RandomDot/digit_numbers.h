@@ -16,11 +16,14 @@ namespace EyeStereo {
 		digit_numbers();
 		~digit_numbers();
 		void random_number();
-
+		void Scale(float scale);
+		void Pos(float x, float y);
 		virtual float distanceShiftDot(float x, float y);
+		virtual void random();
+
 		int ChoosedNumber;
 		Vertex*		ver[10];
-		float scale;
+	
 		
 	};
 }

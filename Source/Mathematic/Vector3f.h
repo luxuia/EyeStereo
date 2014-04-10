@@ -26,6 +26,7 @@ namespace EyeStereo
 		Vector3f( );
 		Vector3f( float x, float y, float z );
 		Vector3f( const Vector3f& Vector );
+		Vector3f(float *list);
 
 		// vector operations
 		void Clamp( );
