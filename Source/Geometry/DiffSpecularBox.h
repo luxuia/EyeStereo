@@ -13,8 +13,8 @@ namespace EyeStereo {
 		DWORD mNumVertices;
 		DWORD mNumFaces;
 
-		ID3D10Buffer* mVB;
-		ID3D10Buffer* mIB;
+		ID3D10Buffer* mVB = NULL;
+		ID3D10Buffer* mIB = NULL;
 
 		D3DXCOLOR mDiffColor;
 		D3DXCOLOR mSpecColor;
@@ -24,8 +24,8 @@ namespace EyeStereo {
 
 		D3DXPLANE	 pPlane[6];
 
-		ID3D10Device*	pd3dDevice;
-		ID3DX10Mesh*	pmesh;
+		ID3D10Device*	pd3dDevice = NULL;
+		ID3DX10Mesh*	pmesh = NULL;
 
 		int live;
 		float w, h, l;
@@ -40,10 +40,10 @@ namespace EyeStereo {
 		}
 
 		~DiffSpecularBox() {
-			SAFE_RELEASE(pd3dDevice);
 
 			SAFE_RELEASE(mIB);
 			SAFE_RELEASE(mVB);
+			SAFE_RELEASE(pmesh);
 		}
 
 		void updatePlane(D3DXMATRIX &matWorld) {
@@ -106,7 +106,6 @@ namespace EyeStereo {
 			//SAFE_RELEASE( mIB );
 
 			pd3dDevice = md3dDevice;
-			pd3dDevice->AddRef();
 			mNumVertices = 24;
 			mNumFaces = 12; // 2 per quad
 

@@ -1,0 +1,263 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.7"/>
+<title>数字式立体视觉刺激系统: E:/Project/final/EyeStereo/Applications/MazeProject/Maze.hpp 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">数字式立体视觉刺激系统
+   &#160;<span id="projectnumber">1.0.1</span>
+   </div>
+   <div id="projectbrief">Digital Stereo System</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.7 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="pages.html"><span>相关页面</span></a></li>
+      <li><a href="namespaces.html"><span>命名空间</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
+    </ul>
+  </div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_8c1195e4829fa17630c4278c41da729a.html">Applications</a></li><li class="navelem"><a class="el" href="dir_b2becde75caf99a0df5ea040c02a219b.html">MazeProject</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Maze.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_maze_8hpp.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef __MAZE__</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define __MAZE__</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_p_c_h_8h.html">Utility/PCH.h</a>&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_stereo_setting_8h.html">Stereo/StereoSetting.h</a>&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_light_8h.html">Geometry/Light.h</a>&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_mesh_loader10_8h.html">Helper/MeshLoader10.h</a>&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_maze_object_8h.html">MazeObject.h</a>&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">namespace </span>EyeStereo {</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_maze.html">   14</a></span>&#160;    <span class="keyword">class </span><a class="code" href="class_eye_stereo_1_1_maze.html">Maze</a> {</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_maze.html#a8de0395b627660b57616200524440f81">   18</a></span>&#160;        ID3D10Device*                   <a class="code" href="class_eye_stereo_1_1_maze.html#a8de0395b627660b57616200524440f81">pd3dDevice</a>;</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_maze.html#aba453ae5c9a95db8fba0ae1c106d2fa0">   19</a></span>&#160;        ID3D10Effect*                   <a class="code" href="class_eye_stereo_1_1_maze.html#aba453ae5c9a95db8fba0ae1c106d2fa0">pEffect</a>;</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_maze.html#aeea202d3486e83b3199dd7c356774a88">   20</a></span>&#160;        ID3D10EffectTechnique*          <a class="code" href="class_eye_stereo_1_1_maze.html#aeea202d3486e83b3199dd7c356774a88">pTech</a>;</div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_maze.html#a4824b3c94ca355d2672ba1f5601db39c">   21</a></span>&#160;        ID3D10InputLayout*              <a class="code" href="class_eye_stereo_1_1_maze.html#a4824b3c94ca355d2672ba1f5601db39c">pInputLayout</a>;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_maze.html#a5578eb60c671210c0258f363f19b546a">   24</a></span>&#160;        ID3D10EffectShaderResourceVariable* <a class="code" href="class_eye_stereo_1_1_maze.html#a5578eb60c671210c0258f363f19b546a">g_ptxDiffuseVariable</a>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_maze.html#a83d48cf3d83e2961eb3a5f0eeb77717d">   25</a></span>&#160;        ID3D10EffectVectorVariable*         <a class="code" href="class_eye_stereo_1_1_maze.html#a83d48cf3d83e2961eb3a5f0eeb77717d">g_pAmbient</a>;</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_maze.html#a6500246837e6af8f8edf895e627a8667">   26</a></span>&#160;        ID3D10EffectVectorVariable*         <a class="code" href="class_eye_stereo_1_1_maze.html#a6500246837e6af8f8edf895e627a8667">g_pDiffuse</a>;</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_maze.html#a1212d8503ffc8b23eb8d37f392061ed2">   27</a></span>&#160;        ID3D10EffectVectorVariable*         <a class="code" href="class_eye_stereo_1_1_maze.html#a1212d8503ffc8b23eb8d37f392061ed2">g_pSpecular</a>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_maze.html#ac7a4569866a94a1512e41c3025adc6d7">   28</a></span>&#160;        ID3D10EffectScalarVariable*         <a class="code" href="class_eye_stereo_1_1_maze.html#ac7a4569866a94a1512e41c3025adc6d7">g_pOpacity</a>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_maze.html#ab70dc306dbb65fe47384f46a0666a04a">   29</a></span>&#160;        ID3D10EffectScalarVariable*         <a class="code" href="class_eye_stereo_1_1_maze.html#ab70dc306dbb65fe47384f46a0666a04a">g_pSpecularPower</a>;</div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_maze.html#a6a556ebd26494301c4c67b06d26667f8">   30</a></span>&#160;        ID3D10EffectVectorVariable*         <a class="code" href="class_eye_stereo_1_1_maze.html#a6a556ebd26494301c4c67b06d26667f8">g_pLightColor</a>;</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_maze.html#a76a4be9cca3e00925f9d3bc757fb12f0">   31</a></span>&#160;        ID3D10EffectVectorVariable*         <a class="code" href="class_eye_stereo_1_1_maze.html#a76a4be9cca3e00925f9d3bc757fb12f0">g_pLightPosition</a>;</div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_maze.html#a6ba82636b534865994cca7bc9cf3f7f8">   32</a></span>&#160;        ID3D10EffectVectorVariable*         <a class="code" href="class_eye_stereo_1_1_maze.html#a6ba82636b534865994cca7bc9cf3f7f8">g_pCameraPosition</a>;</div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_maze.html#afaf8312e473f4ecf1b3643c1be1361e5">   33</a></span>&#160;        ID3D10EffectScalarVariable*         <a class="code" href="class_eye_stereo_1_1_maze.html#afaf8312e473f4ecf1b3643c1be1361e5">g_pTime</a>;</div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_maze.html#a987d5dcc6dfcfce3d3c63c2cf4966f56">   34</a></span>&#160;        ID3D10EffectMatrixVariable*         <a class="code" href="class_eye_stereo_1_1_maze.html#a987d5dcc6dfcfce3d3c63c2cf4966f56">g_pWorld</a>;</div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_maze.html#adbcc11dd48d5d53dbdc18fd86452eb68">   35</a></span>&#160;        ID3D10EffectMatrixVariable*         <a class="code" href="class_eye_stereo_1_1_maze.html#adbcc11dd48d5d53dbdc18fd86452eb68">g_pWorldViewProjection</a>;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_maze.html#adb08e437c67ba9b9e930f6ca2f5c6974">   37</a></span>&#160;        ID3D10EffectShaderResourceVariable* <a class="code" href="class_eye_stereo_1_1_maze.html#adb08e437c67ba9b9e930f6ca2f5c6974">pShaderRV</a>;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_maze.html#aa22776e40cba99a57aae3be690e20d7f">   39</a></span>&#160;        IDXGISwapChain*                 <a class="code" href="class_eye_stereo_1_1_maze.html#aa22776e40cba99a57aae3be690e20d7f">pSwapChain</a>;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_maze.html#af6bfb27fc57c6a8c79e6331639b43c69">   41</a></span>&#160;        CModelViewerCamera*             <a class="code" href="class_eye_stereo_1_1_maze.html#af6bfb27fc57c6a8c79e6331639b43c69">pCamera</a>;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_maze.html#a42ea1eaa7de473b82890ed1951cf1ecf">   43</a></span>&#160;        <span class="keywordtype">long</span> <span class="keywordtype">int</span>                        <a class="code" href="class_eye_stereo_1_1_maze.html#a42ea1eaa7de473b82890ed1951cf1ecf">windowsWidth</a>, <a class="code" href="class_eye_stereo_1_1_maze.html#a0e1fad058a5fb3e2602b6a7298e062d7">windowsHeight</a>;</div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_maze.html#abaa8be13ad783aa35fc2271be90edcfb">   44</a></span>&#160;        <a class="code" href="class_eye_stereo_1_1_stereo_setting.html">StereoSetting</a>*                  <a class="code" href="class_eye_stereo_1_1_maze.html#abaa8be13ad783aa35fc2271be90edcfb">pStereoSetting</a>;</div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_maze.html#a5dfec03b99d86fa4def5d9fa402f10bc">   45</a></span>&#160;        <span class="keywordtype">bool</span>                            <a class="code" href="class_eye_stereo_1_1_maze.html#a5dfec03b99d86fa4def5d9fa402f10bc">bactive</a>;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_maze.html#aae3c3ee698a0f4f10ac4c3c9944ab6e1">   47</a></span>&#160;        D3DXVECTOR3                     <a class="code" href="class_eye_stereo_1_1_maze.html#aae3c3ee698a0f4f10ac4c3c9944ab6e1">eyePos</a>;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_maze.html#a9dfb41c6b93d8bb761ae94cb26a93b72">   49</a></span>&#160;        <span class="keywordtype">bool</span>                            <a class="code" href="class_eye_stereo_1_1_maze.html#a9dfb41c6b93d8bb761ae94cb26a93b72">bStereo</a>;</div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_maze.html#ad3107d7f30f4f96014c31e330e2d317e">   50</a></span>&#160;        <span class="keywordtype">float</span>                           <a class="code" href="class_eye_stereo_1_1_maze.html#a402558b10387ab832133599a2d73a270">initDepth</a>, <a class="code" href="class_eye_stereo_1_1_maze.html#ad3107d7f30f4f96014c31e330e2d317e">initRadius</a>;</div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_maze.html#ab75401623ea19dd8f8e68d683bd51c6b">   51</a></span>&#160;        WCHAR*                          <a class="code" href="class_eye_stereo_1_1_maze.html#ab75401623ea19dd8f8e68d683bd51c6b">mShareMessage</a>;</div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_maze.html#a8a18a5897013e21d84e3e8f7796fdb20">   52</a></span>&#160;        <span class="keywordtype">bool</span>*                           <a class="code" href="class_eye_stereo_1_1_maze.html#a8a18a5897013e21d84e3e8f7796fdb20">mShareChanged</a>;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_maze.html#a7d6445608dc303a806ced5af9c8342c9">   54</a></span>&#160;        ID3D10RasterizerState*          <a class="code" href="class_eye_stereo_1_1_maze.html#a7d6445608dc303a806ced5af9c8342c9">pSolidState</a>;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_maze.html#a3c4051a945da773bfc8363b8a4cf4337">   56</a></span>&#160;        <a class="code" href="class_eye_stereo_1_1_maze_object.html">MazeObject</a>*                     <a class="code" href="class_eye_stereo_1_1_maze.html#a3c4051a945da773bfc8363b8a4cf4337">MazeObj</a>;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_maze.html#aa6646484fabf22e55e37562df50d8acaa298bfae7783cbf0f1ed6203217f11a50">   58</a></span>&#160;        <span class="keyword">enum</span>{ <a class="code" href="class_eye_stereo_1_1_maze.html#aa6646484fabf22e55e37562df50d8acaa298bfae7783cbf0f1ed6203217f11a50">MAX_OBJECTS</a> = 20 };</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_maze.html#a93f210a9a17528aa9c62365de29d7167">   61</a></span>&#160;        <a class="code" href="class_c_mesh_loader10.html">CMeshLoader10</a>                   <a class="code" href="class_eye_stereo_1_1_maze.html#a93f210a9a17528aa9c62365de29d7167">g_earthMesh</a>;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_maze.html#a91c2e6517f7e567c893e28a3188824fb">   63</a></span>&#160;        ID3D10EffectScalarVariable*     <a class="code" href="class_eye_stereo_1_1_maze.html#a91c2e6517f7e567c893e28a3188824fb">g_pBrightness_left</a>; <span class="comment">// ���� ����        ID3D10EffectScalarVariable*     g_pBrightness_right; // ���� ����
+      float g_brightness_left;
+        float g_brightness_right;
+        
+
+        Maze();
+
+        bool init(ID3D10Device* pd3d, StereoSetting* pstereo, CModelViewerCamera *pcamera);
+
+        void stereoRender(float fTime);
+
+        void RenderSubset(UINT id, UINT iSubSet);
+
+        void pick(int sx, int sy);
+
+        void HandMessages(UINT uMsg, LPARAM lParam);
+
+        void ShareMessage(WCHAR* sharestr, bool *sharechanged);
+
+        ~Maze();
+
+        void ClearScreen(ID3D10Device *pd3dDevice);
+
+    };
+
+}
+
+#endif //__SELECT_STEREO_H__</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_maze.html#a21f828b4022a36f926a668f6e1c81e7a">   64</a></span>&#160;        ID3D10EffectScalarVariable*     <a class="code" href="class_eye_stereo_1_1_maze.html#a21f828b4022a36f926a668f6e1c81e7a">g_pBrightness_right</a>; <span class="comment">// ���� ����       float g_brightness_left;
+        float g_brightness_right;
+        
+
+        Maze();
+
+        bool init(ID3D10Device* pd3d, StereoSetting* pstereo, CModelViewerCamera *pcamera);
+
+        void stereoRender(float fTime);
+
+        void RenderSubset(UINT id, UINT iSubSet);
+
+        void pick(int sx, int sy);
+
+        void HandMessages(UINT uMsg, LPARAM lParam);
+
+        void ShareMessage(WCHAR* sharestr, bool *sharechanged);
+
+        ~Maze();
+
+        void ClearScreen(ID3D10Device *pd3dDevice);
+
+    };
+
+}
+
+#endif //__SELECT_STEREO_H__</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_maze.html#a46b396f01421a076d06b36bfe04c624e">   65</a></span>&#160;        <span class="keywordtype">float</span> <a class="code" href="class_eye_stereo_1_1_maze.html#a46b396f01421a076d06b36bfe04c624e">g_brightness_left</a>;</div>
+<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_maze.html#a4b9d8f80208c1ea015780efa88a4db56">   66</a></span>&#160;        <span class="keywordtype">float</span> <a class="code" href="class_eye_stereo_1_1_maze.html#a4b9d8f80208c1ea015780efa88a4db56">g_brightness_right</a>;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        </div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <a class="code" href="class_eye_stereo_1_1_maze.html#a7ecf1da4b9685f97bf3110a8479e724b">Maze</a>();</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="class_eye_stereo_1_1_maze.html#a93e4d56582bc032d28b76c730fe01963">init</a>(ID3D10Device* pd3d, <a class="code" href="class_eye_stereo_1_1_stereo_setting.html">StereoSetting</a>* pstereo, CModelViewerCamera *pcamera);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_eye_stereo_1_1_maze.html#a60ba1ee6928b7a2489f62352e83dcaa8">stereoRender</a>(<span class="keywordtype">float</span> fTime);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_eye_stereo_1_1_maze.html#a2ad7e6e1230f281da47f55c0eca10cfe">RenderSubset</a>(UINT <span class="keywordtype">id</span>, UINT iSubSet);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_eye_stereo_1_1_maze.html#ac2679c7ea224cff80480077f179b9ad0">pick</a>(<span class="keywordtype">int</span> sx, <span class="keywordtype">int</span> sy);</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_eye_stereo_1_1_maze.html#a78c5514c775bd5a90e66fbc45836c87a">HandMessages</a>(UINT uMsg, LPARAM lParam);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_eye_stereo_1_1_maze.html#a7097bde991578a59a63bb6a8a05793b0">ShareMessage</a>(WCHAR* sharestr, <span class="keywordtype">bool</span> *sharechanged);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <a class="code" href="class_eye_stereo_1_1_maze.html#a4f187353f595193318ac66133a22287e">~Maze</a>();</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_eye_stereo_1_1_maze.html#a393380b4063bedd1a607ace4f057c580">ClearScreen</a>(ID3D10Device *<a class="code" href="class_eye_stereo_1_1_maze.html#a8de0395b627660b57616200524440f81">pd3dDevice</a>);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    };</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;}</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="preprocessor">#endif //__SELECT_STEREO_H__</span></div>
+<div class="ttc" id="class_eye_stereo_1_1_maze_html_a93e4d56582bc032d28b76c730fe01963"><div class="ttname"><a href="class_eye_stereo_1_1_maze.html#a93e4d56582bc032d28b76c730fe01963">EyeStereo::Maze::init</a></div><div class="ttdeci">bool init(ID3D10Device *pd3d, StereoSetting *pstereo, CModelViewerCamera *pcamera)</div><div class="ttdef"><b>Definition:</b> Maze.cpp:13</div></div>
+<div class="ttc" id="_stereo_setting_8h_html"><div class="ttname"><a href="_stereo_setting_8h.html">StereoSetting.h</a></div></div>
+<div class="ttc" id="class_eye_stereo_1_1_maze_html_aa22776e40cba99a57aae3be690e20d7f"><div class="ttname"><a href="class_eye_stereo_1_1_maze.html#aa22776e40cba99a57aae3be690e20d7f">EyeStereo::Maze::pSwapChain</a></div><div class="ttdeci">IDXGISwapChain * pSwapChain</div><div class="ttdef"><b>Definition:</b> Maze.hpp:39</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_maze_html_a987d5dcc6dfcfce3d3c63c2cf4966f56"><div class="ttname"><a href="class_eye_stereo_1_1_maze.html#a987d5dcc6dfcfce3d3c63c2cf4966f56">EyeStereo::Maze::g_pWorld</a></div><div class="ttdeci">ID3D10EffectMatrixVariable * g_pWorld</div><div class="ttdef"><b>Definition:</b> Maze.hpp:34</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_maze_html_aba453ae5c9a95db8fba0ae1c106d2fa0"><div class="ttname"><a href="class_eye_stereo_1_1_maze.html#aba453ae5c9a95db8fba0ae1c106d2fa0">EyeStereo::Maze::pEffect</a></div><div class="ttdeci">ID3D10Effect * pEffect</div><div class="ttdef"><b>Definition:</b> Maze.hpp:19</div></div>
+<div class="ttc" id="class_c_mesh_loader10_html"><div class="ttname"><a href="class_c_mesh_loader10.html">CMeshLoader10</a></div><div class="ttdef"><b>Definition:</b> MeshLoader10.h:59</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_maze_html_ac7a4569866a94a1512e41c3025adc6d7"><div class="ttname"><a href="class_eye_stereo_1_1_maze.html#ac7a4569866a94a1512e41c3025adc6d7">EyeStereo::Maze::g_pOpacity</a></div><div class="ttdeci">ID3D10EffectScalarVariable * g_pOpacity</div><div class="ttdef"><b>Definition:</b> Maze.hpp:28</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_maze_html_a42ea1eaa7de473b82890ed1951cf1ecf"><div class="ttname"><a href="class_eye_stereo_1_1_maze.html#a42ea1eaa7de473b82890ed1951cf1ecf">EyeStereo::Maze::windowsWidth</a></div><div class="ttdeci">long int windowsWidth</div><div class="ttdef"><b>Definition:</b> Maze.hpp:43</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_maze_html_a393380b4063bedd1a607ace4f057c580"><div class="ttname"><a href="class_eye_stereo_1_1_maze.html#a393380b4063bedd1a607ace4f057c580">EyeStereo::Maze::ClearScreen</a></div><div class="ttdeci">void ClearScreen(ID3D10Device *pd3dDevice)</div><div class="ttdef"><b>Definition:</b> Maze.cpp:361</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_maze_html_ab70dc306dbb65fe47384f46a0666a04a"><div class="ttname"><a href="class_eye_stereo_1_1_maze.html#ab70dc306dbb65fe47384f46a0666a04a">EyeStereo::Maze::g_pSpecularPower</a></div><div class="ttdeci">ID3D10EffectScalarVariable * g_pSpecularPower</div><div class="ttdef"><b>Definition:</b> Maze.hpp:29</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_maze_html_a60ba1ee6928b7a2489f62352e83dcaa8"><div class="ttname"><a href="class_eye_stereo_1_1_maze.html#a60ba1ee6928b7a2489f62352e83dcaa8">EyeStereo::Maze::stereoRender</a></div><div class="ttdeci">void stereoRender(float fTime)</div><div class="ttdef"><b>Definition:</b> Maze.cpp:153</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_maze_html_a93f210a9a17528aa9c62365de29d7167"><div class="ttname"><a href="class_eye_stereo_1_1_maze.html#a93f210a9a17528aa9c62365de29d7167">EyeStereo::Maze::g_earthMesh</a></div><div class="ttdeci">CMeshLoader10 g_earthMesh</div><div class="ttdef"><b>Definition:</b> Maze.hpp:61</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_maze_html_a6ba82636b534865994cca7bc9cf3f7f8"><div class="ttname"><a href="class_eye_stereo_1_1_maze.html#a6ba82636b534865994cca7bc9cf3f7f8">EyeStereo::Maze::g_pCameraPosition</a></div><div class="ttdeci">ID3D10EffectVectorVariable * g_pCameraPosition</div><div class="ttdef"><b>Definition:</b> Maze.hpp:32</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_maze_html_a6500246837e6af8f8edf895e627a8667"><div class="ttname"><a href="class_eye_stereo_1_1_maze.html#a6500246837e6af8f8edf895e627a8667">EyeStereo::Maze::g_pDiffuse</a></div><div class="ttdeci">ID3D10EffectVectorVariable * g_pDiffuse</div><div class="ttdef"><b>Definition:</b> Maze.hpp:26</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_maze_html_ab75401623ea19dd8f8e68d683bd51c6b"><div class="ttname"><a href="class_eye_stereo_1_1_maze.html#ab75401623ea19dd8f8e68d683bd51c6b">EyeStereo::Maze::mShareMessage</a></div><div class="ttdeci">WCHAR * mShareMessage</div><div class="ttdef"><b>Definition:</b> Maze.hpp:51</div></div>
+<div class="ttc" id="_p_c_h_8h_html"><div class="ttname"><a href="_p_c_h_8h.html">PCH.h</a></div></div>
+<div class="ttc" id="class_eye_stereo_1_1_maze_html_a8a18a5897013e21d84e3e8f7796fdb20"><div class="ttname"><a href="class_eye_stereo_1_1_maze.html#a8a18a5897013e21d84e3e8f7796fdb20">EyeStereo::Maze::mShareChanged</a></div><div class="ttdeci">bool * mShareChanged</div><div class="ttdef"><b>Definition:</b> Maze.hpp:52</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_maze_html_a78c5514c775bd5a90e66fbc45836c87a"><div class="ttname"><a href="class_eye_stereo_1_1_maze.html#a78c5514c775bd5a90e66fbc45836c87a">EyeStereo::Maze::HandMessages</a></div><div class="ttdeci">void HandMessages(UINT uMsg, LPARAM lParam)</div><div class="ttdef"><b>Definition:</b> Maze.cpp:330</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_stereo_setting_html"><div class="ttname"><a href="class_eye_stereo_1_1_stereo_setting.html">EyeStereo::StereoSetting</a></div><div class="ttdef"><b>Definition:</b> StereoSetting.h:9</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_maze_html_ad3107d7f30f4f96014c31e330e2d317e"><div class="ttname"><a href="class_eye_stereo_1_1_maze.html#ad3107d7f30f4f96014c31e330e2d317e">EyeStereo::Maze::initRadius</a></div><div class="ttdeci">float initRadius</div><div class="ttdef"><b>Definition:</b> Maze.hpp:50</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_maze_html_abaa8be13ad783aa35fc2271be90edcfb"><div class="ttname"><a href="class_eye_stereo_1_1_maze.html#abaa8be13ad783aa35fc2271be90edcfb">EyeStereo::Maze::pStereoSetting</a></div><div class="ttdeci">StereoSetting * pStereoSetting</div><div class="ttdef"><b>Definition:</b> Maze.hpp:44</div></div>
+<div class="ttc" id="_light_8h_html"><div class="ttname"><a href="_light_8h.html">Light.h</a></div></div>
+<div class="ttc" id="class_eye_stereo_1_1_maze_html_adb08e437c67ba9b9e930f6ca2f5c6974"><div class="ttname"><a href="class_eye_stereo_1_1_maze.html#adb08e437c67ba9b9e930f6ca2f5c6974">EyeStereo::Maze::pShaderRV</a></div><div class="ttdeci">ID3D10EffectShaderResourceVariable * pShaderRV</div><div class="ttdef"><b>Definition:</b> Maze.hpp:37</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_maze_html_a7ecf1da4b9685f97bf3110a8479e724b"><div class="ttname"><a href="class_eye_stereo_1_1_maze.html#a7ecf1da4b9685f97bf3110a8479e724b">EyeStereo::Maze::Maze</a></div><div class="ttdeci">Maze()</div><div class="ttdef"><b>Definition:</b> Maze.cpp:5</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_maze_html_a7097bde991578a59a63bb6a8a05793b0"><div class="ttname"><a href="class_eye_stereo_1_1_maze.html#a7097bde991578a59a63bb6a8a05793b0">EyeStereo::Maze::ShareMessage</a></div><div class="ttdeci">void ShareMessage(WCHAR *sharestr, bool *sharechanged)</div><div class="ttdef"><b>Definition:</b> Maze.cpp:339</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_maze_html_a0e1fad058a5fb3e2602b6a7298e062d7"><div class="ttname"><a href="class_eye_stereo_1_1_maze.html#a0e1fad058a5fb3e2602b6a7298e062d7">EyeStereo::Maze::windowsHeight</a></div><div class="ttdeci">long int windowsHeight</div><div class="ttdef"><b>Definition:</b> Maze.hpp:43</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_maze_object_html"><div class="ttname"><a href="class_eye_stereo_1_1_maze_object.html">EyeStereo::MazeObject</a></div><div class="ttdef"><b>Definition:</b> MazeObject.h:11</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_maze_html_a1212d8503ffc8b23eb8d37f392061ed2"><div class="ttname"><a href="class_eye_stereo_1_1_maze.html#a1212d8503ffc8b23eb8d37f392061ed2">EyeStereo::Maze::g_pSpecular</a></div><div class="ttdeci">ID3D10EffectVectorVariable * g_pSpecular</div><div class="ttdef"><b>Definition:</b> Maze.hpp:27</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_maze_html_a21f828b4022a36f926a668f6e1c81e7a"><div class="ttname"><a href="class_eye_stereo_1_1_maze.html#a21f828b4022a36f926a668f6e1c81e7a">EyeStereo::Maze::g_pBrightness_right</a></div><div class="ttdeci">ID3D10EffectScalarVariable * g_pBrightness_right</div><div class="ttdef"><b>Definition:</b> Maze.hpp:64</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_maze_html_a4f187353f595193318ac66133a22287e"><div class="ttname"><a href="class_eye_stereo_1_1_maze.html#a4f187353f595193318ac66133a22287e">EyeStereo::Maze::~Maze</a></div><div class="ttdeci">~Maze()</div><div class="ttdef"><b>Definition:</b> Maze.cpp:345</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_maze_html_a3c4051a945da773bfc8363b8a4cf4337"><div class="ttname"><a href="class_eye_stereo_1_1_maze.html#a3c4051a945da773bfc8363b8a4cf4337">EyeStereo::Maze::MazeObj</a></div><div class="ttdeci">MazeObject * MazeObj</div><div class="ttdef"><b>Definition:</b> Maze.hpp:56</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_maze_html_a9dfb41c6b93d8bb761ae94cb26a93b72"><div class="ttname"><a href="class_eye_stereo_1_1_maze.html#a9dfb41c6b93d8bb761ae94cb26a93b72">EyeStereo::Maze::bStereo</a></div><div class="ttdeci">bool bStereo</div><div class="ttdef"><b>Definition:</b> Maze.hpp:49</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_maze_html_a46b396f01421a076d06b36bfe04c624e"><div class="ttname"><a href="class_eye_stereo_1_1_maze.html#a46b396f01421a076d06b36bfe04c624e">EyeStereo::Maze::g_brightness_left</a></div><div class="ttdeci">float g_brightness_left</div><div class="ttdef"><b>Definition:</b> Maze.hpp:65</div></div>
+<div class="ttc" id="_maze_object_8h_html"><div class="ttname"><a href="_maze_object_8h.html">MazeObject.h</a></div></div>
+<div class="ttc" id="class_eye_stereo_1_1_maze_html_ac2679c7ea224cff80480077f179b9ad0"><div class="ttname"><a href="class_eye_stereo_1_1_maze.html#ac2679c7ea224cff80480077f179b9ad0">EyeStereo::Maze::pick</a></div><div class="ttdeci">void pick(int sx, int sy)</div><div class="ttdef"><b>Definition:</b> Maze.cpp:264</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_maze_html_a76a4be9cca3e00925f9d3bc757fb12f0"><div class="ttname"><a href="class_eye_stereo_1_1_maze.html#a76a4be9cca3e00925f9d3bc757fb12f0">EyeStereo::Maze::g_pLightPosition</a></div><div class="ttdeci">ID3D10EffectVectorVariable * g_pLightPosition</div><div class="ttdef"><b>Definition:</b> Maze.hpp:31</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_maze_html_a402558b10387ab832133599a2d73a270"><div class="ttname"><a href="class_eye_stereo_1_1_maze.html#a402558b10387ab832133599a2d73a270">EyeStereo::Maze::initDepth</a></div><div class="ttdeci">float initDepth</div><div class="ttdef"><b>Definition:</b> Maze.hpp:50</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_maze_html_aeea202d3486e83b3199dd7c356774a88"><div class="ttname"><a href="class_eye_stereo_1_1_maze.html#aeea202d3486e83b3199dd7c356774a88">EyeStereo::Maze::pTech</a></div><div class="ttdeci">ID3D10EffectTechnique * pTech</div><div class="ttdef"><b>Definition:</b> Maze.hpp:20</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_maze_html_a2ad7e6e1230f281da47f55c0eca10cfe"><div class="ttname"><a href="class_eye_stereo_1_1_maze.html#a2ad7e6e1230f281da47f55c0eca10cfe">EyeStereo::Maze::RenderSubset</a></div><div class="ttdeci">void RenderSubset(UINT id, UINT iSubSet)</div><div class="ttdef"><b>Definition:</b> Maze.cpp:241</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_maze_html_a83d48cf3d83e2961eb3a5f0eeb77717d"><div class="ttname"><a href="class_eye_stereo_1_1_maze.html#a83d48cf3d83e2961eb3a5f0eeb77717d">EyeStereo::Maze::g_pAmbient</a></div><div class="ttdeci">ID3D10EffectVectorVariable * g_pAmbient</div><div class="ttdef"><b>Definition:</b> Maze.hpp:25</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_maze_html_a8de0395b627660b57616200524440f81"><div class="ttname"><a href="class_eye_stereo_1_1_maze.html#a8de0395b627660b57616200524440f81">EyeStereo::Maze::pd3dDevice</a></div><div class="ttdeci">ID3D10Device * pd3dDevice</div><div class="ttdef"><b>Definition:</b> Maze.hpp:18</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_maze_html_a5dfec03b99d86fa4def5d9fa402f10bc"><div class="ttname"><a href="class_eye_stereo_1_1_maze.html#a5dfec03b99d86fa4def5d9fa402f10bc">EyeStereo::Maze::bactive</a></div><div class="ttdeci">bool bactive</div><div class="ttdef"><b>Definition:</b> Maze.hpp:45</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_maze_html_aa6646484fabf22e55e37562df50d8acaa298bfae7783cbf0f1ed6203217f11a50"><div class="ttname"><a href="class_eye_stereo_1_1_maze.html#aa6646484fabf22e55e37562df50d8acaa298bfae7783cbf0f1ed6203217f11a50">EyeStereo::Maze::MAX_OBJECTS</a></div><div class="ttdef"><b>Definition:</b> Maze.hpp:58</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_maze_html"><div class="ttname"><a href="class_eye_stereo_1_1_maze.html">EyeStereo::Maze</a></div><div class="ttdef"><b>Definition:</b> Maze.hpp:14</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_maze_html_a6a556ebd26494301c4c67b06d26667f8"><div class="ttname"><a href="class_eye_stereo_1_1_maze.html#a6a556ebd26494301c4c67b06d26667f8">EyeStereo::Maze::g_pLightColor</a></div><div class="ttdeci">ID3D10EffectVectorVariable * g_pLightColor</div><div class="ttdef"><b>Definition:</b> Maze.hpp:30</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_maze_html_a4b9d8f80208c1ea015780efa88a4db56"><div class="ttname"><a href="class_eye_stereo_1_1_maze.html#a4b9d8f80208c1ea015780efa88a4db56">EyeStereo::Maze::g_brightness_right</a></div><div class="ttdeci">float g_brightness_right</div><div class="ttdef"><b>Definition:</b> Maze.hpp:66</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_maze_html_af6bfb27fc57c6a8c79e6331639b43c69"><div class="ttname"><a href="class_eye_stereo_1_1_maze.html#af6bfb27fc57c6a8c79e6331639b43c69">EyeStereo::Maze::pCamera</a></div><div class="ttdeci">CModelViewerCamera * pCamera</div><div class="ttdef"><b>Definition:</b> Maze.hpp:41</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_maze_html_afaf8312e473f4ecf1b3643c1be1361e5"><div class="ttname"><a href="class_eye_stereo_1_1_maze.html#afaf8312e473f4ecf1b3643c1be1361e5">EyeStereo::Maze::g_pTime</a></div><div class="ttdeci">ID3D10EffectScalarVariable * g_pTime</div><div class="ttdef"><b>Definition:</b> Maze.hpp:33</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_maze_html_a5578eb60c671210c0258f363f19b546a"><div class="ttname"><a href="class_eye_stereo_1_1_maze.html#a5578eb60c671210c0258f363f19b546a">EyeStereo::Maze::g_ptxDiffuseVariable</a></div><div class="ttdeci">ID3D10EffectShaderResourceVariable * g_ptxDiffuseVariable</div><div class="ttdef"><b>Definition:</b> Maze.hpp:24</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_maze_html_aae3c3ee698a0f4f10ac4c3c9944ab6e1"><div class="ttname"><a href="class_eye_stereo_1_1_maze.html#aae3c3ee698a0f4f10ac4c3c9944ab6e1">EyeStereo::Maze::eyePos</a></div><div class="ttdeci">D3DXVECTOR3 eyePos</div><div class="ttdef"><b>Definition:</b> Maze.hpp:47</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_maze_html_a91c2e6517f7e567c893e28a3188824fb"><div class="ttname"><a href="class_eye_stereo_1_1_maze.html#a91c2e6517f7e567c893e28a3188824fb">EyeStereo::Maze::g_pBrightness_left</a></div><div class="ttdeci">ID3D10EffectScalarVariable * g_pBrightness_left</div><div class="ttdef"><b>Definition:</b> Maze.hpp:63</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_maze_html_a4824b3c94ca355d2672ba1f5601db39c"><div class="ttname"><a href="class_eye_stereo_1_1_maze.html#a4824b3c94ca355d2672ba1f5601db39c">EyeStereo::Maze::pInputLayout</a></div><div class="ttdeci">ID3D10InputLayout * pInputLayout</div><div class="ttdef"><b>Definition:</b> Maze.hpp:21</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_maze_html_adbcc11dd48d5d53dbdc18fd86452eb68"><div class="ttname"><a href="class_eye_stereo_1_1_maze.html#adbcc11dd48d5d53dbdc18fd86452eb68">EyeStereo::Maze::g_pWorldViewProjection</a></div><div class="ttdeci">ID3D10EffectMatrixVariable * g_pWorldViewProjection</div><div class="ttdef"><b>Definition:</b> Maze.hpp:35</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_maze_html_a7d6445608dc303a806ced5af9c8342c9"><div class="ttname"><a href="class_eye_stereo_1_1_maze.html#a7d6445608dc303a806ced5af9c8342c9">EyeStereo::Maze::pSolidState</a></div><div class="ttdeci">ID3D10RasterizerState * pSolidState</div><div class="ttdef"><b>Definition:</b> Maze.hpp:54</div></div>
+<div class="ttc" id="_mesh_loader10_8h_html"><div class="ttname"><a href="_mesh_loader10_8h.html">MeshLoader10.h</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2014年 六月 27日 星期五 16:12:02 , 为 数字式立体视觉刺激系统使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.7
+</small></address>
+</body>
+</html>

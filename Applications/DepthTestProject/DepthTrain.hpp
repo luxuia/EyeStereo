@@ -1,12 +1,20 @@
 #ifndef __DEPTH_TEST__
 #define __DEPTH_TEST__
 
+/** @file
+	ç”¨äºŽæ·±åº¦æµ‹è¯•
+*/
+
 #include "Utility/PCH.h"
 #include "Stereo/StereoSetting.h"
 #include "Geometry/Light.h"
 #include "Helper/MeshLoader10.h"
 
 
+/**
+	@class DepthTrain
+
+*/
 namespace EyeStereo {
 
 	class DepthTrain {
@@ -58,9 +66,9 @@ namespace EyeStereo {
 		std::vector<D3DXVECTOR3>		g_ObjectResize;
 		CMeshLoader10					g_earthMesh;
 
-		ID3D10EffectScalarVariable*         g_pBrightness_left; // ×óÑÛ ÁÁ¶È
-		ID3D10EffectScalarVariable*         g_pBrightness_right; // ÓÒÑÛ ÁÁ¶È
-		//	ID3D10EffectScalarVariable*         g_pContrast; // HLSL ¶Ô±È¶È
+		ID3D10EffectScalarVariable*         g_pBrightness_left; ///< å·¦çœ¼äº®åº¦
+		ID3D10EffectScalarVariable*         g_pBrightness_right; ///< å³çœ¼äº®åº¦
+		//	ID3D10EffectScalarVariable*         g_pContrast; // HLSL
 		float g_brightness_left;
 		float g_brightness_right;
 		//	float g_contrast;
@@ -73,6 +81,11 @@ namespace EyeStereo {
 
 		void RenderSubset(UINT id, UINT iSubSet);
 
+
+
+		/**
+			@brief æ ¹æ®é¼ æ ‡åœ¨çª—å£ä¸Šçš„åæ ‡ç¡®å®šé€‰ä¸­çš„ç‰©ä½“
+		*/
 		void pick(int sx, int sy);
 
 		void HandMessages(UINT uMsg, LPARAM lParam);

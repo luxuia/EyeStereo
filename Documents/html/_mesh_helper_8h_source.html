@@ -1,0 +1,203 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.7"/>
+<title>数字式立体视觉刺激系统: E:/Project/final/EyeStereo/Source/Helper/MeshHelper.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">数字式立体视觉刺激系统
+   &#160;<span id="projectnumber">1.0.1</span>
+   </div>
+   <div id="projectbrief">Digital Stereo System</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.7 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="pages.html"><span>相关页面</span></a></li>
+      <li><a href="namespaces.html"><span>命名空间</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
+    </ul>
+  </div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_74389ed8173ad57b461b9d623a1f3867.html">Source</a></li><li class="navelem"><a class="el" href="dir_f18351aed2c2400c459377e19e71c488.html">Helper</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">MeshHelper.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_mesh_helper_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef __MESH_HELPER__</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define __MESH_HELPER__</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_log_8h.html">Utility/Log.h</a>&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
+<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="class_mesh_helper.html">    6</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_mesh_helper.html">MeshHelper</a> {</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">public</span> :</div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="class_mesh_helper.html#a87f16c1b68676fb9720bb92fd427da01">    8</a></span>&#160;    <a class="code" href="class_mesh_helper.html#a87f16c1b68676fb9720bb92fd427da01">MeshHelper</a>(ID3D10Device* &amp;pDevice, ID3D10Effect*&amp; <a class="code" href="class_mesh_helper.html#a14550de1c50b65aa31275714d70b93f8">pEffect</a>,<span class="keyword">const</span> WCHAR*  fxFile):<a class="code" href="class_mesh_helper.html#a3924a078121e7875cce4b450c53c61df">pd3dDevice</a>(pDevice), pEffect(pEffect) {</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;        HRESULT hr;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;        V (D3DX10CreateEffectFromFile( fxFile, NULL, NULL, <span class="stringliteral">&quot;fx_4_0&quot;</span>, </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;            D3D10_SHADER_ENABLE_STRICTNESS | D3D10_SHADER_DEBUG, 0,</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;            pDevice, NULL, NULL, &amp;pEffect, NULL, NULL ) );</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        <a class="code" href="class_mesh_helper.html#a13a3f8e706814c3b9aedad2bc602febf">pTech</a> = pEffect-&gt;GetTechniqueByName(<span class="stringliteral">&quot;NoSpecular&quot;</span>);</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        <a class="code" href="class_mesh_helper.html#a2bf7baa92278376f6f4c6351c98bb93b">g_ptxDiffuseVariable</a> = pEffect-&gt;GetVariableByName( <span class="stringliteral">&quot;g_MeshTexture&quot;</span> )-&gt;AsShaderResource();    </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        <a class="code" href="class_mesh_helper.html#a58a97f1026a5ca180163111b5ed94235">g_pAmbient</a> = pEffect-&gt;GetVariableByName( <span class="stringliteral">&quot;g_vMaterialAmbient&quot;</span> )-&gt;AsVector();</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <a class="code" href="class_mesh_helper.html#a4c4d6a460f12f336584f231c229de2a1">g_pDiffuse</a> = pEffect-&gt;GetVariableByName( <span class="stringliteral">&quot;g_vMaterialDiffuse&quot;</span> )-&gt;AsVector();</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <a class="code" href="class_mesh_helper.html#a263077b8ca19ed3e11910c9b262cad10">g_pSpecular</a> = pEffect-&gt;GetVariableByName( <span class="stringliteral">&quot;g_vMaterialSpecular&quot;</span> )-&gt;AsVector();</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <a class="code" href="class_mesh_helper.html#a5148960e6e3a2cf775f3b7c903585ff1">g_pOpacity</a> = pEffect-&gt;GetVariableByName( <span class="stringliteral">&quot;g_fMaterialAlpha&quot;</span> )-&gt;AsScalar();</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <a class="code" href="class_mesh_helper.html#acff5baec3e3a3ec75b8a5cb519f5ed36">g_pSpecularPower</a> = pEffect-&gt;GetVariableByName( <span class="stringliteral">&quot;g_nMaterialShininess&quot;</span> )-&gt;AsScalar();</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <a class="code" href="class_mesh_helper.html#af2e4f0d0bbf9ba36fb10afd26dacf3da">g_pLightColor</a> = pEffect-&gt;GetVariableByName( <span class="stringliteral">&quot;g_vLightColor&quot;</span> )-&gt;AsVector();</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <a class="code" href="class_mesh_helper.html#a36c481915392650d41a3105b9299aa06">g_pLightPosition</a> = pEffect-&gt;GetVariableByName( <span class="stringliteral">&quot;g_vLightPosition&quot;</span> )-&gt;AsVector();</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <a class="code" href="class_mesh_helper.html#a39a1a2d44445d42315abd7613ce63984">g_pCameraPosition</a> = pEffect-&gt;GetVariableByName( <span class="stringliteral">&quot;g_vCameraPosition&quot;</span> )-&gt;AsVector();</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <a class="code" href="class_mesh_helper.html#a99fb95c57b30b400d3db920bb09aac92">g_pTime</a> = pEffect-&gt;GetVariableByName( <span class="stringliteral">&quot;g_fTime&quot;</span> )-&gt;AsScalar();</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <a class="code" href="class_mesh_helper.html#adfcee9c32ed627c8030b6271c9a46a87">g_pWorld</a> = pEffect-&gt;GetVariableByName( <span class="stringliteral">&quot;g_mWorld&quot;</span> )-&gt;AsMatrix();</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <a class="code" href="class_mesh_helper.html#a95b9da38cc6c0bde25d829f6acf4b550">g_pWorldViewProjection</a> = pEffect-&gt;GetVariableByName( <span class="stringliteral">&quot;g_mWorldViewProjection&quot;</span> )-&gt;AsMatrix();</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    }</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="class_mesh_helper.html#a3f0a18e32d73a0ede44d36e3a2fa4c72">   30</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_mesh_helper.html#a3f0a18e32d73a0ede44d36e3a2fa4c72">CreateMesh</a>(<a class="code" href="class_c_mesh_loader10.html">CMeshLoader10</a>* mesh, <span class="keyword">const</span> WCHAR*   meshFile) {</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        mesh-&gt;<a class="code" href="class_c_mesh_loader10.html#ae680b5b67c2a14bee8038fd95af55d01">Create</a>(<a class="code" href="class_mesh_helper.html#a3924a078121e7875cce4b450c53c61df">pd3dDevice</a>, meshFile);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <span class="comment">//mesh-&gt;GetMesh()-&gt;GenerateGSAdjacency();</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        wprintf(L<span class="stringliteral">&quot;Loading Mesh: %s\n&quot;</span>, meshFile);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <span class="keywordflow">for</span> (UINT i = 0; i &lt; mesh-&gt;<a class="code" href="class_c_mesh_loader10.html#a5d1382f7d3fbdd419bc12079b693d0d0">GetNumMaterials</a>(); ++i) {</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            <a class="code" href="struct_material.html">Material</a>* pMaterial = mesh-&gt;<a class="code" href="class_c_mesh_loader10.html#a08690b4715603d5bd9924362a1c5f983">GetMaterial</a>( i );</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            <span class="keyword">const</span> <span class="keywordtype">char</span>* strTechnique = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;            <span class="keywordflow">if</span>( pMaterial-&gt;<a class="code" href="struct_material.html#a5d6193359d95914e35774c7dd9dbb21c">pTextureRV10</a> &amp;&amp; pMaterial-&gt;<a class="code" href="struct_material.html#aa0f809e1462c732fec8e86fe2fa5bb2e">bSpecular</a> )</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                strTechnique = <span class="stringliteral">&quot;TexturedSpecular&quot;</span>;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span>( pMaterial-&gt;<a class="code" href="struct_material.html#a5d6193359d95914e35774c7dd9dbb21c">pTextureRV10</a> &amp;&amp; !pMaterial-&gt;<a class="code" href="struct_material.html#aa0f809e1462c732fec8e86fe2fa5bb2e">bSpecular</a> )</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;                strTechnique = <span class="stringliteral">&quot;TexturedNoSpecular&quot;</span>;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span>( !pMaterial-&gt;<a class="code" href="struct_material.html#a5d6193359d95914e35774c7dd9dbb21c">pTextureRV10</a> &amp;&amp; pMaterial-&gt;<a class="code" href="struct_material.html#aa0f809e1462c732fec8e86fe2fa5bb2e">bSpecular</a> )</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;                strTechnique = <span class="stringliteral">&quot;Specular&quot;</span>;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span>( !pMaterial-&gt;<a class="code" href="struct_material.html#a5d6193359d95914e35774c7dd9dbb21c">pTextureRV10</a> &amp;&amp; !pMaterial-&gt;<a class="code" href="struct_material.html#aa0f809e1462c732fec8e86fe2fa5bb2e">bSpecular</a> )</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                strTechnique = <span class="stringliteral">&quot;NoSpecular&quot;</span>;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            pMaterial-&gt;<a class="code" href="struct_material.html#add43e0bc4d075b3de06084a976fc7a7f">pTechnique</a> = <a class="code" href="class_mesh_helper.html#a14550de1c50b65aa31275714d70b93f8">pEffect</a>-&gt;GetTechniqueByName( strTechnique );</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        }</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    }</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="class_mesh_helper.html#ab4c752c92b209be7d2b1cd65aa7063d0">   52</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_mesh_helper.html#ab4c752c92b209be7d2b1cd65aa7063d0">RenderMesh</a>(<a class="code" href="class_c_mesh_loader10.html">CMeshLoader10</a>*  mesh, D3DXMATRIX    &amp;world, D3DXMATRIX &amp;WVP, <span class="keywordtype">float</span> fTime) {</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        HRESULT hr;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        V( <a class="code" href="class_mesh_helper.html#a95b9da38cc6c0bde25d829f6acf4b550">g_pWorldViewProjection</a>-&gt;SetMatrix( (<span class="keywordtype">float</span>*)&amp;WVP ) );</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        V( <a class="code" href="class_mesh_helper.html#adfcee9c32ed627c8030b6271c9a46a87">g_pWorld</a>-&gt;SetMatrix( (<span class="keywordtype">float</span>*)&amp;world ) );</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        V( <a class="code" href="class_mesh_helper.html#a99fb95c57b30b400d3db920bb09aac92">g_pTime</a>-&gt;SetFloat( (<span class="keywordtype">float</span>)fTime ) );</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <span class="keywordflow">for</span> (UINT iSubSet = 0; iSubSet &lt; mesh-&gt;<a class="code" href="class_c_mesh_loader10.html#a549441682715b68675fc6aa6b0bfc60c">GetNumSubsets</a>(); ++iSubSet) {</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            <a class="code" href="struct_material.html">Material</a> *pMaterial = mesh-&gt;<a class="code" href="class_c_mesh_loader10.html#a858397739b3084faeaffb5a12442645f">GetSubsetMaterial</a>(iSubSet);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            V( <a class="code" href="class_mesh_helper.html#a58a97f1026a5ca180163111b5ed94235">g_pAmbient</a>-&gt;SetFloatVector( pMaterial-&gt;<a class="code" href="struct_material.html#a8fb32bca6b3f151282215b5f746138f3">vAmbient</a> ) );</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            V( <a class="code" href="class_mesh_helper.html#a4c4d6a460f12f336584f231c229de2a1">g_pDiffuse</a>-&gt;SetFloatVector( pMaterial-&gt;<a class="code" href="struct_material.html#ab6a621b8ee1e055f0eaa65c6ae87f32b">vDiffuse</a> ) );</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            V( <a class="code" href="class_mesh_helper.html#a263077b8ca19ed3e11910c9b262cad10">g_pSpecular</a>-&gt;SetFloatVector( pMaterial-&gt;<a class="code" href="struct_material.html#a7b394e6e8e47e31322048b1f4890b1c3">vSpecular</a> ) );</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            V( <a class="code" href="class_mesh_helper.html#a5148960e6e3a2cf775f3b7c903585ff1">g_pOpacity</a>-&gt;SetFloat( pMaterial-&gt;<a class="code" href="struct_material.html#a088560fb820c8872cb1ff3ba369c94c0">fAlpha</a> ) );</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            V( <a class="code" href="class_mesh_helper.html#acff5baec3e3a3ec75b8a5cb519f5ed36">g_pSpecularPower</a>-&gt;SetInt( pMaterial-&gt;<a class="code" href="struct_material.html#a925cf5d7b5b5a97d66bb4dff0b2dd417">nShininess</a> ) );</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            <span class="keywordflow">if</span> ( !IsErrorResource( pMaterial-&gt;<a class="code" href="struct_material.html#a5d6193359d95914e35774c7dd9dbb21c">pTextureRV10</a> ) )</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                <a class="code" href="class_mesh_helper.html#a2bf7baa92278376f6f4c6351c98bb93b">g_ptxDiffuseVariable</a>-&gt;SetResource( pMaterial-&gt;<a class="code" href="struct_material.html#a5d6193359d95914e35774c7dd9dbb21c">pTextureRV10</a> );</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            D3D10_TECHNIQUE_DESC techDesc;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            pMaterial-&gt;<a class="code" href="struct_material.html#add43e0bc4d075b3de06084a976fc7a7f">pTechnique</a>-&gt;GetDesc(&amp;techDesc);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            <span class="keywordflow">for</span> (UINT p = 0; p &lt; techDesc.Passes; ++p) {</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                pMaterial-&gt;<a class="code" href="struct_material.html#add43e0bc4d075b3de06084a976fc7a7f">pTechnique</a>-&gt;GetPassByIndex(p)-&gt;Apply(0);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;                mesh-&gt;<a class="code" href="class_c_mesh_loader10.html#a4c22d021f1ae9abe14ebabe869147714">GetMesh</a>()-&gt;DrawSubset(iSubSet);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            }</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        }</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    }</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
+<div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="class_mesh_helper.html#a13a3f8e706814c3b9aedad2bc602febf">   82</a></span>&#160;    ID3D10EffectTechnique*              <a class="code" href="class_mesh_helper.html#a13a3f8e706814c3b9aedad2bc602febf">pTech</a>;</div>
+<div class="line"><a name="l00083"></a><span class="lineno"><a class="line" href="class_mesh_helper.html#a3924a078121e7875cce4b450c53c61df">   83</a></span>&#160;    ID3D10Device*                       &amp;<a class="code" href="class_mesh_helper.html#a3924a078121e7875cce4b450c53c61df">pd3dDevice</a>;</div>
+<div class="line"><a name="l00084"></a><span class="lineno"><a class="line" href="class_mesh_helper.html#a14550de1c50b65aa31275714d70b93f8">   84</a></span>&#160;    ID3D10Effect*                       &amp;<a class="code" href="class_mesh_helper.html#a14550de1c50b65aa31275714d70b93f8">pEffect</a>;</div>
+<div class="line"><a name="l00085"></a><span class="lineno"><a class="line" href="class_mesh_helper.html#a2bf7baa92278376f6f4c6351c98bb93b">   85</a></span>&#160;    ID3D10EffectShaderResourceVariable* <a class="code" href="class_mesh_helper.html#a2bf7baa92278376f6f4c6351c98bb93b">g_ptxDiffuseVariable</a>;</div>
+<div class="line"><a name="l00086"></a><span class="lineno"><a class="line" href="class_mesh_helper.html#a58a97f1026a5ca180163111b5ed94235">   86</a></span>&#160;    ID3D10EffectVectorVariable*         <a class="code" href="class_mesh_helper.html#a58a97f1026a5ca180163111b5ed94235">g_pAmbient</a>;</div>
+<div class="line"><a name="l00087"></a><span class="lineno"><a class="line" href="class_mesh_helper.html#a4c4d6a460f12f336584f231c229de2a1">   87</a></span>&#160;    ID3D10EffectVectorVariable*         <a class="code" href="class_mesh_helper.html#a4c4d6a460f12f336584f231c229de2a1">g_pDiffuse</a>;</div>
+<div class="line"><a name="l00088"></a><span class="lineno"><a class="line" href="class_mesh_helper.html#a263077b8ca19ed3e11910c9b262cad10">   88</a></span>&#160;    ID3D10EffectVectorVariable*         <a class="code" href="class_mesh_helper.html#a263077b8ca19ed3e11910c9b262cad10">g_pSpecular</a>;</div>
+<div class="line"><a name="l00089"></a><span class="lineno"><a class="line" href="class_mesh_helper.html#a5148960e6e3a2cf775f3b7c903585ff1">   89</a></span>&#160;    ID3D10EffectScalarVariable*         <a class="code" href="class_mesh_helper.html#a5148960e6e3a2cf775f3b7c903585ff1">g_pOpacity</a>;</div>
+<div class="line"><a name="l00090"></a><span class="lineno"><a class="line" href="class_mesh_helper.html#acff5baec3e3a3ec75b8a5cb519f5ed36">   90</a></span>&#160;    ID3D10EffectScalarVariable*         <a class="code" href="class_mesh_helper.html#acff5baec3e3a3ec75b8a5cb519f5ed36">g_pSpecularPower</a>;</div>
+<div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="class_mesh_helper.html#af2e4f0d0bbf9ba36fb10afd26dacf3da">   91</a></span>&#160;    ID3D10EffectVectorVariable*         <a class="code" href="class_mesh_helper.html#af2e4f0d0bbf9ba36fb10afd26dacf3da">g_pLightColor</a>;</div>
+<div class="line"><a name="l00092"></a><span class="lineno"><a class="line" href="class_mesh_helper.html#a36c481915392650d41a3105b9299aa06">   92</a></span>&#160;    ID3D10EffectVectorVariable*         <a class="code" href="class_mesh_helper.html#a36c481915392650d41a3105b9299aa06">g_pLightPosition</a>;</div>
+<div class="line"><a name="l00093"></a><span class="lineno"><a class="line" href="class_mesh_helper.html#a39a1a2d44445d42315abd7613ce63984">   93</a></span>&#160;    ID3D10EffectVectorVariable*         <a class="code" href="class_mesh_helper.html#a39a1a2d44445d42315abd7613ce63984">g_pCameraPosition</a>;</div>
+<div class="line"><a name="l00094"></a><span class="lineno"><a class="line" href="class_mesh_helper.html#a99fb95c57b30b400d3db920bb09aac92">   94</a></span>&#160;    ID3D10EffectScalarVariable*         <a class="code" href="class_mesh_helper.html#a99fb95c57b30b400d3db920bb09aac92">g_pTime</a>;</div>
+<div class="line"><a name="l00095"></a><span class="lineno"><a class="line" href="class_mesh_helper.html#adfcee9c32ed627c8030b6271c9a46a87">   95</a></span>&#160;    ID3D10EffectMatrixVariable*         <a class="code" href="class_mesh_helper.html#adfcee9c32ed627c8030b6271c9a46a87">g_pWorld</a>;</div>
+<div class="line"><a name="l00096"></a><span class="lineno"><a class="line" href="class_mesh_helper.html#a95b9da38cc6c0bde25d829f6acf4b550">   96</a></span>&#160;    ID3D10EffectMatrixVariable*         <a class="code" href="class_mesh_helper.html#a95b9da38cc6c0bde25d829f6acf4b550">g_pWorldViewProjection</a>;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;};</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="preprocessor">#endif //__MESH_HELPER__</span></div>
+<div class="ttc" id="struct_material_html_add43e0bc4d075b3de06084a976fc7a7f"><div class="ttname"><a href="struct_material.html#add43e0bc4d075b3de06084a976fc7a7f">Material::pTechnique</a></div><div class="ttdeci">ID3D10EffectTechnique * pTechnique</div><div class="ttdef"><b>Definition:</b> MeshLoader10.h:55</div></div>
+<div class="ttc" id="class_mesh_helper_html_a39a1a2d44445d42315abd7613ce63984"><div class="ttname"><a href="class_mesh_helper.html#a39a1a2d44445d42315abd7613ce63984">MeshHelper::g_pCameraPosition</a></div><div class="ttdeci">ID3D10EffectVectorVariable * g_pCameraPosition</div><div class="ttdef"><b>Definition:</b> MeshHelper.h:93</div></div>
+<div class="ttc" id="class_c_mesh_loader10_html_a08690b4715603d5bd9924362a1c5f983"><div class="ttname"><a href="class_c_mesh_loader10.html#a08690b4715603d5bd9924362a1c5f983">CMeshLoader10::GetMaterial</a></div><div class="ttdeci">Material * GetMaterial(UINT iMaterial)</div><div class="ttdef"><b>Definition:</b> MeshLoader10.h:78</div></div>
+<div class="ttc" id="class_mesh_helper_html_a263077b8ca19ed3e11910c9b262cad10"><div class="ttname"><a href="class_mesh_helper.html#a263077b8ca19ed3e11910c9b262cad10">MeshHelper::g_pSpecular</a></div><div class="ttdeci">ID3D10EffectVectorVariable * g_pSpecular</div><div class="ttdef"><b>Definition:</b> MeshHelper.h:88</div></div>
+<div class="ttc" id="class_c_mesh_loader10_html"><div class="ttname"><a href="class_c_mesh_loader10.html">CMeshLoader10</a></div><div class="ttdef"><b>Definition:</b> MeshLoader10.h:59</div></div>
+<div class="ttc" id="class_c_mesh_loader10_html_a858397739b3084faeaffb5a12442645f"><div class="ttname"><a href="class_c_mesh_loader10.html#a858397739b3084faeaffb5a12442645f">CMeshLoader10::GetSubsetMaterial</a></div><div class="ttdeci">Material * GetSubsetMaterial(UINT iSubset)</div><div class="ttdef"><b>Definition:</b> MeshLoader10.h:87</div></div>
+<div class="ttc" id="class_mesh_helper_html_a13a3f8e706814c3b9aedad2bc602febf"><div class="ttname"><a href="class_mesh_helper.html#a13a3f8e706814c3b9aedad2bc602febf">MeshHelper::pTech</a></div><div class="ttdeci">ID3D10EffectTechnique * pTech</div><div class="ttdef"><b>Definition:</b> MeshHelper.h:82</div></div>
+<div class="ttc" id="class_mesh_helper_html_ab4c752c92b209be7d2b1cd65aa7063d0"><div class="ttname"><a href="class_mesh_helper.html#ab4c752c92b209be7d2b1cd65aa7063d0">MeshHelper::RenderMesh</a></div><div class="ttdeci">void RenderMesh(CMeshLoader10 *mesh, D3DXMATRIX &amp;world, D3DXMATRIX &amp;WVP, float fTime)</div><div class="ttdef"><b>Definition:</b> MeshHelper.h:52</div></div>
+<div class="ttc" id="class_c_mesh_loader10_html_a549441682715b68675fc6aa6b0bfc60c"><div class="ttname"><a href="class_c_mesh_loader10.html#a549441682715b68675fc6aa6b0bfc60c">CMeshLoader10::GetNumSubsets</a></div><div class="ttdeci">UINT GetNumSubsets()</div><div class="ttdef"><b>Definition:</b> MeshLoader10.h:83</div></div>
+<div class="ttc" id="struct_material_html_a7b394e6e8e47e31322048b1f4890b1c3"><div class="ttname"><a href="struct_material.html#a7b394e6e8e47e31322048b1f4890b1c3">Material::vSpecular</a></div><div class="ttdeci">D3DXVECTOR3 vSpecular</div><div class="ttdef"><b>Definition:</b> MeshLoader10.h:46</div></div>
+<div class="ttc" id="class_mesh_helper_html_a58a97f1026a5ca180163111b5ed94235"><div class="ttname"><a href="class_mesh_helper.html#a58a97f1026a5ca180163111b5ed94235">MeshHelper::g_pAmbient</a></div><div class="ttdeci">ID3D10EffectVectorVariable * g_pAmbient</div><div class="ttdef"><b>Definition:</b> MeshHelper.h:86</div></div>
+<div class="ttc" id="class_mesh_helper_html_adfcee9c32ed627c8030b6271c9a46a87"><div class="ttname"><a href="class_mesh_helper.html#adfcee9c32ed627c8030b6271c9a46a87">MeshHelper::g_pWorld</a></div><div class="ttdeci">ID3D10EffectMatrixVariable * g_pWorld</div><div class="ttdef"><b>Definition:</b> MeshHelper.h:95</div></div>
+<div class="ttc" id="class_c_mesh_loader10_html_a4c22d021f1ae9abe14ebabe869147714"><div class="ttname"><a href="class_c_mesh_loader10.html#a4c22d021f1ae9abe14ebabe869147714">CMeshLoader10::GetMesh</a></div><div class="ttdeci">ID3DX10Mesh * GetMesh()</div><div class="ttdef"><b>Definition:</b> MeshLoader10.h:92</div></div>
+<div class="ttc" id="class_mesh_helper_html_a14550de1c50b65aa31275714d70b93f8"><div class="ttname"><a href="class_mesh_helper.html#a14550de1c50b65aa31275714d70b93f8">MeshHelper::pEffect</a></div><div class="ttdeci">ID3D10Effect *&amp; pEffect</div><div class="ttdef"><b>Definition:</b> MeshHelper.h:84</div></div>
+<div class="ttc" id="class_mesh_helper_html_a2bf7baa92278376f6f4c6351c98bb93b"><div class="ttname"><a href="class_mesh_helper.html#a2bf7baa92278376f6f4c6351c98bb93b">MeshHelper::g_ptxDiffuseVariable</a></div><div class="ttdeci">ID3D10EffectShaderResourceVariable * g_ptxDiffuseVariable</div><div class="ttdef"><b>Definition:</b> MeshHelper.h:85</div></div>
+<div class="ttc" id="class_mesh_helper_html_a95b9da38cc6c0bde25d829f6acf4b550"><div class="ttname"><a href="class_mesh_helper.html#a95b9da38cc6c0bde25d829f6acf4b550">MeshHelper::g_pWorldViewProjection</a></div><div class="ttdeci">ID3D10EffectMatrixVariable * g_pWorldViewProjection</div><div class="ttdef"><b>Definition:</b> MeshHelper.h:96</div></div>
+<div class="ttc" id="struct_material_html"><div class="ttname"><a href="struct_material.html">Material</a></div><div class="ttdef"><b>Definition:</b> MeshLoader10.h:40</div></div>
+<div class="ttc" id="class_mesh_helper_html_acff5baec3e3a3ec75b8a5cb519f5ed36"><div class="ttname"><a href="class_mesh_helper.html#acff5baec3e3a3ec75b8a5cb519f5ed36">MeshHelper::g_pSpecularPower</a></div><div class="ttdeci">ID3D10EffectScalarVariable * g_pSpecularPower</div><div class="ttdef"><b>Definition:</b> MeshHelper.h:90</div></div>
+<div class="ttc" id="_log_8h_html"><div class="ttname"><a href="_log_8h.html">Log.h</a></div></div>
+<div class="ttc" id="struct_material_html_aa0f809e1462c732fec8e86fe2fa5bb2e"><div class="ttname"><a href="struct_material.html#aa0f809e1462c732fec8e86fe2fa5bb2e">Material::bSpecular</a></div><div class="ttdeci">bool bSpecular</div><div class="ttdef"><b>Definition:</b> MeshLoader10.h:51</div></div>
+<div class="ttc" id="class_c_mesh_loader10_html_ae680b5b67c2a14bee8038fd95af55d01"><div class="ttname"><a href="class_c_mesh_loader10.html#ae680b5b67c2a14bee8038fd95af55d01">CMeshLoader10::Create</a></div><div class="ttdeci">HRESULT Create(ID3D10Device *pd3dDevice, const WCHAR *strFilename)</div><div class="ttdef"><b>Definition:</b> MeshLoader10.cpp:83</div></div>
+<div class="ttc" id="struct_material_html_a8fb32bca6b3f151282215b5f746138f3"><div class="ttname"><a href="struct_material.html#a8fb32bca6b3f151282215b5f746138f3">Material::vAmbient</a></div><div class="ttdeci">D3DXVECTOR3 vAmbient</div><div class="ttdef"><b>Definition:</b> MeshLoader10.h:44</div></div>
+<div class="ttc" id="class_mesh_helper_html_a3924a078121e7875cce4b450c53c61df"><div class="ttname"><a href="class_mesh_helper.html#a3924a078121e7875cce4b450c53c61df">MeshHelper::pd3dDevice</a></div><div class="ttdeci">ID3D10Device *&amp; pd3dDevice</div><div class="ttdef"><b>Definition:</b> MeshHelper.h:83</div></div>
+<div class="ttc" id="struct_material_html_a088560fb820c8872cb1ff3ba369c94c0"><div class="ttname"><a href="struct_material.html#a088560fb820c8872cb1ff3ba369c94c0">Material::fAlpha</a></div><div class="ttdeci">float fAlpha</div><div class="ttdef"><b>Definition:</b> MeshLoader10.h:49</div></div>
+<div class="ttc" id="class_mesh_helper_html_a4c4d6a460f12f336584f231c229de2a1"><div class="ttname"><a href="class_mesh_helper.html#a4c4d6a460f12f336584f231c229de2a1">MeshHelper::g_pDiffuse</a></div><div class="ttdeci">ID3D10EffectVectorVariable * g_pDiffuse</div><div class="ttdef"><b>Definition:</b> MeshHelper.h:87</div></div>
+<div class="ttc" id="class_mesh_helper_html_a5148960e6e3a2cf775f3b7c903585ff1"><div class="ttname"><a href="class_mesh_helper.html#a5148960e6e3a2cf775f3b7c903585ff1">MeshHelper::g_pOpacity</a></div><div class="ttdeci">ID3D10EffectScalarVariable * g_pOpacity</div><div class="ttdef"><b>Definition:</b> MeshHelper.h:89</div></div>
+<div class="ttc" id="struct_material_html_ab6a621b8ee1e055f0eaa65c6ae87f32b"><div class="ttname"><a href="struct_material.html#ab6a621b8ee1e055f0eaa65c6ae87f32b">Material::vDiffuse</a></div><div class="ttdeci">D3DXVECTOR3 vDiffuse</div><div class="ttdef"><b>Definition:</b> MeshLoader10.h:45</div></div>
+<div class="ttc" id="class_mesh_helper_html_a87f16c1b68676fb9720bb92fd427da01"><div class="ttname"><a href="class_mesh_helper.html#a87f16c1b68676fb9720bb92fd427da01">MeshHelper::MeshHelper</a></div><div class="ttdeci">MeshHelper(ID3D10Device *&amp;pDevice, ID3D10Effect *&amp;pEffect, const WCHAR *fxFile)</div><div class="ttdef"><b>Definition:</b> MeshHelper.h:8</div></div>
+<div class="ttc" id="class_mesh_helper_html_a3f0a18e32d73a0ede44d36e3a2fa4c72"><div class="ttname"><a href="class_mesh_helper.html#a3f0a18e32d73a0ede44d36e3a2fa4c72">MeshHelper::CreateMesh</a></div><div class="ttdeci">void CreateMesh(CMeshLoader10 *mesh, const WCHAR *meshFile)</div><div class="ttdef"><b>Definition:</b> MeshHelper.h:30</div></div>
+<div class="ttc" id="class_c_mesh_loader10_html_a5d1382f7d3fbdd419bc12079b693d0d0"><div class="ttname"><a href="class_c_mesh_loader10.html#a5d1382f7d3fbdd419bc12079b693d0d0">CMeshLoader10::GetNumMaterials</a></div><div class="ttdeci">UINT GetNumMaterials() const </div><div class="ttdef"><b>Definition:</b> MeshLoader10.h:74</div></div>
+<div class="ttc" id="class_mesh_helper_html_af2e4f0d0bbf9ba36fb10afd26dacf3da"><div class="ttname"><a href="class_mesh_helper.html#af2e4f0d0bbf9ba36fb10afd26dacf3da">MeshHelper::g_pLightColor</a></div><div class="ttdeci">ID3D10EffectVectorVariable * g_pLightColor</div><div class="ttdef"><b>Definition:</b> MeshHelper.h:91</div></div>
+<div class="ttc" id="class_mesh_helper_html_a36c481915392650d41a3105b9299aa06"><div class="ttname"><a href="class_mesh_helper.html#a36c481915392650d41a3105b9299aa06">MeshHelper::g_pLightPosition</a></div><div class="ttdeci">ID3D10EffectVectorVariable * g_pLightPosition</div><div class="ttdef"><b>Definition:</b> MeshHelper.h:92</div></div>
+<div class="ttc" id="struct_material_html_a5d6193359d95914e35774c7dd9dbb21c"><div class="ttname"><a href="struct_material.html#a5d6193359d95914e35774c7dd9dbb21c">Material::pTextureRV10</a></div><div class="ttdeci">ID3D10ShaderResourceView * pTextureRV10</div><div class="ttdef"><b>Definition:</b> MeshLoader10.h:54</div></div>
+<div class="ttc" id="struct_material_html_a925cf5d7b5b5a97d66bb4dff0b2dd417"><div class="ttname"><a href="struct_material.html#a925cf5d7b5b5a97d66bb4dff0b2dd417">Material::nShininess</a></div><div class="ttdeci">int nShininess</div><div class="ttdef"><b>Definition:</b> MeshLoader10.h:48</div></div>
+<div class="ttc" id="class_mesh_helper_html"><div class="ttname"><a href="class_mesh_helper.html">MeshHelper</a></div><div class="ttdef"><b>Definition:</b> MeshHelper.h:6</div></div>
+<div class="ttc" id="class_mesh_helper_html_a99fb95c57b30b400d3db920bb09aac92"><div class="ttname"><a href="class_mesh_helper.html#a99fb95c57b30b400d3db920bb09aac92">MeshHelper::g_pTime</a></div><div class="ttdeci">ID3D10EffectScalarVariable * g_pTime</div><div class="ttdef"><b>Definition:</b> MeshHelper.h:94</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2014年 六月 27日 星期五 16:12:02 , 为 数字式立体视觉刺激系统使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.7
+</small></address>
+</body>
+</html>

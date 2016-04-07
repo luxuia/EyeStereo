@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.7"/>
+<title>数字式立体视觉刺激系统: G:/交接/EyeStereo/Source/Geometry/DiffSpecularBall.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">数字式立体视觉刺激系统
+   &#160;<span id="projectnumber">1.0.1</span>
+   </div>
+   <div id="projectbrief">Digital Stereo System</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.7 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="pages.html"><span>相关页面</span></a></li>
+      <li><a href="modules.html"><span>模块</span></a></li>
+      <li><a href="namespaces.html"><span>命名空间</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
+    </ul>
+  </div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_74389ed8173ad57b461b9d623a1f3867.html">Source</a></li><li class="navelem"><a class="el" href="dir_985b62d4e26a26570b9333149bab298a.html">Geometry</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">DiffSpecularBall.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_diff_specular_ball_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef __BALL_H__</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define __BALL_H__</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;Sphere.hpp&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">namespace </span>EyeStereo{</div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_ball.html">    8</a></span>&#160;    <span class="keyword">class </span><a class="code" href="class_eye_stereo_1_1_ball.html">Ball</a> : <span class="keyword">public</span> Sphere {</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_ball.html#a4ec6c71c64411107482109b6e268064c">   10</a></span>&#160;        D3DXVECTOR3 <a class="code" href="class_eye_stereo_1_1_ball.html#a4ec6c71c64411107482109b6e268064c">pos</a>;</div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_ball.html#a1816f71ecfb26dd05d5514bc4b40b2f4">   11</a></span>&#160;        <span class="keywordtype">float</span> <a class="code" href="class_eye_stereo_1_1_ball.html#a1816f71ecfb26dd05d5514bc4b40b2f4">r</a>;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_ball.html#aa90965d27d9901d66f696ab281f4411a">   13</a></span>&#160;        D3DXVECTOR3 <a class="code" href="class_eye_stereo_1_1_ball.html#aa90965d27d9901d66f696ab281f4411a">v</a>;</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_ball.html#a61e00d9f24529ebea586ca6d733b9dcb">   14</a></span>&#160;        <a class="code" href="class_eye_stereo_1_1_ball.html#a61e00d9f24529ebea586ca6d733b9dcb">Ball</a>() {</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;            <a class="code" href="class_eye_stereo_1_1_ball.html#a4ec6c71c64411107482109b6e268064c">pos</a>.x = <a class="code" href="class_eye_stereo_1_1_ball.html#a4ec6c71c64411107482109b6e268064c">pos</a>.y = <a class="code" href="class_eye_stereo_1_1_ball.html#a4ec6c71c64411107482109b6e268064c">pos</a>.z = 0;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        }</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    };</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;}</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#endif //__BALL_H__</span></div>
+<div class="ttc" id="class_eye_stereo_1_1_ball_html_aa90965d27d9901d66f696ab281f4411a"><div class="ttname"><a href="class_eye_stereo_1_1_ball.html#aa90965d27d9901d66f696ab281f4411a">EyeStereo::Ball::v</a></div><div class="ttdeci">D3DXVECTOR3 v</div><div class="ttdef"><b>Definition:</b> DiffSpecularBall.h:13</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_ball_html_a1816f71ecfb26dd05d5514bc4b40b2f4"><div class="ttname"><a href="class_eye_stereo_1_1_ball.html#a1816f71ecfb26dd05d5514bc4b40b2f4">EyeStereo::Ball::r</a></div><div class="ttdeci">float r</div><div class="ttdef"><b>Definition:</b> DiffSpecularBall.h:11</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_ball_html"><div class="ttname"><a href="class_eye_stereo_1_1_ball.html">EyeStereo::Ball</a></div><div class="ttdef"><b>Definition:</b> DiffSpecularBall.h:8</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_ball_html_a61e00d9f24529ebea586ca6d733b9dcb"><div class="ttname"><a href="class_eye_stereo_1_1_ball.html#a61e00d9f24529ebea586ca6d733b9dcb">EyeStereo::Ball::Ball</a></div><div class="ttdeci">Ball()</div><div class="ttdef"><b>Definition:</b> DiffSpecularBall.h:14</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_ball_html_a4ec6c71c64411107482109b6e268064c"><div class="ttname"><a href="class_eye_stereo_1_1_ball.html#a4ec6c71c64411107482109b6e268064c">EyeStereo::Ball::pos</a></div><div class="ttdeci">D3DXVECTOR3 pos</div><div class="ttdef"><b>Definition:</b> DiffSpecularBall.h:10</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2014年 六月 27日 星期五 15:19:06 , 为 数字式立体视觉刺激系统使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.7
+</small></address>
+</body>
+</html>

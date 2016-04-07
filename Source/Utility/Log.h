@@ -30,13 +30,17 @@ namespace EyeStereo
 
 	public:
 
+
+
 		static Log& Get( );
 
-		bool Open( );
+		bool Open(std::wstring filename = L"Log.txt");
 		bool Close( );
 
 		bool Write( const wchar_t *TextString );
 		bool Write( std::wstring& TextString );
+		bool Write(float num);
+		bool Write(float Score, float Time, float Correct);
 		bool WriteSeparater( );
 	};
 };

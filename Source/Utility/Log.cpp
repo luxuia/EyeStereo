@@ -25,12 +25,12 @@ Log& Log::Get()
 	return( log );
 }
 //--------------------------------------------------------------------------------
-bool Log::Open()
+bool Log::Open(std::wstring filename )
 {
-	std::wstring filename = L"Log.txt";
+	//std::wstring filename = L"Log.txt";
 	AppLog.open( filename.c_str(), std::fstream::app);
 
-	Write( L"Log file opened." );
+	//Write( L"Log file opened." );
 
 	return( true );
 }
@@ -44,6 +44,22 @@ bool Log::Write( const wchar_t *cTextString )
 #endif
 	return( true );
 }
+
+
+bool Log::Write(float num) {
+	WCHAR tmp[64];
+	swprintf(tmp, L"%0.2f", num);
+	Write(tmp);
+	return true;
+}
+
+bool Log::Write(float Score, float Time, float Correct) {
+	WCHAR tmp[64];
+	swprintf(tmp, L"%0.2f\t%0.2f\t%0.2f", Score, Time, Correct);
+	Write(tmp);
+	return true;
+}
+
 //--------------------------------------------------------------------------------
 bool Log::Write( std::wstring& TextString )
 {

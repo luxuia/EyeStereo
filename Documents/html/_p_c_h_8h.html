@@ -1,0 +1,832 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.7"/>
+<title>数字式立体视觉刺激系统: E:/Project/final/EyeStereo/Source/Utility/PCH.h 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">数字式立体视觉刺激系统
+   &#160;<span id="projectnumber">1.0.1</span>
+   </div>
+   <div id="projectbrief">Digital Stereo System</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.7 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="pages.html"><span>相关页面</span></a></li>
+      <li><a href="namespaces.html"><span>命名空间</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
+    </ul>
+  </div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_74389ed8173ad57b461b9d623a1f3867.html">Source</a></li><li class="navelem"><a class="el" href="dir_a84262e66930ad9071f68edb7a79274b.html">Utility</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">宏定义</a> &#124;
+<a href="#func-members">函数</a> &#124;
+<a href="#var-members">变量</a>  </div>
+  <div class="headertitle">
+<div class="title">PCH.h 文件参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;fstream&gt;</code><br />
+<code>#include &lt;string&gt;</code><br />
+<code>#include &lt;map&gt;</code><br />
+<code>#include &lt;list&gt;</code><br />
+<code>#include &lt;sstream&gt;</code><br />
+<code>#include &lt;algorithm&gt;</code><br />
+<code>#include &lt;vector&gt;</code><br />
+<code>#include &lt;exception&gt;</code><br />
+<code>#include &lt;iostream&gt;</code><br />
+<code>#include &lt;iomanip&gt;</code><br />
+<code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;math.h&gt;</code><br />
+<code>#include &lt;memory&gt;</code><br />
+<code>#include &lt;assert.h&gt;</code><br />
+<code>#include &lt;time.h&gt;</code><br />
+<code>#include &quot;DXUT.h&quot;</code><br />
+<code>#include &quot;DXUTgui.h&quot;</code><br />
+<code>#include &quot;DXUTmisc.h&quot;</code><br />
+<code>#include &quot;DXUTCamera.h&quot;</code><br />
+<code>#include &quot;DXUTSettingsDlg.h&quot;</code><br />
+<code>#include &quot;SDKmisc.h&quot;</code><br />
+<code>#include &quot;SDKmesh.h&quot;</code><br />
+</div>
+<p><a href="_p_c_h_8h_source.html">浏览源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+宏定义</h2></td></tr>
+<tr class="memitem:a8a7c30a576d5706b6c0821834d01cbbc"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_p_c_h_8h.html#a8a7c30a576d5706b6c0821834d01cbbc">STRICT</a></td></tr>
+<tr class="separator:a8a7c30a576d5706b6c0821834d01cbbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2bc549675ca29f733709b4656d22d52a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_p_c_h_8h.html#a2bc549675ca29f733709b4656d22d52a">SAFE_RELEASE</a>(x)&#160;&#160;&#160;{if(x){(x)-&gt;Release();(x)=NULL;}}</td></tr>
+<tr class="separator:a2bc549675ca29f733709b4656d22d52a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b8b2bed986c06c207ebac140ba65a7a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_p_c_h_8h.html#a4b8b2bed986c06c207ebac140ba65a7a">SAFE_DELETE</a>(x)&#160;&#160;&#160;{if(x){delete (x);(x)=NULL;}}</td></tr>
+<tr class="separator:a4b8b2bed986c06c207ebac140ba65a7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a529602a5e4c2f9ba2c721ce9aefaddf7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_p_c_h_8h.html#a529602a5e4c2f9ba2c721ce9aefaddf7">SAFE_DELETE_ARRAY</a>(x)&#160;&#160;&#160;{if(x){delete[] (x);(x)=NULL;}}</td></tr>
+<tr class="separator:a529602a5e4c2f9ba2c721ce9aefaddf7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a950f847786afa9558a7b734b0d19ce04"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_p_c_h_8h.html#a950f847786afa9558a7b734b0d19ce04">EYE_PI</a>&#160;&#160;&#160;3.14159265f</td></tr>
+<tr class="separator:a950f847786afa9558a7b734b0d19ce04"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:a6177bca459af85a03b49f1a27606f065"><td class="memItemLeft" align="right" valign="top">D3DX10INLINE float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_p_c_h_8h.html#a6177bca459af85a03b49f1a27606f065">RandF</a> ()</td></tr>
+<tr class="separator:a6177bca459af85a03b49f1a27606f065"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62f81e2b73af0e9e311ab30141a6cd30"><td class="memItemLeft" align="right" valign="top">D3DX10INLINE float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_p_c_h_8h.html#a62f81e2b73af0e9e311ab30141a6cd30">RandF</a> (float a, float b)</td></tr>
+<tr class="separator:a62f81e2b73af0e9e311ab30141a6cd30"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac67cfae4ad2bd7c3ab36861777a1cc68"><td class="memItemLeft" align="right" valign="top">D3DX10INLINE D3DXVECTOR3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_p_c_h_8h.html#ac67cfae4ad2bd7c3ab36861777a1cc68">RandUnitVec3</a> ()</td></tr>
+<tr class="separator:ac67cfae4ad2bd7c3ab36861777a1cc68"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a079883e68bc4d729dd457a7378d4da97"><td class="memItemLeft" align="right" valign="top">const D3DXCOLOR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_p_c_h_8h.html#a079883e68bc4d729dd457a7378d4da97">WHITE</a> (1.0f, 1.0f, 1.0f, 1.0f)</td></tr>
+<tr class="separator:a079883e68bc4d729dd457a7378d4da97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4341fd2a4c87f3415c0729145eab7ae5"><td class="memItemLeft" align="right" valign="top">const D3DXCOLOR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_p_c_h_8h.html#a4341fd2a4c87f3415c0729145eab7ae5">BLACK</a> (0.0f, 0.0f, 0.0f, 1.0f)</td></tr>
+<tr class="separator:a4341fd2a4c87f3415c0729145eab7ae5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07fae9445b0999d43e04af280bb4a426"><td class="memItemLeft" align="right" valign="top">const D3DXCOLOR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_p_c_h_8h.html#a07fae9445b0999d43e04af280bb4a426">RED</a> (1.0f, 0.0f, 0.0f, 1.0f)</td></tr>
+<tr class="separator:a07fae9445b0999d43e04af280bb4a426"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa150435780d8ad5de8af21ef6c858fd6"><td class="memItemLeft" align="right" valign="top">const D3DXCOLOR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_p_c_h_8h.html#aa150435780d8ad5de8af21ef6c858fd6">GREEN</a> (0.0f, 1.0f, 0.0f, 1.0f)</td></tr>
+<tr class="separator:aa150435780d8ad5de8af21ef6c858fd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a55d763a0b1c95c6e7116309760bd31"><td class="memItemLeft" align="right" valign="top">const D3DXCOLOR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_p_c_h_8h.html#a0a55d763a0b1c95c6e7116309760bd31">BLUE</a> (0.0f, 0.0f, 1.0f, 1.0f)</td></tr>
+<tr class="separator:a0a55d763a0b1c95c6e7116309760bd31"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c5b097577dbfc6d33ce3013172a6d2a"><td class="memItemLeft" align="right" valign="top">const D3DXCOLOR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_p_c_h_8h.html#a0c5b097577dbfc6d33ce3013172a6d2a">YELLOW</a> (1.0f, 1.0f, 0.0f, 1.0f)</td></tr>
+<tr class="separator:a0c5b097577dbfc6d33ce3013172a6d2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac83c19ab96b46f7fb84a575894d51003"><td class="memItemLeft" align="right" valign="top">const D3DXCOLOR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_p_c_h_8h.html#ac83c19ab96b46f7fb84a575894d51003">CYAN</a> (0.0f, 1.0f, 1.0f, 1.0f)</td></tr>
+<tr class="separator:ac83c19ab96b46f7fb84a575894d51003"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8cb9dffa94e5b256ca18359297713246"><td class="memItemLeft" align="right" valign="top">const D3DXCOLOR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_p_c_h_8h.html#a8cb9dffa94e5b256ca18359297713246">MAGENTA</a> (1.0f, 0.0f, 1.0f, 1.0f)</td></tr>
+<tr class="separator:a8cb9dffa94e5b256ca18359297713246"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac08f48a40e2aa15a05996a7f3c399b14"><td class="memItemLeft" align="right" valign="top">const D3DXCOLOR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_p_c_h_8h.html#ac08f48a40e2aa15a05996a7f3c399b14">BEACH_SAND</a> (1.0f, 0.96f, 0.62f, 1.0f)</td></tr>
+<tr class="separator:ac08f48a40e2aa15a05996a7f3c399b14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd9af0248b45a1ae270f3a93797eeaaf"><td class="memItemLeft" align="right" valign="top">const D3DXCOLOR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_p_c_h_8h.html#acd9af0248b45a1ae270f3a93797eeaaf">LIGHT_YELLOW_GREEN</a> (0.48f, 0.77f, 0.46f, 1.0f)</td></tr>
+<tr class="separator:acd9af0248b45a1ae270f3a93797eeaaf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aafa1fdb2e7a7b33cfec440df60edabbe"><td class="memItemLeft" align="right" valign="top">const D3DXCOLOR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_p_c_h_8h.html#aafa1fdb2e7a7b33cfec440df60edabbe">DARK_YELLOW_GREEN</a> (0.1f, 0.48f, 0.19f, 1.0f)</td></tr>
+<tr class="separator:aafa1fdb2e7a7b33cfec440df60edabbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ef2340a88eee01388b88bb362d45db8"><td class="memItemLeft" align="right" valign="top">const D3DXCOLOR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_p_c_h_8h.html#a6ef2340a88eee01388b88bb362d45db8">DARKBROWN</a> (0.45f, 0.39f, 0.34f, 1.0f)</td></tr>
+<tr class="separator:a6ef2340a88eee01388b88bb362d45db8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af70fbfd33b5b0002e7dc290fc709754d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_p_c_h_8h.html#af70fbfd33b5b0002e7dc290fc709754d">printMatrix</a> (float *mat)</td></tr>
+<tr class="separator:af70fbfd33b5b0002e7dc290fc709754d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd17544b97bf3546dff79ac4fbe4c961"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_p_c_h_8h.html#acd17544b97bf3546dff79ac4fbe4c961">Vec3Len</a> (D3DXVECTOR3 &amp;a, D3DXVECTOR3 &amp;b)</td></tr>
+<tr class="separator:acd17544b97bf3546dff79ac4fbe4c961"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb0f0567a375084234d352efe24f9acc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_p_c_h_8h.html#afb0f0567a375084234d352efe24f9acc">PrintMatrixDEBUG</a> (D3DXMATRIX &amp;mat)</td></tr>
+<tr class="separator:afb0f0567a375084234d352efe24f9acc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+变量</h2></td></tr>
+<tr class="memitem:a8ded4fe042c19b3187c49f69aee9c275"><td class="memItemLeft" align="right" valign="top">const float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_p_c_h_8h.html#a8ded4fe042c19b3187c49f69aee9c275">Elapse</a> = 1e-5f</td></tr>
+<tr class="separator:a8ded4fe042c19b3187c49f69aee9c275"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">宏定义说明</h2>
+<a class="anchor" id="a950f847786afa9558a7b734b0d19ce04"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define EYE_PI&#160;&#160;&#160;3.14159265f</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a4b8b2bed986c06c207ebac140ba65a7a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SAFE_DELETE</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">x</td><td>)</td>
+          <td>&#160;&#160;&#160;{if(x){delete (x);(x)=NULL;}}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a529602a5e4c2f9ba2c721ce9aefaddf7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SAFE_DELETE_ARRAY</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">x</td><td>)</td>
+          <td>&#160;&#160;&#160;{if(x){delete[] (x);(x)=NULL;}}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a2bc549675ca29f733709b4656d22d52a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SAFE_RELEASE</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">x</td><td>)</td>
+          <td>&#160;&#160;&#160;{if(x){(x)-&gt;Release();(x)=NULL;}}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a8a7c30a576d5706b6c0821834d01cbbc"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define STRICT</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">函数说明</h2>
+<a class="anchor" id="ac08f48a40e2aa15a05996a7f3c399b14"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const D3DXCOLOR BEACH_SAND </td>
+          <td>(</td>
+          <td class="paramtype">1.&#160;</td>
+          <td class="paramname"><em>0f</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0.&#160;</td>
+          <td class="paramname"><em>96f</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0.&#160;</td>
+          <td class="paramname"><em>62f</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">1.&#160;</td>
+          <td class="paramname"><em>0f</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a4341fd2a4c87f3415c0729145eab7ae5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const D3DXCOLOR BLACK </td>
+          <td>(</td>
+          <td class="paramtype">0.&#160;</td>
+          <td class="paramname"><em>0f</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0.&#160;</td>
+          <td class="paramname"><em>0f</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0.&#160;</td>
+          <td class="paramname"><em>0f</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">1.&#160;</td>
+          <td class="paramname"><em>0f</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a0a55d763a0b1c95c6e7116309760bd31"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const D3DXCOLOR BLUE </td>
+          <td>(</td>
+          <td class="paramtype">0.&#160;</td>
+          <td class="paramname"><em>0f</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0.&#160;</td>
+          <td class="paramname"><em>0f</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">1.&#160;</td>
+          <td class="paramname"><em>0f</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">1.&#160;</td>
+          <td class="paramname"><em>0f</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ac83c19ab96b46f7fb84a575894d51003"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const D3DXCOLOR CYAN </td>
+          <td>(</td>
+          <td class="paramtype">0.&#160;</td>
+          <td class="paramname"><em>0f</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">1.&#160;</td>
+          <td class="paramname"><em>0f</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">1.&#160;</td>
+          <td class="paramname"><em>0f</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">1.&#160;</td>
+          <td class="paramname"><em>0f</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aafa1fdb2e7a7b33cfec440df60edabbe"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const D3DXCOLOR DARK_YELLOW_GREEN </td>
+          <td>(</td>
+          <td class="paramtype">0.&#160;</td>
+          <td class="paramname"><em>1f</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0.&#160;</td>
+          <td class="paramname"><em>48f</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0.&#160;</td>
+          <td class="paramname"><em>19f</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">1.&#160;</td>
+          <td class="paramname"><em>0f</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a6ef2340a88eee01388b88bb362d45db8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const D3DXCOLOR DARKBROWN </td>
+          <td>(</td>
+          <td class="paramtype">0.&#160;</td>
+          <td class="paramname"><em>45f</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0.&#160;</td>
+          <td class="paramname"><em>39f</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0.&#160;</td>
+          <td class="paramname"><em>34f</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">1.&#160;</td>
+          <td class="paramname"><em>0f</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aa150435780d8ad5de8af21ef6c858fd6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const D3DXCOLOR GREEN </td>
+          <td>(</td>
+          <td class="paramtype">0.&#160;</td>
+          <td class="paramname"><em>0f</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">1.&#160;</td>
+          <td class="paramname"><em>0f</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0.&#160;</td>
+          <td class="paramname"><em>0f</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">1.&#160;</td>
+          <td class="paramname"><em>0f</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="acd9af0248b45a1ae270f3a93797eeaaf"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const D3DXCOLOR LIGHT_YELLOW_GREEN </td>
+          <td>(</td>
+          <td class="paramtype">0.&#160;</td>
+          <td class="paramname"><em>48f</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0.&#160;</td>
+          <td class="paramname"><em>77f</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0.&#160;</td>
+          <td class="paramname"><em>46f</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">1.&#160;</td>
+          <td class="paramname"><em>0f</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a8cb9dffa94e5b256ca18359297713246"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const D3DXCOLOR MAGENTA </td>
+          <td>(</td>
+          <td class="paramtype">1.&#160;</td>
+          <td class="paramname"><em>0f</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0.&#160;</td>
+          <td class="paramname"><em>0f</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">1.&#160;</td>
+          <td class="paramname"><em>0f</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">1.&#160;</td>
+          <td class="paramname"><em>0f</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="af70fbfd33b5b0002e7dc290fc709754d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void printMatrix </td>
+          <td>(</td>
+          <td class="paramtype">float *&#160;</td>
+          <td class="paramname"><em>mat</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="afb0f0567a375084234d352efe24f9acc"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PrintMatrixDEBUG </td>
+          <td>(</td>
+          <td class="paramtype">D3DXMATRIX &amp;&#160;</td>
+          <td class="paramname"><em>mat</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a6177bca459af85a03b49f1a27606f065"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">D3DX10INLINE float RandF </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a62f81e2b73af0e9e311ab30141a6cd30"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">D3DX10INLINE float RandF </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ac67cfae4ad2bd7c3ab36861777a1cc68"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">D3DX10INLINE D3DXVECTOR3 RandUnitVec3 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a07fae9445b0999d43e04af280bb4a426"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const D3DXCOLOR RED </td>
+          <td>(</td>
+          <td class="paramtype">1.&#160;</td>
+          <td class="paramname"><em>0f</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0.&#160;</td>
+          <td class="paramname"><em>0f</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0.&#160;</td>
+          <td class="paramname"><em>0f</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">1.&#160;</td>
+          <td class="paramname"><em>0f</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="acd17544b97bf3546dff79ac4fbe4c961"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Vec3Len </td>
+          <td>(</td>
+          <td class="paramtype">D3DXVECTOR3 &amp;&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">D3DXVECTOR3 &amp;&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a079883e68bc4d729dd457a7378d4da97"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const D3DXCOLOR WHITE </td>
+          <td>(</td>
+          <td class="paramtype">1.&#160;</td>
+          <td class="paramname"><em>0f</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">1.&#160;</td>
+          <td class="paramname"><em>0f</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">1.&#160;</td>
+          <td class="paramname"><em>0f</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">1.&#160;</td>
+          <td class="paramname"><em>0f</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a0c5b097577dbfc6d33ce3013172a6d2a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const D3DXCOLOR YELLOW </td>
+          <td>(</td>
+          <td class="paramtype">1.&#160;</td>
+          <td class="paramname"><em>0f</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">1.&#160;</td>
+          <td class="paramname"><em>0f</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0.&#160;</td>
+          <td class="paramname"><em>0f</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">1.&#160;</td>
+          <td class="paramname"><em>0f</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">变量说明</h2>
+<a class="anchor" id="a8ded4fe042c19b3187c49f69aee9c275"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const float Elapse = 1e-5f</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2014年 六月 27日 星期五 16:12:02 , 为 数字式立体视觉刺激系统使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.7
+</small></address>
+</body>
+</html>

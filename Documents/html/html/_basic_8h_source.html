@@ -1,0 +1,234 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.7"/>
+<title>数字式立体视觉刺激系统: G:/交接/EyeStereo/Applications/Basic/Basic.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">数字式立体视觉刺激系统
+   &#160;<span id="projectnumber">1.0.1</span>
+   </div>
+   <div id="projectbrief">Digital Stereo System</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.7 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="pages.html"><span>相关页面</span></a></li>
+      <li><a href="modules.html"><span>模块</span></a></li>
+      <li><a href="namespaces.html"><span>命名空间</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
+    </ul>
+  </div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_8c1195e4829fa17630c4278c41da729a.html">Applications</a></li><li class="navelem"><a class="el" href="dir_170a16e49875d81644261e37eceb0642.html">Basic</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Basic.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_basic_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef __SELECT_STEREO_H__</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define __SELECT_STEREO_H__</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_p_c_h_8h.html">Utility/PCH.h</a>&quot;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_diff_specular_sphere_8hpp.html">Geometry/DiffSpecularSphere.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_background_8h.html">Geometry/Background.h</a>&quot;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_light_8h.html">Geometry/Light.h</a>&quot;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">using namespace </span>EyeStereo;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="class_basic_render.html">   22</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_basic_render.html">BasicRender</a> {</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="class_basic_render.html#af9a6fd7e42382f7182fcf7b17455465e">   26</a></span>&#160;    ID3D10Device*                   pd3dDevice = NULL;</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="class_basic_render.html#a2bf4c9fd84f0a4b67e26697c7a50b1bc">   27</a></span>&#160;    ID3D10Effect*                   pEffect = NULL;</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="class_basic_render.html#a0e7ff13d89ef5e0a20a290be77bd1d66">   28</a></span>&#160;    ID3D10EffectTechnique*          pTech = NULL;</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="class_basic_render.html#a338c705e4b898fdf208c9d7371d7d58b">   29</a></span>&#160;    ID3D10InputLayout*              pInputLayout = NULL;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="class_basic_render.html#af4d88f7d98b5402273499c90fcced424">   31</a></span>&#160;    ID3D10EffectShaderResourceVariable* pShaderRV = NULL;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    </div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="class_basic_render.html#a2ea02d24451ff3605295174e2fec4ebb">   33</a></span>&#160;    D3DXMATRIX                      <a class="code" href="class_basic_render.html#a2ea02d24451ff3605295174e2fec4ebb">matWorld</a>;</div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="class_basic_render.html#a43407c83679da2635dd45dc6cfe0af66">   34</a></span>&#160;    D3DXMATRIX                      <a class="code" href="class_basic_render.html#a43407c83679da2635dd45dc6cfe0af66">matWorldViewProjection</a>;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="class_basic_render.html#a550dad64c74632d26fa1abc91573e8ad">   36</a></span>&#160;    IDXGISwapChain*                 pSwapChain = NULL;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="class_basic_render.html#af900f119224b4bf772cae4b049f49bc0">   38</a></span>&#160;    CModelViewerCamera*             <a class="code" href="class_basic_render.html#af900f119224b4bf772cae4b049f49bc0">pCamera</a>;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="class_basic_render.html#aeb3092dffc8f2bc157163bd592a2e5d8">   40</a></span>&#160;    <span class="keywordtype">long</span> <span class="keywordtype">int</span>                        <a class="code" href="class_basic_render.html#aeb3092dffc8f2bc157163bd592a2e5d8">windowsWidth</a>, windowsHeight; </div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="class_basic_render.html#a3f0762eae224a5bea06a35944f0ec650">   41</a></span>&#160;    <a class="code" href="class_eye_stereo_1_1_stereo_setting.html">StereoSetting</a>*                  <a class="code" href="class_basic_render.html#a3f0762eae224a5bea06a35944f0ec650">pStereoSetting</a>;</div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="class_basic_render.html#ae63c2403a18a6849813a4feca4b620c3">   42</a></span>&#160;    <span class="keywordtype">bool</span>                            <a class="code" href="class_basic_render.html#ae63c2403a18a6849813a4feca4b620c3">bactive</a>;</div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="class_basic_render.html#ae5c457d52b74d6eaa2e23b62b3422c85">   43</a></span>&#160;    <a class="code" href="class_eye_stereo_1_1_vector3f.html">Vector3f</a>*                       pSpherePos = NULL;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="class_basic_render.html#ab417d1aee6cf5c7e4d91b3d112e2edce">   45</a></span>&#160;    D3DXVECTOR3                     <a class="code" href="class_basic_render.html#ab417d1aee6cf5c7e4d91b3d112e2edce">eyePos</a>;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="class_basic_render.html#a673518e03aacc0bddc3a744e6528adb1">   47</a></span>&#160;    <span class="keywordtype">bool</span>                            <a class="code" href="class_basic_render.html#a673518e03aacc0bddc3a744e6528adb1">bStereo</a>;</div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="class_basic_render.html#a6272c64386e52eeb8541aa00c53e114c">   48</a></span>&#160;    <span class="keywordtype">float</span>                           initDepth, <a class="code" href="class_basic_render.html#a6272c64386e52eeb8541aa00c53e114c">initRadius</a>;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="class_basic_render.html#a07c27e0577047bc8786b4b44b08d64aa">   51</a></span>&#160;    ID3D10RasterizerState*          pSolidState = NULL;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="class_basic_render.html#af931001b7afc1436d7f1bd6852edc9c2">   53</a></span>&#160;    <a class="code" href="class_basic_render.html#af931001b7afc1436d7f1bd6852edc9c2">BasicRender</a>() {</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        initRadius = 2;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        initDepth = 4;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    }</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="class_basic_render.html#a2403686f9a960062762cbc0f406b4f2e">   65</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_basic_render.html#a2403686f9a960062762cbc0f406b4f2e">init</a>(ID3D10Device* pd3d, <a class="code" href="class_eye_stereo_1_1_stereo_setting.html">StereoSetting</a>* pstereo, CModelViewerCamera *pcamera) {</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        pd3dDevice = pd3d;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        HRESULT hr;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        V_RETURN(D3DX10CreateEffectFromFile(L<span class="stringliteral">&quot;../Data/Shader/Pos4Color4.fx&quot;</span>, NULL, NULL, <span class="stringliteral">&quot;fx_4_0&quot;</span>,</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            D3D10_SHADER_ENABLE_STRICTNESS | D3D10_SHADER_DEBUG, 0,</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            pd3d, NULL, NULL, &amp;pEffect, NULL, NULL) == 1);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        pTech = pEffect-&gt;GetTechniqueByName(<span class="stringliteral">&quot;RenderScene&quot;</span>);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        D3D10_INPUT_ELEMENT_DESC layout[] = {</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;            { <span class="stringliteral">&quot;POSITION&quot;</span>, 0, DXGI_FORMAT_R32G32B32_FLOAT, 0, 0, D3D10_INPUT_PER_VERTEX_DATA, 0 },</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;            { <span class="stringliteral">&quot;COLOR&quot;</span>, 0, DXGI_FORMAT_R32G32B32A32_FLOAT, 0, 12, D3D10_INPUT_PER_VERTEX_DATA, 0 },</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        };</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        UINT numElements = <span class="keyword">sizeof</span>(layout) / <span class="keyword">sizeof</span>(layout[0]);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        D3D10_PASS_DESC PassDesc;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        pTech-&gt;GetPassByIndex(0)-&gt;GetDesc( &amp;PassDesc );</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        pd3d-&gt;CreateInputLayout( layout, numElements, </div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;            PassDesc.pIAInputSignature, PassDesc.IAInputSignatureSize, &amp;pInputLayout);</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        pSwapChain = DXUTGetDXGISwapChain();</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        pSwapChain-&gt;AddRef();</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        windowsHeight = DXUTGetWindowHeight();</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        windowsWidth = DXUTGetWindowWidth();</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        pStereoSetting = pstereo;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        pCamera = pcamera;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        bactive = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        bStereo = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        eyePos = D3DXVECTOR3(0, 0, -5);</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        </div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        D3D10_RASTERIZER_DESC rsDesc;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        ZeroMemory(&amp;rsDesc, <span class="keyword">sizeof</span>(D3D10_RASTERIZER_DESC));</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        </div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        rsDesc.FillMode = D3D10_FILL_SOLID;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        rsDesc.CullMode = D3D10_CULL_BACK;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        rsDesc.FrontCounterClockwise = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        pd3dDevice-&gt;CreateRasterizerState(&amp;rsDesc, &amp;pSolidState);</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        </div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    }</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;</div>
+<div class="line"><a name="l00122"></a><span class="lineno"><a class="line" href="class_basic_render.html#a7f7fadb9363744bd501825d60790c9ed">  122</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_basic_render.html#a7f7fadb9363744bd501825d60790c9ed">stereoRender</a>(<span class="keywordtype">float</span> fTime) {</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        pd3dDevice-&gt;IASetInputLayout(pInputLayout);</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        pd3dDevice-&gt;IASetPrimitiveTopology(D3D10_PRIMITIVE_TOPOLOGY_TRIANGLELIST);</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        pd3dDevice-&gt;RSSetState(pSolidState);</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        renderLeft(fTime);</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;        renderRight(fTime);</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        </div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    }</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;</div>
+<div class="line"><a name="l00133"></a><span class="lineno"><a class="line" href="class_basic_render.html#a9c830ef675135840363d19768f8535ca">  133</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_basic_render.html#a9c830ef675135840363d19768f8535ca">renderLeft</a>(<span class="keywordtype">float</span> fTime) {</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        </div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    }</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;</div>
+<div class="line"><a name="l00138"></a><span class="lineno"><a class="line" href="class_basic_render.html#a302df9ba6573f2b96d0cb10ba65726bb">  138</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_basic_render.html#a302df9ba6573f2b96d0cb10ba65726bb">renderRight</a>(<span class="keywordtype">float</span> fTime) {</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    }</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;</div>
+<div class="line"><a name="l00145"></a><span class="lineno"><a class="line" href="class_basic_render.html#ac0d376fa6ea283c1100e73a0937b398b">  145</a></span>&#160;    <a class="code" href="class_basic_render.html#ac0d376fa6ea283c1100e73a0937b398b">~BasicRender</a>() {</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;        <a class="code" href="_basic_box_8h.html#a6038f7bdb274c2e159988a57dedbf93d">SAFE_RELEASE</a>(pEffect);</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;        <a class="code" href="_basic_box_8h.html#a6038f7bdb274c2e159988a57dedbf93d">SAFE_RELEASE</a>(pInputLayout);</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;        <a class="code" href="_basic_box_8h.html#a6038f7bdb274c2e159988a57dedbf93d">SAFE_RELEASE</a>(pSwapChain);</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;        <a class="code" href="_basic_box_8h.html#a6038f7bdb274c2e159988a57dedbf93d">SAFE_RELEASE</a>(pSolidState);</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    }</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;</div>
+<div class="line"><a name="l00156"></a><span class="lineno"><a class="line" href="class_basic_render.html#aeea038ca90e541653cfacfb435793d43">  156</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_basic_render.html#aeea038ca90e541653cfacfb435793d43">ClearScreen</a>(ID3D10Device *pd3dDevice)</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    {</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;        <span class="keywordtype">float</span> ClearColor[4] = { 0.176f, 0.196f, 0.667f, 0.0f };</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;        ID3D10RenderTargetView* pRTV = DXUTGetD3D10RenderTargetView();</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;        pd3dDevice-&gt;ClearRenderTargetView( pRTV, ClearColor );</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;        <span class="comment">// Clear the depth stencil</span></div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;        ID3D10DepthStencilView* pDSV = DXUTGetD3D10DepthStencilView();</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;        pd3dDevice-&gt;ClearDepthStencilView( pDSV, D3D10_CLEAR_DEPTH, 1.0, 0 );</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;        <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    }</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;};</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;<span class="preprocessor">#endif //__SELECT_STEREO_H__</span></div>
+<div class="ttc" id="class_basic_render_html"><div class="ttname"><a href="class_basic_render.html">BasicRender</a></div><div class="ttdoc">简单render类 </div><div class="ttdef"><b>Definition:</b> Basic.h:22</div></div>
+<div class="ttc" id="_background_8h_html"><div class="ttname"><a href="_background_8h.html">Background.h</a></div></div>
+<div class="ttc" id="class_basic_render_html_a2ea02d24451ff3605295174e2fec4ebb"><div class="ttname"><a href="class_basic_render.html#a2ea02d24451ff3605295174e2fec4ebb">BasicRender::matWorld</a></div><div class="ttdeci">D3DXMATRIX matWorld</div><div class="ttdef"><b>Definition:</b> Basic.h:33</div></div>
+<div class="ttc" id="class_basic_render_html_a43407c83679da2635dd45dc6cfe0af66"><div class="ttname"><a href="class_basic_render.html#a43407c83679da2635dd45dc6cfe0af66">BasicRender::matWorldViewProjection</a></div><div class="ttdeci">D3DXMATRIX matWorldViewProjection</div><div class="ttdef"><b>Definition:</b> Basic.h:34</div></div>
+<div class="ttc" id="class_basic_render_html_a7f7fadb9363744bd501825d60790c9ed"><div class="ttname"><a href="class_basic_render.html#a7f7fadb9363744bd501825d60790c9ed">BasicRender::stereoRender</a></div><div class="ttdeci">void stereoRender(float fTime)</div><div class="ttdoc">渲染过程入口 </div><div class="ttdef"><b>Definition:</b> Basic.h:122</div></div>
+<div class="ttc" id="class_basic_render_html_af931001b7afc1436d7f1bd6852edc9c2"><div class="ttname"><a href="class_basic_render.html#af931001b7afc1436d7f1bd6852edc9c2">BasicRender::BasicRender</a></div><div class="ttdeci">BasicRender()</div><div class="ttdef"><b>Definition:</b> Basic.h:53</div></div>
+<div class="ttc" id="class_basic_render_html_a302df9ba6573f2b96d0cb10ba65726bb"><div class="ttname"><a href="class_basic_render.html#a302df9ba6573f2b96d0cb10ba65726bb">BasicRender::renderRight</a></div><div class="ttdeci">void renderRight(float fTime)</div><div class="ttdef"><b>Definition:</b> Basic.h:138</div></div>
+<div class="ttc" id="class_basic_render_html_a3f0762eae224a5bea06a35944f0ec650"><div class="ttname"><a href="class_basic_render.html#a3f0762eae224a5bea06a35944f0ec650">BasicRender::pStereoSetting</a></div><div class="ttdeci">StereoSetting * pStereoSetting</div><div class="ttdef"><b>Definition:</b> Basic.h:41</div></div>
+<div class="ttc" id="class_basic_render_html_aeea038ca90e541653cfacfb435793d43"><div class="ttname"><a href="class_basic_render.html#aeea038ca90e541653cfacfb435793d43">BasicRender::ClearScreen</a></div><div class="ttdeci">void ClearScreen(ID3D10Device *pd3dDevice)</div><div class="ttdef"><b>Definition:</b> Basic.h:156</div></div>
+<div class="ttc" id="_p_c_h_8h_html"><div class="ttname"><a href="_p_c_h_8h.html">PCH.h</a></div></div>
+<div class="ttc" id="class_eye_stereo_1_1_vector3f_html"><div class="ttname"><a href="class_eye_stereo_1_1_vector3f.html">EyeStereo::Vector3f</a></div><div class="ttdef"><b>Definition:</b> Vector3f.h:23</div></div>
+<div class="ttc" id="_basic_box_8h_html_a6038f7bdb274c2e159988a57dedbf93d"><div class="ttname"><a href="_basic_box_8h.html#a6038f7bdb274c2e159988a57dedbf93d">SAFE_RELEASE</a></div><div class="ttdeci">#define SAFE_RELEASE(p)</div><div class="ttdef"><b>Definition:</b> BasicBox.h:11</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_stereo_setting_html"><div class="ttname"><a href="class_eye_stereo_1_1_stereo_setting.html">EyeStereo::StereoSetting</a></div><div class="ttdef"><b>Definition:</b> StereoSetting.h:9</div></div>
+<div class="ttc" id="_light_8h_html"><div class="ttname"><a href="_light_8h.html">Light.h</a></div></div>
+<div class="ttc" id="_diff_specular_sphere_8hpp_html"><div class="ttname"><a href="_diff_specular_sphere_8hpp.html">DiffSpecularSphere.hpp</a></div></div>
+<div class="ttc" id="class_basic_render_html_a6272c64386e52eeb8541aa00c53e114c"><div class="ttname"><a href="class_basic_render.html#a6272c64386e52eeb8541aa00c53e114c">BasicRender::initRadius</a></div><div class="ttdeci">float initRadius</div><div class="ttdef"><b>Definition:</b> Basic.h:48</div></div>
+<div class="ttc" id="class_basic_render_html_af900f119224b4bf772cae4b049f49bc0"><div class="ttname"><a href="class_basic_render.html#af900f119224b4bf772cae4b049f49bc0">BasicRender::pCamera</a></div><div class="ttdeci">CModelViewerCamera * pCamera</div><div class="ttdef"><b>Definition:</b> Basic.h:38</div></div>
+<div class="ttc" id="class_basic_render_html_aeb3092dffc8f2bc157163bd592a2e5d8"><div class="ttname"><a href="class_basic_render.html#aeb3092dffc8f2bc157163bd592a2e5d8">BasicRender::windowsWidth</a></div><div class="ttdeci">long int windowsWidth</div><div class="ttdef"><b>Definition:</b> Basic.h:40</div></div>
+<div class="ttc" id="class_basic_render_html_ae63c2403a18a6849813a4feca4b620c3"><div class="ttname"><a href="class_basic_render.html#ae63c2403a18a6849813a4feca4b620c3">BasicRender::bactive</a></div><div class="ttdeci">bool bactive</div><div class="ttdef"><b>Definition:</b> Basic.h:42</div></div>
+<div class="ttc" id="class_basic_render_html_ac0d376fa6ea283c1100e73a0937b398b"><div class="ttname"><a href="class_basic_render.html#ac0d376fa6ea283c1100e73a0937b398b">BasicRender::~BasicRender</a></div><div class="ttdeci">~BasicRender()</div><div class="ttdef"><b>Definition:</b> Basic.h:145</div></div>
+<div class="ttc" id="class_basic_render_html_ab417d1aee6cf5c7e4d91b3d112e2edce"><div class="ttname"><a href="class_basic_render.html#ab417d1aee6cf5c7e4d91b3d112e2edce">BasicRender::eyePos</a></div><div class="ttdeci">D3DXVECTOR3 eyePos</div><div class="ttdef"><b>Definition:</b> Basic.h:45</div></div>
+<div class="ttc" id="class_basic_render_html_a2403686f9a960062762cbc0f406b4f2e"><div class="ttname"><a href="class_basic_render.html#a2403686f9a960062762cbc0f406b4f2e">BasicRender::init</a></div><div class="ttdeci">bool init(ID3D10Device *pd3d, StereoSetting *pstereo, CModelViewerCamera *pcamera)</div><div class="ttdoc">模块初始化 </div><div class="ttdef"><b>Definition:</b> Basic.h:65</div></div>
+<div class="ttc" id="class_basic_render_html_a673518e03aacc0bddc3a744e6528adb1"><div class="ttname"><a href="class_basic_render.html#a673518e03aacc0bddc3a744e6528adb1">BasicRender::bStereo</a></div><div class="ttdeci">bool bStereo</div><div class="ttdef"><b>Definition:</b> Basic.h:47</div></div>
+<div class="ttc" id="class_basic_render_html_a9c830ef675135840363d19768f8535ca"><div class="ttname"><a href="class_basic_render.html#a9c830ef675135840363d19768f8535ca">BasicRender::renderLeft</a></div><div class="ttdeci">void renderLeft(float fTime)</div><div class="ttdef"><b>Definition:</b> Basic.h:133</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2014年 六月 27日 星期五 15:19:00 , 为 数字式立体视觉刺激系统使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.7
+</small></address>
+</body>
+</html>

@@ -1,4 +1,4 @@
-//--------------------------------------------------------------------------------
+﻿//--------------------------------------------------------------------------------
 // This file is a portion of the Eye Stereo Project.  It is distributed
 // under the MIT License, available in the root of this distribution and 
 // at the following URL:
@@ -54,6 +54,7 @@ StereoSetting*				g_pStereoSetting = NULL;
 ChooseItRender*				g_pChooseItRender = NULL;
 KeyBoard*					g_pKeyBoard = NULL;
 WavAudioPlayer*				g_pWavAudioPlayer = NULL;
+Vector3f					g_PosSphere[] = { Vector3f(-2, -2, 4), Vector3f(2, -2, 4), Vector3f(-2, 2, 4), Vector3f(2, 2, 4) }; ///< Init Pos of Sphere
 
 WCHAR						g_pShareMessage[64] = L"UESTC_LIFE";
 bool						g_bShareChanged = false;
@@ -82,6 +83,7 @@ enum {
 
  IDC_STEREO_OPEN,
  IDC_CHOOSEIT_SWITCH,
+ IDC_CHOOSEIT_RANDOM,
 
  IDC_STEREO_SEPARATION_SILDER,
 
@@ -140,7 +142,7 @@ int WINAPI wWinMain( HINSTANCE hInstance, HINSTANCE hPrevInstance, LPWSTR lpCmdL
     DXUTSetCallbackDeviceChanging( ModifyDeviceSettings );
 
 
-    DXUTSetCallbackD3D10DeviceAcceptable( IsD3D10DeviceAcceptable );
+    //DXUTSetCallbackD3D10DeviceAcceptable( IsD3D10DeviceAcceptable );
     DXUTSetCallbackD3D10DeviceCreated( OnD3D10CreateDevice );
     DXUTSetCallbackD3D10SwapChainResized( OnD3D10ResizedSwapChain );
     DXUTSetCallbackD3D10SwapChainReleasing( OnD3D10ReleasingSwapChain );
@@ -151,7 +153,7 @@ int WINAPI wWinMain( HINSTANCE hInstance, HINSTANCE hPrevInstance, LPWSTR lpCmdL
     DXUTInit( true, true, NULL ); // Parse the command line, show msgboxes on error, no extra command line params
     DXUTSetCursorSettings( true, true );
     DXUTCreateWindow( L"Choose It Project" );
-    DXUTCreateDevice( true, 640, 480 );
+    DXUTCreateDevice( false, 0, 0 );
     DXUTMainLoop(); // Enter into the DXUT render loop
 
     return DXUTGetExitCode();
@@ -174,8 +176,9 @@ void InitApp()
     g_HUD.AddButton( IDC_TOGGLEREF,			L"Toggle REF (F3)",		35, iY += 24, 125, 22, VK_F3 );
     g_HUD.AddButton( IDC_TOGGLEWARP,		L"Toggle WARP (F4)",	35, iY += 24, 125, 22, VK_F4 );
 	
-	g_HUD.AddButton( IDC_STEREO_OPEN,	L"��Stereo",	35,	iY+=24, 125, 22);
-	g_HUD.AddButton(IDC_CHOOSEIT_SWITCH, L"��ʼChooseIt����", 35, iY += 24, 125, 22);
+	g_HUD.AddButton( IDC_STEREO_OPEN,	L"打开Stereo",	35,	iY+=24, 125, 22);
+	g_HUD.AddButton(IDC_CHOOSEIT_SWITCH, L"开始ChooseIt测试", 35, iY += 24, 125, 22);
+	g_HUD.AddButton(IDC_CHOOSEIT_RANDOM, L"随机位置", 35, iY += 24, 125, 22);
 
 	g_SampleUI.AddSlider( IDC_STEREO_SEPARATION_SILDER,		35, iY+=32, 125, 22, 0, 100, 100);
 
@@ -219,6 +222,21 @@ bool CALLBACK IsD3D10DeviceAcceptable( UINT Adapter, UINT Output, D3D10_DRIVER_T
     return true;
 }
 
+/**
+随机r选择一个位置作为真立体的球。程序中 pSpherePos[0] 的位置为真立体视的地方。
+*/
+void setRandomPlace()
+{
+
+	if (g_pChooseItRender->pSpherePos == NULL) {
+		g_pChooseItRender->pSpherePos = new Vector3f[3];
+		for (int i = 0; i < 4; ++i) {
+			g_pChooseItRender->pSpherePos[i] = g_PosSphere[i];
+		}
+	}
+	int r = rand() % 4;
+	std::swap(g_pChooseItRender->pSpherePos[r], g_pChooseItRender->pSpherePos[0]);  // Set 0's Sphere As Stereo Sphere
+}
 
 //--------------------------------------------------------------------------------------
 // Create any D3D10 resources that aren't dependant on the back buffer
@@ -250,7 +268,7 @@ HRESULT CALLBACK OnD3D10CreateDevice( ID3D10Device* pd3dDevice, const DXGI_SURFA
 
 
 	g_pChooseItRender->init(pd3dDevice, g_pStereoSetting, &g_Camera);
-
+	setRandomPlace();
 //	g_pWavAudioPlayer->Init();
 
 	g_pd3dDevice = pd3dDevice;
@@ -492,6 +510,7 @@ void CALLBACK OnKeyboard( UINT nChar, bool bKeyDown, bool bAltDown, void* pUserC
 }
 
 
+
 //--------------------------------------------------------------------------------------
 // Handles the GUI events
 //--------------------------------------------------------------------------------------
@@ -515,9 +534,9 @@ void CALLBACK OnGUIEvent( UINT nEvent, int nControlID, CDXUTControl* pControl, v
 
 			g_pChooseItRender->bStereo = !g_pChooseItRender->bStereo;
 			if (g_pChooseItRender->bStereo) {
-				g_HUD.GetButton( IDC_STEREO_OPEN )->SetText(L"����Stereo");
+				g_HUD.GetButton( IDC_STEREO_OPEN )->SetText(L"结束Stereo");
 			} else {
-				g_HUD.GetButton( IDC_STEREO_OPEN )->SetText(L"��ʼStereo");
+				g_HUD.GetButton( IDC_STEREO_OPEN )->SetText(L"开始Stereo");
 			}
 
 			break;
@@ -529,14 +548,15 @@ void CALLBACK OnGUIEvent( UINT nEvent, int nControlID, CDXUTControl* pControl, v
 			g_pChooseItRender->bactive = flg;
 
 			if (g_pChooseItRender->bactive) {
-				g_HUD.GetButton(IDC_CHOOSEIT_SWITCH)->SetText(L"��������");
+				g_HUD.GetButton(IDC_CHOOSEIT_SWITCH)->SetText(L"结束测试");
 			} else {
-				g_HUD.GetButton(IDC_CHOOSEIT_SWITCH)->SetText(L"��ʼChooseIt����");
+				g_HUD.GetButton(IDC_CHOOSEIT_SWITCH)->SetText(L"开始ChooseIt测试");
 			}
 			break;
 		}
-
-
+		case IDC_CHOOSEIT_RANDOM: {
+			setRandomPlace();   ///< 点击按钮后改变位置
+		}
     }
 }
 

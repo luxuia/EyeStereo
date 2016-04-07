@@ -62,7 +62,7 @@ namespace EyeStereo {
 
 		void Restart();
 
-		UINT FindConnectedCubes(std::vector< uupair > &stack, TetrisCubes::Status dir);
+		UINT FindConnectedCubes(std::vector< uupair > &stack, TetrisCubes::Status dir, uupair lastCube);
 
 
 		bool Collision(UINT a, UINT b, TetrisCubes::Status dir, float space);

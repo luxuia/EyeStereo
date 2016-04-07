@@ -24,7 +24,6 @@
 //#define DEBUG_VS   // Uncomment this line to debug D3D9 vertex shaders 
 //#define DEBUG_PS   // Uncomment this line to debug D3D9 pixel shaders 
 
-
 using namespace EyeStereo;
 
 //--------------------------------------------------------------------------------------
@@ -48,14 +47,10 @@ ID3D10EffectMatrixVariable* g_pmWorldViewProj = NULL;
 ID3D10EffectMatrixVariable* g_pmWorld = NULL;
 ID3D10EffectScalarVariable* g_pfTime = NULL;
 
-
-
-
 //MY_ADDED
 StereoSetting*				g_pStereoSetting = NULL;
 PingPang*					g_pPingPang = NULL;
 KeyBoard*					g_pKeyBoard = NULL;
-
 
 WCHAR						g_pShareMessage[64] = L"UESTC_LIFE";
 bool						g_bShareChanged = false;
@@ -83,7 +78,6 @@ enum {
  IDC_TOGGLEWARP,
 
  IDC_PINGPANG,
-
 
  IDC_STEREO_OPEN,
 
@@ -155,7 +149,7 @@ int WINAPI wWinMain( HINSTANCE hInstance, HINSTANCE hPrevInstance, LPWSTR lpCmdL
     DXUTInit( true, true, NULL ); // Parse the command line, show msgboxes on error, no extra command line params
     DXUTSetCursorSettings( true, true );
     DXUTCreateWindow( L"PingPang Experience" );
-    DXUTCreateDevice( true, 640, 480 );
+    DXUTCreateDevice( false, 0, 0 );
     DXUTMainLoop(); // Enter into the DXUT render loop
 
     return DXUTGetExitCode();
@@ -348,7 +342,7 @@ void CALLBACK OnD3D10DestroyDevice( void* pUserContext )
     SAFE_RELEASE( g_pVertexLayout );
     SAFE_RELEASE( g_pSprite10 );
     
-	SAFE_DELETE(g_pTxtHelper);
+	SAFE_DELETE( g_pTxtHelper );
 	
 	SAFE_DELETE( g_pPingPang );
 	SAFE_DELETE( g_pStereoSetting );
@@ -469,10 +463,6 @@ void CALLBACK OnKeyboard( UINT nChar, bool bKeyDown, bool bAltDown, void* pUserC
 			case 't':		{(*g_pKeyBoard)[8] = 1;break;}
 			}
 		}
-		
-		
-		//}
-
 }
 
 

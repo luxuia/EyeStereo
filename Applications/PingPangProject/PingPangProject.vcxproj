@@ -98,6 +98,8 @@
     <ClCompile Include="..\..\Dependencies\DXUT\Optional\SDKmisc.cpp" />
     <ClCompile Include="..\..\Dependencies\DXUT\Optional\SDKwavefile.cpp" />
     <ClCompile Include="..\..\Source\Geometry\DiffSpecularSphere.cpp" />
+    <ClCompile Include="..\..\Source\Mathematic\Vector2f.cpp" />
+    <ClCompile Include="..\..\Source\Mathematic\Vector3f.cpp" />
     <ClCompile Include="..\..\Source\Utility\Log.cpp" />
     <ClCompile Include="App.cpp" />
     <ClCompile Include="PingPang.cpp" />
@@ -115,6 +117,8 @@
     <ClInclude Include="..\..\Dependencies\DXUT\Optional\SDKwavefile.h" />
     <ClInclude Include="..\..\Source\Geometry\DiffSpecularSphere.hpp" />
     <ClInclude Include="..\..\Source\Geometry\Vertex.h" />
+    <ClInclude Include="..\..\Source\Mathematic\Vector2f.h" />
+    <ClInclude Include="..\..\Source\Mathematic\Vector3f.h" />
     <ClInclude Include="PingPang.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -22,7 +22,7 @@
 
 using namespace EyeStereo;
 
-#define filename "RandomDotExperience.data"
+#define filename "MaZeExperience.data"
 
 //--------------------------------------------------------------------------------------
 // Global variables
@@ -47,6 +47,8 @@ KeyBoard*					g_pKeyBoard = NULL;
 
 
 WCHAR						g_pShareMessage[64] = L"双眼视差: ";
+WCHAR						g_pScore[64] = L"0";
+WCHAR						g_pAngel[64] = L"NA";
 bool						g_bShareChanged = false;
 clock_t                     start = 0,finish;
 Timer*						pTimer;
@@ -57,12 +59,16 @@ static const WCHAR* C_PointNum = L"点数量: %d";
 static const WCHAR* C_PointSize = L"点大小: %0.3f";
 static const WCHAR* C_PointDensity = L"点密度: %f (个/平方厘米)";
 static const WCHAR* C_Binoculardisparity = L"双眼视差: %d 度 %d 分 %d 秒";
-static const WCHAR* C_LogStr = L"time used %0.2f sec(s), to recognize  number %d, input %d\n";
+static const WCHAR* C_Score = L"您的得分: %.2f";
+
+static const WCHAR* C_LogStr = L"time used %0.2f sec(s), to recognize  number %d, input %d, percent %.2f\n";
 static const int C_MaxPointNum = 5000;
 int g_iPointNum = 2000;
 float g_Binodisp = 0.0;
 float g_fPointSize = 0.02;
 float g_fPointDensity = 2000/10000;
+
+WCHAR*						g_pLogFilePath = NULL;
 
 //--------------------------------------------------------------------------------------
 // UI control IDs
@@ -88,9 +94,10 @@ enum {
  IDC_SHARE_MESSAGE,
 
  IDC_BINOCULAR_DISPARITY_EDITBOX,//双眼视差
- IDC_BINOCULAR_DISPARITY_SLIDER,
 
- IDC_FINISHI_TEST
+ IDC_SCORE,//得分
+ IDC_ANGEL//得分
+ //IDC_FINISHI_TEST
 };
 
 
@@ -114,7 +121,7 @@ HRESULT CALLBACK OnD3D10ResizedSwapChain( ID3D10Device* pd3dDevice, IDXGISwapCha
 void CALLBACK OnD3D10FrameRender( ID3D10Device* pd3dDevice, double fTime, float fElapsedTime, void* pUserContext );
 void CALLBACK OnD3D10ReleasingSwapChain( void* pUserContext );
 void CALLBACK OnD3D10DestroyDevice( void* pUserContext );
-float calcang(float W, float H, float x, float y, float l, float L, float w, float h);
+double calcang(float eye_from_left_bottom_x, float eye_form_left_bottom_y, float eye_separation, float eye_screen_distance, float pic_w, float pic_h);
 
 void InitApp();
 void RenderText();
@@ -139,11 +146,14 @@ int WINAPI wWinMain( HINSTANCE hInstance, HINSTANCE hPrevInstance, LPWSTR lpCmdL
     DXUTSetCallbackD3D10DeviceDestroyed( OnD3D10DestroyDevice );
     DXUTSetCallbackD3D10FrameRender( OnD3D10FrameRender );
 
+	//WCHAR* tmp = L"D:/test.txt";
+	g_pLogFilePath = lpCmdLine;
+
     InitApp();
     DXUTInit( true, true, NULL ); // Parse the command line, show msgboxes on error, no extra command line params
     DXUTSetCursorSettings( true, true );
     DXUTCreateWindow( L"Random Dot Experience" );
-    DXUTCreateDevice( true, 640, 480 );
+    DXUTCreateDevice( false, 0, 0 );
     DXUTMainLoop(); // Enter into the DXUT render loop
 
     return DXUTGetExitCode();
@@ -164,7 +174,7 @@ void InitApp()
 	
 	g_HUD.AddButton( IDC_STEREO_OPEN_SWITCH,	L"打开Stereo",	35,	iY+=24, 125, 22);
 	g_HUD.AddButton( IDC_RANDOMDOT_SWITCH,	L"视融合检测",	35, iY+=24, 125, 22);
-	g_HUD.AddButton( IDC_FINISHI_TEST,	L"已经看见了图形",	35, iY+=24, 125, 22);
+//	g_HUD.AddButton( IDC_FINISHI_TEST,	L"已经看见了图形",	35, iY+=24, 125, 22);
 
 	CDXUTComboBox *pcombo = new CDXUTComboBox();
 	g_HUD.AddComboBox(IDC_RANDOMDOT_SUBMIT, 35, iY += 24, 125, 22, 0, false, &pcombo);
@@ -194,14 +204,14 @@ void InitApp()
 	g_HUD.AddSlider(IDC_RANDOMDOT_POINT_SIZE_SLIDER, 35, iY += 24, 125, 22, 1, 10, g_fPointSize*100);
 
 
-
 	iY = 100;
 	g_SampleUI.AddSlider( IDC_RANDOMDOT_SEPERATION_SILDER, 35, iY, 125, 22, -100, 100, 20);
 
 	g_SampleUI.AddStatic( IDC_SHARE_MESSAGE, g_pShareMessage, 35, iY+=32, 125, 40);
 
-	g_SampleUI.AddSlider(IDC_BINOCULAR_DISPARITY_SLIDER, 35, iY += 30, 125, 30);
-	g_SampleUI.AddEditBox(IDC_BINOCULAR_DISPARITY_EDITBOX, L"未知", 35, iY += 30, 125, 30);
+	g_SampleUI.AddStatic(IDC_ANGEL, g_pAngel, 35, iY += 30, 125, 30);
+
+	g_SampleUI.AddStatic(IDC_SCORE, g_pScore,35, iY += 32, 125, 40);
 
 	g_SampleUI.GetSlider( IDC_RANDOMDOT_SEPERATION_SILDER )->SetVisible(false);
 
@@ -215,7 +225,7 @@ void InitApp()
 
 	pTimer = new Timer();
 
-	Log::Get().Open();
+	Log::Get().Open(g_pLogFilePath);
 }
 
 
@@ -529,49 +539,31 @@ void CALLBACK OnGUIEvent( UINT nEvent, int nControlID, CDXUTControl* pControl, v
 			g_HUD.GetStatic(IDC_RANDOMDOT_POINT_NUM_SHOW)->SetText(tmp);
 			break;
 		}
-		case IDC_BINOCULAR_DISPARITY_SLIDER: {
-			
-			g_Binodisp = g_HUD.GetSlider(IDC_BINOCULAR_DISPARITY_SLIDER)->GetValue() / 100.0;
-/*			WCHAR tmp[200];
-			int ang = 0, minu = 0, sec = 0;
-		    float t1 ,t2, t;
-			t1 = calcang, t2 = calcang();
-			t = abs(t1 - t2);
-			ang = int(t), minu = int(t * 1000) % 1000, sec = int(t * 1000000) % 1000;
-			swprintf(tmp, C_Binoculardisparity, ang, minu, sec);
-			g_HUD.GetStatic(IDC_BINOCULAR_DISPARITY_EDITBOX)->SetText(tmp);*/
-			break;
-		}
-		case IDC_FINISHI_TEST: {
-			g_pRandomDotRender->bIsfinish = !g_pRandomDotRender->bIsfinish;
-			if (g_pRandomDotRender->bIsfinish) {
-				if(!start) {
-					std::ofstream output_str(filename);
-					output_str<<"0"<<std::endl;
-				}
-				else {
-					finish = clock();
-					clock_t delta = finish - start;
-					double tim = (double) delta / CLOCKS_PER_SEC;
-//					printf("%f\n",tim);
-					std::ofstream output_str(filename);
-					output_str<<std::fixed<<std::setprecision(2)<<tim<<std::endl;
-				}
-			} else {
-				g_HUD.GetButton( IDC_FINISHI_TEST )->SetText(L"可以退出程序");
-			}
-			break;
-		}
+//		case IDC_FINISHI_TEST: {
+//			g_pRandomDotRender->bIsfinish = !g_pRandomDotRender->bIsfinish;
+//			swprintf(g_pScore, score);
+//			break;
+//		}
 		case IDC_RANDOMDOT_GEOMETRY_NEXT_BUTTON: {
+			static int score = 0;
+			static int total = 0;
+			double p, p_percent;
 			pTimer->Update();
 			float seconds = pTimer->Elapsed();
-			WCHAR tmp_str[80];
+			WCHAR tmp_str[100];
 			int type = g_pRandomDotRender->pGeo->getType();
 			int inputType = g_HUD.GetComboBox(IDC_RANDOMDOT_SUBMIT)->GetSelectedIndex()-1; /// index zero from query string , then 0..9
-			swprintf(tmp_str, C_LogStr, seconds, type, inputType);
-			Log::Get().Write(tmp_str);
-			Log::Get().WriteSeparater();
-			g_pRandomDotRender->pGeo->random();
+			if (type == inputType)
+				score += 1;
+			total++;
+			p_percent = (double)score / total;
+			p = score * 3 + (total - score) + p_percent * 1000;
+			swprintf(tmp_str, C_Score, p);
+			g_SampleUI.GetStatic(IDC_SCORE)->SetText(tmp_str);
+			swprintf(tmp_str, C_LogStr, seconds, type, inputType, p_percent);
+			Log::Get().Write(p, 1, p_percent);
+			//Log::Get().WriteSeparater();
+			g_pRandomDotRender->pGeo->Select();
 
 			pTimer->Reset();
 		}
@@ -583,13 +575,12 @@ void CALLBACK OnGUIEvent( UINT nEvent, int nControlID, CDXUTControl* pControl, v
 
 
 
-float calcang(float W, float H, float x, float y, float l, float L, float w, float h)
+double calcang(float eye_from_left_bottom_x, float eye_form_left_bottom_y, float eye_separation, float eye_screen_distance, float pic_w, float pic_h)
 {
-	double a, b, c, angl;
-	a = sqrt((x - w) * (x - w) + L * L + (y - h) * (y - h));
-	b = sqrt((x + l - w) * (x + l - w) + L * L + (y - h) * (y - h));
-	c = l;
-	angl = (a * a + b * b - c * c) / (2 * a * b);
+	double left_eye, right_eye, angl;
+	left_eye = sqrt((eye_from_left_bottom_x - pic_w) * (eye_from_left_bottom_x - pic_w) + eye_screen_distance * eye_screen_distance + (eye_form_left_bottom_y - pic_h) * (eye_form_left_bottom_y - pic_h));
+	right_eye = sqrt((eye_from_left_bottom_x + eye_separation - pic_w) * (eye_from_left_bottom_x + eye_separation - pic_w) + eye_screen_distance * eye_screen_distance + (eye_form_left_bottom_y - pic_h) * (eye_form_left_bottom_y - pic_h));
+	angl = (left_eye * left_eye + right_eye * right_eye - eye_separation * eye_separation) / (2 * left_eye * right_eye);
 	angl = acos(angl);
 	return angl;
 }

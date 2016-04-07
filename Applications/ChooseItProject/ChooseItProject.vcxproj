@@ -99,7 +99,8 @@
     <ClCompile Include="..\..\Dependencies\DXUT\Optional\SDKwavefile.cpp" />
     <ClCompile Include="..\..\Source\Geometry\DiffSpecularSphere.cpp" />
     <ClCompile Include="..\..\Source\Helper\MeshLoader10.cpp" />
-    <ClCompile Include="..\..\Source\Helper\WavAudioPlayer.cpp" />
+    <ClCompile Include="..\..\Source\Mathematic\Vector2f.cpp" />
+    <ClCompile Include="..\..\Source\Mathematic\Vector3f.cpp" />
     <ClCompile Include="..\..\Source\Utility\Log.cpp" />
     <ClCompile Include="App.cpp" />
   </ItemGroup>
@@ -118,7 +119,8 @@
     <ClInclude Include="..\..\Source\Geometry\Vertex.h" />
     <ClInclude Include="..\..\Source\Helper\MeshHelper.h" />
     <ClInclude Include="..\..\Source\Helper\MeshLoader10.h" />
-    <ClInclude Include="..\..\Source\Helper\WavAudioPlayer.h" />
+    <ClInclude Include="..\..\Source\Mathematic\Vector2f.h" />
+    <ClInclude Include="..\..\Source\Mathematic\Vector3f.h" />
     <ClInclude Include="..\..\Source\Utility\Log.h" />
     <ClInclude Include="ChooseIt.h" />
   </ItemGroup>

@@ -16,6 +16,9 @@ namespace EyeStereo {
 	class RandomDotRender {
 	public:
 
+		/**
+			设置左右眼标志
+		*/
 		enum STflg {LEFT = 0, RIGHT = 1, };
 
 		ID3D10Device*					pd3dDevice;
@@ -56,6 +59,10 @@ namespace EyeStereo {
 
 		Geometry *getGeometry(Geometry *newGeo);
 
+		/**
+			@param[in] dotDist 点点距离(未实现)
+			产生随机点图
+		*/
 		void makeDot(float dotDist);
 
 		bool init(ID3D10Device* pd3d, StereoSetting* pstereo, CModelViewerCamera *pcamera, float dotDist, KeyBoard *key);
@@ -70,6 +77,8 @@ namespace EyeStereo {
 
 		bool renderRight(float fTime);
 
+
+		///> 收集数据
 		void collectData();
 
 		void ClearScreen(ID3D10Device *pd3dDevice);

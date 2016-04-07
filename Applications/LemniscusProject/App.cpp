@@ -56,6 +56,9 @@ Lemniscus*					g_pLemniscus = NULL;
 KeyBoard*					g_pKeyBoard = NULL;
 WCHAR						g_pShareMessage[64] = L"UESTC_LIFE";
 bool						g_bShareChanged = false;
+Timer*						g_pTimer = NULL;
+WCHAR*						g_pLogFilePath = NULL;
+
 //--------------------------------------------------------------------------------------
 // UI control IDs
 //--------------------------------------------------------------------------------------
@@ -66,7 +69,7 @@ enum {
  IDC_CHANGEDEVICE,
  IDC_TOGGLEWARP,
 
- IDC_LEMNISCUS,
+ IDC_LEMNISCUS,   //< å…«å­—èˆž
 
  IDC_STEREO_OPEN,
 
@@ -133,11 +136,13 @@ int WINAPI wWinMain( HINSTANCE hInstance, HINSTANCE hPrevInstance, LPWSTR lpCmdL
     DXUTSetCallbackD3D10DeviceDestroyed( OnD3D10DestroyDevice );
     DXUTSetCallbackD3D10FrameRender( OnD3D10FrameRender );
 
+	g_pLogFilePath = lpCmdLine;
+
     InitApp();
     DXUTInit( true, true, NULL ); // Parse the command line, show msgboxes on error, no extra command line params
     DXUTSetCursorSettings( true, true );
     DXUTCreateWindow( L"EyeProject" );
-    DXUTCreateDevice( true, 640, 480 );
+    DXUTCreateDevice( false, 0, 0 );
     DXUTMainLoop(); // Enter into the DXUT render loop
 
     return DXUTGetExitCode();
@@ -160,19 +165,15 @@ void InitApp()
     g_HUD.AddButton( IDC_TOGGLEREF,			L"Toggle REF (F3)",		35, iY += 24, 125, 22, VK_F3 );
     g_HUD.AddButton( IDC_TOGGLEWARP,		L"Toggle WARP (F4)",	35, iY += 24, 125, 22, VK_F4 );
 	
-	g_HUD.AddButton( IDC_STEREO_OPEN,	L"´ò¿ªStereo",	35,	iY+=24, 125, 22);
-	g_HUD.AddButton( IDC_LEMNISCUS,		L"Ë«Å¦Ïß",		35, iY+=24, 125, 22);
+	g_HUD.AddButton( IDC_STEREO_OPEN,	L"æ‰“å¼€Stereo",	35,	iY+=24, 125, 22);
+	g_HUD.AddButton( IDC_LEMNISCUS,		L"åŒçº½çº¿",		35, iY+=24, 125, 22);
 
 	iY = 0;
-
 
 
 	g_SampleUI.AddSlider( IDC_STEREO_SEPARATION_SILDER,		35, iY+=32, 125, 22, 0, 100, 100);
 
 	g_SampleUI.AddStatic( IDC_SHARE_MESSAGE,	g_pShareMessage, 35, iY+=32, 125, 40);
-
-
-	
 
     g_SampleUI.SetCallback( OnGUIEvent ); iY = 10;
 
@@ -182,7 +183,9 @@ void InitApp()
 	g_pLemniscus = new Lemniscus();
 
 	g_pKeyBoard = new KeyBoard();
-
+	g_pTimer = new Timer();
+	Log::Get().Open(g_pLogFilePath);
+	//Log::Get().Open(L"Lemniscus.txt");
 }
 
 
@@ -348,8 +351,6 @@ void CALLBACK OnD3D10DestroyDevice( void* pUserContext )
     SAFE_RELEASE( g_pSprite10 );
     SAFE_DELETE( g_pTxtHelper );
 	delete	g_pLemniscus;
-
-
 	delete	g_pStereoSetting;
 	//_CrtDumpMemoryLeaks();
 }
@@ -402,17 +403,12 @@ void CALLBACK OnFrameMove( double fTime, float fElapsedTime, void* pUserContext 
 }
 
 
-
-
 //--------------------------------------------------------------------------------------
 // Handle messages to the application
 //--------------------------------------------------------------------------------------
 LRESULT CALLBACK MsgProc( HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam, bool* pbNoFurtherProcessing,
                           void* pUserContext )
 {
-
-
-
     // Pass messages to dialog resource manager calls so GUI state is updated correctly
     *pbNoFurtherProcessing = g_DialogResourceManager.MsgProc( hWnd, uMsg, wParam, lParam );
     if( *pbNoFurtherProcessing )
@@ -468,10 +464,7 @@ void CALLBACK OnKeyboard( UINT nChar, bool bKeyDown, bool bAltDown, void* pUserC
 			case 't':		{(*g_pKeyBoard)[8] = 1;break;}
 			}
 		}
-		
-		
 		//}
-
 }
 
 
@@ -497,18 +490,25 @@ void CALLBACK OnGUIEvent( UINT nEvent, int nControlID, CDXUTControl* pControl, v
 			g_pLemniscus->bactive = !g_pLemniscus->bactive;
 
 			if (g_pLemniscus->bactive) {
-				g_HUD.GetButton( IDC_LEMNISCUS)->SetText(L"½áÊøË«Å¦Ïß");
+				///begin Lemniscus app;
+				g_pTimer->Reset();
+				g_HUD.GetButton( IDC_LEMNISCUS)->SetText(L"ç»“æŸåŒçº½çº¿"); 
 			} else {
-				g_HUD.GetButton( IDC_LEMNISCUS)->SetText(L"¿ªÊ¼Ë«Å¦Ïß");
+				// End pre Lemniscus App; then record content;
+
+				g_pTimer->Update();
+				float second = g_pTimer->Elapsed();
+				Log::Get().Write(second, 1, second);
+				g_HUD.GetButton( IDC_LEMNISCUS)->SetText(L"å¼€å§‹åŒçº½çº¿");
 			}
 			break;
 		}
 		case IDC_STEREO_OPEN: {
 			g_pLemniscus->bStereo = !g_pLemniscus->bStereo;
 			if (g_pLemniscus->bStereo) {
-				g_HUD.GetButton( IDC_STEREO_OPEN )->SetText(L"½áÊøStereo");
+				g_HUD.GetButton( IDC_STEREO_OPEN )->SetText(L"ç»“æŸStereo");
 			} else {
-				g_HUD.GetButton( IDC_STEREO_OPEN )->SetText(L"¿ªÊ¼Stereo");
+				g_HUD.GetButton( IDC_STEREO_OPEN )->SetText(L"å¼€å§‹Stereo");
 			}
 
 			break;

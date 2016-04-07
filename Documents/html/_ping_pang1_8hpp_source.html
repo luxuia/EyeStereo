@@ -1,0 +1,226 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.7"/>
+<title>Stereo: Applications/PingPangProject/PingPang1.hpp 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Stereo
+   &#160;<span id="projectnumber">1</span>
+   </div>
+   <div id="projectbrief">Stereo</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.7 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="namespaces.html"><span>命名空间</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
+    </ul>
+  </div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_8c1195e4829fa17630c4278c41da729a.html">Applications</a></li><li class="navelem"><a class="el" href="dir_1ad077b399c30c75ba492636a635506c.html">PingPangProject</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">PingPang1.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_ping_pang1_8hpp.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef __PINGPANG_H__</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define __PINGPANG_H__</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_p_c_h_8h.html">Utility\PCH.h</a>&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;Geometry\Sphere.hpp&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;Geometry\Ball.h&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_light_box_8h.html">Geometry\LightBox.h</a>&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_light_8h.html">Geometry\Light.h</a>&quot;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_stereo_setting_8h.html">Stereo\StereoSetting.h</a>&quot;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_key_board_state_8h.html">Event\KeyBoardState.h</a>&quot;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_vertex_8h.html">Geometry\Vertex.h</a>&quot;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">namespace </span>EyeStereo {</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_ping_pang.html">   18</a></span>&#160;    <span class="keyword">class </span><a class="code" href="class_eye_stereo_1_1_ping_pang.html">PingPang</a> {</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="keyword">class </span>LifeTimeBox : <span class="keyword">public</span> LightBox{</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;            <span class="keyword">enum</span> LIVE_STATE{ <a class="code" href="namespace_eye_stereo.html#aca00170ee7f2e74a8cbdd83316ea7535a0fa083f992f713309de08402e19e7fe8">DIE</a>, <a class="code" href="namespace_eye_stereo.html#aca00170ee7f2e74a8cbdd83316ea7535a9541c80916c4a84a892acb9f24722324">LIVE</a>, EVER };</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;            LIVE_STATE liveState;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;            LifeTimeBox(<span class="keywordtype">float</span> ll, <span class="keywordtype">float</span> hh, <span class="keywordtype">float</span> ww, D3DXCOLOR diff, D3DXCOLOR spec = <a class="code" href="_p_c_h_8h.html#a0c5b097577dbfc6d33ce3013172a6d2a">YELLOW</a>) {</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;                liveState = <a class="code" href="namespace_eye_stereo.html#aca00170ee7f2e74a8cbdd83316ea7535a9541c80916c4a84a892acb9f24722324">LIVE</a>;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;                LightBox::LightBox(ll, hh, ww, diff, spec);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;            }</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        };</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_ping_pang.html#a97bd49cabaf08d9a90e5d8a91722ab78">   30</a></span>&#160;        ID3D10Device*   <a class="code" href="class_eye_stereo_1_1_ping_pang.html#a97bd49cabaf08d9a90e5d8a91722ab78">pd3dDevice</a>;</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_ping_pang.html#a0833822f97c1effb913f2b2ee01a3120">   31</a></span>&#160;        ID3D10Effect*   <a class="code" href="class_eye_stereo_1_1_ping_pang.html#a0833822f97c1effb913f2b2ee01a3120">pEffect</a>;</div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_ping_pang.html#aa3dfdfca4b18991b528b5e296feac05d">   32</a></span>&#160;        ID3D10EffectTechnique*  <a class="code" href="class_eye_stereo_1_1_ping_pang.html#aa3dfdfca4b18991b528b5e296feac05d">pTech</a>;</div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_ping_pang.html#ab41f5bebeeac1d271198e9bef4c5a902">   33</a></span>&#160;        ID3D10InputLayout*      <a class="code" href="class_eye_stereo_1_1_ping_pang.html#ab41f5bebeeac1d271198e9bef4c5a902">pInputLayout</a>;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_ping_pang.html#ac9e5e035cf640d6b5e82b1f8c076704b">   36</a></span>&#160;        IDXGISwapChain*         <a class="code" href="class_eye_stereo_1_1_ping_pang.html#ac9e5e035cf640d6b5e82b1f8c076704b">pSwapChain</a>;</div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_ping_pang.html#ad014522e66e2d34b588dbc4a3a377ddd">   37</a></span>&#160;        CModelViewerCamera*     <a class="code" href="class_eye_stereo_1_1_ping_pang.html#ad014522e66e2d34b588dbc4a3a377ddd">pCamera</a>;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_ping_pang.html#a2522fe46db359bd140f00ae0034790fb">   39</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="class_eye_stereo_1_1_ping_pang.html#a2522fe46db359bd140f00ae0034790fb">blockNumL</a>, <a class="code" href="class_eye_stereo_1_1_ping_pang.html#a5cb760bcff5b27c24ee6099770926a97">blockNumH</a>;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_ping_pang.html#ac9d90c2dd73d74041388d539f1e07014">   42</a></span>&#160;        ID3D10EffectMatrixVariable*     <a class="code" href="class_eye_stereo_1_1_ping_pang.html#ac9d90c2dd73d74041388d539f1e07014">mfxWVP</a>;</div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_ping_pang.html#a803b07953eb307a5d2387a549025cb38">   43</a></span>&#160;        ID3D10EffectMatrixVariable*     <a class="code" href="class_eye_stereo_1_1_ping_pang.html#a803b07953eb307a5d2387a549025cb38">mfxWorld</a>;</div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_ping_pang.html#ad6e488852708e932b1cb8943521a2b4c">   44</a></span>&#160;        ID3D10EffectVariable*           <a class="code" href="class_eye_stereo_1_1_ping_pang.html#ad6e488852708e932b1cb8943521a2b4c">mfxEyePosVal</a>;</div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_ping_pang.html#a940c7b0a8a4274b1325b9fc5782d48b9">   45</a></span>&#160;        ID3D10EffectVariable*           <a class="code" href="class_eye_stereo_1_1_ping_pang.html#a940c7b0a8a4274b1325b9fc5782d48b9">mfxLightVal</a>[3];</div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_ping_pang.html#a4d6f5f91c2294229d981a62140b7ac24">   46</a></span>&#160;        ID3D10EffectScalarVariable*     <a class="code" href="class_eye_stereo_1_1_ping_pang.html#a4d6f5f91c2294229d981a62140b7ac24">mfxLightType</a>;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_ping_pang.html#a48ec7fec9384e9b23cd34a5c762a0d7d">   48</a></span>&#160;        ID3D10EffectShaderResourceVariable* <a class="code" href="class_eye_stereo_1_1_ping_pang.html#a48ec7fec9384e9b23cd34a5c762a0d7d">pShaderRV</a>;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_ping_pang.html#ae279ac63e23788a526b8e46de4bdc84b">   50</a></span>&#160;        D3DXMATRIX                      <a class="code" href="class_eye_stereo_1_1_ping_pang.html#ae279ac63e23788a526b8e46de4bdc84b">matWorld</a>;</div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_ping_pang.html#a0180e55a07d0972579bc85acc1f98cf8">   51</a></span>&#160;        D3DXMATRIX                      <a class="code" href="class_eye_stereo_1_1_ping_pang.html#a0180e55a07d0972579bc85acc1f98cf8">matBlockWorld</a>[20];</div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_ping_pang.html#a9c25274f012c3254c93732ca27dc6498">   52</a></span>&#160;        D3DXMATRIX                      <a class="code" href="class_eye_stereo_1_1_ping_pang.html#a9c25274f012c3254c93732ca27dc6498">matWorldViewProjection</a>;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_ping_pang.html#a9899164e889fbe64f4ad8b455e9944db">   55</a></span>&#160;        <a class="code" href="class_eye_stereo_1_1_ball.html">Ball</a>*                           <a class="code" href="class_eye_stereo_1_1_ping_pang.html#a9899164e889fbe64f4ad8b455e9944db">pBall</a>;</div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_ping_pang.html#a567bd63ed07cdef69858addabbcaa761">   56</a></span>&#160;        std::vector&lt;LifeTimeBox*&gt;           <a class="code" href="class_eye_stereo_1_1_ping_pang.html#a567bd63ed07cdef69858addabbcaa761">pBoxVector</a>;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_ping_pang.html#a7f4c563b78d3682d31fd43e0a25f527a">   58</a></span>&#160;        <span class="keywordtype">long</span> <span class="keywordtype">int</span>                        <a class="code" href="class_eye_stereo_1_1_ping_pang.html#a7f4c563b78d3682d31fd43e0a25f527a">windowsWidth</a>, <a class="code" href="class_eye_stereo_1_1_ping_pang.html#a66c42c3cae98166c1fc1e42c9ed7f5b9">windowsHeight</a>;</div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_ping_pang.html#a1e746920ab370fc8602978929e3e180c">   59</a></span>&#160;        <a class="code" href="class_eye_stereo_1_1_stereo_setting.html">StereoSetting</a>*                  <a class="code" href="class_eye_stereo_1_1_ping_pang.html#a1e746920ab370fc8602978929e3e180c">pStereoSetting</a>;</div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_ping_pang.html#a97b6685b7f83836e20ebf98ffc3724f0">   60</a></span>&#160;        <span class="keywordtype">bool</span>                            <a class="code" href="class_eye_stereo_1_1_ping_pang.html#a97b6685b7f83836e20ebf98ffc3724f0">bactive</a>;</div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_ping_pang.html#aaff71ade2b5a417cfea3a5d0af28cb8e">   61</a></span>&#160;        <span class="keywordtype">bool</span>                            <a class="code" href="class_eye_stereo_1_1_ping_pang.html#aaff71ade2b5a417cfea3a5d0af28cb8e">bstereo</a>;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_ping_pang.html#a9574f4e4d57e2ab1bd9758404488e8ee">   63</a></span>&#160;        <a class="code" href="struct_light.html">Light</a>                           <a class="code" href="class_eye_stereo_1_1_ping_pang.html#a9574f4e4d57e2ab1bd9758404488e8ee">lights</a>[3];</div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_ping_pang.html#a96d913cf60b2d868db6e49d81dd5440d">   64</a></span>&#160;        <span class="keywordtype">int</span>                             <a class="code" href="class_eye_stereo_1_1_ping_pang.html#a96d913cf60b2d868db6e49d81dd5440d">lightType</a>;</div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_ping_pang.html#a3b4550d885c11c5e29ab59f68fa69df3">   65</a></span>&#160;        D3DXVECTOR3                     <a class="code" href="class_eye_stereo_1_1_ping_pang.html#a3b4550d885c11c5e29ab59f68fa69df3">eyePos</a>;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <span class="comment">// </span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="comment">//  ID3D10RasterizerState*          pSolidState;</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
+<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_ping_pang.html#a6d28fd00655689d2ae3746e42bf21094">   69</a></span>&#160;        <a class="code" href="struct_eye_stereo_1_1_key_board.html">KeyBoard</a>*                       <a class="code" href="class_eye_stereo_1_1_ping_pang.html#a6d28fd00655689d2ae3746e42bf21094">pKeyBoard</a>;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
+<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_ping_pang.html#a94589c8cfe95bb7fec73dba6297a66f7">   71</a></span>&#160;        <a class="code" href="class_eye_stereo_1_1_ping_pang.html#a94589c8cfe95bb7fec73dba6297a66f7">PingPang</a>() :<a class="code" href="class_eye_stereo_1_1_ping_pang.html#a48ec7fec9384e9b23cd34a5c762a0d7d">pShaderRV</a>(NULL), <a class="code" href="class_eye_stereo_1_1_ping_pang.html#a97bd49cabaf08d9a90e5d8a91722ab78">pd3dDevice</a>(NULL), <a class="code" href="class_eye_stereo_1_1_ping_pang.html#a0833822f97c1effb913f2b2ee01a3120">pEffect</a>(NULL), <a class="code" href="class_eye_stereo_1_1_ping_pang.html#aa3dfdfca4b18991b528b5e296feac05d">pTech</a>(NULL), <a class="code" href="class_eye_stereo_1_1_ping_pang.html#ab41f5bebeeac1d271198e9bef4c5a902">pInputLayout</a>(NULL), <a class="code" href="class_eye_stereo_1_1_ping_pang.html#ac9e5e035cf640d6b5e82b1f8c076704b">pSwapChain</a>(NULL), <a class="code" href="class_eye_stereo_1_1_ping_pang.html#a9899164e889fbe64f4ad8b455e9944db">pBall</a>(NULL), <a class="code" href="class_eye_stereo_1_1_ping_pang.html#a5cb760bcff5b27c24ee6099770926a97">blockNumH</a>(3), <a class="code" href="class_eye_stereo_1_1_ping_pang.html#a2522fe46db359bd140f00ae0034790fb">blockNumL</a>(4) {</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        }</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
+<div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_ping_pang.html#adf5dd7de45e87829544cd270425f8d55">   74</a></span>&#160;        <a class="code" href="class_eye_stereo_1_1_ping_pang.html#adf5dd7de45e87829544cd270425f8d55">~PingPang</a>() {</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            <a class="code" href="_basic_box_8h.html#a6038f7bdb274c2e159988a57dedbf93d">SAFE_RELEASE</a>(<a class="code" href="class_eye_stereo_1_1_ping_pang.html#a0833822f97c1effb913f2b2ee01a3120">pEffect</a>);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            <a class="code" href="_basic_box_8h.html#a6038f7bdb274c2e159988a57dedbf93d">SAFE_RELEASE</a>(<a class="code" href="class_eye_stereo_1_1_ping_pang.html#ab41f5bebeeac1d271198e9bef4c5a902">pInputLayout</a>);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;            <a class="code" href="_basic_box_8h.html#a6038f7bdb274c2e159988a57dedbf93d">SAFE_RELEASE</a>(<a class="code" href="class_eye_stereo_1_1_ping_pang.html#ac9e5e035cf640d6b5e82b1f8c076704b">pSwapChain</a>);</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;            <span class="comment">/*      SAFE_DELETE(pSolidState);*/</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;            <a class="code" href="_p_c_h_8h.html#a4b8b2bed986c06c207ebac140ba65a7a">SAFE_DELETE</a>(<a class="code" href="class_eye_stereo_1_1_ping_pang.html#a9899164e889fbe64f4ad8b455e9944db">pBall</a>);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;            <a class="code" href="class_eye_stereo_1_1_ping_pang.html#a567bd63ed07cdef69858addabbcaa761">pBoxVector</a>.clear();</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        }</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="class_eye_stereo_1_1_ping_pang.html#af2ff064732c73f1ea05e31014035ab74">init</a>(ID3D10Device* pdevice, <a class="code" href="class_eye_stereo_1_1_stereo_setting.html">StereoSetting</a>* stereo, CModelViewerCamera* pcamera, <a class="code" href="struct_eye_stereo_1_1_key_board.html">KeyBoard</a>* key) ; </div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_eye_stereo_1_1_ping_pang.html#ae799dbbbe80f51810a10d11d67826496">CreateBounds</a>();</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_eye_stereo_1_1_ping_pang.html#acf730184766739738768709059739f58">initLight</a>();</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_eye_stereo_1_1_ping_pang.html#a59e5734facb55d0bf4505a6a2f2e6a8b">Restart</a>();</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        D3DXVECTOR3 <a class="code" href="class_eye_stereo_1_1_ping_pang.html#a21400c49797f81038fd296a6f9360521">RefectBall</a>(D3DXVECTOR3 v, D3DXVECTOR3 normal);</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_eye_stereo_1_1_ping_pang.html#a67b9498b2995f0ad040dd7fbc30b5cbc">CaculateBallV</a>(<span class="keywordtype">float</span> fTime);</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_eye_stereo_1_1_ping_pang.html#a25424d00fa367ee1523f18fbd1b7e62f">stereoRender</a>(<span class="keywordtype">float</span> fTime);</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_eye_stereo_1_1_ping_pang.html#a1ea0f15e677b0509e4e930f33d70a74e">renderScene</a>(<span class="keywordtype">int</span> index);</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_eye_stereo_1_1_ping_pang.html#a48537b250116557b88cbfceaa579c090">ClearScreen</a>(ID3D10Device *<a class="code" href="class_eye_stereo_1_1_ping_pang.html#a97bd49cabaf08d9a90e5d8a91722ab78">pd3dDevice</a>);</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    };</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;}</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="preprocessor">#endif //__PINGPANG_H__</span></div>
+<div class="ttc" id="class_eye_stereo_1_1_ping_pang_html_a25424d00fa367ee1523f18fbd1b7e62f"><div class="ttname"><a href="class_eye_stereo_1_1_ping_pang.html#a25424d00fa367ee1523f18fbd1b7e62f">EyeStereo::PingPang::stereoRender</a></div><div class="ttdeci">void stereoRender(float fTime)</div><div class="ttdef"><b>Definition:</b> PingPang - 副本.cpp:310</div></div>
+<div class="ttc" id="namespace_eye_stereo_html_aca00170ee7f2e74a8cbdd83316ea7535a9541c80916c4a84a892acb9f24722324"><div class="ttname"><a href="namespace_eye_stereo.html#aca00170ee7f2e74a8cbdd83316ea7535a9541c80916c4a84a892acb9f24722324">EyeStereo::LIVE</a></div><div class="ttdef"><b>Definition:</b> DiffSpecularBox.h:9</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_ping_pang_html_a567bd63ed07cdef69858addabbcaa761"><div class="ttname"><a href="class_eye_stereo_1_1_ping_pang.html#a567bd63ed07cdef69858addabbcaa761">EyeStereo::PingPang::pBoxVector</a></div><div class="ttdeci">std::vector&lt; LifeTimeBox * &gt; pBoxVector</div><div class="ttdef"><b>Definition:</b> PingPang1.hpp:56</div></div>
+<div class="ttc" id="_stereo_setting_8h_html"><div class="ttname"><a href="_stereo_setting_8h.html">StereoSetting.h</a></div></div>
+<div class="ttc" id="class_eye_stereo_1_1_ping_pang_html_a21400c49797f81038fd296a6f9360521"><div class="ttname"><a href="class_eye_stereo_1_1_ping_pang.html#a21400c49797f81038fd296a6f9360521">EyeStereo::PingPang::RefectBall</a></div><div class="ttdeci">D3DXVECTOR3 RefectBall(D3DXVECTOR3 v, D3DXVECTOR3 normal)</div><div class="ttdef"><b>Definition:</b> PingPang - 副本.cpp:243</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_ping_pang_html_a48ec7fec9384e9b23cd34a5c762a0d7d"><div class="ttname"><a href="class_eye_stereo_1_1_ping_pang.html#a48ec7fec9384e9b23cd34a5c762a0d7d">EyeStereo::PingPang::pShaderRV</a></div><div class="ttdeci">ID3D10EffectShaderResourceVariable * pShaderRV</div><div class="ttdef"><b>Definition:</b> PingPang1.hpp:48</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_ping_pang_html_aa3dfdfca4b18991b528b5e296feac05d"><div class="ttname"><a href="class_eye_stereo_1_1_ping_pang.html#aa3dfdfca4b18991b528b5e296feac05d">EyeStereo::PingPang::pTech</a></div><div class="ttdeci">ID3D10EffectTechnique * pTech</div><div class="ttdef"><b>Definition:</b> PingPang1.hpp:32</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_ping_pang_html_a96d913cf60b2d868db6e49d81dd5440d"><div class="ttname"><a href="class_eye_stereo_1_1_ping_pang.html#a96d913cf60b2d868db6e49d81dd5440d">EyeStereo::PingPang::lightType</a></div><div class="ttdeci">int lightType</div><div class="ttdef"><b>Definition:</b> PingPang1.hpp:64</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_ping_pang_html_a4d6f5f91c2294229d981a62140b7ac24"><div class="ttname"><a href="class_eye_stereo_1_1_ping_pang.html#a4d6f5f91c2294229d981a62140b7ac24">EyeStereo::PingPang::mfxLightType</a></div><div class="ttdeci">ID3D10EffectScalarVariable * mfxLightType</div><div class="ttdef"><b>Definition:</b> PingPang1.hpp:46</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_ping_pang_html_a9c25274f012c3254c93732ca27dc6498"><div class="ttname"><a href="class_eye_stereo_1_1_ping_pang.html#a9c25274f012c3254c93732ca27dc6498">EyeStereo::PingPang::matWorldViewProjection</a></div><div class="ttdeci">D3DXMATRIX matWorldViewProjection</div><div class="ttdef"><b>Definition:</b> PingPang1.hpp:52</div></div>
+<div class="ttc" id="_p_c_h_8h_html_a4b8b2bed986c06c207ebac140ba65a7a"><div class="ttname"><a href="_p_c_h_8h.html#a4b8b2bed986c06c207ebac140ba65a7a">SAFE_DELETE</a></div><div class="ttdeci">#define SAFE_DELETE(x)</div><div class="ttdef"><b>Definition:</b> PCH.h:66</div></div>
+<div class="ttc" id="struct_eye_stereo_1_1_key_board_html"><div class="ttname"><a href="struct_eye_stereo_1_1_key_board.html">EyeStereo::KeyBoard</a></div><div class="ttdef"><b>Definition:</b> KeyBoardState.h:19</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_ping_pang_html_a48537b250116557b88cbfceaa579c090"><div class="ttname"><a href="class_eye_stereo_1_1_ping_pang.html#a48537b250116557b88cbfceaa579c090">EyeStereo::PingPang::ClearScreen</a></div><div class="ttdeci">void ClearScreen(ID3D10Device *pd3dDevice)</div><div class="ttdef"><b>Definition:</b> PingPang - 副本.cpp:442</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_ping_pang_html_aaff71ade2b5a417cfea3a5d0af28cb8e"><div class="ttname"><a href="class_eye_stereo_1_1_ping_pang.html#aaff71ade2b5a417cfea3a5d0af28cb8e">EyeStereo::PingPang::bstereo</a></div><div class="ttdeci">bool bstereo</div><div class="ttdef"><b>Definition:</b> PingPang1.hpp:61</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_ping_pang_html_a97bd49cabaf08d9a90e5d8a91722ab78"><div class="ttname"><a href="class_eye_stereo_1_1_ping_pang.html#a97bd49cabaf08d9a90e5d8a91722ab78">EyeStereo::PingPang::pd3dDevice</a></div><div class="ttdeci">ID3D10Device * pd3dDevice</div><div class="ttdef"><b>Definition:</b> PingPang1.hpp:30</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_ping_pang_html_acf730184766739738768709059739f58"><div class="ttname"><a href="class_eye_stereo_1_1_ping_pang.html#acf730184766739738768709059739f58">EyeStereo::PingPang::initLight</a></div><div class="ttdeci">void initLight()</div><div class="ttdef"><b>Definition:</b> PingPang - 副本.cpp:189</div></div>
+<div class="ttc" id="_p_c_h_8h_html"><div class="ttname"><a href="_p_c_h_8h.html">PCH.h</a></div></div>
+<div class="ttc" id="class_eye_stereo_1_1_ping_pang_html_a2522fe46db359bd140f00ae0034790fb"><div class="ttname"><a href="class_eye_stereo_1_1_ping_pang.html#a2522fe46db359bd140f00ae0034790fb">EyeStereo::PingPang::blockNumL</a></div><div class="ttdeci">int blockNumL</div><div class="ttdef"><b>Definition:</b> PingPang1.hpp:39</div></div>
+<div class="ttc" id="_basic_box_8h_html_a6038f7bdb274c2e159988a57dedbf93d"><div class="ttname"><a href="_basic_box_8h.html#a6038f7bdb274c2e159988a57dedbf93d">SAFE_RELEASE</a></div><div class="ttdeci">#define SAFE_RELEASE(p)</div><div class="ttdef"><b>Definition:</b> BasicBox.h:11</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_ping_pang_html_ab41f5bebeeac1d271198e9bef4c5a902"><div class="ttname"><a href="class_eye_stereo_1_1_ping_pang.html#ab41f5bebeeac1d271198e9bef4c5a902">EyeStereo::PingPang::pInputLayout</a></div><div class="ttdeci">ID3D10InputLayout * pInputLayout</div><div class="ttdef"><b>Definition:</b> PingPang1.hpp:33</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_stereo_setting_html"><div class="ttname"><a href="class_eye_stereo_1_1_stereo_setting.html">EyeStereo::StereoSetting</a></div><div class="ttdef"><b>Definition:</b> StereoSetting.h:9</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_ping_pang_html_a7f4c563b78d3682d31fd43e0a25f527a"><div class="ttname"><a href="class_eye_stereo_1_1_ping_pang.html#a7f4c563b78d3682d31fd43e0a25f527a">EyeStereo::PingPang::windowsWidth</a></div><div class="ttdeci">long int windowsWidth</div><div class="ttdef"><b>Definition:</b> PingPang1.hpp:58</div></div>
+<div class="ttc" id="_light_8h_html"><div class="ttname"><a href="_light_8h.html">Light.h</a></div></div>
+<div class="ttc" id="class_eye_stereo_1_1_ping_pang_html_adf5dd7de45e87829544cd270425f8d55"><div class="ttname"><a href="class_eye_stereo_1_1_ping_pang.html#adf5dd7de45e87829544cd270425f8d55">EyeStereo::PingPang::~PingPang</a></div><div class="ttdeci">~PingPang()</div><div class="ttdef"><b>Definition:</b> PingPang1.hpp:74</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_ping_pang_html_ae799dbbbe80f51810a10d11d67826496"><div class="ttname"><a href="class_eye_stereo_1_1_ping_pang.html#ae799dbbbe80f51810a10d11d67826496">EyeStereo::PingPang::CreateBounds</a></div><div class="ttdeci">void CreateBounds()</div><div class="ttdef"><b>Definition:</b> PingPang - 副本.cpp:132</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_ping_pang_html_ad6e488852708e932b1cb8943521a2b4c"><div class="ttname"><a href="class_eye_stereo_1_1_ping_pang.html#ad6e488852708e932b1cb8943521a2b4c">EyeStereo::PingPang::mfxEyePosVal</a></div><div class="ttdeci">ID3D10EffectVariable * mfxEyePosVal</div><div class="ttdef"><b>Definition:</b> PingPang1.hpp:44</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_ping_pang_html_a66c42c3cae98166c1fc1e42c9ed7f5b9"><div class="ttname"><a href="class_eye_stereo_1_1_ping_pang.html#a66c42c3cae98166c1fc1e42c9ed7f5b9">EyeStereo::PingPang::windowsHeight</a></div><div class="ttdeci">long int windowsHeight</div><div class="ttdef"><b>Definition:</b> PingPang1.hpp:58</div></div>
+<div class="ttc" id="_p_c_h_8h_html_a0c5b097577dbfc6d33ce3013172a6d2a"><div class="ttname"><a href="_p_c_h_8h.html#a0c5b097577dbfc6d33ce3013172a6d2a">YELLOW</a></div><div class="ttdeci">const D3DXCOLOR YELLOW(1.0f, 1.0f, 0.0f, 1.0f)</div></div>
+<div class="ttc" id="_vertex_8h_html"><div class="ttname"><a href="_vertex_8h.html">Vertex.h</a></div></div>
+<div class="ttc" id="class_eye_stereo_1_1_ping_pang_html_a67b9498b2995f0ad040dd7fbc30b5cbc"><div class="ttname"><a href="class_eye_stereo_1_1_ping_pang.html#a67b9498b2995f0ad040dd7fbc30b5cbc">EyeStereo::PingPang::CaculateBallV</a></div><div class="ttdeci">void CaculateBallV(float fTime)</div><div class="ttdef"><b>Definition:</b> PingPang - 副本.cpp:261</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_ping_pang_html_a6d28fd00655689d2ae3746e42bf21094"><div class="ttname"><a href="class_eye_stereo_1_1_ping_pang.html#a6d28fd00655689d2ae3746e42bf21094">EyeStereo::PingPang::pKeyBoard</a></div><div class="ttdeci">KeyBoard * pKeyBoard</div><div class="ttdef"><b>Definition:</b> PingPang1.hpp:69</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_ping_pang_html_a97b6685b7f83836e20ebf98ffc3724f0"><div class="ttname"><a href="class_eye_stereo_1_1_ping_pang.html#a97b6685b7f83836e20ebf98ffc3724f0">EyeStereo::PingPang::bactive</a></div><div class="ttdeci">bool bactive</div><div class="ttdef"><b>Definition:</b> PingPang1.hpp:60</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_ping_pang_html_a803b07953eb307a5d2387a549025cb38"><div class="ttname"><a href="class_eye_stereo_1_1_ping_pang.html#a803b07953eb307a5d2387a549025cb38">EyeStereo::PingPang::mfxWorld</a></div><div class="ttdeci">ID3D10EffectMatrixVariable * mfxWorld</div><div class="ttdef"><b>Definition:</b> PingPang1.hpp:43</div></div>
+<div class="ttc" id="struct_light_html"><div class="ttname"><a href="struct_light.html">Light</a></div><div class="ttdef"><b>Definition:</b> Light.h:6</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_ping_pang_html_a94589c8cfe95bb7fec73dba6297a66f7"><div class="ttname"><a href="class_eye_stereo_1_1_ping_pang.html#a94589c8cfe95bb7fec73dba6297a66f7">EyeStereo::PingPang::PingPang</a></div><div class="ttdeci">PingPang()</div><div class="ttdef"><b>Definition:</b> PingPang1.hpp:71</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_ball_html"><div class="ttname"><a href="class_eye_stereo_1_1_ball.html">EyeStereo::Ball</a></div><div class="ttdef"><b>Definition:</b> DiffSpecularBall.h:8</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_ping_pang_html_a940c7b0a8a4274b1325b9fc5782d48b9"><div class="ttname"><a href="class_eye_stereo_1_1_ping_pang.html#a940c7b0a8a4274b1325b9fc5782d48b9">EyeStereo::PingPang::mfxLightVal</a></div><div class="ttdeci">ID3D10EffectVariable * mfxLightVal[3]</div><div class="ttdef"><b>Definition:</b> PingPang1.hpp:45</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_ping_pang_html_ac9e5e035cf640d6b5e82b1f8c076704b"><div class="ttname"><a href="class_eye_stereo_1_1_ping_pang.html#ac9e5e035cf640d6b5e82b1f8c076704b">EyeStereo::PingPang::pSwapChain</a></div><div class="ttdeci">IDXGISwapChain * pSwapChain</div><div class="ttdef"><b>Definition:</b> PingPang1.hpp:36</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_ping_pang_html_a9574f4e4d57e2ab1bd9758404488e8ee"><div class="ttname"><a href="class_eye_stereo_1_1_ping_pang.html#a9574f4e4d57e2ab1bd9758404488e8ee">EyeStereo::PingPang::lights</a></div><div class="ttdeci">Light lights[3]</div><div class="ttdef"><b>Definition:</b> PingPang1.hpp:63</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_ping_pang_html_a5cb760bcff5b27c24ee6099770926a97"><div class="ttname"><a href="class_eye_stereo_1_1_ping_pang.html#a5cb760bcff5b27c24ee6099770926a97">EyeStereo::PingPang::blockNumH</a></div><div class="ttdeci">int blockNumH</div><div class="ttdef"><b>Definition:</b> PingPang1.hpp:39</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_ping_pang_html_a59e5734facb55d0bf4505a6a2f2e6a8b"><div class="ttname"><a href="class_eye_stereo_1_1_ping_pang.html#a59e5734facb55d0bf4505a6a2f2e6a8b">EyeStereo::PingPang::Restart</a></div><div class="ttdeci">void Restart()</div><div class="ttdef"><b>Definition:</b> PingPang - 副本.cpp:226</div></div>
+<div class="ttc" id="_key_board_state_8h_html"><div class="ttname"><a href="_key_board_state_8h.html">KeyBoardState.h</a></div></div>
+<div class="ttc" id="class_eye_stereo_1_1_ping_pang_html_af2ff064732c73f1ea05e31014035ab74"><div class="ttname"><a href="class_eye_stereo_1_1_ping_pang.html#af2ff064732c73f1ea05e31014035ab74">EyeStereo::PingPang::init</a></div><div class="ttdeci">bool init(ID3D10Device *pdevice, StereoSetting *stereo, CModelViewerCamera *pcamera, KeyBoard *key)</div><div class="ttdef"><b>Definition:</b> PingPang - 副本.cpp:16</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_ping_pang_html_ad014522e66e2d34b588dbc4a3a377ddd"><div class="ttname"><a href="class_eye_stereo_1_1_ping_pang.html#ad014522e66e2d34b588dbc4a3a377ddd">EyeStereo::PingPang::pCamera</a></div><div class="ttdeci">CModelViewerCamera * pCamera</div><div class="ttdef"><b>Definition:</b> PingPang1.hpp:37</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_ping_pang_html_a0180e55a07d0972579bc85acc1f98cf8"><div class="ttname"><a href="class_eye_stereo_1_1_ping_pang.html#a0180e55a07d0972579bc85acc1f98cf8">EyeStereo::PingPang::matBlockWorld</a></div><div class="ttdeci">D3DXMATRIX matBlockWorld[20]</div><div class="ttdef"><b>Definition:</b> PingPang1.hpp:51</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_ping_pang_html_a0833822f97c1effb913f2b2ee01a3120"><div class="ttname"><a href="class_eye_stereo_1_1_ping_pang.html#a0833822f97c1effb913f2b2ee01a3120">EyeStereo::PingPang::pEffect</a></div><div class="ttdeci">ID3D10Effect * pEffect</div><div class="ttdef"><b>Definition:</b> PingPang1.hpp:31</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_ping_pang_html_ac9d90c2dd73d74041388d539f1e07014"><div class="ttname"><a href="class_eye_stereo_1_1_ping_pang.html#ac9d90c2dd73d74041388d539f1e07014">EyeStereo::PingPang::mfxWVP</a></div><div class="ttdeci">ID3D10EffectMatrixVariable * mfxWVP</div><div class="ttdef"><b>Definition:</b> PingPang1.hpp:42</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_ping_pang_html_a9899164e889fbe64f4ad8b455e9944db"><div class="ttname"><a href="class_eye_stereo_1_1_ping_pang.html#a9899164e889fbe64f4ad8b455e9944db">EyeStereo::PingPang::pBall</a></div><div class="ttdeci">Ball * pBall</div><div class="ttdef"><b>Definition:</b> PingPang1.hpp:55</div></div>
+<div class="ttc" id="namespace_eye_stereo_html_aca00170ee7f2e74a8cbdd83316ea7535a0fa083f992f713309de08402e19e7fe8"><div class="ttname"><a href="namespace_eye_stereo.html#aca00170ee7f2e74a8cbdd83316ea7535a0fa083f992f713309de08402e19e7fe8">EyeStereo::DIE</a></div><div class="ttdef"><b>Definition:</b> DiffSpecularBox.h:9</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_ping_pang_html_a1ea0f15e677b0509e4e930f33d70a74e"><div class="ttname"><a href="class_eye_stereo_1_1_ping_pang.html#a1ea0f15e677b0509e4e930f33d70a74e">EyeStereo::PingPang::renderScene</a></div><div class="ttdeci">void renderScene(int index)</div><div class="ttdef"><b>Definition:</b> PingPang - 副本.cpp:432</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_ping_pang_html_ae279ac63e23788a526b8e46de4bdc84b"><div class="ttname"><a href="class_eye_stereo_1_1_ping_pang.html#ae279ac63e23788a526b8e46de4bdc84b">EyeStereo::PingPang::matWorld</a></div><div class="ttdeci">D3DXMATRIX matWorld</div><div class="ttdef"><b>Definition:</b> PingPang1.hpp:50</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_ping_pang_html_a1e746920ab370fc8602978929e3e180c"><div class="ttname"><a href="class_eye_stereo_1_1_ping_pang.html#a1e746920ab370fc8602978929e3e180c">EyeStereo::PingPang::pStereoSetting</a></div><div class="ttdeci">StereoSetting * pStereoSetting</div><div class="ttdef"><b>Definition:</b> PingPang1.hpp:59</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_ping_pang_html_a3b4550d885c11c5e29ab59f68fa69df3"><div class="ttname"><a href="class_eye_stereo_1_1_ping_pang.html#a3b4550d885c11c5e29ab59f68fa69df3">EyeStereo::PingPang::eyePos</a></div><div class="ttdeci">D3DXVECTOR3 eyePos</div><div class="ttdef"><b>Definition:</b> PingPang1.hpp:65</div></div>
+<div class="ttc" id="_light_box_8h_html"><div class="ttname"><a href="_light_box_8h.html">LightBox.h</a></div></div>
+<div class="ttc" id="class_eye_stereo_1_1_ping_pang_html"><div class="ttname"><a href="class_eye_stereo_1_1_ping_pang.html">EyeStereo::PingPang</a></div><div class="ttdef"><b>Definition:</b> PingPang1.hpp:18</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2014年 六月 26日 星期四 19:13:30 , 为 Stereo使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.7
+</small></address>
+</body>
+</html>

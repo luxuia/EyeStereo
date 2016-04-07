@@ -1,0 +1,164 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.7"/>
+<title>数字式立体视觉刺激系统: _NVVIOSTATUS结构体 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">数字式立体视觉刺激系统
+   &#160;<span id="projectnumber">1.0.1</span>
+   </div>
+   <div id="projectbrief">Digital Stereo System</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.7 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="pages.html"><span>相关页面</span></a></li>
+      <li><a href="modules.html"><span>模块</span></a></li>
+      <li><a href="namespaces.html"><span>命名空间</span></a></li>
+      <li class="current"><a href="annotated.html"><span>类</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>类列表</span></a></li>
+      <li><a href="classes.html"><span>类索引</span></a></li>
+      <li><a href="hierarchy.html"><span>类继承关系</span></a></li>
+      <li><a href="functions.html"><span>类成员</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-attribs">Public 属性</a> &#124;
+<a href="struct___n_v_v_i_o_s_t_a_t_u_s-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">_NVVIOSTATUS结构体 参考<div class="ingroups"><a class="el" href="group__vidio.html">Vidio</a></div></div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Video device status.  
+ <a href="struct___n_v_v_i_o_s_t_a_t_u_s.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="nvapi_8h_source.html">nvapi.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public 属性</h2></td></tr>
+<tr class="memitem:a78266a987cda93423bd4472bd854dc69"><td class="memItemLeft" align="right" valign="top"><a class="el" href="nvapi_8h.html#aaae2f78a3deabb2a061e030085de652c">NvU32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct___n_v_v_i_o_s_t_a_t_u_s.html#a78266a987cda93423bd4472bd854dc69">version</a></td></tr>
+<tr class="memdesc:a78266a987cda93423bd4472bd854dc69"><td class="mdescLeft">&#160;</td><td class="mdescRight">Structure version.  <a href="#a78266a987cda93423bd4472bd854dc69">更多...</a><br /></td></tr>
+<tr class="separator:a78266a987cda93423bd4472bd854dc69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab27b2e5a25c2c1bc9e255b1476c91222"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__vidio.html#gac056516b4d524df49e8d533cabbdbd83">NVVIOSTATUSTYPE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct___n_v_v_i_o_s_t_a_t_u_s.html#ab27b2e5a25c2c1bc9e255b1476c91222">nvvioStatusType</a></td></tr>
+<tr class="memdesc:ab27b2e5a25c2c1bc9e255b1476c91222"><td class="mdescLeft">&#160;</td><td class="mdescRight">Input or Output status.  <a href="#ab27b2e5a25c2c1bc9e255b1476c91222">更多...</a><br /></td></tr>
+<tr class="separator:ab27b2e5a25c2c1bc9e255b1476c91222"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ce22239f9422762f6dc61811de6d653"><td class="memItemLeft" >union {</td></tr>
+<tr class="memitem:a6f37c8e46ea87c8ca66239ce1f9541d8"><td class="memItemLeft" >&#160;&#160;&#160;<a class="el" href="group__vidio.html#gad3cd833625ff16a527dda6b3c60d2f2f">NVVIOINPUTSTATUS</a>&#160;&#160;&#160;<a class="el" href="struct___n_v_v_i_o_s_t_a_t_u_s.html#ab3ee4b1be83e8766423e8a83cecc3ca9">inStatus</a></td></tr>
+<tr class="memdesc:a6f37c8e46ea87c8ca66239ce1f9541d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Input device status.  <a href="#a6f37c8e46ea87c8ca66239ce1f9541d8">更多...</a><br /></td></tr>
+<tr class="separator:a6f37c8e46ea87c8ca66239ce1f9541d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a893450a6acd4068657651b53b2f6a90b"><td class="memItemLeft" >&#160;&#160;&#160;<a class="el" href="group__vidio.html#ga12008add71e4907cb8f53614f507327d">NVVIOOUTPUTSTATUS</a>&#160;&#160;&#160;<a class="el" href="struct___n_v_v_i_o_s_t_a_t_u_s.html#ac1df634e615e476f4b717fc47cd4aca0">outStatus</a></td></tr>
+<tr class="memdesc:a893450a6acd4068657651b53b2f6a90b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Output device status.  <a href="#a893450a6acd4068657651b53b2f6a90b">更多...</a><br /></td></tr>
+<tr class="separator:a893450a6acd4068657651b53b2f6a90b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ce22239f9422762f6dc61811de6d653"><td class="memItemLeft" valign="top">}&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct___n_v_v_i_o_s_t_a_t_u_s.html#a8ce22239f9422762f6dc61811de6d653">vioStatus</a></td></tr>
+<tr class="separator:a8ce22239f9422762f6dc61811de6d653"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>Video device status. </p>
+</div><h2 class="groupheader">类成员变量说明</h2>
+<a class="anchor" id="ab3ee4b1be83e8766423e8a83cecc3ca9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__vidio.html#gad3cd833625ff16a527dda6b3c60d2f2f">NVVIOINPUTSTATUS</a> _NVVIOSTATUS::inStatus</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Input device status. </p>
+
+</div>
+</div>
+<a class="anchor" id="ab27b2e5a25c2c1bc9e255b1476c91222"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__vidio.html#gac056516b4d524df49e8d533cabbdbd83">NVVIOSTATUSTYPE</a> _NVVIOSTATUS::nvvioStatusType</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Input or Output status. </p>
+
+</div>
+</div>
+<a class="anchor" id="ac1df634e615e476f4b717fc47cd4aca0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__vidio.html#ga12008add71e4907cb8f53614f507327d">NVVIOOUTPUTSTATUS</a> _NVVIOSTATUS::outStatus</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Output device status. </p>
+
+</div>
+</div>
+<a class="anchor" id="a78266a987cda93423bd4472bd854dc69"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="nvapi_8h.html#aaae2f78a3deabb2a061e030085de652c">NvU32</a> _NVVIOSTATUS::version</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Structure version. </p>
+
+</div>
+</div>
+<a class="anchor" id="a8ce22239f9422762f6dc61811de6d653"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">union { ... }  _NVVIOSTATUS::vioStatus</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>该结构体的文档由以下文件生成:<ul>
+<li>G:/交接/EyeStereo/Source/Stereo/<a class="el" href="nvapi_8h_source.html">nvapi.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2014年 六月 27日 星期五 15:19:50 , 为 数字式立体视觉刺激系统使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.7
+</small></address>
+</body>
+</html>

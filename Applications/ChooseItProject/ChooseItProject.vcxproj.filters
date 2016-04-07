@@ -37,11 +37,14 @@
     <ClCompile Include="..\..\Source\Helper\MeshLoader10.cpp">
       <Filter>Lib</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Source\Helper\WavAudioPlayer.cpp">
-      <Filter>Lib</Filter>
-    </ClCompile>
     <ClCompile Include="App.cpp" />
     <ClCompile Include="..\..\Source\Geometry\DiffSpecularSphere.cpp">
+      <Filter>Lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Mathematic\Vector2f.cpp">
+      <Filter>Lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Mathematic\Vector3f.cpp">
       <Filter>Lib</Filter>
     </ClCompile>
   </ItemGroup>
@@ -88,11 +91,14 @@
     <ClInclude Include="..\..\Source\Helper\MeshLoader10.h">
       <Filter>Lib</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Source\Helper\WavAudioPlayer.h">
-      <Filter>Lib</Filter>
-    </ClInclude>
     <ClInclude Include="ChooseIt.h" />
     <ClInclude Include="..\..\Source\Geometry\DiffSpecularSphere.hpp">
+      <Filter>Lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Mathematic\Vector2f.h">
+      <Filter>Lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Mathematic\Vector3f.h">
       <Filter>Lib</Filter>
     </ClInclude>
   </ItemGroup>

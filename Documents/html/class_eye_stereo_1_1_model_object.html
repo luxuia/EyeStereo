@@ -1,0 +1,535 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.7"/>
+<title>数字式立体视觉刺激系统: EyeStereo::ModelObject类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">数字式立体视觉刺激系统
+   &#160;<span id="projectnumber">1.0.1</span>
+   </div>
+   <div id="projectbrief">Digital Stereo System</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.7 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="pages.html"><span>相关页面</span></a></li>
+      <li><a href="namespaces.html"><span>命名空间</span></a></li>
+      <li class="current"><a href="annotated.html"><span>类</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>类列表</span></a></li>
+      <li><a href="classes.html"><span>类索引</span></a></li>
+      <li><a href="hierarchy.html"><span>类继承关系</span></a></li>
+      <li><a href="functions.html"><span>类成员</span></a></li>
+    </ul>
+  </div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespace_eye_stereo.html">EyeStereo</a></li><li class="navelem"><a class="el" href="class_eye_stereo_1_1_model_object.html">ModelObject</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Public 类型</a> &#124;
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-attribs">Public 属性</a> &#124;
+<a href="class_eye_stereo_1_1_model_object-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">EyeStereo::ModelObject类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_fill_object_8h_source.html">FillObject.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public 类型</h2></td></tr>
+<tr class="memitem:aa991827f5122f74c0af36ec7ccc5f6a1"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_eye_stereo_1_1_model_object.html#aa991827f5122f74c0af36ec7ccc5f6a1">CubeTypes</a> { <a class="el" href="class_eye_stereo_1_1_model_object.html#aa991827f5122f74c0af36ec7ccc5f6a1aff37ba7a74994322700ec0267b068f65">LINE</a>, 
+<a class="el" href="class_eye_stereo_1_1_model_object.html#aa991827f5122f74c0af36ec7ccc5f6a1a7369f137e27894c68824cfe56e62ea6d">AO</a>, 
+<a class="el" href="class_eye_stereo_1_1_model_object.html#aa991827f5122f74c0af36ec7ccc5f6a1aa2a52ef780ebdb89bb029f3adf6b4ca3">TU</a>, 
+<a class="el" href="class_eye_stereo_1_1_model_object.html#aa991827f5122f74c0af36ec7ccc5f6a1aa4b4d7167347d8ab88aa33a581bed40a">FANG</a>
+ }</td></tr>
+<tr class="memdesc:aa991827f5122f74c0af36ec7ccc5f6a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">const value define  <a href="class_eye_stereo_1_1_model_object.html#aa991827f5122f74c0af36ec7ccc5f6a1">更多...</a><br /></td></tr>
+<tr class="separator:aa991827f5122f74c0af36ec7ccc5f6a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14d69f63b68d1f33be92cfdc9e1c5f38"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_eye_stereo_1_1_model_object.html#a14d69f63b68d1f33be92cfdc9e1c5f38">Status</a> { <br />
+&#160;&#160;<a class="el" href="class_eye_stereo_1_1_model_object.html#a14d69f63b68d1f33be92cfdc9e1c5f38a033b7ab5538a09f501099e04674d29b8">ACTIVE</a> = 7, 
+<a class="el" href="class_eye_stereo_1_1_model_object.html#a14d69f63b68d1f33be92cfdc9e1c5f38ac3be01abf98c0dae63b758b0b967c42c">DOWN</a> = 1, 
+<a class="el" href="class_eye_stereo_1_1_model_object.html#a14d69f63b68d1f33be92cfdc9e1c5f38ae04b8476f575a92c19c0000c96ebc0c7">LEFT</a> = 2, 
+<a class="el" href="class_eye_stereo_1_1_model_object.html#a14d69f63b68d1f33be92cfdc9e1c5f38a064309cbb646e8fd99ee1cc80abbde9e">RIGHT</a> = 4, 
+<br />
+&#160;&#160;<a class="el" href="class_eye_stereo_1_1_model_object.html#a14d69f63b68d1f33be92cfdc9e1c5f38af8e88cccdda633d6cc04666382daa8ab">NONE</a> = 0, 
+<a class="el" href="class_eye_stereo_1_1_model_object.html#a14d69f63b68d1f33be92cfdc9e1c5f38aabf14f286d40409d7b766aa6bd7fd87c">INVISIABLE</a> = 8
+<br />
+ }</td></tr>
+<tr class="separator:a14d69f63b68d1f33be92cfdc9e1c5f38"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a61286e0df1618e0bb5ace921ad9e8d02"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_eye_stereo_1_1_model_object.html#a61286e0df1618e0bb5ace921ad9e8d02">ModelObject</a> ()</td></tr>
+<tr class="separator:a61286e0df1618e0bb5ace921ad9e8d02"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa21d4fcd78bdf91dd8d7cee2581d92ff"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_eye_stereo_1_1_model_object.html#aa21d4fcd78bdf91dd8d7cee2581d92ff">CollisionOne</a> (ID3DX10Mesh *othermesh, D3DXVECTOR3 &amp;otherpos, <a class="el" href="class_eye_stereo_1_1_model_object.html#a14d69f63b68d1f33be92cfdc9e1c5f38">Status</a> dir, float space)</td></tr>
+<tr class="separator:aa21d4fcd78bdf91dd8d7cee2581d92ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6916f415ea726a685cc7087faa533b8a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_eye_stereo_1_1_model_object.html#a6916f415ea726a685cc7087faa533b8a">Move</a> (float step, <a class="el" href="class_eye_stereo_1_1_model_object.html#a14d69f63b68d1f33be92cfdc9e1c5f38">Status</a> dir)</td></tr>
+<tr class="separator:a6916f415ea726a685cc7087faa533b8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d1dd681b69e9f06560e37994f72ccfe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_eye_stereo_1_1_model_object.html#a5d1dd681b69e9f06560e37994f72ccfe">DirectMove</a> (float step, <a class="el" href="class_eye_stereo_1_1_model_object.html#a14d69f63b68d1f33be92cfdc9e1c5f38">Status</a> dir)</td></tr>
+<tr class="separator:a5d1dd681b69e9f06560e37994f72ccfe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94dd3f751a4aaf85e60366b81f5e061e"><td class="memItemLeft" align="right" valign="top">D3DXVECTOR3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_eye_stereo_1_1_model_object.html#a94dd3f751a4aaf85e60366b81f5e061e">TestMove</a> (float step, <a class="el" href="class_eye_stereo_1_1_model_object.html#a14d69f63b68d1f33be92cfdc9e1c5f38">Status</a> dir)</td></tr>
+<tr class="separator:a94dd3f751a4aaf85e60366b81f5e061e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9aaa91cd5f00d45a47e39fbb4342c199"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_eye_stereo_1_1_model_object.html#a9aaa91cd5f00d45a47e39fbb4342c199">Move</a> (float)</td></tr>
+<tr class="separator:a9aaa91cd5f00d45a47e39fbb4342c199"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5df8aa79359dcbd77f7adf1ae6675c2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_eye_stereo_1_1_model_object.html#ad5df8aa79359dcbd77f7adf1ae6675c2">Collision</a> (ID3DX10Mesh *othermesh, D3DXVECTOR3 &amp;otherpos, <a class="el" href="class_eye_stereo_1_1_model_object.html#a14d69f63b68d1f33be92cfdc9e1c5f38">Status</a> dir=<a class="el" href="class_eye_stereo_1_1_model_object.html#a14d69f63b68d1f33be92cfdc9e1c5f38ac3be01abf98c0dae63b758b0b967c42c">DOWN</a>, float space=0.01)</td></tr>
+<tr class="separator:ad5df8aa79359dcbd77f7adf1ae6675c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a957a19be41d85552633f0a3936bf5ecd"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_eye_stereo_1_1_model_object.html#a957a19be41d85552633f0a3936bf5ecd">Collision</a> (<a class="el" href="class_eye_stereo_1_1_model_object.html">ModelObject</a> *otherCubes, <a class="el" href="class_eye_stereo_1_1_model_object.html#a14d69f63b68d1f33be92cfdc9e1c5f38">Status</a> dir=<a class="el" href="class_eye_stereo_1_1_model_object.html#a14d69f63b68d1f33be92cfdc9e1c5f38ac3be01abf98c0dae63b758b0b967c42c">DOWN</a>, float space=0.01)</td></tr>
+<tr class="separator:a957a19be41d85552633f0a3936bf5ecd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91a40011b47a33e96edc5a3888340e39"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_eye_stereo_1_1_model_object.html#a91a40011b47a33e96edc5a3888340e39">Rotate90</a> ()</td></tr>
+<tr class="separator:a91a40011b47a33e96edc5a3888340e39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd6f3e15f4029d655a05b1dcfdfaaf64"><td class="memItemLeft" align="right" valign="top">D3DXVECTOR3 *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_eye_stereo_1_1_model_object.html#acd6f3e15f4029d655a05b1dcfdfaaf64">getCentrePos</a> ()</td></tr>
+<tr class="separator:acd6f3e15f4029d655a05b1dcfdfaaf64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public 属性</h2></td></tr>
+<tr class="memitem:a7b312b279c0b15cd2906878333e4c336"><td class="memItemLeft" align="right" valign="top">D3DXVECTOR3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_eye_stereo_1_1_model_object.html#a7b312b279c0b15cd2906878333e4c336">WordPos</a></td></tr>
+<tr class="separator:a7b312b279c0b15cd2906878333e4c336"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7f5f930ac8c6ed8f83b9faf20ddfede"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_eye_stereo_1_1_model_object.html#a14d69f63b68d1f33be92cfdc9e1c5f38">Status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_eye_stereo_1_1_model_object.html#ad7f5f930ac8c6ed8f83b9faf20ddfede">status</a></td></tr>
+<tr class="separator:ad7f5f930ac8c6ed8f83b9faf20ddfede"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60a6e64cb538923340967131a525ce0d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_mesh_loader10.html">CMeshLoader10</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_eye_stereo_1_1_model_object.html#a60a6e64cb538923340967131a525ce0d">mesh</a></td></tr>
+<tr class="separator:a60a6e64cb538923340967131a525ce0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4aceb8a972ac920041c281c326726926"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_eye_stereo_1_1_model_object.html#aa991827f5122f74c0af36ec7ccc5f6a1">CubeTypes</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_eye_stereo_1_1_model_object.html#a4aceb8a972ac920041c281c326726926">type</a></td></tr>
+<tr class="separator:a4aceb8a972ac920041c281c326726926"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">成员枚举类型说明</h2>
+<a class="anchor" id="aa991827f5122f74c0af36ec7ccc5f6a1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="class_eye_stereo_1_1_model_object.html#aa991827f5122f74c0af36ec7ccc5f6a1">EyeStereo::ModelObject::CubeTypes</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>const value define </p>
+<p>方块，与俄罗斯公用，待解决 </p>
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a class="anchor" id="aa991827f5122f74c0af36ec7ccc5f6a1aff37ba7a74994322700ec0267b068f65"></a>LINE&#160;</td><td class="fielddoc">
+<p>条块 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="aa991827f5122f74c0af36ec7ccc5f6a1a7369f137e27894c68824cfe56e62ea6d"></a>AO&#160;</td><td class="fielddoc">
+<p>凹块 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="aa991827f5122f74c0af36ec7ccc5f6a1aa2a52ef780ebdb89bb029f3adf6b4ca3"></a>TU&#160;</td><td class="fielddoc">
+<p>凸块 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="aa991827f5122f74c0af36ec7ccc5f6a1aa4b4d7167347d8ab88aa33a581bed40a"></a>FANG&#160;</td><td class="fielddoc">
+<p>方块 </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a class="anchor" id="a14d69f63b68d1f33be92cfdc9e1c5f38"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="class_eye_stereo_1_1_model_object.html#a14d69f63b68d1f33be92cfdc9e1c5f38">EyeStereo::ModelObject::Status</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>方块的状态 </p>
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a class="anchor" id="a14d69f63b68d1f33be92cfdc9e1c5f38a033b7ab5538a09f501099e04674d29b8"></a>ACTIVE&#160;</td><td class="fielddoc">
+<p>活动 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a14d69f63b68d1f33be92cfdc9e1c5f38ac3be01abf98c0dae63b758b0b967c42c"></a>DOWN&#160;</td><td class="fielddoc">
+<p>正在下降 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a14d69f63b68d1f33be92cfdc9e1c5f38ae04b8476f575a92c19c0000c96ebc0c7"></a>LEFT&#160;</td><td class="fielddoc">
+<p>左 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a14d69f63b68d1f33be92cfdc9e1c5f38a064309cbb646e8fd99ee1cc80abbde9e"></a>RIGHT&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a14d69f63b68d1f33be92cfdc9e1c5f38af8e88cccdda633d6cc04666382daa8ab"></a>NONE&#160;</td><td class="fielddoc">
+<p>不正常 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a14d69f63b68d1f33be92cfdc9e1c5f38aabf14f286d40409d7b766aa6bd7fd87c"></a>INVISIABLE&#160;</td><td class="fielddoc">
+<p>不可见 </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">构造及析构函数说明</h2>
+<a class="anchor" id="a61286e0df1618e0bb5ace921ad9e8d02"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">EyeStereo::ModelObject::ModelObject </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a class="anchor" id="ad5df8aa79359dcbd77f7adf1ae6675c2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool EyeStereo::ModelObject::Collision </td>
+          <td>(</td>
+          <td class="paramtype">ID3DX10Mesh *&#160;</td>
+          <td class="paramname"><em>othermesh</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">D3DXVECTOR3 &amp;&#160;</td>
+          <td class="paramname"><em>otherpos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_eye_stereo_1_1_model_object.html#a14d69f63b68d1f33be92cfdc9e1c5f38">Status</a>&#160;</td>
+          <td class="paramname"><em>dir</em> = <code><a class="el" href="class_eye_stereo_1_1_model_object.html#a14d69f63b68d1f33be92cfdc9e1c5f38ac3be01abf98c0dae63b758b0b967c42c">DOWN</a></code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>space</em> = <code>0.01</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a957a19be41d85552633f0a3936bf5ecd"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool EyeStereo::ModelObject::Collision </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_eye_stereo_1_1_model_object.html">ModelObject</a> *&#160;</td>
+          <td class="paramname"><em>otherCubes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_eye_stereo_1_1_model_object.html#a14d69f63b68d1f33be92cfdc9e1c5f38">Status</a>&#160;</td>
+          <td class="paramname"><em>dir</em> = <code><a class="el" href="class_eye_stereo_1_1_model_object.html#a14d69f63b68d1f33be92cfdc9e1c5f38ac3be01abf98c0dae63b758b0b967c42c">DOWN</a></code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>space</em> = <code>0.01</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aa21d4fcd78bdf91dd8d7cee2581d92ff"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool EyeStereo::ModelObject::CollisionOne </td>
+          <td>(</td>
+          <td class="paramtype">ID3DX10Mesh *&#160;</td>
+          <td class="paramname"><em>othermesh</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">D3DXVECTOR3 &amp;&#160;</td>
+          <td class="paramname"><em>otherpos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_eye_stereo_1_1_model_object.html#a14d69f63b68d1f33be92cfdc9e1c5f38">Status</a>&#160;</td>
+          <td class="paramname"><em>dir</em> = <code><a class="el" href="class_eye_stereo_1_1_model_object.html#a14d69f63b68d1f33be92cfdc9e1c5f38ac3be01abf98c0dae63b758b0b967c42c">DOWN</a></code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>space</em> = <code>0.01</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">othermesh</td><td>另一个元素的模型 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">otherpos</td><td>另一个元素的位置 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">dir</td><td>判断相交的方向 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">space</td><td>相交的判断精度 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>是否相交 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a5d1dd681b69e9f06560e37994f72ccfe"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void EyeStereo::ModelObject::DirectMove </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>step</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_eye_stereo_1_1_model_object.html#a14d69f63b68d1f33be92cfdc9e1c5f38">Status</a>&#160;</td>
+          <td class="paramname"><em>dir</em> = <code><a class="el" href="class_eye_stereo_1_1_model_object.html#a14d69f63b68d1f33be92cfdc9e1c5f38af8e88cccdda633d6cc04666382daa8ab">NONE</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="acd6f3e15f4029d655a05b1dcfdfaaf64"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">D3DXVECTOR3* EyeStereo::ModelObject::getCentrePos </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a6916f415ea726a685cc7087faa533b8a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void EyeStereo::ModelObject::Move </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>step</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_eye_stereo_1_1_model_object.html#a14d69f63b68d1f33be92cfdc9e1c5f38">Status</a>&#160;</td>
+          <td class="paramname"><em>dir</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a9aaa91cd5f00d45a47e39fbb4342c199"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void EyeStereo::ModelObject::Move </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>step</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a91a40011b47a33e96edc5a3888340e39"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void EyeStereo::ModelObject::Rotate90 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a94dd3f751a4aaf85e60366b81f5e061e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">D3DXVECTOR3 EyeStereo::ModelObject::TestMove </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>step</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_eye_stereo_1_1_model_object.html#a14d69f63b68d1f33be92cfdc9e1c5f38">Status</a>&#160;</td>
+          <td class="paramname"><em>dir</em> = <code><a class="el" href="class_eye_stereo_1_1_model_object.html#a14d69f63b68d1f33be92cfdc9e1c5f38af8e88cccdda633d6cc04666382daa8ab">NONE</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">step</td><td>移动的距离 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">dir</td><td>移动的方向 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>测试情况下移动到的位置 </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a class="anchor" id="a60a6e64cb538923340967131a525ce0d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_c_mesh_loader10.html">CMeshLoader10</a>* EyeStereo::ModelObject::mesh</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ad7f5f930ac8c6ed8f83b9faf20ddfede"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_eye_stereo_1_1_model_object.html#a14d69f63b68d1f33be92cfdc9e1c5f38">Status</a> EyeStereo::ModelObject::status</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a4aceb8a972ac920041c281c326726926"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_eye_stereo_1_1_model_object.html#aa991827f5122f74c0af36ec7ccc5f6a1">CubeTypes</a> EyeStereo::ModelObject::type</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a7b312b279c0b15cd2906878333e4c336"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">D3DXVECTOR3 EyeStereo::ModelObject::WordPos</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>E:/Project/final/EyeStereo/Applications/FillAble/<a class="el" href="_fill_object_8h_source.html">FillObject.h</a></li>
+<li>E:/Project/final/EyeStereo/Applications/FillAble/<a class="el" href="_fill_object_8cpp.html">FillObject.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2014年 六月 27日 星期五 16:12:02 , 为 数字式立体视觉刺激系统使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.7
+</small></address>
+</body>
+</html>

@@ -1,0 +1,236 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.7"/>
+<title>数字式立体视觉刺激系统: E:/Project/final/EyeStereo/Source/Helper/MeshLoader10.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">数字式立体视觉刺激系统
+   &#160;<span id="projectnumber">1.0.1</span>
+   </div>
+   <div id="projectbrief">Digital Stereo System</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.7 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="pages.html"><span>相关页面</span></a></li>
+      <li><a href="namespaces.html"><span>命名空间</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
+    </ul>
+  </div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_74389ed8173ad57b461b9d623a1f3867.html">Source</a></li><li class="navelem"><a class="el" href="dir_f18351aed2c2400c459377e19e71c488.html">Helper</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">MeshLoader10.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_mesh_loader10_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//--------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">// File: MeshLoader10.h</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">// Wrapper class for ID3DX10Mesh interface. Handles loading mesh data from an .obj file</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">// and resource management for material textures.</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">// Copyright (c) Microsoft Corporation. All rights reserved.</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">//--------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#ifndef _MESHLOADER10_H_</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#define _MESHLOADER10_H_</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="_mesh_loader10_8h.html#ae6514115d0b2144365b4d04068b53f23">   13</a></span>&#160;<span class="preprocessor">#define ERROR_RESOURCE_VALUE 1</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">// template&lt;typename TYPE&gt; BOOL IsErrorResource( TYPE data )</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">// {</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">//     if( ( TYPE )ERROR_RESOURCE_VALUE == data )</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">//         return TRUE;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">//     return FALSE;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">// }</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">// Vertex format</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="struct_v_e_r_t_e_x.html">   23</a></span>&#160;<span class="keyword">struct </span><a class="code" href="struct_v_e_r_t_e_x.html">VERTEX</a></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;{</div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="struct_v_e_r_t_e_x.html#a5f1c17b55ec79caee9dfff590906e54c">   25</a></span>&#160;    D3DXVECTOR3 <a class="code" href="struct_v_e_r_t_e_x.html#a5f1c17b55ec79caee9dfff590906e54c">position</a>;</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="struct_v_e_r_t_e_x.html#a33de468562fae526f210511e78a840cf">   26</a></span>&#160;    D3DXVECTOR3 <a class="code" href="struct_v_e_r_t_e_x.html#a33de468562fae526f210511e78a840cf">normal</a>;</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="struct_v_e_r_t_e_x.html#a0bf5e4274a1e6dba447ad5234c11655f">   27</a></span>&#160;    D3DXVECTOR2 <a class="code" href="struct_v_e_r_t_e_x.html#a0bf5e4274a1e6dba447ad5234c11655f">texcoord</a>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;};</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment">// Used for a hashtable vertex cache when creating the mesh from a .obj file</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="struct_cache_entry.html">   32</a></span>&#160;<span class="keyword">struct </span><a class="code" href="struct_cache_entry.html">CacheEntry</a></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;{</div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="struct_cache_entry.html#a5129bb1b7f63af2116737f1b77a75761">   34</a></span>&#160;    UINT <a class="code" href="struct_cache_entry.html#a5129bb1b7f63af2116737f1b77a75761">index</a>;</div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="struct_cache_entry.html#a1d105d2db6993844353b614bcd2e927c">   35</a></span>&#160;    <a class="code" href="struct_cache_entry.html">CacheEntry</a>* <a class="code" href="struct_cache_entry.html#a1d105d2db6993844353b614bcd2e927c">pNext</a>;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;};</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment">// Material properties per mesh subset</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="struct_material.html">   40</a></span>&#160;<span class="keyword">struct </span><a class="code" href="struct_material.html">Material</a></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;{</div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="struct_material.html#ae70156212936ff31f382db0a0ba116db">   42</a></span>&#160;    WCHAR   <a class="code" href="struct_material.html#ae70156212936ff31f382db0a0ba116db">strName</a>[MAX_PATH];</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="struct_material.html#a8fb32bca6b3f151282215b5f746138f3">   44</a></span>&#160;    D3DXVECTOR3 <a class="code" href="struct_material.html#a8fb32bca6b3f151282215b5f746138f3">vAmbient</a>;</div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="struct_material.html#ab6a621b8ee1e055f0eaa65c6ae87f32b">   45</a></span>&#160;    D3DXVECTOR3 <a class="code" href="struct_material.html#ab6a621b8ee1e055f0eaa65c6ae87f32b">vDiffuse</a>;</div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="struct_material.html#a7b394e6e8e47e31322048b1f4890b1c3">   46</a></span>&#160;    D3DXVECTOR3 <a class="code" href="struct_material.html#a7b394e6e8e47e31322048b1f4890b1c3">vSpecular</a>;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="struct_material.html#a925cf5d7b5b5a97d66bb4dff0b2dd417">   48</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="struct_material.html#a925cf5d7b5b5a97d66bb4dff0b2dd417">nShininess</a>;</div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="struct_material.html#a088560fb820c8872cb1ff3ba369c94c0">   49</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="struct_material.html#a088560fb820c8872cb1ff3ba369c94c0">fAlpha</a>;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="struct_material.html#aa0f809e1462c732fec8e86fe2fa5bb2e">   51</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="struct_material.html#aa0f809e1462c732fec8e86fe2fa5bb2e">bSpecular</a>;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="struct_material.html#a4a96782d562905b16f6016af0fa98f8b">   53</a></span>&#160;    WCHAR   <a class="code" href="struct_material.html#a4a96782d562905b16f6016af0fa98f8b">strTexture</a>[MAX_PATH];</div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="struct_material.html#a5d6193359d95914e35774c7dd9dbb21c">   54</a></span>&#160;    ID3D10ShaderResourceView* <a class="code" href="struct_material.html#a5d6193359d95914e35774c7dd9dbb21c">pTextureRV10</a>;</div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="struct_material.html#add43e0bc4d075b3de06084a976fc7a7f">   55</a></span>&#160;    ID3D10EffectTechnique*  <a class="code" href="struct_material.html#add43e0bc4d075b3de06084a976fc7a7f">pTechnique</a>;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;};</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="class_c_mesh_loader10.html">   59</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_c_mesh_loader10.html">CMeshLoader10</a></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;{</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            <a class="code" href="class_c_mesh_loader10.html#a375f819881c7b999bff07e59fc63c4ab">CMeshLoader10</a>();</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            <a class="code" href="class_c_mesh_loader10.html#a97e4a5dfb1250bf03f738ee9f52ed662">~CMeshLoader10</a>();</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    HRESULT <a class="code" href="class_c_mesh_loader10.html#ae680b5b67c2a14bee8038fd95af55d01">Create</a>( ID3D10Device* pd3dDevice, <span class="keyword">const</span> WCHAR* strFilename );</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordtype">void</span>    <a class="code" href="class_c_mesh_loader10.html#a2e172714dc0eea811bddf8c540f31978">Destroy</a>();</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="class_c_mesh_loader10.html#abea1ee3c22622a9048d9000eb198ccec">   68</a></span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> TYPE&gt; BOOL <a class="code" href="class_c_mesh_loader10.html#abea1ee3c22622a9048d9000eb198ccec">IsErrorResource</a>( TYPE data ) {</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                    <span class="keywordflow">if</span>( ( TYPE )<a class="code" href="_mesh_loader10_8h.html#ae6514115d0b2144365b4d04068b53f23">ERROR_RESOURCE_VALUE</a> == data )</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                                        <span class="keywordflow">return</span> TRUE;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;                    <span class="keywordflow">return</span> FALSE;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    }</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
+<div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="class_c_mesh_loader10.html#a5d1382f7d3fbdd419bc12079b693d0d0">   74</a></span>&#160;    UINT    <a class="code" href="class_c_mesh_loader10.html#a5d1382f7d3fbdd419bc12079b693d0d0">GetNumMaterials</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="class_c_mesh_loader10.html#a9c9ddad9a31e487f225cf41b6c169de5">m_Materials</a>.GetSize();</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    }</div>
+<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="class_c_mesh_loader10.html#a08690b4715603d5bd9924362a1c5f983">   78</a></span>&#160;    <a class="code" href="struct_material.html">Material</a>* <a class="code" href="class_c_mesh_loader10.html#a08690b4715603d5bd9924362a1c5f983">GetMaterial</a>( UINT iMaterial )</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    {</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="class_c_mesh_loader10.html#a9c9ddad9a31e487f225cf41b6c169de5">m_Materials</a>.GetAt( iMaterial );</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    }</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
+<div class="line"><a name="l00083"></a><span class="lineno"><a class="line" href="class_c_mesh_loader10.html#a549441682715b68675fc6aa6b0bfc60c">   83</a></span>&#160;    UINT <a class="code" href="class_c_mesh_loader10.html#a549441682715b68675fc6aa6b0bfc60c">GetNumSubsets</a>()</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    {</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="class_c_mesh_loader10.html#af240f512149636eaca38c75636d604eb">m_NumAttribTableEntries</a>;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    }</div>
+<div class="line"><a name="l00087"></a><span class="lineno"><a class="line" href="class_c_mesh_loader10.html#a858397739b3084faeaffb5a12442645f">   87</a></span>&#160;    <a class="code" href="struct_material.html">Material</a>* <a class="code" href="class_c_mesh_loader10.html#a858397739b3084faeaffb5a12442645f">GetSubsetMaterial</a>( UINT iSubset )</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    {</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="class_c_mesh_loader10.html#a9c9ddad9a31e487f225cf41b6c169de5">m_Materials</a>.GetAt( <a class="code" href="class_c_mesh_loader10.html#a9cc1a0972bb99a2ee1a79a5129e67b82">m_pAttribTable</a>[iSubset].AttribId );</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    }</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
+<div class="line"><a name="l00092"></a><span class="lineno"><a class="line" href="class_c_mesh_loader10.html#a4c22d021f1ae9abe14ebabe869147714">   92</a></span>&#160;    ID3DX10Mesh* <a class="code" href="class_c_mesh_loader10.html#a4c22d021f1ae9abe14ebabe869147714">GetMesh</a>()</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    {</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="class_c_mesh_loader10.html#abe6d62dd11a15fed241608c6f504d2bf">m_pMesh</a>;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    }</div>
+<div class="line"><a name="l00096"></a><span class="lineno"><a class="line" href="class_c_mesh_loader10.html#a3918847816ca9b6aa74b1c3d07205647">   96</a></span>&#160;    WCHAR* <a class="code" href="class_c_mesh_loader10.html#a3918847816ca9b6aa74b1c3d07205647">GetMediaDirectory</a>()</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    {</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="class_c_mesh_loader10.html#a36a5356d0be3f23c2e52e730df3ea913">m_strMediaDir</a>;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    }</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="keyword">public</span> :</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    HRESULT <a class="code" href="class_c_mesh_loader10.html#a140b81b57a67c38e2dce4c1a12f60c91">LoadGeometryFromOBJ</a>( <span class="keyword">const</span> WCHAR* strFilename );</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    HRESULT <a class="code" href="class_c_mesh_loader10.html#a88befcdcb8baceae8ee11206ee6f7c48">LoadMaterialsFromMTL</a>( <span class="keyword">const</span> WCHAR* strFileName );</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="keywordtype">void</span>    <a class="code" href="class_c_mesh_loader10.html#abb7817acde88bf6a579c3322853b4352">InitMaterial</a>( <a class="code" href="struct_material.html">Material</a>* pMaterial );</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    DWORD   <a class="code" href="class_c_mesh_loader10.html#a6fd71f2ec336b84018bae107641380ed">AddVertex</a>( UINT hash, <a class="code" href="struct_v_e_r_t_e_x.html">VERTEX</a>* pVertex );</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <span class="keywordtype">void</span>    <a class="code" href="class_c_mesh_loader10.html#a1a19425d8c725f48393b2e5392f82f0b">DeleteCache</a>();</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;</div>
+<div class="line"><a name="l00110"></a><span class="lineno"><a class="line" href="class_c_mesh_loader10.html#aa03c2511071b20f25834cd80f7facaa0">  110</a></span>&#160;    ID3D10Device* <a class="code" href="class_c_mesh_loader10.html#aa03c2511071b20f25834cd80f7facaa0">m_pd3dDevice</a>;    <span class="comment">// Direct3D Device object associated with this mesh</span></div>
+<div class="line"><a name="l00111"></a><span class="lineno"><a class="line" href="class_c_mesh_loader10.html#abe6d62dd11a15fed241608c6f504d2bf">  111</a></span>&#160;    ID3DX10Mesh* <a class="code" href="class_c_mesh_loader10.html#abe6d62dd11a15fed241608c6f504d2bf">m_pMesh</a>;         <span class="comment">// Encapsulated D3DX Mesh</span></div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;</div>
+<div class="line"><a name="l00113"></a><span class="lineno"><a class="line" href="class_c_mesh_loader10.html#adcd1001f9c527284861ea1c3373d0263">  113</a></span>&#160;    CGrowableArray &lt;CacheEntry*&gt; <a class="code" href="class_c_mesh_loader10.html#adcd1001f9c527284861ea1c3373d0263">m_VertexCache</a>;   <span class="comment">// Hashtable cache for locating duplicate vertices</span></div>
+<div class="line"><a name="l00114"></a><span class="lineno"><a class="line" href="class_c_mesh_loader10.html#a960f7786f550260b43ada586c214f340">  114</a></span>&#160;    CGrowableArray &lt;VERTEX&gt; <a class="code" href="class_c_mesh_loader10.html#a960f7786f550260b43ada586c214f340">m_Vertices</a>;      <span class="comment">// Filled and copied to the vertex buffer</span></div>
+<div class="line"><a name="l00115"></a><span class="lineno"><a class="line" href="class_c_mesh_loader10.html#a332fd0a358fba463a01ed985bb800209">  115</a></span>&#160;    CGrowableArray &lt;DWORD&gt; <a class="code" href="class_c_mesh_loader10.html#a332fd0a358fba463a01ed985bb800209">m_Indices</a>;       <span class="comment">// Filled and copied to the index buffer</span></div>
+<div class="line"><a name="l00116"></a><span class="lineno"><a class="line" href="class_c_mesh_loader10.html#a0e5e3d2e4fb4e0b33f75ffeb638584f2">  116</a></span>&#160;    CGrowableArray &lt;DWORD&gt; <a class="code" href="class_c_mesh_loader10.html#a0e5e3d2e4fb4e0b33f75ffeb638584f2">m_Attributes</a>;    <span class="comment">// Filled and copied to the attribute buffer</span></div>
+<div class="line"><a name="l00117"></a><span class="lineno"><a class="line" href="class_c_mesh_loader10.html#a9c9ddad9a31e487f225cf41b6c169de5">  117</a></span>&#160;    CGrowableArray &lt;Material*&gt; <a class="code" href="class_c_mesh_loader10.html#a9c9ddad9a31e487f225cf41b6c169de5">m_Materials</a>;     <span class="comment">// Holds material properties per subset</span></div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;</div>
+<div class="line"><a name="l00119"></a><span class="lineno"><a class="line" href="class_c_mesh_loader10.html#af240f512149636eaca38c75636d604eb">  119</a></span>&#160;    UINT        <a class="code" href="class_c_mesh_loader10.html#af240f512149636eaca38c75636d604eb">m_NumAttribTableEntries</a>;</div>
+<div class="line"><a name="l00120"></a><span class="lineno"><a class="line" href="class_c_mesh_loader10.html#a9cc1a0972bb99a2ee1a79a5129e67b82">  120</a></span>&#160;    D3DX10_ATTRIBUTE_RANGE *<a class="code" href="class_c_mesh_loader10.html#a9cc1a0972bb99a2ee1a79a5129e67b82">m_pAttribTable</a>;</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;</div>
+<div class="line"><a name="l00122"></a><span class="lineno"><a class="line" href="class_c_mesh_loader10.html#a36a5356d0be3f23c2e52e730df3ea913">  122</a></span>&#160;    WCHAR   <a class="code" href="class_c_mesh_loader10.html#a36a5356d0be3f23c2e52e730df3ea913">m_strMediaDir</a>[ MAX_PATH ];               <span class="comment">// Directory where the mesh was found</span></div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;};</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;<span class="preprocessor">#endif // _MESHLOADER_H_</span></div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;</div>
+<div class="ttc" id="class_c_mesh_loader10_html_a332fd0a358fba463a01ed985bb800209"><div class="ttname"><a href="class_c_mesh_loader10.html#a332fd0a358fba463a01ed985bb800209">CMeshLoader10::m_Indices</a></div><div class="ttdeci">CGrowableArray&lt; DWORD &gt; m_Indices</div><div class="ttdef"><b>Definition:</b> MeshLoader10.h:115</div></div>
+<div class="ttc" id="class_c_mesh_loader10_html_a375f819881c7b999bff07e59fc63c4ab"><div class="ttname"><a href="class_c_mesh_loader10.html#a375f819881c7b999bff07e59fc63c4ab">CMeshLoader10::CMeshLoader10</a></div><div class="ttdeci">CMeshLoader10()</div><div class="ttdef"><b>Definition:</b> MeshLoader10.cpp:28</div></div>
+<div class="ttc" id="struct_material_html_add43e0bc4d075b3de06084a976fc7a7f"><div class="ttname"><a href="struct_material.html#add43e0bc4d075b3de06084a976fc7a7f">Material::pTechnique</a></div><div class="ttdeci">ID3D10EffectTechnique * pTechnique</div><div class="ttdef"><b>Definition:</b> MeshLoader10.h:55</div></div>
+<div class="ttc" id="class_c_mesh_loader10_html_a08690b4715603d5bd9924362a1c5f983"><div class="ttname"><a href="class_c_mesh_loader10.html#a08690b4715603d5bd9924362a1c5f983">CMeshLoader10::GetMaterial</a></div><div class="ttdeci">Material * GetMaterial(UINT iMaterial)</div><div class="ttdef"><b>Definition:</b> MeshLoader10.h:78</div></div>
+<div class="ttc" id="class_c_mesh_loader10_html_abe6d62dd11a15fed241608c6f504d2bf"><div class="ttname"><a href="class_c_mesh_loader10.html#abe6d62dd11a15fed241608c6f504d2bf">CMeshLoader10::m_pMesh</a></div><div class="ttdeci">ID3DX10Mesh * m_pMesh</div><div class="ttdef"><b>Definition:</b> MeshLoader10.h:111</div></div>
+<div class="ttc" id="class_c_mesh_loader10_html"><div class="ttname"><a href="class_c_mesh_loader10.html">CMeshLoader10</a></div><div class="ttdef"><b>Definition:</b> MeshLoader10.h:59</div></div>
+<div class="ttc" id="class_c_mesh_loader10_html_a1a19425d8c725f48393b2e5392f82f0b"><div class="ttname"><a href="class_c_mesh_loader10.html#a1a19425d8c725f48393b2e5392f82f0b">CMeshLoader10::DeleteCache</a></div><div class="ttdeci">void DeleteCache()</div><div class="ttdef"><b>Definition:</b> MeshLoader10.cpp:419</div></div>
+<div class="ttc" id="class_c_mesh_loader10_html_a858397739b3084faeaffb5a12442645f"><div class="ttname"><a href="class_c_mesh_loader10.html#a858397739b3084faeaffb5a12442645f">CMeshLoader10::GetSubsetMaterial</a></div><div class="ttdeci">Material * GetSubsetMaterial(UINT iSubset)</div><div class="ttdef"><b>Definition:</b> MeshLoader10.h:87</div></div>
+<div class="ttc" id="class_c_mesh_loader10_html_af240f512149636eaca38c75636d604eb"><div class="ttname"><a href="class_c_mesh_loader10.html#af240f512149636eaca38c75636d604eb">CMeshLoader10::m_NumAttribTableEntries</a></div><div class="ttdeci">UINT m_NumAttribTableEntries</div><div class="ttdef"><b>Definition:</b> MeshLoader10.h:119</div></div>
+<div class="ttc" id="struct_v_e_r_t_e_x_html_a33de468562fae526f210511e78a840cf"><div class="ttname"><a href="struct_v_e_r_t_e_x.html#a33de468562fae526f210511e78a840cf">VERTEX::normal</a></div><div class="ttdeci">D3DXVECTOR3 normal</div><div class="ttdef"><b>Definition:</b> MeshLoader10.h:26</div></div>
+<div class="ttc" id="class_c_mesh_loader10_html_a2e172714dc0eea811bddf8c540f31978"><div class="ttname"><a href="class_c_mesh_loader10.html#a2e172714dc0eea811bddf8c540f31978">CMeshLoader10::Destroy</a></div><div class="ttdeci">void Destroy()</div><div class="ttdef"><b>Definition:</b> MeshLoader10.cpp:49</div></div>
+<div class="ttc" id="struct_v_e_r_t_e_x_html"><div class="ttname"><a href="struct_v_e_r_t_e_x.html">VERTEX</a></div><div class="ttdef"><b>Definition:</b> MeshLoader10.h:23</div></div>
+<div class="ttc" id="class_c_mesh_loader10_html_a549441682715b68675fc6aa6b0bfc60c"><div class="ttname"><a href="class_c_mesh_loader10.html#a549441682715b68675fc6aa6b0bfc60c">CMeshLoader10::GetNumSubsets</a></div><div class="ttdeci">UINT GetNumSubsets()</div><div class="ttdef"><b>Definition:</b> MeshLoader10.h:83</div></div>
+<div class="ttc" id="struct_material_html_a7b394e6e8e47e31322048b1f4890b1c3"><div class="ttname"><a href="struct_material.html#a7b394e6e8e47e31322048b1f4890b1c3">Material::vSpecular</a></div><div class="ttdeci">D3DXVECTOR3 vSpecular</div><div class="ttdef"><b>Definition:</b> MeshLoader10.h:46</div></div>
+<div class="ttc" id="class_c_mesh_loader10_html_a97e4a5dfb1250bf03f738ee9f52ed662"><div class="ttname"><a href="class_c_mesh_loader10.html#a97e4a5dfb1250bf03f738ee9f52ed662">CMeshLoader10::~CMeshLoader10</a></div><div class="ttdeci">~CMeshLoader10()</div><div class="ttdef"><b>Definition:</b> MeshLoader10.cpp:41</div></div>
+<div class="ttc" id="class_c_mesh_loader10_html_a4c22d021f1ae9abe14ebabe869147714"><div class="ttname"><a href="class_c_mesh_loader10.html#a4c22d021f1ae9abe14ebabe869147714">CMeshLoader10::GetMesh</a></div><div class="ttdeci">ID3DX10Mesh * GetMesh()</div><div class="ttdef"><b>Definition:</b> MeshLoader10.h:92</div></div>
+<div class="ttc" id="class_c_mesh_loader10_html_a9cc1a0972bb99a2ee1a79a5129e67b82"><div class="ttname"><a href="class_c_mesh_loader10.html#a9cc1a0972bb99a2ee1a79a5129e67b82">CMeshLoader10::m_pAttribTable</a></div><div class="ttdeci">D3DX10_ATTRIBUTE_RANGE * m_pAttribTable</div><div class="ttdef"><b>Definition:</b> MeshLoader10.h:120</div></div>
+<div class="ttc" id="struct_material_html"><div class="ttname"><a href="struct_material.html">Material</a></div><div class="ttdef"><b>Definition:</b> MeshLoader10.h:40</div></div>
+<div class="ttc" id="struct_cache_entry_html_a5129bb1b7f63af2116737f1b77a75761"><div class="ttname"><a href="struct_cache_entry.html#a5129bb1b7f63af2116737f1b77a75761">CacheEntry::index</a></div><div class="ttdeci">UINT index</div><div class="ttdef"><b>Definition:</b> MeshLoader10.h:34</div></div>
+<div class="ttc" id="struct_material_html_aa0f809e1462c732fec8e86fe2fa5bb2e"><div class="ttname"><a href="struct_material.html#aa0f809e1462c732fec8e86fe2fa5bb2e">Material::bSpecular</a></div><div class="ttdeci">bool bSpecular</div><div class="ttdef"><b>Definition:</b> MeshLoader10.h:51</div></div>
+<div class="ttc" id="class_c_mesh_loader10_html_a0e5e3d2e4fb4e0b33f75ffeb638584f2"><div class="ttname"><a href="class_c_mesh_loader10.html#a0e5e3d2e4fb4e0b33f75ffeb638584f2">CMeshLoader10::m_Attributes</a></div><div class="ttdeci">CGrowableArray&lt; DWORD &gt; m_Attributes</div><div class="ttdef"><b>Definition:</b> MeshLoader10.h:116</div></div>
+<div class="ttc" id="class_c_mesh_loader10_html_a960f7786f550260b43ada586c214f340"><div class="ttname"><a href="class_c_mesh_loader10.html#a960f7786f550260b43ada586c214f340">CMeshLoader10::m_Vertices</a></div><div class="ttdeci">CGrowableArray&lt; VERTEX &gt; m_Vertices</div><div class="ttdef"><b>Definition:</b> MeshLoader10.h:114</div></div>
+<div class="ttc" id="class_c_mesh_loader10_html_ae680b5b67c2a14bee8038fd95af55d01"><div class="ttname"><a href="class_c_mesh_loader10.html#ae680b5b67c2a14bee8038fd95af55d01">CMeshLoader10::Create</a></div><div class="ttdeci">HRESULT Create(ID3D10Device *pd3dDevice, const WCHAR *strFilename)</div><div class="ttdef"><b>Definition:</b> MeshLoader10.cpp:83</div></div>
+<div class="ttc" id="struct_v_e_r_t_e_x_html_a0bf5e4274a1e6dba447ad5234c11655f"><div class="ttname"><a href="struct_v_e_r_t_e_x.html#a0bf5e4274a1e6dba447ad5234c11655f">VERTEX::texcoord</a></div><div class="ttdeci">D3DXVECTOR2 texcoord</div><div class="ttdef"><b>Definition:</b> MeshLoader10.h:27</div></div>
+<div class="ttc" id="class_c_mesh_loader10_html_a6fd71f2ec336b84018bae107641380ed"><div class="ttname"><a href="class_c_mesh_loader10.html#a6fd71f2ec336b84018bae107641380ed">CMeshLoader10::AddVertex</a></div><div class="ttdeci">DWORD AddVertex(UINT hash, VERTEX *pVertex)</div><div class="ttdef"><b>Definition:</b> MeshLoader10.cpp:344</div></div>
+<div class="ttc" id="struct_cache_entry_html"><div class="ttname"><a href="struct_cache_entry.html">CacheEntry</a></div><div class="ttdef"><b>Definition:</b> MeshLoader10.h:32</div></div>
+<div class="ttc" id="struct_material_html_a8fb32bca6b3f151282215b5f746138f3"><div class="ttname"><a href="struct_material.html#a8fb32bca6b3f151282215b5f746138f3">Material::vAmbient</a></div><div class="ttdeci">D3DXVECTOR3 vAmbient</div><div class="ttdef"><b>Definition:</b> MeshLoader10.h:44</div></div>
+<div class="ttc" id="class_c_mesh_loader10_html_abb7817acde88bf6a579c3322853b4352"><div class="ttname"><a href="class_c_mesh_loader10.html#abb7817acde88bf6a579c3322853b4352">CMeshLoader10::InitMaterial</a></div><div class="ttdeci">void InitMaterial(Material *pMaterial)</div><div class="ttdef"><b>Definition:</b> MeshLoader10.cpp:558</div></div>
+<div class="ttc" id="class_c_mesh_loader10_html_aa03c2511071b20f25834cd80f7facaa0"><div class="ttname"><a href="class_c_mesh_loader10.html#aa03c2511071b20f25834cd80f7facaa0">CMeshLoader10::m_pd3dDevice</a></div><div class="ttdeci">ID3D10Device * m_pd3dDevice</div><div class="ttdef"><b>Definition:</b> MeshLoader10.h:110</div></div>
+<div class="ttc" id="class_c_mesh_loader10_html_a140b81b57a67c38e2dce4c1a12f60c91"><div class="ttname"><a href="class_c_mesh_loader10.html#a140b81b57a67c38e2dce4c1a12f60c91">CMeshLoader10::LoadGeometryFromOBJ</a></div><div class="ttdeci">HRESULT LoadGeometryFromOBJ(const WCHAR *strFilename)</div><div class="ttdef"><b>Definition:</b> MeshLoader10.cpp:166</div></div>
+<div class="ttc" id="struct_material_html_a088560fb820c8872cb1ff3ba369c94c0"><div class="ttname"><a href="struct_material.html#a088560fb820c8872cb1ff3ba369c94c0">Material::fAlpha</a></div><div class="ttdeci">float fAlpha</div><div class="ttdef"><b>Definition:</b> MeshLoader10.h:49</div></div>
+<div class="ttc" id="class_c_mesh_loader10_html_a3918847816ca9b6aa74b1c3d07205647"><div class="ttname"><a href="class_c_mesh_loader10.html#a3918847816ca9b6aa74b1c3d07205647">CMeshLoader10::GetMediaDirectory</a></div><div class="ttdeci">WCHAR * GetMediaDirectory()</div><div class="ttdef"><b>Definition:</b> MeshLoader10.h:96</div></div>
+<div class="ttc" id="struct_material_html_ae70156212936ff31f382db0a0ba116db"><div class="ttname"><a href="struct_material.html#ae70156212936ff31f382db0a0ba116db">Material::strName</a></div><div class="ttdeci">WCHAR strName[MAX_PATH]</div><div class="ttdef"><b>Definition:</b> MeshLoader10.h:42</div></div>
+<div class="ttc" id="_mesh_loader10_8h_html_ae6514115d0b2144365b4d04068b53f23"><div class="ttname"><a href="_mesh_loader10_8h.html#ae6514115d0b2144365b4d04068b53f23">ERROR_RESOURCE_VALUE</a></div><div class="ttdeci">#define ERROR_RESOURCE_VALUE</div><div class="ttdef"><b>Definition:</b> MeshLoader10.h:13</div></div>
+<div class="ttc" id="struct_material_html_ab6a621b8ee1e055f0eaa65c6ae87f32b"><div class="ttname"><a href="struct_material.html#ab6a621b8ee1e055f0eaa65c6ae87f32b">Material::vDiffuse</a></div><div class="ttdeci">D3DXVECTOR3 vDiffuse</div><div class="ttdef"><b>Definition:</b> MeshLoader10.h:45</div></div>
+<div class="ttc" id="class_c_mesh_loader10_html_a36a5356d0be3f23c2e52e730df3ea913"><div class="ttname"><a href="class_c_mesh_loader10.html#a36a5356d0be3f23c2e52e730df3ea913">CMeshLoader10::m_strMediaDir</a></div><div class="ttdeci">WCHAR m_strMediaDir[MAX_PATH]</div><div class="ttdef"><b>Definition:</b> MeshLoader10.h:122</div></div>
+<div class="ttc" id="struct_v_e_r_t_e_x_html_a5f1c17b55ec79caee9dfff590906e54c"><div class="ttname"><a href="struct_v_e_r_t_e_x.html#a5f1c17b55ec79caee9dfff590906e54c">VERTEX::position</a></div><div class="ttdeci">D3DXVECTOR3 position</div><div class="ttdef"><b>Definition:</b> MeshLoader10.h:25</div></div>
+<div class="ttc" id="class_c_mesh_loader10_html_a5d1382f7d3fbdd419bc12079b693d0d0"><div class="ttname"><a href="class_c_mesh_loader10.html#a5d1382f7d3fbdd419bc12079b693d0d0">CMeshLoader10::GetNumMaterials</a></div><div class="ttdeci">UINT GetNumMaterials() const </div><div class="ttdef"><b>Definition:</b> MeshLoader10.h:74</div></div>
+<div class="ttc" id="class_c_mesh_loader10_html_adcd1001f9c527284861ea1c3373d0263"><div class="ttname"><a href="class_c_mesh_loader10.html#adcd1001f9c527284861ea1c3373d0263">CMeshLoader10::m_VertexCache</a></div><div class="ttdeci">CGrowableArray&lt; CacheEntry * &gt; m_VertexCache</div><div class="ttdef"><b>Definition:</b> MeshLoader10.h:113</div></div>
+<div class="ttc" id="class_c_mesh_loader10_html_a88befcdcb8baceae8ee11206ee6f7c48"><div class="ttname"><a href="class_c_mesh_loader10.html#a88befcdcb8baceae8ee11206ee6f7c48">CMeshLoader10::LoadMaterialsFromMTL</a></div><div class="ttdeci">HRESULT LoadMaterialsFromMTL(const WCHAR *strFileName)</div><div class="ttdef"><b>Definition:</b> MeshLoader10.cpp:438</div></div>
+<div class="ttc" id="class_c_mesh_loader10_html_a9c9ddad9a31e487f225cf41b6c169de5"><div class="ttname"><a href="class_c_mesh_loader10.html#a9c9ddad9a31e487f225cf41b6c169de5">CMeshLoader10::m_Materials</a></div><div class="ttdeci">CGrowableArray&lt; Material * &gt; m_Materials</div><div class="ttdef"><b>Definition:</b> MeshLoader10.h:117</div></div>
+<div class="ttc" id="struct_cache_entry_html_a1d105d2db6993844353b614bcd2e927c"><div class="ttname"><a href="struct_cache_entry.html#a1d105d2db6993844353b614bcd2e927c">CacheEntry::pNext</a></div><div class="ttdeci">CacheEntry * pNext</div><div class="ttdef"><b>Definition:</b> MeshLoader10.h:35</div></div>
+<div class="ttc" id="struct_material_html_a5d6193359d95914e35774c7dd9dbb21c"><div class="ttname"><a href="struct_material.html#a5d6193359d95914e35774c7dd9dbb21c">Material::pTextureRV10</a></div><div class="ttdeci">ID3D10ShaderResourceView * pTextureRV10</div><div class="ttdef"><b>Definition:</b> MeshLoader10.h:54</div></div>
+<div class="ttc" id="struct_material_html_a925cf5d7b5b5a97d66bb4dff0b2dd417"><div class="ttname"><a href="struct_material.html#a925cf5d7b5b5a97d66bb4dff0b2dd417">Material::nShininess</a></div><div class="ttdeci">int nShininess</div><div class="ttdef"><b>Definition:</b> MeshLoader10.h:48</div></div>
+<div class="ttc" id="struct_material_html_a4a96782d562905b16f6016af0fa98f8b"><div class="ttname"><a href="struct_material.html#a4a96782d562905b16f6016af0fa98f8b">Material::strTexture</a></div><div class="ttdeci">WCHAR strTexture[MAX_PATH]</div><div class="ttdef"><b>Definition:</b> MeshLoader10.h:53</div></div>
+<div class="ttc" id="class_c_mesh_loader10_html_abea1ee3c22622a9048d9000eb198ccec"><div class="ttname"><a href="class_c_mesh_loader10.html#abea1ee3c22622a9048d9000eb198ccec">CMeshLoader10::IsErrorResource</a></div><div class="ttdeci">BOOL IsErrorResource(TYPE data)</div><div class="ttdef"><b>Definition:</b> MeshLoader10.h:68</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2014年 六月 27日 星期五 16:12:02 , 为 数字式立体视觉刺激系统使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.7
+</small></address>
+</body>
+</html>

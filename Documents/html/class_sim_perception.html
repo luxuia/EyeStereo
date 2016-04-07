@@ -1,0 +1,656 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.7"/>
+<title>数字式立体视觉刺激系统: SimPerception类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">数字式立体视觉刺激系统
+   &#160;<span id="projectnumber">1.0.1</span>
+   </div>
+   <div id="projectbrief">Digital Stereo System</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.7 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="pages.html"><span>相关页面</span></a></li>
+      <li><a href="namespaces.html"><span>命名空间</span></a></li>
+      <li class="current"><a href="annotated.html"><span>类</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>类列表</span></a></li>
+      <li><a href="classes.html"><span>类索引</span></a></li>
+      <li><a href="hierarchy.html"><span>类继承关系</span></a></li>
+      <li><a href="functions.html"><span>类成员</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Public 类型</a> &#124;
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-attribs">Public 属性</a> &#124;
+<a href="class_sim_perception-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">SimPerception类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_sim_perception_8h_source.html">SimPerception.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public 类型</h2></td></tr>
+<tr class="memitem:a4813b38e64bd86fab90828787e86f0c8"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sim_perception.html#a4813b38e64bd86fab90828787e86f0c8">STflg</a> { <a class="el" href="class_sim_perception.html#a4813b38e64bd86fab90828787e86f0c8ad5363e2ae000fc5e5b1fcd93cbafcdf2">LEFT</a> = 0, 
+<a class="el" href="class_sim_perception.html#a4813b38e64bd86fab90828787e86f0c8aed4986519f58633fc68ab475b51f8845">RIGHT</a> = 1
+ }</td></tr>
+<tr class="separator:a4813b38e64bd86fab90828787e86f0c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a30eaf498ef068a42fb93f529de917707"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sim_perception.html#a30eaf498ef068a42fb93f529de917707">SimPerception</a> ()</td></tr>
+<tr class="separator:a30eaf498ef068a42fb93f529de917707"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a705822f63f23efc655cedbd684a3813b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sim_perception.html#a705822f63f23efc655cedbd684a3813b">init</a> (ID3D10Device *pd3d, <a class="el" href="class_eye_stereo_1_1_stereo_setting.html">StereoSetting</a> *pSS)</td></tr>
+<tr class="separator:a705822f63f23efc655cedbd684a3813b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a591054235ca86ed90b6ee0b1a69e7cea"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sim_perception.html#a591054235ca86ed90b6ee0b1a69e7cea">loadTexture</a> (<a class="el" href="class_sim_perception.html#a4813b38e64bd86fab90828787e86f0c8">STflg</a> eyeFlg, WCHAR *pSrcFile)</td></tr>
+<tr class="separator:a591054235ca86ed90b6ee0b1a69e7cea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a657ac3bad43becaf6858c171f1796277"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sim_perception.html#a657ac3bad43becaf6858c171f1796277">stereoRender</a> ()</td></tr>
+<tr class="separator:a657ac3bad43becaf6858c171f1796277"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a91f4a7cea7170922fbaacb4657f2a4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sim_perception.html#a8a91f4a7cea7170922fbaacb4657f2a4">ClearScreen</a> (ID3D10Device *<a class="el" href="class_sim_perception.html#a6f56812ebefce6306b7254da69d80185">pd3dDevice</a>)</td></tr>
+<tr class="separator:a8a91f4a7cea7170922fbaacb4657f2a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62cbcd5f7a7b7882a158fc708887e4c5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sim_perception.html#a62cbcd5f7a7b7882a158fc708887e4c5">renderLeft</a> ()</td></tr>
+<tr class="separator:a62cbcd5f7a7b7882a158fc708887e4c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d9a9314f260fc706e135924e5d8d0b5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sim_perception.html#a5d9a9314f260fc706e135924e5d8d0b5">renderRight</a> ()</td></tr>
+<tr class="separator:a5d9a9314f260fc706e135924e5d8d0b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9493e6fefd526ea24ba67d6571eede6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sim_perception.html#af9493e6fefd526ea24ba67d6571eede6">HandMessages</a> (HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)</td></tr>
+<tr class="separator:af9493e6fefd526ea24ba67d6571eede6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9520b600bf0975a944583f3ee624aced"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sim_perception.html#a9520b600bf0975a944583f3ee624aced">dataRecord</a> ()</td></tr>
+<tr class="separator:a9520b600bf0975a944583f3ee624aced"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70d53aab6d3e60fc0d832547641556d2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sim_perception.html#a70d53aab6d3e60fc0d832547641556d2">~SimPerception</a> ()</td></tr>
+<tr class="separator:a70d53aab6d3e60fc0d832547641556d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public 属性</h2></td></tr>
+<tr class="memitem:a6f56812ebefce6306b7254da69d80185"><td class="memItemLeft" align="right" valign="top">ID3D10Device *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sim_perception.html#a6f56812ebefce6306b7254da69d80185">pd3dDevice</a></td></tr>
+<tr class="separator:a6f56812ebefce6306b7254da69d80185"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5c365849c2e7e3c39b61976fe053171"><td class="memItemLeft" align="right" valign="top">ID3D10Effect *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sim_perception.html#af5c365849c2e7e3c39b61976fe053171">pEffect</a></td></tr>
+<tr class="separator:af5c365849c2e7e3c39b61976fe053171"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2cad9f66cfe509777c023e1a6ffb0018"><td class="memItemLeft" align="right" valign="top">ID3D10EffectTechnique *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sim_perception.html#a2cad9f66cfe509777c023e1a6ffb0018">pTech</a></td></tr>
+<tr class="separator:a2cad9f66cfe509777c023e1a6ffb0018"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14f23b1fc1a5a958ffdae8ac400bf379"><td class="memItemLeft" align="right" valign="top">ID3D10InputLayout *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sim_perception.html#a14f23b1fc1a5a958ffdae8ac400bf379">pInputLayout</a></td></tr>
+<tr class="separator:a14f23b1fc1a5a958ffdae8ac400bf379"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90e18f50b11130a86056c6dfba5d9196"><td class="memItemLeft" align="right" valign="top">ID3D10BlendState *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sim_perception.html#a90e18f50b11130a86056c6dfba5d9196">pBlendStateNoBlend</a></td></tr>
+<tr class="separator:a90e18f50b11130a86056c6dfba5d9196"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe2a49f6b7b8c4c3b0abc4c804f08f7e"><td class="memItemLeft" align="right" valign="top">ID3D10Resource *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sim_perception.html#afe2a49f6b7b8c4c3b0abc4c804f08f7e">pCursors</a> [2]</td></tr>
+<tr class="separator:afe2a49f6b7b8c4c3b0abc4c804f08f7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4266e507eb441d091b7313748f2031f"><td class="memItemLeft" align="right" valign="top">ID3D10DepthStencilState *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sim_perception.html#af4266e507eb441d091b7313748f2031f">pDepthStencilState</a></td></tr>
+<tr class="separator:af4266e507eb441d091b7313748f2031f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7bee4bbc5376f6b169a5a5450a1a9b45"><td class="memItemLeft" align="right" valign="top">ID3D10ShaderResourceView *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sim_perception.html#a7bee4bbc5376f6b169a5a5450a1a9b45">pshaderRV</a> [2]</td></tr>
+<tr class="separator:a7bee4bbc5376f6b169a5a5450a1a9b45"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5b2c5e8383094475d9413989a1fde39"><td class="memItemLeft" align="right" valign="top">IDXGISwapChain *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sim_perception.html#ad5b2c5e8383094475d9413989a1fde39">pSwapChain</a></td></tr>
+<tr class="separator:ad5b2c5e8383094475d9413989a1fde39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6477b11bf77e0a4603cb81d24e4eb288"><td class="memItemLeft" align="right" valign="top">ID3DX10Sprite *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sim_perception.html#a6477b11bf77e0a4603cb81d24e4eb288">pSprite</a></td></tr>
+<tr class="separator:a6477b11bf77e0a4603cb81d24e4eb288"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d5a8604d2e2218257718edd30908686"><td class="memItemLeft" align="right" valign="top">D3DX10_SPRITE&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sim_perception.html#a2d5a8604d2e2218257718edd30908686">sprite10</a> [2]</td></tr>
+<tr class="separator:a2d5a8604d2e2218257718edd30908686"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada09b03acbf770ccb81ef851613501e1"><td class="memItemLeft" align="right" valign="top">D3D10_BOX&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sim_perception.html#ada09b03acbf770ccb81ef851613501e1">textureBox</a></td></tr>
+<tr class="separator:ada09b03acbf770ccb81ef851613501e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0a9e0cdf29fe82145687c438d76a080"><td class="memItemLeft" align="right" valign="top">long int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sim_perception.html#af0a9e0cdf29fe82145687c438d76a080">windowsWidth</a></td></tr>
+<tr class="separator:af0a9e0cdf29fe82145687c438d76a080"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17cc7c05821e6b8fb754ac7fa3aa5206"><td class="memItemLeft" align="right" valign="top">long int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sim_perception.html#a17cc7c05821e6b8fb754ac7fa3aa5206">windowsHeight</a></td></tr>
+<tr class="separator:a17cc7c05821e6b8fb754ac7fa3aa5206"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb7e680e2f49c8c83982f5e72876a325"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_eye_stereo_1_1_stereo_setting.html">StereoSetting</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sim_perception.html#adb7e680e2f49c8c83982f5e72876a325">pStereoSetting</a></td></tr>
+<tr class="separator:adb7e680e2f49c8c83982f5e72876a325"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d44a3bdc9a4f18e33ef8d58073924ac"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sim_perception.html#a6d44a3bdc9a4f18e33ef8d58073924ac">bactive</a></td></tr>
+<tr class="separator:a6d44a3bdc9a4f18e33ef8d58073924ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeebcc0f3b121881afad48077d538b62d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sim_perception.html#aeebcc0f3b121881afad48077d538b62d">bStereo</a></td></tr>
+<tr class="separator:aeebcc0f3b121881afad48077d538b62d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7cc2a6ee96219ff7f7ef2ee5a2addc09"><td class="memItemLeft" align="right" valign="top">POINT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sim_perception.html#a7cc2a6ee96219ff7f7ef2ee5a2addc09">pp</a></td></tr>
+<tr class="separator:a7cc2a6ee96219ff7f7ef2ee5a2addc09"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">成员枚举类型说明</h2>
+<a class="anchor" id="a4813b38e64bd86fab90828787e86f0c8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="class_sim_perception.html#a4813b38e64bd86fab90828787e86f0c8">SimPerception::STflg</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a class="anchor" id="a4813b38e64bd86fab90828787e86f0c8ad5363e2ae000fc5e5b1fcd93cbafcdf2"></a>LEFT&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a4813b38e64bd86fab90828787e86f0c8aed4986519f58633fc68ab475b51f8845"></a>RIGHT&#160;</td><td class="fielddoc">
+</td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">构造及析构函数说明</h2>
+<a class="anchor" id="a30eaf498ef068a42fb93f529de917707"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SimPerception::SimPerception </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a70d53aab6d3e60fc0d832547641556d2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SimPerception::~SimPerception </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a class="anchor" id="a8a91f4a7cea7170922fbaacb4657f2a4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SimPerception::ClearScreen </td>
+          <td>(</td>
+          <td class="paramtype">ID3D10Device *&#160;</td>
+          <td class="paramname"><em>pd3dDevice</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a9520b600bf0975a944583f3ee624aced"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SimPerception::dataRecord </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="af9493e6fefd526ea24ba67d6571eede6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SimPerception::HandMessages </td>
+          <td>(</td>
+          <td class="paramtype">HWND&#160;</td>
+          <td class="paramname"><em>hWnd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">UINT&#160;</td>
+          <td class="paramname"><em>uMsg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">WPARAM&#160;</td>
+          <td class="paramname"><em>wParam</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">LPARAM&#160;</td>
+          <td class="paramname"><em>lParam</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a705822f63f23efc655cedbd684a3813b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SimPerception::init </td>
+          <td>(</td>
+          <td class="paramtype">ID3D10Device *&#160;</td>
+          <td class="paramname"><em>pd3d</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_eye_stereo_1_1_stereo_setting.html">StereoSetting</a> *&#160;</td>
+          <td class="paramname"><em>pSS</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a591054235ca86ed90b6ee0b1a69e7cea"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SimPerception::loadTexture </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_sim_perception.html#a4813b38e64bd86fab90828787e86f0c8">STflg</a>&#160;</td>
+          <td class="paramname"><em>eyeFlg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">WCHAR *&#160;</td>
+          <td class="paramname"><em>pSrcFile</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a62cbcd5f7a7b7882a158fc708887e4c5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SimPerception::renderLeft </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a5d9a9314f260fc706e135924e5d8d0b5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SimPerception::renderRight </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a657ac3bad43becaf6858c171f1796277"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SimPerception::stereoRender </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a class="anchor" id="a6d44a3bdc9a4f18e33ef8d58073924ac"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SimPerception::bactive</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aeebcc0f3b121881afad48077d538b62d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SimPerception::bStereo</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a90e18f50b11130a86056c6dfba5d9196"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ID3D10BlendState* SimPerception::pBlendStateNoBlend</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="afe2a49f6b7b8c4c3b0abc4c804f08f7e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ID3D10Resource* SimPerception::pCursors[2]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a6f56812ebefce6306b7254da69d80185"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ID3D10Device* SimPerception::pd3dDevice</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="af4266e507eb441d091b7313748f2031f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ID3D10DepthStencilState* SimPerception::pDepthStencilState</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="af5c365849c2e7e3c39b61976fe053171"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ID3D10Effect* SimPerception::pEffect</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a14f23b1fc1a5a958ffdae8ac400bf379"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ID3D10InputLayout* SimPerception::pInputLayout</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a7cc2a6ee96219ff7f7ef2ee5a2addc09"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">POINT SimPerception::pp</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a7bee4bbc5376f6b169a5a5450a1a9b45"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ID3D10ShaderResourceView* SimPerception::pshaderRV[2]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a6477b11bf77e0a4603cb81d24e4eb288"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ID3DX10Sprite* SimPerception::pSprite</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="adb7e680e2f49c8c83982f5e72876a325"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_eye_stereo_1_1_stereo_setting.html">StereoSetting</a>* SimPerception::pStereoSetting</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ad5b2c5e8383094475d9413989a1fde39"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">IDXGISwapChain* SimPerception::pSwapChain</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a2cad9f66cfe509777c023e1a6ffb0018"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ID3D10EffectTechnique* SimPerception::pTech</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a2d5a8604d2e2218257718edd30908686"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">D3DX10_SPRITE SimPerception::sprite10[2]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ada09b03acbf770ccb81ef851613501e1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">D3D10_BOX SimPerception::textureBox</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a17cc7c05821e6b8fb754ac7fa3aa5206"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">long int SimPerception::windowsHeight</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="af0a9e0cdf29fe82145687c438d76a080"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">long int SimPerception::windowsWidth</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>E:/Project/final/EyeStereo/Applications/SimPerceptionProject/<a class="el" href="_sim_perception_8h_source.html">SimPerception.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2014年 六月 27日 星期五 16:12:02 , 为 数字式立体视觉刺激系统使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.7
+</small></address>
+</body>
+</html>

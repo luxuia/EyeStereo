@@ -11,11 +11,32 @@ namespace EyeStereo {
 	public:
 
 /// const value define
-		enum CubeTypes { LINE, AO, TU, FANG, };
-		enum Status{ ACTIVE = 7, DOWN = 1, LEFT = 2, RIGHT = 4, NONE = 0, INVISIABLE = 8 };
-		#define CONST_Z_ 5
+		/**
+			方块
+		*/
+		enum CubeTypes { 
+			LINE, ///< 条块
+			AO,   ///< 凹块
+			TU,   ///< 凸块
+			FANG, ///< 方块
+		};
 
+		/**
+			方块的状态
+		*/
+		enum Status{ 
+			ACTIVE = 7,   	///< 活动
+			DOWN = 1,   	///< 正在下降
+			LEFT = 2, 		///< 左
+			RIGHT = 4, 
+			NONE = 0, 		///< 不正常
+			INVISIABLE = 8, ///< 不可见
+		};
 
+		/**
+			方块Z轴深度纬度
+		*/
+		#define CONST_Z_ 5   
 
 		std::vector<D3DXVECTOR3>	WordPos;
 		Status status;
@@ -27,10 +48,26 @@ namespace EyeStereo {
 			CentrePos = NULL;
 		}
 
+		/**
+			@param[in] i 第i个方块
+			@param[in] othermesh 另一个mesh
+			@param[in] otherpos 另一个位置
+			@param[in] dir 方向
+			@param[in] space 碰撞精度
+			@return 是否碰撞
+		*/
 		bool CollisionOne(UINT i, ID3DX10Mesh* othermesh, D3DXVECTOR3 &otherpos, Status dir, float space);
 		void Move(float step, Status dir);
 		void Move(float);
 
+		/**
+			@param[in] othermesh 另一个模型
+			@param[in] otherpos 另一个位置
+			@param[in] dir 方向
+			@param[in] space 碰撞精度
+			@return 是否碰撞
+			枚举这些立方体与另一个模型是否碰撞
+		*/
 		bool Collision(ID3DX10Mesh* othermesh, D3DXVECTOR3 &otherpos, Status dir = DOWN, float space = 0.01) {
 			for (UINT i = 0; i < WordPos.size(); ++i){
 				if (CollisionOne(i, othermesh, otherpos, dir, space))
@@ -39,6 +76,13 @@ namespace EyeStereo {
 			return false;
 		}
 
+		/**
+			@param[in] otherCubes 另一些立方体
+			@param[in] dir 当前这个方块的状态
+			@param[in] space 碰撞精度
+			@return 是否会碰撞
+			枚举所有另一些立方体的mesh和pos，并根据当前方块的趋势判断是否会碰撞
+		*/
 		bool Collision(TetrisCubes* otherCubes, Status dir = DOWN, float space = 0.01) {
 			for (UINT i = 0; i < otherCubes->WordPos.size(); ++i) {
 				if (Collision(otherCubes->mesh->GetMesh(), otherCubes->WordPos[i], dir, space))
@@ -57,11 +101,17 @@ namespace EyeStereo {
 	public:
 		TetrisCubesCreator(CMeshLoader10 *cubeMesh) :CubeMesh(cubeMesh){}
 
+
+		/**
+			@param[in] wPos 位置
+			@param[in] status 状态
+
+		*/
 		bool CreateRandomCube(D3DXVECTOR3 &wPos, TetrisCubes::Status status = TetrisCubes::DOWN) {
 			TetrisCubes::CubeTypes type = RandomType();
 
 			switch (type) {
-			case TetrisCubes::LINE: { // -------
+			case TetrisCubes::LINE: { /// -------
 						   TetrisCubes cube;
 						   cube.WordPos.push_back(wPos);
 						   for (UINT i = 1; i < 4; i++) {
@@ -73,7 +123,7 @@ namespace EyeStereo {
 						   Cubes.push_back(cube);
 						   return true;
 			}
-			case TetrisCubes::AO: { //����������
+			case TetrisCubes::AO: { ///凹。。。。
 						 TetrisCubes cube;
 						 cube.WordPos.push_back(wPos);
 						 cube.WordPos.push_back(D3DXVECTOR3(wPos.x + 1, wPos.y, wPos.z));
@@ -86,7 +136,7 @@ namespace EyeStereo {
 						 Cubes.push_back(cube);
 						 return true;
 			}
-			case TetrisCubes::TU: { //͹������
+			case TetrisCubes::TU: { ///凸。。。
 						 TetrisCubes cube;
 						 cube.WordPos.push_back(wPos);
 						 cube.WordPos.push_back(D3DXVECTOR3(wPos.x + 1, wPos.y, wPos.z));
@@ -98,7 +148,7 @@ namespace EyeStereo {
 						 Cubes.push_back(cube);
 						 return true;
 			}
-			case TetrisCubes::FANG: { //��������
+			case TetrisCubes::FANG: { ///方。。。
 						   TetrisCubes cube;
 						   cube.WordPos.push_back(wPos);
 						   cube.WordPos.push_back(D3DXVECTOR3(wPos.x + 1, wPos.y, wPos.z));
@@ -115,6 +165,8 @@ namespace EyeStereo {
 			}
 		}
 
+
+		/// 产生一个随机的方块
 		bool CreateRandomCube(TetrisCubes::Status status = TetrisCubes::DOWN) {
 			float x = floor(RandF(-3, 3));
 			float y = floor(RandF(4, 6));

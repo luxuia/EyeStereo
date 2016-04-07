@@ -12,7 +12,6 @@
 
 using namespace EyeStereo;
 
-
 bool PingPang::init(ID3D10Device* pdevice, StereoSetting* stereo, CModelViewerCamera* pcamera, KeyBoard* key) {
 	pd3dDevice = pdevice;
 	pCamera = pcamera;
@@ -94,12 +93,8 @@ bool PingPang::init(ID3D10Device* pdevice, StereoSetting* stereo, CModelViewerCa
 		}
 	}
 
-
 	CreateBounds();
-
-
 	pSwapChain = DXUTGetDXGISwapChain();
-	pSwapChain->AddRef();
 
 	windowsHeight = DXUTGetWindowHeight();
 	windowsWidth = DXUTGetWindowWidth();
@@ -241,14 +236,7 @@ void PingPang::Restart() {
 
 
 D3DXVECTOR3 PingPang::RefectBall(D3DXVECTOR3 v, D3DXVECTOR3 normal) {
-
-	//D3DXVec3Normalize(&v, &v);
-	//D3DXVec3Normalize(&normal, &normal);
-
-
 	D3DXVECTOR3 outv(v - D3DXVec3Dot(&v, &normal)*normal * 2);
-
-
 
 	if (D3DXVec3Length(&outv) > 3) {
 		printf("this is to quick");
@@ -272,9 +260,8 @@ void PingPang::CaculateBallV(float fTime) {
 			}
 			else {
 				D3DXVECTOR3 intersect;
-
 				D3DXPlaneIntersectLine(&intersect, &(pBoxVector[i]->pPlane[j]), &(pBall->pos), &(pBall->pos - pBoxVector[i]->v[j * 4].normal));
-				if (Vector3(intersect - pBall->pos).Dot(Vector3(pBall->v)) > 0) {
+				if (Vector3f((float*)(intersect - pBall->pos)).Dot(Vector3f( (float*)(pBall->v) ) ) > 0) {
 					if (pBoxVector[i]->contain(j, intersect)) {
 
 
@@ -452,13 +439,16 @@ void PingPang::ClearScreen(ID3D10Device *pd3dDevice)
 }
 
 PingPang::~PingPang() {
+	
 	SAFE_RELEASE(pEffect);
 	SAFE_RELEASE(pInputLayout);
 	SAFE_RELEASE(pSwapChain);
 	/*		SAFE_DELETE(pSolidState);*/
-	if (pBall != NULL)
-		delete pBall;
+	SAFE_DELETE(pBall);
 
+	for (std::vector< DiffSpecularBox* >::iterator it = pBoxVector.begin(); it != pBoxVector.end(); ++it) {
+		SAFE_DELETE(*it);
+	}
 	pBoxVector.clear();
 
 }

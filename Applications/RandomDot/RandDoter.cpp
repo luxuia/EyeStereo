@@ -4,7 +4,7 @@
 #include "DXUT.h"
 #include "Geometry/vertex.h"
 
-#define __DEBUG__ 1
+//#define __DEBUG__ 1
 
 using namespace EyeStereo;
 

@@ -41,8 +41,6 @@ namespace EyeStereo {
 		bool init(ID3D10Device *pd3ddevice) {
 
 			if (InitStereo()) {
-
-
 				g_pBigTexture = NULL;
 				makeBigTexture(pd3ddevice);
 				//InitStereoParam(pd3ddevice);
@@ -58,7 +56,7 @@ namespace EyeStereo {
 		{
 			// ≥ı ºªØ
 		
-			/*
+			
 			NvAPI_Status status;
 			status = NvAPI_Initialize();
 			if (status != NVAPI_OK)
@@ -90,7 +88,7 @@ namespace EyeStereo {
 
 			NvAPI_Stereo_CreateConfigurationProfileRegistryKey(NVAPI_STEREO_DEFAULT_REGISTRY_PROFILE);
 		
-			*/
+			
 			windowWidth = DXUTGetWindowWidth();
 			windowHeight = DXUTGetWindowHeight();
 		

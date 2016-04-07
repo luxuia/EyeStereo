@@ -75,26 +75,26 @@ void Tetris::Restart() {
 	g_pTetrisCreator->CreateRandomCube(TetrisCubes::ACTIVE);
 }
 
-UINT Tetris::FindConnectedCubes(std::vector< uupair > &stack, TetrisCubes::Status dir = TetrisCubes::NONE) {
+UINT Tetris::FindConnectedCubes(std::vector< uupair > &stack, TetrisCubes::Status dir = TetrisCubes::NONE, uupair lastCube = std::make_pair(0, 0)) {
 
 	if (dir == TetrisCubes::NONE) {
-		return FindConnectedCubes(stack, TetrisCubes::LEFT) + FindConnectedCubes(stack, TetrisCubes::RIGHT);
+		return FindConnectedCubes(stack, TetrisCubes::LEFT, lastCube) + FindConnectedCubes(stack, TetrisCubes::RIGHT, lastCube);
 	}
 	
 	UINT st, nd;
 	for (UINT i(0); i < g_pTetrisCreator->Cubes.size(); ++i) {
 		for (UINT p(0); p < g_pTetrisCreator->Cubes[i].WordPos.size(); ++p ) {
 			if ( std::find( stack.begin(), stack.end(), std::make_pair(i, p) ) == stack.end() ) {
-				st = stack.at(0).first;
-				nd = stack.at(0).second;
-				if (g_pTetrisCreator->Cubes[st].CollisionOne(nd, g_pTetrisCreator->CubeMesh->GetMesh(), g_pTetrisCreator->Cubes[i].WordPos[p], dir, 100)) {
+				st = lastCube.first;
+				nd = lastCube.second;
+				if (g_pTetrisCreator->Cubes[st].CollisionOne(nd, g_pTetrisCreator->CubeMesh->GetMesh(), g_pTetrisCreator->Cubes[i].WordPos[p], dir, 0.1)) {
 					stack.push_back(std::make_pair(i, p));
-					return FindConnectedCubes(stack, dir) + 1;
+					return FindConnectedCubes(stack, dir, std::make_pair(i, p)) + 1;
 				}
 			}
 		}
 	}
-	return 1;
+	return 0;
 }
 
 bool _pairCMP(const Tetris::uupair& a, const Tetris::uupair& b) {
@@ -127,7 +127,8 @@ void Tetris::DeleteIfFullLine() {
 		for (UINT p = 0; p < g_pTetrisCreator->Cubes[i].WordPos.size(); ++p) {
 			_stack.clear();
 			_stack.push_back(std::pair<UINT, UINT>(i, p));
-			if (FindConnectedCubes(_stack, TetrisCubes::NONE) > 10) {
+			int iFindConnected = FindConnectedCubes(_stack, TetrisCubes::NONE, std::make_pair(i, p))+1;
+			if (iFindConnected > 10) {
 				
 				DestoryCubes(_stack); 
 				isDestoryed = TRUE;

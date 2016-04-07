@@ -1,0 +1,348 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.7"/>
+<title>数字式立体视觉刺激系统: G:/交接/EyeStereo/Source/Geometry/Background.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">数字式立体视觉刺激系统
+   &#160;<span id="projectnumber">1.0.1</span>
+   </div>
+   <div id="projectbrief">Digital Stereo System</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.7 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="pages.html"><span>相关页面</span></a></li>
+      <li><a href="modules.html"><span>模块</span></a></li>
+      <li><a href="namespaces.html"><span>命名空间</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
+    </ul>
+  </div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_74389ed8173ad57b461b9d623a1f3867.html">Source</a></li><li class="navelem"><a class="el" href="dir_985b62d4e26a26570b9333149bab298a.html">Geometry</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Background.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_background_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef __BACKGROUND_H__</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define __BACKGROUND_H__</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_p_c_h_8h.html">Utility/PCH.h</a>&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_vertex_8h.html">Geometry/Vertex.h</a>&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">namespace </span>EyeStereo {</div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="struct_eye_stereo_1_1_background.html">    8</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="struct_eye_stereo_1_1_background.html">Background</a> {</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="struct_eye_stereo_1_1_background.html#af7718692f21704bb4843e588d4e2160e">   10</a></span>&#160;        DWORD   <a class="code" href="struct_eye_stereo_1_1_background.html#af7718692f21704bb4843e588d4e2160e">mNumVertices</a>;</div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="struct_eye_stereo_1_1_background.html#a9e6f6db45d03de3587c26e75bd7b34dd">   11</a></span>&#160;        DWORD   <a class="code" href="struct_eye_stereo_1_1_background.html#a9e6f6db45d03de3587c26e75bd7b34dd">mNumFaces</a>;</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="struct_eye_stereo_1_1_background.html#a456fa71b18d54ba8a59c01a6fe141951">   12</a></span>&#160;        UINT        <a class="code" href="struct_eye_stereo_1_1_background.html#a456fa71b18d54ba8a59c01a6fe141951">mUnit</a>;</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="struct_eye_stereo_1_1_background.html#af320f46bcc59430f9c4649e4f9e50062">   13</a></span>&#160;        <span class="keywordtype">float</span>   <a class="code" href="struct_eye_stereo_1_1_background.html#af320f46bcc59430f9c4649e4f9e50062">mWidth</a>, <a class="code" href="struct_eye_stereo_1_1_background.html#a1c5ce0243437acec225ea5eb043527df">mHeight</a>;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="struct_eye_stereo_1_1_background.html#ac8c2d16849e354d2f773a72eded8f6e5">   16</a></span>&#160;        ID3D10Device* <a class="code" href="struct_eye_stereo_1_1_background.html#ac8c2d16849e354d2f773a72eded8f6e5">md3dDevice</a>;</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="struct_eye_stereo_1_1_background.html#a7461456a48a5ef7727cc966c460faac2">   17</a></span>&#160;        ID3D10Buffer* <a class="code" href="struct_eye_stereo_1_1_background.html#a7461456a48a5ef7727cc966c460faac2">mVB</a>;</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="struct_eye_stereo_1_1_background.html#a404ce4fcfe58cbfada1a2033d678dbce">   18</a></span>&#160;        ID3D10Buffer* <a class="code" href="struct_eye_stereo_1_1_background.html#a404ce4fcfe58cbfada1a2033d678dbce">mIB</a>;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="struct_eye_stereo_1_1_background.html#a7d950cac5c06dd287dacfe28b8fa0839">   20</a></span>&#160;        <a class="code" href="struct_eye_stereo_1_1_background.html#a7d950cac5c06dd287dacfe28b8fa0839">Background</a>() {</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;            <a class="code" href="struct_eye_stereo_1_1_background.html#ac8c2d16849e354d2f773a72eded8f6e5">md3dDevice</a> = NULL;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;            <a class="code" href="struct_eye_stereo_1_1_background.html#a7461456a48a5ef7727cc966c460faac2">mVB</a> = NULL;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;            <a class="code" href="struct_eye_stereo_1_1_background.html#a404ce4fcfe58cbfada1a2033d678dbce">mIB</a> = NULL;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        }</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="struct_eye_stereo_1_1_background.html#ae3cfbcddfe142d12ab77628a9db0e75a">   28</a></span>&#160;        <a class="code" href="struct_eye_stereo_1_1_background.html#ae3cfbcddfe142d12ab77628a9db0e75a">~Background</a>() {</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="struct_eye_stereo_1_1_background.html#ac8c2d16849e354d2f773a72eded8f6e5">md3dDevice</a> != NULL) {</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                <a class="code" href="struct_eye_stereo_1_1_background.html#ac8c2d16849e354d2f773a72eded8f6e5">md3dDevice</a>-&gt;Release();</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;            }</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="struct_eye_stereo_1_1_background.html#a7461456a48a5ef7727cc966c460faac2">mVB</a> != NULL) {</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                <a class="code" href="_basic_box_8h.html#a6038f7bdb274c2e159988a57dedbf93d">SAFE_RELEASE</a>(<a class="code" href="struct_eye_stereo_1_1_background.html#a7461456a48a5ef7727cc966c460faac2">mVB</a>);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            }</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="struct_eye_stereo_1_1_background.html#a404ce4fcfe58cbfada1a2033d678dbce">mIB</a> != NULL) {</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                <a class="code" href="_basic_box_8h.html#a6038f7bdb274c2e159988a57dedbf93d">SAFE_RELEASE</a>(<a class="code" href="struct_eye_stereo_1_1_background.html#a404ce4fcfe58cbfada1a2033d678dbce">mIB</a>);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;            }</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        }</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="struct_eye_stereo_1_1_background.html#aba6b9d5981dacb078ad133d946c827b9">   43</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="struct_eye_stereo_1_1_background.html#aba6b9d5981dacb078ad133d946c827b9">init</a>(ID3D10Device* device, <span class="keywordtype">int</span> unit, <span class="keywordtype">float</span> width, <span class="keywordtype">float</span> height)</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        {</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            <a class="code" href="struct_eye_stereo_1_1_background.html#ac8c2d16849e354d2f773a72eded8f6e5">md3dDevice</a> = device;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            <a class="code" href="struct_eye_stereo_1_1_background.html#ac8c2d16849e354d2f773a72eded8f6e5">md3dDevice</a>-&gt;AddRef();</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            std::vector&lt;Vertex14&gt; vertices;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            std::vector&lt;DWORD&gt; indices;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            <a class="code" href="struct_eye_stereo_1_1_background.html#a456fa71b18d54ba8a59c01a6fe141951">mUnit</a> = unit;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            <a class="code" href="struct_eye_stereo_1_1_background.html#af320f46bcc59430f9c4649e4f9e50062">mWidth</a> = width;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            <a class="code" href="struct_eye_stereo_1_1_background.html#a1c5ce0243437acec225ea5eb043527df">mHeight</a> = height;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            assert(<a class="code" href="struct_eye_stereo_1_1_background.html#a456fa71b18d54ba8a59c01a6fe141951">mUnit</a> &gt; 0, <span class="stringliteral">&quot;Unit number must large than zero&quot;</span>);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            assert(<a class="code" href="struct_eye_stereo_1_1_background.html#af320f46bcc59430f9c4649e4f9e50062">mWidth</a> &gt; 0 &amp;&amp; <a class="code" href="struct_eye_stereo_1_1_background.html#a1c5ce0243437acec225ea5eb043527df">mHeight</a> &gt; 0, <span class="stringliteral">&quot;Width &amp;&amp; Height Should be large than Zero&quot;</span>);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            <a class="code" href="struct_eye_stereo_1_1_background.html#a5860ceb7430328c10f521aab9711569e">buildStacks</a>(vertices, indices);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            <a class="code" href="struct_eye_stereo_1_1_background.html#af7718692f21704bb4843e588d4e2160e">mNumVertices</a> = (UINT)vertices.size();</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            <a class="code" href="struct_eye_stereo_1_1_background.html#a9e6f6db45d03de3587c26e75bd7b34dd">mNumFaces</a> = (UINT)indices.size() / 3;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            D3D10_BUFFER_DESC vbd;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            vbd.Usage = D3D10_USAGE_IMMUTABLE;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            vbd.ByteWidth = <span class="keyword">sizeof</span>(<a class="code" href="struct_eye_stereo_1_1_vertex14.html">Vertex14</a>)* <a class="code" href="struct_eye_stereo_1_1_background.html#af7718692f21704bb4843e588d4e2160e">mNumVertices</a>;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            vbd.BindFlags = D3D10_BIND_VERTEX_BUFFER;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            vbd.CPUAccessFlags = 0;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            vbd.MiscFlags = 0;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            D3D10_SUBRESOURCE_DATA vinitData;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            vinitData.pSysMem = &amp;vertices[0];</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            <a class="code" href="struct_eye_stereo_1_1_background.html#ac8c2d16849e354d2f773a72eded8f6e5">md3dDevice</a>-&gt;CreateBuffer(&amp;vbd, &amp;vinitData, &amp;<a class="code" href="struct_eye_stereo_1_1_background.html#a7461456a48a5ef7727cc966c460faac2">mVB</a>);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;            D3D10_BUFFER_DESC ibd;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;            ibd.Usage = D3D10_USAGE_IMMUTABLE;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;            ibd.ByteWidth = <span class="keyword">sizeof</span>(DWORD)* <a class="code" href="struct_eye_stereo_1_1_background.html#a9e6f6db45d03de3587c26e75bd7b34dd">mNumFaces</a> * 3;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            ibd.BindFlags = D3D10_BIND_INDEX_BUFFER;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;            ibd.CPUAccessFlags = 0;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            ibd.MiscFlags = 0;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;            D3D10_SUBRESOURCE_DATA iinitData;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            iinitData.pSysMem = &amp;indices[0];</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            <a class="code" href="struct_eye_stereo_1_1_background.html#ac8c2d16849e354d2f773a72eded8f6e5">md3dDevice</a>-&gt;CreateBuffer(&amp;ibd, &amp;iinitData, &amp;<a class="code" href="struct_eye_stereo_1_1_background.html#a404ce4fcfe58cbfada1a2033d678dbce">mIB</a>);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        }</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
+<div class="line"><a name="l00088"></a><span class="lineno"><a class="line" href="struct_eye_stereo_1_1_background.html#a34c4c33dc0d88b05346ce4bd5e2629c7">   88</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="struct_eye_stereo_1_1_background.html#a34c4c33dc0d88b05346ce4bd5e2629c7">draw</a>() {</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;            UINT stride = <span class="keyword">sizeof</span>(<a class="code" href="struct_eye_stereo_1_1_vertex14.html">Vertex14</a>);</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;            UINT offset = 0;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;            <a class="code" href="struct_eye_stereo_1_1_background.html#ac8c2d16849e354d2f773a72eded8f6e5">md3dDevice</a>-&gt;IASetVertexBuffers(0, 1, &amp;<a class="code" href="struct_eye_stereo_1_1_background.html#a7461456a48a5ef7727cc966c460faac2">mVB</a>, &amp;stride, &amp;offset);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;            <a class="code" href="struct_eye_stereo_1_1_background.html#ac8c2d16849e354d2f773a72eded8f6e5">md3dDevice</a>-&gt;IASetIndexBuffer(<a class="code" href="struct_eye_stereo_1_1_background.html#a404ce4fcfe58cbfada1a2033d678dbce">mIB</a>, DXGI_FORMAT_R32_UINT, 0);</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;            <a class="code" href="struct_eye_stereo_1_1_background.html#ac8c2d16849e354d2f773a72eded8f6e5">md3dDevice</a>-&gt;DrawIndexed(<a class="code" href="struct_eye_stereo_1_1_background.html#a9e6f6db45d03de3587c26e75bd7b34dd">mNumFaces</a> * 3, 0, 0);</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        }</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
+<div class="line"><a name="l00096"></a><span class="lineno"><a class="line" href="struct_eye_stereo_1_1_background.html#a5860ceb7430328c10f521aab9711569e">   96</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="struct_eye_stereo_1_1_background.html#a5860ceb7430328c10f521aab9711569e">buildStacks</a>(std::vector&lt;Vertex14&gt; &amp; vertices, std::vector&lt;DWORD&gt; &amp; indices){</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;            printf(<span class="stringliteral">&quot;Building Stacks\n&quot;</span>);</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;            <a class="code" href="struct_eye_stereo_1_1_background.html#a4e471249dab74a8004027bcd7a0d7a1d">BuildBottom</a>(vertices, indices);</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;            <a class="code" href="struct_eye_stereo_1_1_background.html#a457f09b330aa3df2d19f4e97096e817f">BuildLeft</a>(vertices, indices);</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;            <a class="code" href="struct_eye_stereo_1_1_background.html#a63efec3410e810be4d81824610912856">BuildRight</a>(vertices, indices);</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;            <a class="code" href="struct_eye_stereo_1_1_background.html#a6163eca81678e3246c34b1703db87744">BuildFront</a>(vertices, indices);</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        }</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;</div>
+<div class="line"><a name="l00106"></a><span class="lineno"><a class="line" href="struct_eye_stereo_1_1_background.html#a4e471249dab74a8004027bcd7a0d7a1d">  106</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="struct_eye_stereo_1_1_background.html#a4e471249dab74a8004027bcd7a0d7a1d">BuildBottom</a>(std::vector&lt;Vertex14&gt; &amp; vertices, std::vector&lt;DWORD&gt; &amp; indices) {</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;            printf(<span class="stringliteral">&quot;Building Bottom\n&quot;</span>);</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;            <span class="keywordtype">float</span> unit = 2 * <a class="code" href="struct_eye_stereo_1_1_background.html#af320f46bcc59430f9c4649e4f9e50062">mWidth</a> / <a class="code" href="struct_eye_stereo_1_1_background.html#a456fa71b18d54ba8a59c01a6fe141951">mUnit</a>;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;            <span class="keywordflow">for</span> (UINT i = 0; i &lt; <a class="code" href="struct_eye_stereo_1_1_background.html#a456fa71b18d54ba8a59c01a6fe141951">mUnit</a>; i++) {</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;                <span class="keywordflow">for</span> (UINT j = 0; j &lt; <a class="code" href="struct_eye_stereo_1_1_background.html#a456fa71b18d54ba8a59c01a6fe141951">mUnit</a>; j++) {</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;                    <span class="comment">//printf(&quot;Caculating %d&#39;s Stack\n&quot;, i*mUnit+j);</span></div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;                    <a class="code" href="struct_eye_stereo_1_1_vertex14.html">Vertex14</a> v;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;                    v.<a class="code" href="struct_eye_stereo_1_1_vertex14.html#a201ee46d08010853aa81c71695872026">pos</a>.x = -<a class="code" href="struct_eye_stereo_1_1_background.html#af320f46bcc59430f9c4649e4f9e50062">mWidth</a> + j*unit;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;                    v.<a class="code" href="struct_eye_stereo_1_1_vertex14.html#a201ee46d08010853aa81c71695872026">pos</a>.y = 0;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;                    v.<a class="code" href="struct_eye_stereo_1_1_vertex14.html#a201ee46d08010853aa81c71695872026">pos</a>.z = <a class="code" href="struct_eye_stereo_1_1_background.html#af320f46bcc59430f9c4649e4f9e50062">mWidth</a> - i*unit;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;                    v.<a class="code" href="struct_eye_stereo_1_1_vertex14.html#a12b4614df49809fca98f0a690b201392">normal</a> = D3DXVECTOR3(0, 1, 0);</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;                    v.<a class="code" href="struct_eye_stereo_1_1_vertex14.html#a219e51848771f7b62fa57c91afe118aa">diffuse</a> = <a class="code" href="_p_c_h_8h.html#a4341fd2a4c87f3415c0729145eab7ae5">BLACK</a>;</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;                    v.<a class="code" href="struct_eye_stereo_1_1_vertex14.html#aa46f22176d523910697775e4a28570a0">spec</a> = <a class="code" href="_p_c_h_8h.html#a079883e68bc4d729dd457a7378d4da97">WHITE</a>;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;                    vertices.push_back(v);</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;                }</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;            }</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;            <span class="keywordflow">for</span> (UINT i = 0; i &lt; mUnit - 1; i++) {</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;                <span class="keywordflow">for</span> (UINT j = 0; j &lt; mUnit - 1; j++) {</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;                    <span class="comment">//printf(&quot;Adding %d&#39;s Stack\n&quot;, i*mUnit+j);</span></div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;                    indices.push_back(i*mUnit + j);</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;                    indices.push_back(i*mUnit + j + 1);</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;                    indices.push_back((i + 1)*mUnit + j);</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;                    indices.push_back(i*mUnit + j + 1);</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;                    indices.push_back((i + 1)*mUnit + j + 1);</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;                    indices.push_back((i + 1)*mUnit + j);</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;                }</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;            }</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;        }</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;</div>
+<div class="line"><a name="l00141"></a><span class="lineno"><a class="line" href="struct_eye_stereo_1_1_background.html#a457f09b330aa3df2d19f4e97096e817f">  141</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="struct_eye_stereo_1_1_background.html#a457f09b330aa3df2d19f4e97096e817f">BuildLeft</a>(std::vector&lt;Vertex14&gt; &amp; vertices, std::vector&lt;DWORD&gt; &amp; indices) {</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;            <span class="keywordtype">float</span> wunit = 2 * <a class="code" href="struct_eye_stereo_1_1_background.html#af320f46bcc59430f9c4649e4f9e50062">mWidth</a> / <a class="code" href="struct_eye_stereo_1_1_background.html#a456fa71b18d54ba8a59c01a6fe141951">mUnit</a>;</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;            <span class="keywordtype">float</span> hunit = <a class="code" href="struct_eye_stereo_1_1_background.html#a1c5ce0243437acec225ea5eb043527df">mHeight</a> / <a class="code" href="struct_eye_stereo_1_1_background.html#a456fa71b18d54ba8a59c01a6fe141951">mUnit</a>;</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;            UINT base = vertices.size();</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;            <span class="keywordflow">for</span> (UINT i = 0; i &lt; <a class="code" href="struct_eye_stereo_1_1_background.html#a456fa71b18d54ba8a59c01a6fe141951">mUnit</a>; i++) {</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;                <span class="keywordflow">for</span> (UINT j = 0; j &lt; <a class="code" href="struct_eye_stereo_1_1_background.html#a456fa71b18d54ba8a59c01a6fe141951">mUnit</a>; j++) {</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;                    <a class="code" href="struct_eye_stereo_1_1_vertex14.html">Vertex14</a> v;</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;                    v.<a class="code" href="struct_eye_stereo_1_1_vertex14.html#a201ee46d08010853aa81c71695872026">pos</a>.x = -<a class="code" href="struct_eye_stereo_1_1_background.html#af320f46bcc59430f9c4649e4f9e50062">mWidth</a>;</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;                    v.<a class="code" href="struct_eye_stereo_1_1_vertex14.html#a201ee46d08010853aa81c71695872026">pos</a>.y = <a class="code" href="struct_eye_stereo_1_1_background.html#a1c5ce0243437acec225ea5eb043527df">mHeight</a> - i*hunit;</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;                    v.<a class="code" href="struct_eye_stereo_1_1_vertex14.html#a201ee46d08010853aa81c71695872026">pos</a>.z = -<a class="code" href="struct_eye_stereo_1_1_background.html#af320f46bcc59430f9c4649e4f9e50062">mWidth</a> + j*wunit;</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;                    v.<a class="code" href="struct_eye_stereo_1_1_vertex14.html#a12b4614df49809fca98f0a690b201392">normal</a> = D3DXVECTOR3(1, 0, 0);</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;                    v.<a class="code" href="struct_eye_stereo_1_1_vertex14.html#a219e51848771f7b62fa57c91afe118aa">diffuse</a> = <a class="code" href="_p_c_h_8h.html#a4341fd2a4c87f3415c0729145eab7ae5">BLACK</a>;</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;                    v.<a class="code" href="struct_eye_stereo_1_1_vertex14.html#aa46f22176d523910697775e4a28570a0">spec</a> = <a class="code" href="_p_c_h_8h.html#a079883e68bc4d729dd457a7378d4da97">WHITE</a>;</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;                    vertices.push_back(v);</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;                }</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;            }</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;            <span class="keywordflow">for</span> (UINT i = 0; i &lt; mUnit - 1; i++) {</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;                <span class="keywordflow">for</span> (UINT j = 0; j &lt; mUnit - 1; j++) {</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;                    <span class="comment">//printf(&quot;Adding %d&#39;s Stack\n&quot;, i*mUnit+j);</span></div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;                    indices.push_back(base + i*mUnit + j);</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;                    indices.push_back(base + i*mUnit + j + 1);</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;                    indices.push_back(base + (i + 1)*mUnit + j);</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;                    indices.push_back(base + i*mUnit + j + 1);</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;                    indices.push_back(base + (i + 1)*mUnit + j + 1);</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;                    indices.push_back(base + (i + 1)*mUnit + j);</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;                }</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;            }</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;        }</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;</div>
+<div class="line"><a name="l00176"></a><span class="lineno"><a class="line" href="struct_eye_stereo_1_1_background.html#a63efec3410e810be4d81824610912856">  176</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="struct_eye_stereo_1_1_background.html#a63efec3410e810be4d81824610912856">BuildRight</a>(std::vector&lt;Vertex14&gt; &amp; vertices, std::vector&lt;DWORD&gt; &amp; indices) {</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;            <span class="keywordtype">float</span> wunit = 2 * <a class="code" href="struct_eye_stereo_1_1_background.html#af320f46bcc59430f9c4649e4f9e50062">mWidth</a> / <a class="code" href="struct_eye_stereo_1_1_background.html#a456fa71b18d54ba8a59c01a6fe141951">mUnit</a>;</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;            <span class="keywordtype">float</span> hunit = <a class="code" href="struct_eye_stereo_1_1_background.html#a1c5ce0243437acec225ea5eb043527df">mHeight</a> / <a class="code" href="struct_eye_stereo_1_1_background.html#a456fa71b18d54ba8a59c01a6fe141951">mUnit</a>;</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;            UINT base = vertices.size();</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;            <span class="keywordflow">for</span> (UINT i = 0; i &lt; <a class="code" href="struct_eye_stereo_1_1_background.html#a456fa71b18d54ba8a59c01a6fe141951">mUnit</a>; i++) {</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;                <span class="keywordflow">for</span> (UINT j = 0; j &lt; <a class="code" href="struct_eye_stereo_1_1_background.html#a456fa71b18d54ba8a59c01a6fe141951">mUnit</a>; j++) {</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;                    <a class="code" href="struct_eye_stereo_1_1_vertex14.html">Vertex14</a> v;</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;                    v.<a class="code" href="struct_eye_stereo_1_1_vertex14.html#a201ee46d08010853aa81c71695872026">pos</a>.x = <a class="code" href="struct_eye_stereo_1_1_background.html#af320f46bcc59430f9c4649e4f9e50062">mWidth</a>;</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;                    v.<a class="code" href="struct_eye_stereo_1_1_vertex14.html#a201ee46d08010853aa81c71695872026">pos</a>.y = <a class="code" href="struct_eye_stereo_1_1_background.html#a1c5ce0243437acec225ea5eb043527df">mHeight</a> - i*hunit;</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;                    v.<a class="code" href="struct_eye_stereo_1_1_vertex14.html#a201ee46d08010853aa81c71695872026">pos</a>.z = -<a class="code" href="struct_eye_stereo_1_1_background.html#af320f46bcc59430f9c4649e4f9e50062">mWidth</a> + j*wunit;</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;                    v.<a class="code" href="struct_eye_stereo_1_1_vertex14.html#a12b4614df49809fca98f0a690b201392">normal</a> = D3DXVECTOR3(-1, 0, 0);</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;                    v.<a class="code" href="struct_eye_stereo_1_1_vertex14.html#a219e51848771f7b62fa57c91afe118aa">diffuse</a> = <a class="code" href="_p_c_h_8h.html#a4341fd2a4c87f3415c0729145eab7ae5">BLACK</a>;</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;                    v.<a class="code" href="struct_eye_stereo_1_1_vertex14.html#aa46f22176d523910697775e4a28570a0">spec</a> = <a class="code" href="_p_c_h_8h.html#a079883e68bc4d729dd457a7378d4da97">WHITE</a>;</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;                    vertices.push_back(v);</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;                }</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;            }</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;            <span class="keywordflow">for</span> (UINT i = 0; i &lt; mUnit - 1; i++) {</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;                <span class="keywordflow">for</span> (UINT j = 0; j &lt; mUnit - 1; j++) {</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;                    <span class="comment">//  printf(&quot;Adding %d&#39;s Stack\n&quot;, i*mUnit+j);</span></div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;                    indices.push_back(base + (i + 1)*mUnit + j);</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;                    indices.push_back(base + i*mUnit + j + 1);</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;                    indices.push_back(base + i*mUnit + j);</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;                    indices.push_back(base + (i + 1)*mUnit + j);</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;                    indices.push_back(base + (i + 1)*mUnit + j + 1);</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;                    indices.push_back(base + i*mUnit + j + 1);</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;                }</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;            }</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;        }</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;</div>
+<div class="line"><a name="l00213"></a><span class="lineno"><a class="line" href="struct_eye_stereo_1_1_background.html#a6163eca81678e3246c34b1703db87744">  213</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="struct_eye_stereo_1_1_background.html#a6163eca81678e3246c34b1703db87744">BuildFront</a>(std::vector&lt;Vertex14&gt; &amp; vertices, std::vector&lt;DWORD&gt; &amp; indices) {</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;            <span class="keywordtype">float</span> wunit = 2 * <a class="code" href="struct_eye_stereo_1_1_background.html#af320f46bcc59430f9c4649e4f9e50062">mWidth</a> / <a class="code" href="struct_eye_stereo_1_1_background.html#a456fa71b18d54ba8a59c01a6fe141951">mUnit</a>;</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;            <span class="keywordtype">float</span> hunit = <a class="code" href="struct_eye_stereo_1_1_background.html#a1c5ce0243437acec225ea5eb043527df">mHeight</a> / <a class="code" href="struct_eye_stereo_1_1_background.html#a456fa71b18d54ba8a59c01a6fe141951">mUnit</a>;</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;            UINT base = vertices.size();</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;            <span class="keywordflow">for</span> (UINT i = 0; i &lt; <a class="code" href="struct_eye_stereo_1_1_background.html#a456fa71b18d54ba8a59c01a6fe141951">mUnit</a>; i++) {</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;                <span class="keywordflow">for</span> (UINT j = 0; j &lt; <a class="code" href="struct_eye_stereo_1_1_background.html#a456fa71b18d54ba8a59c01a6fe141951">mUnit</a>; j++) {</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;                    <a class="code" href="struct_eye_stereo_1_1_vertex14.html">Vertex14</a> v;</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;                    v.<a class="code" href="struct_eye_stereo_1_1_vertex14.html#a201ee46d08010853aa81c71695872026">pos</a>.x = -<a class="code" href="struct_eye_stereo_1_1_background.html#af320f46bcc59430f9c4649e4f9e50062">mWidth</a> + j*wunit;</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;                    v.<a class="code" href="struct_eye_stereo_1_1_vertex14.html#a201ee46d08010853aa81c71695872026">pos</a>.y = <a class="code" href="struct_eye_stereo_1_1_background.html#a1c5ce0243437acec225ea5eb043527df">mHeight</a> - i*hunit;</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;                    v.<a class="code" href="struct_eye_stereo_1_1_vertex14.html#a201ee46d08010853aa81c71695872026">pos</a>.z = <a class="code" href="struct_eye_stereo_1_1_background.html#af320f46bcc59430f9c4649e4f9e50062">mWidth</a>;</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;                    v.<a class="code" href="struct_eye_stereo_1_1_vertex14.html#a12b4614df49809fca98f0a690b201392">normal</a> = D3DXVECTOR3(0, 0, -1);</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;                    v.<a class="code" href="struct_eye_stereo_1_1_vertex14.html#a219e51848771f7b62fa57c91afe118aa">diffuse</a> = <a class="code" href="_p_c_h_8h.html#a4341fd2a4c87f3415c0729145eab7ae5">BLACK</a>;</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;                    v.<a class="code" href="struct_eye_stereo_1_1_vertex14.html#aa46f22176d523910697775e4a28570a0">spec</a> = <a class="code" href="_p_c_h_8h.html#a079883e68bc4d729dd457a7378d4da97">WHITE</a>;</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;                    vertices.push_back(v);</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;                }</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;            }</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;            <span class="keywordflow">for</span> (UINT i = 0; i &lt; mUnit - 1; i++) {</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;                <span class="keywordflow">for</span> (UINT j = 0; j &lt; mUnit - 1; j++) {</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;                    <span class="comment">//  printf(&quot;Adding %d&#39;s Stack\n&quot;, i*mUnit+j);</span></div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;                    indices.push_back(base + i*mUnit + j);</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;                    indices.push_back(base + i*mUnit + j + 1);</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;                    indices.push_back(base + (i + 1)*mUnit + j);</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;                    indices.push_back(base + i*mUnit + j + 1);</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;                    indices.push_back(base + (i + 1)*mUnit + j + 1);</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;                    indices.push_back(base + (i + 1)*mUnit + j);</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;                }</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;            }</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;        }</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;    };</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;}</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;<span class="preprocessor">#endif //__BACKGROUND_H__</span></div>
+<div class="ttc" id="struct_eye_stereo_1_1_vertex14_html_a201ee46d08010853aa81c71695872026"><div class="ttname"><a href="struct_eye_stereo_1_1_vertex14.html#a201ee46d08010853aa81c71695872026">EyeStereo::Vertex14::pos</a></div><div class="ttdeci">D3DXVECTOR3 pos</div><div class="ttdef"><b>Definition:</b> Vertex.h:42</div></div>
+<div class="ttc" id="struct_eye_stereo_1_1_background_html_ac8c2d16849e354d2f773a72eded8f6e5"><div class="ttname"><a href="struct_eye_stereo_1_1_background.html#ac8c2d16849e354d2f773a72eded8f6e5">EyeStereo::Background::md3dDevice</a></div><div class="ttdeci">ID3D10Device * md3dDevice</div><div class="ttdef"><b>Definition:</b> Background.h:16</div></div>
+<div class="ttc" id="struct_eye_stereo_1_1_background_html_a456fa71b18d54ba8a59c01a6fe141951"><div class="ttname"><a href="struct_eye_stereo_1_1_background.html#a456fa71b18d54ba8a59c01a6fe141951">EyeStereo::Background::mUnit</a></div><div class="ttdeci">UINT mUnit</div><div class="ttdef"><b>Definition:</b> Background.h:12</div></div>
+<div class="ttc" id="_p_c_h_8h_html_a4341fd2a4c87f3415c0729145eab7ae5"><div class="ttname"><a href="_p_c_h_8h.html#a4341fd2a4c87f3415c0729145eab7ae5">BLACK</a></div><div class="ttdeci">const D3DXCOLOR BLACK(0.0f, 0.0f, 0.0f, 1.0f)</div></div>
+<div class="ttc" id="struct_eye_stereo_1_1_background_html_a4e471249dab74a8004027bcd7a0d7a1d"><div class="ttname"><a href="struct_eye_stereo_1_1_background.html#a4e471249dab74a8004027bcd7a0d7a1d">EyeStereo::Background::BuildBottom</a></div><div class="ttdeci">void BuildBottom(std::vector&lt; Vertex14 &gt; &amp;vertices, std::vector&lt; DWORD &gt; &amp;indices)</div><div class="ttdef"><b>Definition:</b> Background.h:106</div></div>
+<div class="ttc" id="struct_eye_stereo_1_1_background_html_a6163eca81678e3246c34b1703db87744"><div class="ttname"><a href="struct_eye_stereo_1_1_background.html#a6163eca81678e3246c34b1703db87744">EyeStereo::Background::BuildFront</a></div><div class="ttdeci">void BuildFront(std::vector&lt; Vertex14 &gt; &amp;vertices, std::vector&lt; DWORD &gt; &amp;indices)</div><div class="ttdef"><b>Definition:</b> Background.h:213</div></div>
+<div class="ttc" id="struct_eye_stereo_1_1_background_html_a457f09b330aa3df2d19f4e97096e817f"><div class="ttname"><a href="struct_eye_stereo_1_1_background.html#a457f09b330aa3df2d19f4e97096e817f">EyeStereo::Background::BuildLeft</a></div><div class="ttdeci">void BuildLeft(std::vector&lt; Vertex14 &gt; &amp;vertices, std::vector&lt; DWORD &gt; &amp;indices)</div><div class="ttdef"><b>Definition:</b> Background.h:141</div></div>
+<div class="ttc" id="struct_eye_stereo_1_1_vertex14_html_aa46f22176d523910697775e4a28570a0"><div class="ttname"><a href="struct_eye_stereo_1_1_vertex14.html#aa46f22176d523910697775e4a28570a0">EyeStereo::Vertex14::spec</a></div><div class="ttdeci">D3DXCOLOR spec</div><div class="ttdef"><b>Definition:</b> Vertex.h:45</div></div>
+<div class="ttc" id="_p_c_h_8h_html"><div class="ttname"><a href="_p_c_h_8h.html">PCH.h</a></div></div>
+<div class="ttc" id="_basic_box_8h_html_a6038f7bdb274c2e159988a57dedbf93d"><div class="ttname"><a href="_basic_box_8h.html#a6038f7bdb274c2e159988a57dedbf93d">SAFE_RELEASE</a></div><div class="ttdeci">#define SAFE_RELEASE(p)</div><div class="ttdef"><b>Definition:</b> BasicBox.h:11</div></div>
+<div class="ttc" id="struct_eye_stereo_1_1_background_html_a404ce4fcfe58cbfada1a2033d678dbce"><div class="ttname"><a href="struct_eye_stereo_1_1_background.html#a404ce4fcfe58cbfada1a2033d678dbce">EyeStereo::Background::mIB</a></div><div class="ttdeci">ID3D10Buffer * mIB</div><div class="ttdef"><b>Definition:</b> Background.h:18</div></div>
+<div class="ttc" id="struct_eye_stereo_1_1_background_html"><div class="ttname"><a href="struct_eye_stereo_1_1_background.html">EyeStereo::Background</a></div><div class="ttdef"><b>Definition:</b> Background.h:8</div></div>
+<div class="ttc" id="struct_eye_stereo_1_1_background_html_af320f46bcc59430f9c4649e4f9e50062"><div class="ttname"><a href="struct_eye_stereo_1_1_background.html#af320f46bcc59430f9c4649e4f9e50062">EyeStereo::Background::mWidth</a></div><div class="ttdeci">float mWidth</div><div class="ttdef"><b>Definition:</b> Background.h:13</div></div>
+<div class="ttc" id="struct_eye_stereo_1_1_background_html_a34c4c33dc0d88b05346ce4bd5e2629c7"><div class="ttname"><a href="struct_eye_stereo_1_1_background.html#a34c4c33dc0d88b05346ce4bd5e2629c7">EyeStereo::Background::draw</a></div><div class="ttdeci">void draw()</div><div class="ttdef"><b>Definition:</b> Background.h:88</div></div>
+<div class="ttc" id="_vertex_8h_html"><div class="ttname"><a href="_vertex_8h.html">Vertex.h</a></div></div>
+<div class="ttc" id="struct_eye_stereo_1_1_background_html_a63efec3410e810be4d81824610912856"><div class="ttname"><a href="struct_eye_stereo_1_1_background.html#a63efec3410e810be4d81824610912856">EyeStereo::Background::BuildRight</a></div><div class="ttdeci">void BuildRight(std::vector&lt; Vertex14 &gt; &amp;vertices, std::vector&lt; DWORD &gt; &amp;indices)</div><div class="ttdef"><b>Definition:</b> Background.h:176</div></div>
+<div class="ttc" id="_p_c_h_8h_html_a079883e68bc4d729dd457a7378d4da97"><div class="ttname"><a href="_p_c_h_8h.html#a079883e68bc4d729dd457a7378d4da97">WHITE</a></div><div class="ttdeci">const D3DXCOLOR WHITE(1.0f, 1.0f, 1.0f, 1.0f)</div></div>
+<div class="ttc" id="struct_eye_stereo_1_1_vertex14_html_a219e51848771f7b62fa57c91afe118aa"><div class="ttname"><a href="struct_eye_stereo_1_1_vertex14.html#a219e51848771f7b62fa57c91afe118aa">EyeStereo::Vertex14::diffuse</a></div><div class="ttdeci">D3DXCOLOR diffuse</div><div class="ttdef"><b>Definition:</b> Vertex.h:44</div></div>
+<div class="ttc" id="struct_eye_stereo_1_1_vertex14_html"><div class="ttname"><a href="struct_eye_stereo_1_1_vertex14.html">EyeStereo::Vertex14</a></div><div class="ttdef"><b>Definition:</b> Vertex.h:40</div></div>
+<div class="ttc" id="struct_eye_stereo_1_1_background_html_a9e6f6db45d03de3587c26e75bd7b34dd"><div class="ttname"><a href="struct_eye_stereo_1_1_background.html#a9e6f6db45d03de3587c26e75bd7b34dd">EyeStereo::Background::mNumFaces</a></div><div class="ttdeci">DWORD mNumFaces</div><div class="ttdef"><b>Definition:</b> Background.h:11</div></div>
+<div class="ttc" id="struct_eye_stereo_1_1_vertex14_html_a12b4614df49809fca98f0a690b201392"><div class="ttname"><a href="struct_eye_stereo_1_1_vertex14.html#a12b4614df49809fca98f0a690b201392">EyeStereo::Vertex14::normal</a></div><div class="ttdeci">D3DXVECTOR3 normal</div><div class="ttdef"><b>Definition:</b> Vertex.h:43</div></div>
+<div class="ttc" id="struct_eye_stereo_1_1_background_html_a7461456a48a5ef7727cc966c460faac2"><div class="ttname"><a href="struct_eye_stereo_1_1_background.html#a7461456a48a5ef7727cc966c460faac2">EyeStereo::Background::mVB</a></div><div class="ttdeci">ID3D10Buffer * mVB</div><div class="ttdef"><b>Definition:</b> Background.h:17</div></div>
+<div class="ttc" id="struct_eye_stereo_1_1_background_html_aba6b9d5981dacb078ad133d946c827b9"><div class="ttname"><a href="struct_eye_stereo_1_1_background.html#aba6b9d5981dacb078ad133d946c827b9">EyeStereo::Background::init</a></div><div class="ttdeci">void init(ID3D10Device *device, int unit, float width, float height)</div><div class="ttdef"><b>Definition:</b> Background.h:43</div></div>
+<div class="ttc" id="struct_eye_stereo_1_1_background_html_af7718692f21704bb4843e588d4e2160e"><div class="ttname"><a href="struct_eye_stereo_1_1_background.html#af7718692f21704bb4843e588d4e2160e">EyeStereo::Background::mNumVertices</a></div><div class="ttdeci">DWORD mNumVertices</div><div class="ttdef"><b>Definition:</b> Background.h:10</div></div>
+<div class="ttc" id="struct_eye_stereo_1_1_background_html_a5860ceb7430328c10f521aab9711569e"><div class="ttname"><a href="struct_eye_stereo_1_1_background.html#a5860ceb7430328c10f521aab9711569e">EyeStereo::Background::buildStacks</a></div><div class="ttdeci">void buildStacks(std::vector&lt; Vertex14 &gt; &amp;vertices, std::vector&lt; DWORD &gt; &amp;indices)</div><div class="ttdef"><b>Definition:</b> Background.h:96</div></div>
+<div class="ttc" id="struct_eye_stereo_1_1_background_html_a1c5ce0243437acec225ea5eb043527df"><div class="ttname"><a href="struct_eye_stereo_1_1_background.html#a1c5ce0243437acec225ea5eb043527df">EyeStereo::Background::mHeight</a></div><div class="ttdeci">float mHeight</div><div class="ttdef"><b>Definition:</b> Background.h:13</div></div>
+<div class="ttc" id="struct_eye_stereo_1_1_background_html_ae3cfbcddfe142d12ab77628a9db0e75a"><div class="ttname"><a href="struct_eye_stereo_1_1_background.html#ae3cfbcddfe142d12ab77628a9db0e75a">EyeStereo::Background::~Background</a></div><div class="ttdeci">~Background()</div><div class="ttdef"><b>Definition:</b> Background.h:28</div></div>
+<div class="ttc" id="struct_eye_stereo_1_1_background_html_a7d950cac5c06dd287dacfe28b8fa0839"><div class="ttname"><a href="struct_eye_stereo_1_1_background.html#a7d950cac5c06dd287dacfe28b8fa0839">EyeStereo::Background::Background</a></div><div class="ttdeci">Background()</div><div class="ttdef"><b>Definition:</b> Background.h:20</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2014年 六月 27日 星期五 15:19:06 , 为 数字式立体视觉刺激系统使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.7
+</small></address>
+</body>
+</html>

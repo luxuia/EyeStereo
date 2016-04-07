@@ -12,8 +12,8 @@
 #ifndef __SPHERE_H__
 #define __SPHERE_H__
 
-#include "Utility\PCH.h"
-struct Vertex14;
+#include "Utility/PCH.h"
+#include "Geometry/Vertex.h"
 
 namespace EyeStereo {
 	class DiffSpecularSphere {

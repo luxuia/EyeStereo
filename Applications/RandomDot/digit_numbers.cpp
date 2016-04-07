@@ -269,8 +269,11 @@ int digit_numbers::getType() {
 	return ChoosedNumber;
 }
 
-void digit_numbers::random() {
-	srand(time(0));
+
+
+//// Select One Number from random List
+void digit_numbers::Select() {
+	
 	static int type = 0;
 	ChoosedNumber = randomList[type++];
 	if (type == 10) {
@@ -280,7 +283,9 @@ void digit_numbers::random() {
 }
 
 
+//// Generate Random Number List
 void digit_numbers::generate() {
+	srand(time(0));
 	for (UINT i = 0; i < 10; ++i) {
 		randomList[i] = i;
 	}

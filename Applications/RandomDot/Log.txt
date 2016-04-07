@@ -1,0 +1,243 @@
+Log file opened.
+time used 3.72 sec(s), to recognize  number 6, input 1
+
+------------------------------------------------------------
+time used 1.82 sec(s), to recognize  number 5, input 1
+
+------------------------------------------------------------
+time used 0.30 sec(s), to recognize  number 9, input 1
+
+------------------------------------------------------------
+time used 0.23 sec(s), to recognize  number 8, input 1
+
+------------------------------------------------------------
+time used 0.26 sec(s), to recognize  number 2, input 1
+
+------------------------------------------------------------
+time used 0.23 sec(s), to recognize  number 0, input 1
+
+------------------------------------------------------------
+time used 0.26 sec(s), to recognize  number 7, input 1
+
+------------------------------------------------------------
+time used 0.38 sec(s), to recognize  number 3, input 1
+
+------------------------------------------------------------
+Log file opened.
+Log file opened.
+time used 5.51 sec(s), to recognize  number 6, input 1
+
+------------------------------------------------------------
+time used 0.34 sec(s), to recognize  number 5, input 1
+
+------------------------------------------------------------
+time used 0.31 sec(s), to recognize  number 9, input 1
+
+------------------------------------------------------------
+time used 0.51 sec(s), to recognize  number 8, input 1
+
+------------------------------------------------------------
+time used 0.39 sec(s), to recognize  number 2, input 1
+
+------------------------------------------------------------
+time used 0.42 sec(s), to recognize  number 0, input 1
+
+------------------------------------------------------------
+Log file opened.
+time used 2.99 sec(s), to recognize  number 6, input 3
+
+------------------------------------------------------------
+time used 0.52 sec(s), to recognize  number 5, input 3
+
+------------------------------------------------------------
+time used 0.21 sec(s), to recognize  number 9, input 3
+
+------------------------------------------------------------
+time used 0.19 sec(s), to recognize  number 8, input 3
+
+------------------------------------------------------------
+Log file opened.
+time used 3.08 sec(s), to recognize  number 6, input 0
+
+------------------------------------------------------------
+time used 0.68 sec(s), to recognize  number 5, input 0
+
+------------------------------------------------------------
+time used 0.40 sec(s), to recognize  number 9, input 0
+
+------------------------------------------------------------
+time used 0.58 sec(s), to recognize  number 8, input 0
+
+------------------------------------------------------------
+time used 1.79 sec(s), to recognize  number 2, input 0
+
+------------------------------------------------------------
+time used 0.22 sec(s), to recognize  number 0, input 0
+
+------------------------------------------------------------
+Log file opened.
+time used 5.40 sec(s), to recognize  number 6, input -1
+
+------------------------------------------------------------
+time used 11.42 sec(s), to recognize  number 5, input 3
+
+------------------------------------------------------------
+time used 0.30 sec(s), to recognize  number 9, input 3
+
+------------------------------------------------------------
+time used 0.20 sec(s), to recognize  number 8, input 3
+
+------------------------------------------------------------
+time used 0.33 sec(s), to recognize  number 2, input 3
+
+------------------------------------------------------------
+time used 0.22 sec(s), to recognize  number 0, input 3
+
+------------------------------------------------------------
+Log file opened.
+time used 3.57 sec(s), to recognize  number 6, input 3
+
+------------------------------------------------------------
+time used 0.48 sec(s), to recognize  number 5, input 3
+
+------------------------------------------------------------
+time used 0.23 sec(s), to recognize  number 9, input 3
+
+------------------------------------------------------------
+time used 0.34 sec(s), to recognize  number 8, input 3
+
+------------------------------------------------------------
+time used 0.37 sec(s), to recognize  number 2, input 3
+
+------------------------------------------------------------
+Log file opened.
+Log file opened.
+Log file opened.
+time used 4.69 sec(s), to recognize  number 6, input 5
+
+------------------------------------------------------------
+time used 2.36 sec(s), to recognize  number 5, input 5
+
+------------------------------------------------------------
+time used 0.78 sec(s), to recognize  number 9, input 5
+
+------------------------------------------------------------
+time used 0.49 sec(s), to recognize  number 8, input 5
+
+------------------------------------------------------------
+time used 0.22 sec(s), to recognize  number 2, input 5
+
+------------------------------------------------------------
+Log file opened.
+Log file opened.
+time used 6.56 sec(s), to recognize  number 6, input 2
+
+------------------------------------------------------------
+time used 0.79 sec(s), to recognize  number 5, input 2
+
+------------------------------------------------------------
+time used 0.58 sec(s), to recognize  number 9, input 2
+
+------------------------------------------------------------
+time used 0.62 sec(s), to recognize  number 8, input 2
+
+------------------------------------------------------------
+time used 1.76 sec(s), to recognize  number 2, input 4
+
+------------------------------------------------------------
+time used 0.32 sec(s), to recognize  number 0, input 4
+
+------------------------------------------------------------
+time used 0.47 sec(s), to recognize  number 7, input 4
+
+------------------------------------------------------------
+time used 0.47 sec(s), to recognize  number 3, input 4
+
+------------------------------------------------------------
+time used 0.49 sec(s), to recognize  number 4, input 4
+
+------------------------------------------------------------
+time used 9.90 sec(s), to recognize  number 6, input 6, percent 1.00
+
+------------------------------------------------------------
+time used 3.96 sec(s), to recognize  number 5, input 3, percent 0.50
+
+------------------------------------------------------------
+time used 1.32 sec(s), to recognize  number 9, input 3, percent 0.33
+
+------------------------------------------------------------
+time used 0.48 sec(s), to recognize  number 8, input 3, percent 0.25
+
+------------------------------------------------------------
+time used 0.41 sec(s), to recognize  number 2, input 3, percent 0.20
+
+------------------------------------------------------------
+time used 0.51 sec(s), to recognize  number 0, input 3, percent 0.17
+
+------------------------------------------------------------
+time used 0.53 sec(s), to recognize  number 7, input 3, percent 0.14
+
+------------------------------------------------------------
+time used 0.48 sec(s), to recognize  number 3, input 3, percent 0.25
+
+------------------------------------------------------------
+time used 0.54 sec(s), to recognize  number 4, input 3, percent 0.22
+
+------------------------------------------------------------
+time used 0.55 sec(s), to recognize  number 1, input 3, percent 0.20
+
+------------------------------------------------------------
+time used 0.30 sec(s), to recognize  number 4, input 3, percent 0.18
+
+------------------------------------------------------------
+time used 5.53 sec(s), to recognize  number 6, input 6, percent 0.25
+
+------------------------------------------------------------
+time used 4.34 sec(s), to recognize  number 9, input 9, percent 0.31
+
+------------------------------------------------------------
+time used 4.51 sec(s), to recognize  number 0, input 0, percent 0.36
+
+------------------------------------------------------------
+time used 4.42 sec(s), to recognize  number 7, input 7, percent 0.40
+
+------------------------------------------------------------
+time used 4.73 sec(s), to recognize  number 3, input 3, percent 0.44
+
+------------------------------------------------------------
+time used 2.77 sec(s), to recognize  number 6, input -1, percent -1%
+
+------------------------------------------------------------
+time used 0.47 sec(s), to recognize  number 5, input -1, percent -1%
+
+------------------------------------------------------------
+time used 0.24 sec(s), to recognize  number 9, input -1, percent -1%
+
+------------------------------------------------------------
+time used 0.25 sec(s), to recognize  number 8, input -1, percent -1%
+
+------------------------------------------------------------
+time used 0.22 sec(s), to recognize  number 2, input -1, percent -1%
+
+------------------------------------------------------------
+time used 0.22 sec(s), to recognize  number 0, input -1, percent -1%
+
+------------------------------------------------------------
+time used 0.21 sec(s), to recognize  number 7, input -1, percent -1%
+
+------------------------------------------------------------
+time used 0.55 sec(s), to recognize  number 3, input -1, percent -1%
+
+------------------------------------------------------------
+time used 0.74 sec(s), to recognize  number 4, input -1, percent -1%
+
+------------------------------------------------------------
+time used 0.62 sec(s), to recognize  number 1, input -1, percent -1%
+
+------------------------------------------------------------
+time used 0.51 sec(s), to recognize  number 7, input -1, percent -1%
+
+------------------------------------------------------------
+time used 4.61 sec(s), to recognize  number 8, input 8, percent 7%
+
+------------------------------------------------------------

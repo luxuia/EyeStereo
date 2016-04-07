@@ -1,4 +1,4 @@
-//--------------------------------------------------------------------------------
+ï»¿//--------------------------------------------------------------------------------
 // This file is a portion of the Eye Stereo Project.  It is distributed
 // under the MIT License, available in the root of this distribution and 
 // at the following URL:
@@ -52,9 +52,6 @@ ID3D10EffectMatrixVariable* g_pmWorldViewProj = NULL;
 ID3D10EffectMatrixVariable* g_pmWorld = NULL;
 ID3D10EffectScalarVariable* g_pfTime = NULL;
 
-
-
-
 //MY_ADDED
 StereoSetting*				g_pStereoSetting = NULL;
 
@@ -62,27 +59,11 @@ DepthTrain*					g_pDepthTrain = NULL;
 
 KeyBoard*					g_pKeyBoard = NULL;
 
-
 WCHAR						g_pShareMessage[64] = L"UESTC_LIFE";
 bool						g_bShareChanged = false;
 
 WavAudioPlayer*				g_pWavAudioPlayer = NULL;
-//--------------------------------------------------------------------------------------
-// UI control IDs
-//--------------------------------------------------------------------------------------
 
-/*
-#define IDC_TOGGLEFULLSCREEN    1
-#define IDC_TOGGLEREF           2
-#define IDC_CHANGEDEVICE        3
-#define IDC_TOGGLEWARP          4
-
-#define IDC_SAMETIME			10
-#define IDC_BLENDSTEREO			11
-
-#define IDC_BLEND_DIS			12
-#define IDC_BLEND_DIS_OK		13
-*/
 
 enum {
  IDC_TOGGLEFULLSCREEN,
@@ -92,15 +73,15 @@ enum {
 
  IDC_STEREO_OPEN,
 
- IDC_DEPTH_TEST,
+ IDC_DEPTH_TEST,   ///< æ·±åº¦æµ‹è¯•å¼€å§‹
 
- IDC_STEREO_SEPARATION_SILDER,
+ IDC_STEREO_SEPARATION_SILDER, 
  
- IDC_BRIGHTNESS_LEFT,
+ IDC_BRIGHTNESS_LEFT, ///< å·¦çœ¼äº®åº¦
  
- IDC_BRIGHTNESS_RIGHT,
+ IDC_BRIGHTNESS_RIGHT, ///< å³çœ¼äº®åº¦
 
- IDC_SHARE_MESSAGE,
+ IDC_SHARE_MESSAGE,  
 
 };
 
@@ -134,6 +115,7 @@ void RenderText();
 // Entry point to the program. Initializes everything and goes into a message processing 
 // loop. Idle time is used to render the scene.
 //--------------------------------------------------------------------------------------
+
 int WINAPI wWinMain( HINSTANCE hInstance, HINSTANCE hPrevInstance, LPWSTR lpCmdLine, int nCmdShow )
 //int main()
 {
@@ -166,7 +148,7 @@ int WINAPI wWinMain( HINSTANCE hInstance, HINSTANCE hPrevInstance, LPWSTR lpCmdL
     DXUTInit( true, true, NULL ); // Parse the command line, show msgboxes on error, no extra command line params
     DXUTSetCursorSettings( true, true );
     DXUTCreateWindow( L"EyeProject" );
-    DXUTCreateDevice( true, 640, 480 );
+    DXUTCreateDevice( false, 0, 0 );
     DXUTMainLoop(); // Enter into the DXUT render loop
     return DXUTGetExitCode();
 }
@@ -188,9 +170,9 @@ void InitApp()
     g_HUD.AddButton( IDC_TOGGLEREF,			L"Toggle REF (F3)",		35, iY += 24, 125, 22, VK_F3 );
     g_HUD.AddButton( IDC_TOGGLEWARP,		L"Toggle WARP (F4)",	35, iY += 24, 125, 22, VK_F4 );
 	
-	g_HUD.AddButton( IDC_STEREO_OPEN,	L"´ò¿ªStereo",	35,	iY+=24, 125, 22);
+	g_HUD.AddButton( IDC_STEREO_OPEN,	L"æ‰“å¼€Stereo",	35,	iY+=24, 125, 22);
 
-	g_HUD.AddButton( IDC_DEPTH_TEST,	L"Éî¶È²âÊÔ",		35, iY+=24, 125, 22);
+	g_HUD.AddButton( IDC_DEPTH_TEST,	L"æ·±åº¦æµ‹è¯•",		35, iY+=24, 125, 22);
 
 
 	iY = 0;
@@ -231,7 +213,7 @@ void RenderText()
 }
 
 //--------------------------------------------------------------------------------------
-// Ëæ»ú³öÏÖÑ¡ÔñÖ¸Ê¾
+// éšæœºå‡ºçŽ°é€‰æ‹©æŒ‡ç¤º
 //--------------------------------------------------------------------------------------
 /*void ListenToSelect()
 {
@@ -557,40 +539,40 @@ void CALLBACK OnGUIEvent( UINT nEvent, int nControlID, CDXUTControl* pControl, v
 		}
 
 		case IDC_BRIGHTNESS_RIGHT: {
-			g_pDepthTrain->g_brightness_right = g_SampleUI.GetSlider( IDC_BRIGHTNESS_RIGHT )->GetValue()/100.0;
-			break;
+									   g_pDepthTrain->g_brightness_right = g_SampleUI.GetSlider(IDC_BRIGHTNESS_RIGHT)->GetValue() / 100.0;
+									   break;
 		}
-		/*case IDC_CONSTRACT: {
+			/*case IDC_CONSTRACT: {
 			g_pDepthTrain->g_contrast = g_SampleUI.GetSlider( IDC_CONSTRACT )->GetValue()/100.0;
 			break;
-		}*/
-        case IDC_TOGGLEWARP:
-            DXUTToggleWARP(); break;
-        case IDC_CHANGEDEVICE:
-            g_SettingsDlg.SetActive( !g_SettingsDlg.IsActive() ); break;
+			}*/
+		case IDC_TOGGLEWARP:
+			DXUTToggleWARP(); break;
+		case IDC_CHANGEDEVICE:
+			g_SettingsDlg.SetActive(!g_SettingsDlg.IsActive()); break;
 		case IDC_DEPTH_TEST: {
-			g_pDepthTrain->bactive = !g_pDepthTrain->bactive;
+								 g_pDepthTrain->bactive = !g_pDepthTrain->bactive;
 
-			if (g_pDepthTrain->bactive) {
-				g_HUD.GetButton( IDC_DEPTH_TEST )->SetText(L"½áÊøÉî¶È²âÊÔ");
-			} else {
-				g_HUD.GetButton( IDC_DEPTH_TEST )->SetText(L"¿ªÊ¼Éî¶È²âÊÔ");
-			}
-			break;
+								 if (g_pDepthTrain->bactive) {
+									 g_HUD.GetButton(IDC_DEPTH_TEST)->SetText(L"ç»“æŸæ·±åº¦æµ‹è¯•");
+								 }
+								 else {
+									 g_HUD.GetButton(IDC_DEPTH_TEST)->SetText(L"å¼€å§‹æ·±åº¦æµ‹è¯•");
+								 }
+								 break;
 		}
 		case IDC_STEREO_OPEN: {
 
-			g_pDepthTrain->bStereo = !g_pDepthTrain->bStereo;
-			if (g_pDepthTrain->bStereo) {
-				g_HUD.GetButton( IDC_STEREO_OPEN )->SetText(L"½áÊøStereo");
-			} else {
-				g_HUD.GetButton( IDC_STEREO_OPEN )->SetText(L"¿ªÊ¼Stereo");
-			}
+								  g_pDepthTrain->bStereo = !g_pDepthTrain->bStereo;
+								  if (g_pDepthTrain->bStereo) {
+									  g_HUD.GetButton(IDC_STEREO_OPEN)->SetText(L"ç»“æŸStereo");
+								  }
+								  else {
+									  g_HUD.GetButton(IDC_STEREO_OPEN)->SetText(L"å¼€å§‹Stereo");
+								  }
 
-			break;
-		} 
+								  break;
+		}
 
-    }
+	}
 }
-
-

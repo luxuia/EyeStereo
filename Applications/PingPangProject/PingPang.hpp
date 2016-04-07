@@ -26,7 +26,17 @@
 
 using namespace EyeStereo;
 
+/**
+	@file 
+	@class PingPang
+
+*/
+
 class PingPang {
+	/**
+		@class Ball
+		球类
+	*/
 	class Ball: public DiffSpecularSphere {
 	public:
 		D3DXVECTOR3 pos;
@@ -42,14 +52,14 @@ class PingPang {
 
 
 public:
-	ID3D10Device*	pd3dDevice;
-	ID3D10Effect*	pEffect;
-	ID3D10EffectTechnique*	pTech;
-	ID3D10InputLayout*		pInputLayout;
+	ID3D10Device*	pd3dDevice = NULL;
+	ID3D10Effect*	pEffect = NULL;
+	ID3D10EffectTechnique*	pTech = NULL;
+	ID3D10InputLayout*		pInputLayout = NULL;
 
 
-	IDXGISwapChain*			pSwapChain;
-	CModelViewerCamera*		pCamera;
+	IDXGISwapChain*			pSwapChain = NULL;
+	CModelViewerCamera*		pCamera = NULL;
 
 	int lengthStack, heightStack;
 
@@ -67,11 +77,11 @@ public:
 	D3DXMATRIX						matWorldViewProjection;
 
 
-	Ball*							pBall;
-	std::vector<DiffSpecularBox*>			pBoxVector;			
+	Ball*							pBall = NULL;
+	std::vector<DiffSpecularBox*>   pBoxVector;			
 
 	long int						windowsWidth, windowsHeight;
-	StereoSetting*					pStereoSetting;
+	StereoSetting*					pStereoSetting = NULL;
 	bool							bactive;
 	bool							bstereo;
 
@@ -83,21 +93,37 @@ public:
 
 	KeyBoard*						pKeyBoard;
 	
-	PingPang():pShaderRV(NULL),pd3dDevice(NULL), pEffect(NULL), pTech(NULL), pInputLayout(NULL), pSwapChain(NULL),pBall(NULL) {
+	PingPang():pShaderRV(NULL), pd3dDevice(NULL), pEffect(NULL), pTech(NULL), pInputLayout(NULL), pSwapChain(NULL),pBall(NULL) {
 		lengthStack = 4;
 		heightStack = 3;
 	}
 
 	bool init(ID3D10Device* pdevice, StereoSetting* stereo, CModelViewerCamera* pcamera, KeyBoard* key);
 
+
+	/**
+		用4个长方体构建一个围墙，让球不会跑出去
+	*/
 	void CreateBounds();
 
 	void initLight();
 
+	/**
+		将设置为dead的砖块恢复，并将球放在原来的位置
+	*/
 	void Restart();
 
+
+	/**
+		更新球和砖块的状态，如果球运动方向在精度范围内将会碰撞，就反射并设置砖块的状态为DIE
+	*/
 	void CaculateBallV(float fTime);
 
+	/**
+		@param[in] v 球的速度向量
+		@param[in] normal 碰撞面的法向量
+		@return 反射后的速度向量
+	*/
 	D3DXVECTOR3 RefectBall(D3DXVECTOR3 v, D3DXVECTOR3 normal);
 
 	void stereoRender(float fTime);

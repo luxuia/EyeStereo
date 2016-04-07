@@ -1,0 +1,292 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.7"/>
+<title>数字式立体视觉刺激系统: G:/交接/EyeStereo/Applications/DepthTestProject/DepthTrain.hpp 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">数字式立体视觉刺激系统
+   &#160;<span id="projectnumber">1.0.1</span>
+   </div>
+   <div id="projectbrief">Digital Stereo System</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.7 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="pages.html"><span>相关页面</span></a></li>
+      <li><a href="modules.html"><span>模块</span></a></li>
+      <li><a href="namespaces.html"><span>命名空间</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
+    </ul>
+  </div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_8c1195e4829fa17630c4278c41da729a.html">Applications</a></li><li class="navelem"><a class="el" href="dir_7db93de727ae0c71f60d7b609cc3973c.html">DepthTestProject</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">DepthTrain.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_depth_train_8hpp.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef __DEPTH_TEST__</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define __DEPTH_TEST__</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_p_c_h_8h.html">Utility/PCH.h</a>&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_stereo_setting_8h.html">Stereo/StereoSetting.h</a>&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_light_8h.html">Geometry/Light.h</a>&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_mesh_loader10_8h.html">Helper/MeshLoader10.h</a>&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="namespace_eye_stereo.html">   10</a></span>&#160;<span class="keyword">namespace </span>EyeStereo {</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_depth_train.html">   12</a></span>&#160;    <span class="keyword">class </span><a class="code" href="class_eye_stereo_1_1_depth_train.html">DepthTrain</a> {</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_depth_train.html#a7f706b8bd0cd2f97c28d913f5a5d06f4">   16</a></span>&#160;        ID3D10Device*                   <a class="code" href="class_eye_stereo_1_1_depth_train.html#a7f706b8bd0cd2f97c28d913f5a5d06f4">pd3dDevice</a>;</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_depth_train.html#aedbc411425d73ad9d12c57c23d14eab4">   17</a></span>&#160;        ID3D10Effect*                   <a class="code" href="class_eye_stereo_1_1_depth_train.html#aedbc411425d73ad9d12c57c23d14eab4">pEffect</a>;</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_depth_train.html#a56e81ba62b868264efaece4ad88c8179">   18</a></span>&#160;        ID3D10EffectTechnique*          <a class="code" href="class_eye_stereo_1_1_depth_train.html#a56e81ba62b868264efaece4ad88c8179">pTech</a>;</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_depth_train.html#a06f1afd2ee355fd9be02b72134ab63e3">   19</a></span>&#160;        ID3D10InputLayout*              <a class="code" href="class_eye_stereo_1_1_depth_train.html#a06f1afd2ee355fd9be02b72134ab63e3">pInputLayout</a>;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_depth_train.html#a1f7486d5d32e57399e8c20977156136e">   22</a></span>&#160;        ID3D10EffectShaderResourceVariable* <a class="code" href="class_eye_stereo_1_1_depth_train.html#a1f7486d5d32e57399e8c20977156136e">g_ptxDiffuseVariable</a>;</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_depth_train.html#a0d57eab55802f85359c2d25431865a42">   23</a></span>&#160;        ID3D10EffectVectorVariable*         <a class="code" href="class_eye_stereo_1_1_depth_train.html#a0d57eab55802f85359c2d25431865a42">g_pAmbient</a>;</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_depth_train.html#a1dd1285f710b61ebd45ba8c5c2f6ac86">   24</a></span>&#160;        ID3D10EffectVectorVariable*         <a class="code" href="class_eye_stereo_1_1_depth_train.html#a1dd1285f710b61ebd45ba8c5c2f6ac86">g_pDiffuse</a>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_depth_train.html#aa7624b6de127a320ee12dcae489f8fb2">   25</a></span>&#160;        ID3D10EffectVectorVariable*         <a class="code" href="class_eye_stereo_1_1_depth_train.html#aa7624b6de127a320ee12dcae489f8fb2">g_pSpecular</a>;</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_depth_train.html#a8faf6568a3fe2af9433c6919ae888d94">   26</a></span>&#160;        ID3D10EffectScalarVariable*         <a class="code" href="class_eye_stereo_1_1_depth_train.html#a8faf6568a3fe2af9433c6919ae888d94">g_pOpacity</a>;</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_depth_train.html#a114ae578ade2e7be5ec02711246b347e">   27</a></span>&#160;        ID3D10EffectScalarVariable*         <a class="code" href="class_eye_stereo_1_1_depth_train.html#a114ae578ade2e7be5ec02711246b347e">g_pSpecularPower</a>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_depth_train.html#aff517c72ca567a3633813d7d93f779f8">   28</a></span>&#160;        ID3D10EffectVectorVariable*         <a class="code" href="class_eye_stereo_1_1_depth_train.html#aff517c72ca567a3633813d7d93f779f8">g_pLightColor</a>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_depth_train.html#a07e656be233509a11c00679d997f46ce">   29</a></span>&#160;        ID3D10EffectVectorVariable*         <a class="code" href="class_eye_stereo_1_1_depth_train.html#a07e656be233509a11c00679d997f46ce">g_pLightPosition</a>;</div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_depth_train.html#a70f24dd8ef12b0b1d1fd55e0b54dbd8e">   30</a></span>&#160;        ID3D10EffectVectorVariable*         <a class="code" href="class_eye_stereo_1_1_depth_train.html#a70f24dd8ef12b0b1d1fd55e0b54dbd8e">g_pCameraPosition</a>;</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_depth_train.html#a1edec3ad0fedbc3ec24848ba3a61e230">   31</a></span>&#160;        ID3D10EffectScalarVariable*         <a class="code" href="class_eye_stereo_1_1_depth_train.html#a1edec3ad0fedbc3ec24848ba3a61e230">g_pTime</a>;</div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_depth_train.html#aad8d29a975dcfd60787f428522212ed2">   32</a></span>&#160;        ID3D10EffectMatrixVariable*         <a class="code" href="class_eye_stereo_1_1_depth_train.html#aad8d29a975dcfd60787f428522212ed2">g_pWorld</a>;</div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_depth_train.html#a989f268f0b4a58a8f7f826f253302402">   33</a></span>&#160;        ID3D10EffectMatrixVariable*         <a class="code" href="class_eye_stereo_1_1_depth_train.html#a989f268f0b4a58a8f7f826f253302402">g_pWorldViewProjection</a>;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_depth_train.html#af3590667bb043ced9e83a67ed6d747c4">   35</a></span>&#160;        ID3D10EffectShaderResourceVariable* <a class="code" href="class_eye_stereo_1_1_depth_train.html#af3590667bb043ced9e83a67ed6d747c4">pShaderRV</a>;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_depth_train.html#a9b369417ed32cf2930da949917e40f93">   37</a></span>&#160;        IDXGISwapChain*                 <a class="code" href="class_eye_stereo_1_1_depth_train.html#a9b369417ed32cf2930da949917e40f93">pSwapChain</a>;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_depth_train.html#abdf56c9e7c0b2c02121120cbf39e3dcd">   39</a></span>&#160;        CModelViewerCamera*             <a class="code" href="class_eye_stereo_1_1_depth_train.html#abdf56c9e7c0b2c02121120cbf39e3dcd">pCamera</a>;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_depth_train.html#a014f4a2299d289af8adb03bbf48295ee">   41</a></span>&#160;        <span class="keywordtype">long</span> <span class="keywordtype">int</span>                        <a class="code" href="class_eye_stereo_1_1_depth_train.html#a014f4a2299d289af8adb03bbf48295ee">windowsWidth</a>, <a class="code" href="class_eye_stereo_1_1_depth_train.html#a9070b69b021db5f780fa51d52c7ef4fb">windowsHeight</a>;</div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_depth_train.html#ae7e87335c4e526018a87129b0276c002">   42</a></span>&#160;        <a class="code" href="class_eye_stereo_1_1_stereo_setting.html">StereoSetting</a>*                  <a class="code" href="class_eye_stereo_1_1_depth_train.html#ae7e87335c4e526018a87129b0276c002">pStereoSetting</a>;</div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_depth_train.html#af06deec954410fab3e88074587f380a7">   43</a></span>&#160;        <span class="keywordtype">bool</span>                            <a class="code" href="class_eye_stereo_1_1_depth_train.html#af06deec954410fab3e88074587f380a7">bactive</a>;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_depth_train.html#afa42ac3011e853408dcf2db6cfb802ac">   45</a></span>&#160;        D3DXVECTOR3                     <a class="code" href="class_eye_stereo_1_1_depth_train.html#afa42ac3011e853408dcf2db6cfb802ac">eyePos</a>;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_depth_train.html#a0f634aa5e1ecadbf02c65fc474cbfa3f">   47</a></span>&#160;        <span class="keywordtype">bool</span>                            <a class="code" href="class_eye_stereo_1_1_depth_train.html#a0f634aa5e1ecadbf02c65fc474cbfa3f">bStereo</a>;</div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_depth_train.html#a62effa59374597b3b94fcf44958fea1c">   48</a></span>&#160;        <span class="keywordtype">float</span>                           <a class="code" href="class_eye_stereo_1_1_depth_train.html#a0eea9294787ad7828588f72da8790f7d">initDepth</a>, <a class="code" href="class_eye_stereo_1_1_depth_train.html#a62effa59374597b3b94fcf44958fea1c">initRadius</a>;</div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_depth_train.html#a0846c0c81ef8e662ef856329943f33ff">   49</a></span>&#160;        WCHAR*                          <a class="code" href="class_eye_stereo_1_1_depth_train.html#a0846c0c81ef8e662ef856329943f33ff">mShareMessage</a>;</div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_depth_train.html#a4b11228a8666539d2bf5974315ba2b6d">   50</a></span>&#160;        <span class="keywordtype">bool</span>*                           <a class="code" href="class_eye_stereo_1_1_depth_train.html#a4b11228a8666539d2bf5974315ba2b6d">mShareChanged</a>;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_depth_train.html#a624ca8b2299151202bae163e6bfa9483">   52</a></span>&#160;        ID3D10RasterizerState*          <a class="code" href="class_eye_stereo_1_1_depth_train.html#a624ca8b2299151202bae163e6bfa9483">pSolidState</a>;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_depth_train.html#a17fad3d3ac399fa4b451e9bfdb63853cae650f20735f6d354fbe94e86bb5bed95">   54</a></span>&#160;        <span class="keyword">enum</span>{ <a class="code" href="class_eye_stereo_1_1_depth_train.html#a17fad3d3ac399fa4b451e9bfdb63853cae650f20735f6d354fbe94e86bb5bed95">MAX_OBJECTS</a> = 10 };</div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_depth_train.html#a0bf9ef408f5a0855bd94597dbf84a0d8">   55</a></span>&#160;        std::vector&lt;CMeshLoader10*&gt;     <a class="code" href="class_eye_stereo_1_1_depth_train.html#a0bf9ef408f5a0855bd94597dbf84a0d8">g_ObjectsMesh</a>;</div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_depth_train.html#a38b577f295fe01292196a595e7606b4b">   56</a></span>&#160;        std::vector&lt;WCHAR*&gt;             <a class="code" href="class_eye_stereo_1_1_depth_train.html#a38b577f295fe01292196a595e7606b4b">g_ObjectsName</a>;</div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_depth_train.html#a98d8f3479497f172488b6b84982910ac">   57</a></span>&#160;        std::vector&lt;D3DXVECTOR3&gt;        <a class="code" href="class_eye_stereo_1_1_depth_train.html#a98d8f3479497f172488b6b84982910ac">g_ObjectsPosition</a>;</div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_depth_train.html#ad1a541752d9d6949979c8274be966b59">   58</a></span>&#160;        std::vector&lt;D3DXVECTOR3&gt;        <a class="code" href="class_eye_stereo_1_1_depth_train.html#ad1a541752d9d6949979c8274be966b59">g_ObjectResize</a>;</div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_depth_train.html#a27f7f074f4bc73381fc8fab9ed34801a">   59</a></span>&#160;        <a class="code" href="class_c_mesh_loader10.html">CMeshLoader10</a>                   <a class="code" href="class_eye_stereo_1_1_depth_train.html#a27f7f074f4bc73381fc8fab9ed34801a">g_earthMesh</a>;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_depth_train.html#aa7b6b36fc11aa3f0f4487f6d12b47a82">   61</a></span>&#160;        ID3D10EffectScalarVariable*         <a class="code" href="class_eye_stereo_1_1_depth_train.html#aa7b6b36fc11aa3f0f4487f6d12b47a82">g_pBrightness_left</a>; <span class="comment">// ���� ����        ID3D10EffectScalarVariable*         g_pBrightness_right; // ���� ����
+      //  ID3D10EffectScalarVariable*         g_pContrast; // HLSL �Աȶ�
+       float g_brightness_left;
+        float g_brightness_right;
+        //  float g_contrast;
+
+        DepthTrain();
+
+        bool init(ID3D10Device* pd3d, StereoSetting* pstereo, CModelViewerCamera *pcamera);
+
+        void stereoRender(float fTime);
+
+        void RenderSubset(UINT id, UINT iSubSet);
+
+        void pick(int sx, int sy);
+
+        void HandMessages(UINT uMsg, LPARAM lParam);
+
+        void ShareMessage(WCHAR* sharestr, bool *sharechanged);
+
+        ~DepthTrain();
+
+        void ClearScreen(ID3D10Device *pd3dDevice);
+
+    };
+
+}
+
+#endif //__SELECT_STEREO_H__</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_depth_train.html#ab275071712794f872fdb0dacc6bf46b1">   62</a></span>&#160;        ID3D10EffectScalarVariable*         <a class="code" href="class_eye_stereo_1_1_depth_train.html#ab275071712794f872fdb0dacc6bf46b1">g_pBrightness_right</a>; <span class="comment">// ���� ����       //  ID3D10EffectScalarVariable*         g_pContrast; // HLSL �Աȶ�
+       float g_brightness_left;
+        float g_brightness_right;
+        //  float g_contrast;
+
+        DepthTrain();
+
+        bool init(ID3D10Device* pd3d, StereoSetting* pstereo, CModelViewerCamera *pcamera);
+
+        void stereoRender(float fTime);
+
+        void RenderSubset(UINT id, UINT iSubSet);
+
+        void pick(int sx, int sy);
+
+        void HandMessages(UINT uMsg, LPARAM lParam);
+
+        void ShareMessage(WCHAR* sharestr, bool *sharechanged);
+
+        ~DepthTrain();
+
+        void ClearScreen(ID3D10Device *pd3dDevice);
+
+    };
+
+}
+
+#endif //__SELECT_STEREO_H__</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <span class="comment">//  ID3D10EffectScalarVariable*         g_pContrast; // HLSL �Աȶ�        float g_brightness_left;
+        float g_brightness_right;
+        //  float g_contrast;
+
+        DepthTrain();
+
+        bool init(ID3D10Device* pd3d, StereoSetting* pstereo, CModelViewerCamera *pcamera);
+
+        void stereoRender(float fTime);
+
+        void RenderSubset(UINT id, UINT iSubSet);
+
+        void pick(int sx, int sy);
+
+        void HandMessages(UINT uMsg, LPARAM lParam);
+
+        void ShareMessage(WCHAR* sharestr, bool *sharechanged);
+
+        ~DepthTrain();
+
+        void ClearScreen(ID3D10Device *pd3dDevice);
+
+    };
+
+}
+
+#endif //__SELECT_STEREO_H__</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_depth_train.html#a547e7939b6cc2d37897d25ac5ee28aab">   64</a></span>&#160;        <span class="keywordtype">float</span> <a class="code" href="class_eye_stereo_1_1_depth_train.html#a547e7939b6cc2d37897d25ac5ee28aab">g_brightness_left</a>;</div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_depth_train.html#adb16c6bab1d02cc9e225a4c9d102c9c2">   65</a></span>&#160;        <span class="keywordtype">float</span> <a class="code" href="class_eye_stereo_1_1_depth_train.html#adb16c6bab1d02cc9e225a4c9d102c9c2">g_brightness_right</a>;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <span class="comment">//  float g_contrast;</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <a class="code" href="class_eye_stereo_1_1_depth_train.html#a2a7e7415ce067217b4bd822a777856ed">DepthTrain</a>();</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="class_eye_stereo_1_1_depth_train.html#a19edad68c54666de670e464635784c89">init</a>(ID3D10Device* pd3d, <a class="code" href="class_eye_stereo_1_1_stereo_setting.html">StereoSetting</a>* pstereo, CModelViewerCamera *pcamera);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_eye_stereo_1_1_depth_train.html#a8b150002fb26e56734db10fed1f98e3d">stereoRender</a>(<span class="keywordtype">float</span> fTime);</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_eye_stereo_1_1_depth_train.html#a617f7eb7fbea83fcb345cbf33fbb3add">RenderSubset</a>(UINT <span class="keywordtype">id</span>, UINT iSubSet);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_eye_stereo_1_1_depth_train.html#a5ec6831e8e97d91446041fe27d59babe">pick</a>(<span class="keywordtype">int</span> sx, <span class="keywordtype">int</span> sy);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_eye_stereo_1_1_depth_train.html#a89df50d828281a46e30737825b802cdd">HandMessages</a>(UINT uMsg, LPARAM lParam);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_eye_stereo_1_1_depth_train.html#a64e1813b96678dd510d9e02e1e5fd042">ShareMessage</a>(WCHAR* sharestr, <span class="keywordtype">bool</span> *sharechanged);</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <a class="code" href="class_eye_stereo_1_1_depth_train.html#a9bb1aaad5e8c4424f5198c51de949edb">~DepthTrain</a>();</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_eye_stereo_1_1_depth_train.html#a1bd5996ca4d77d6985c4f53b58fbc925">ClearScreen</a>(ID3D10Device *<a class="code" href="class_eye_stereo_1_1_depth_train.html#a7f706b8bd0cd2f97c28d913f5a5d06f4">pd3dDevice</a>);</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    };</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;}</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="preprocessor">#endif //__SELECT_STEREO_H__</span></div>
+<div class="ttc" id="class_eye_stereo_1_1_depth_train_html_afa42ac3011e853408dcf2db6cfb802ac"><div class="ttname"><a href="class_eye_stereo_1_1_depth_train.html#afa42ac3011e853408dcf2db6cfb802ac">EyeStereo::DepthTrain::eyePos</a></div><div class="ttdeci">D3DXVECTOR3 eyePos</div><div class="ttdef"><b>Definition:</b> DepthTrain.hpp:45</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_depth_train_html_a1edec3ad0fedbc3ec24848ba3a61e230"><div class="ttname"><a href="class_eye_stereo_1_1_depth_train.html#a1edec3ad0fedbc3ec24848ba3a61e230">EyeStereo::DepthTrain::g_pTime</a></div><div class="ttdeci">ID3D10EffectScalarVariable * g_pTime</div><div class="ttdef"><b>Definition:</b> DepthTrain.hpp:31</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_depth_train_html_a56e81ba62b868264efaece4ad88c8179"><div class="ttname"><a href="class_eye_stereo_1_1_depth_train.html#a56e81ba62b868264efaece4ad88c8179">EyeStereo::DepthTrain::pTech</a></div><div class="ttdeci">ID3D10EffectTechnique * pTech</div><div class="ttdef"><b>Definition:</b> DepthTrain.hpp:18</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_depth_train_html_a0f634aa5e1ecadbf02c65fc474cbfa3f"><div class="ttname"><a href="class_eye_stereo_1_1_depth_train.html#a0f634aa5e1ecadbf02c65fc474cbfa3f">EyeStereo::DepthTrain::bStereo</a></div><div class="ttdeci">bool bStereo</div><div class="ttdef"><b>Definition:</b> DepthTrain.hpp:47</div></div>
+<div class="ttc" id="_stereo_setting_8h_html"><div class="ttname"><a href="_stereo_setting_8h.html">StereoSetting.h</a></div></div>
+<div class="ttc" id="class_eye_stereo_1_1_depth_train_html_a0846c0c81ef8e662ef856329943f33ff"><div class="ttname"><a href="class_eye_stereo_1_1_depth_train.html#a0846c0c81ef8e662ef856329943f33ff">EyeStereo::DepthTrain::mShareMessage</a></div><div class="ttdeci">WCHAR * mShareMessage</div><div class="ttdef"><b>Definition:</b> DepthTrain.hpp:49</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_depth_train_html_af3590667bb043ced9e83a67ed6d747c4"><div class="ttname"><a href="class_eye_stereo_1_1_depth_train.html#af3590667bb043ced9e83a67ed6d747c4">EyeStereo::DepthTrain::pShaderRV</a></div><div class="ttdeci">ID3D10EffectShaderResourceVariable * pShaderRV</div><div class="ttdef"><b>Definition:</b> DepthTrain.hpp:35</div></div>
+<div class="ttc" id="class_c_mesh_loader10_html"><div class="ttname"><a href="class_c_mesh_loader10.html">CMeshLoader10</a></div><div class="ttdef"><b>Definition:</b> MeshLoader10.h:59</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_depth_train_html_a1bd5996ca4d77d6985c4f53b58fbc925"><div class="ttname"><a href="class_eye_stereo_1_1_depth_train.html#a1bd5996ca4d77d6985c4f53b58fbc925">EyeStereo::DepthTrain::ClearScreen</a></div><div class="ttdeci">void ClearScreen(ID3D10Device *pd3dDevice)</div><div class="ttdef"><b>Definition:</b> DepthTrain.cpp:357</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_depth_train_html_aa7b6b36fc11aa3f0f4487f6d12b47a82"><div class="ttname"><a href="class_eye_stereo_1_1_depth_train.html#aa7b6b36fc11aa3f0f4487f6d12b47a82">EyeStereo::DepthTrain::g_pBrightness_left</a></div><div class="ttdeci">ID3D10EffectScalarVariable * g_pBrightness_left</div><div class="ttdef"><b>Definition:</b> DepthTrain.hpp:61</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_depth_train_html_ab275071712794f872fdb0dacc6bf46b1"><div class="ttname"><a href="class_eye_stereo_1_1_depth_train.html#ab275071712794f872fdb0dacc6bf46b1">EyeStereo::DepthTrain::g_pBrightness_right</a></div><div class="ttdeci">ID3D10EffectScalarVariable * g_pBrightness_right</div><div class="ttdef"><b>Definition:</b> DepthTrain.hpp:62</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_depth_train_html_a0eea9294787ad7828588f72da8790f7d"><div class="ttname"><a href="class_eye_stereo_1_1_depth_train.html#a0eea9294787ad7828588f72da8790f7d">EyeStereo::DepthTrain::initDepth</a></div><div class="ttdeci">float initDepth</div><div class="ttdef"><b>Definition:</b> DepthTrain.hpp:48</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_depth_train_html_aff517c72ca567a3633813d7d93f779f8"><div class="ttname"><a href="class_eye_stereo_1_1_depth_train.html#aff517c72ca567a3633813d7d93f779f8">EyeStereo::DepthTrain::g_pLightColor</a></div><div class="ttdeci">ID3D10EffectVectorVariable * g_pLightColor</div><div class="ttdef"><b>Definition:</b> DepthTrain.hpp:28</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_depth_train_html_a014f4a2299d289af8adb03bbf48295ee"><div class="ttname"><a href="class_eye_stereo_1_1_depth_train.html#a014f4a2299d289af8adb03bbf48295ee">EyeStereo::DepthTrain::windowsWidth</a></div><div class="ttdeci">long int windowsWidth</div><div class="ttdef"><b>Definition:</b> DepthTrain.hpp:41</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_depth_train_html_a0d57eab55802f85359c2d25431865a42"><div class="ttname"><a href="class_eye_stereo_1_1_depth_train.html#a0d57eab55802f85359c2d25431865a42">EyeStereo::DepthTrain::g_pAmbient</a></div><div class="ttdeci">ID3D10EffectVectorVariable * g_pAmbient</div><div class="ttdef"><b>Definition:</b> DepthTrain.hpp:23</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_depth_train_html_a617f7eb7fbea83fcb345cbf33fbb3add"><div class="ttname"><a href="class_eye_stereo_1_1_depth_train.html#a617f7eb7fbea83fcb345cbf33fbb3add">EyeStereo::DepthTrain::RenderSubset</a></div><div class="ttdeci">void RenderSubset(UINT id, UINT iSubSet)</div><div class="ttdef"><b>Definition:</b> DepthTrain.cpp:244</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_depth_train_html_a64e1813b96678dd510d9e02e1e5fd042"><div class="ttname"><a href="class_eye_stereo_1_1_depth_train.html#a64e1813b96678dd510d9e02e1e5fd042">EyeStereo::DepthTrain::ShareMessage</a></div><div class="ttdeci">void ShareMessage(WCHAR *sharestr, bool *sharechanged)</div><div class="ttdef"><b>Definition:</b> DepthTrain.cpp:332</div></div>
+<div class="ttc" id="_p_c_h_8h_html"><div class="ttname"><a href="_p_c_h_8h.html">PCH.h</a></div></div>
+<div class="ttc" id="class_eye_stereo_1_1_depth_train_html_a8b150002fb26e56734db10fed1f98e3d"><div class="ttname"><a href="class_eye_stereo_1_1_depth_train.html#a8b150002fb26e56734db10fed1f98e3d">EyeStereo::DepthTrain::stereoRender</a></div><div class="ttdeci">void stereoRender(float fTime)</div><div class="ttdef"><b>Definition:</b> DepthTrain.cpp:156</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_stereo_setting_html"><div class="ttname"><a href="class_eye_stereo_1_1_stereo_setting.html">EyeStereo::StereoSetting</a></div><div class="ttdef"><b>Definition:</b> StereoSetting.h:9</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_depth_train_html_a7f706b8bd0cd2f97c28d913f5a5d06f4"><div class="ttname"><a href="class_eye_stereo_1_1_depth_train.html#a7f706b8bd0cd2f97c28d913f5a5d06f4">EyeStereo::DepthTrain::pd3dDevice</a></div><div class="ttdeci">ID3D10Device * pd3dDevice</div><div class="ttdef"><b>Definition:</b> DepthTrain.hpp:16</div></div>
+<div class="ttc" id="_light_8h_html"><div class="ttname"><a href="_light_8h.html">Light.h</a></div></div>
+<div class="ttc" id="class_eye_stereo_1_1_depth_train_html_a547e7939b6cc2d37897d25ac5ee28aab"><div class="ttname"><a href="class_eye_stereo_1_1_depth_train.html#a547e7939b6cc2d37897d25ac5ee28aab">EyeStereo::DepthTrain::g_brightness_left</a></div><div class="ttdeci">float g_brightness_left</div><div class="ttdef"><b>Definition:</b> DepthTrain.hpp:64</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_depth_train_html_a9070b69b021db5f780fa51d52c7ef4fb"><div class="ttname"><a href="class_eye_stereo_1_1_depth_train.html#a9070b69b021db5f780fa51d52c7ef4fb">EyeStereo::DepthTrain::windowsHeight</a></div><div class="ttdeci">long int windowsHeight</div><div class="ttdef"><b>Definition:</b> DepthTrain.hpp:41</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_depth_train_html_aedbc411425d73ad9d12c57c23d14eab4"><div class="ttname"><a href="class_eye_stereo_1_1_depth_train.html#aedbc411425d73ad9d12c57c23d14eab4">EyeStereo::DepthTrain::pEffect</a></div><div class="ttdeci">ID3D10Effect * pEffect</div><div class="ttdef"><b>Definition:</b> DepthTrain.hpp:17</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_depth_train_html_af06deec954410fab3e88074587f380a7"><div class="ttname"><a href="class_eye_stereo_1_1_depth_train.html#af06deec954410fab3e88074587f380a7">EyeStereo::DepthTrain::bactive</a></div><div class="ttdeci">bool bactive</div><div class="ttdef"><b>Definition:</b> DepthTrain.hpp:43</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_depth_train_html_aad8d29a975dcfd60787f428522212ed2"><div class="ttname"><a href="class_eye_stereo_1_1_depth_train.html#aad8d29a975dcfd60787f428522212ed2">EyeStereo::DepthTrain::g_pWorld</a></div><div class="ttdeci">ID3D10EffectMatrixVariable * g_pWorld</div><div class="ttdef"><b>Definition:</b> DepthTrain.hpp:32</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_depth_train_html_aa7624b6de127a320ee12dcae489f8fb2"><div class="ttname"><a href="class_eye_stereo_1_1_depth_train.html#aa7624b6de127a320ee12dcae489f8fb2">EyeStereo::DepthTrain::g_pSpecular</a></div><div class="ttdeci">ID3D10EffectVectorVariable * g_pSpecular</div><div class="ttdef"><b>Definition:</b> DepthTrain.hpp:25</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_depth_train_html_a8faf6568a3fe2af9433c6919ae888d94"><div class="ttname"><a href="class_eye_stereo_1_1_depth_train.html#a8faf6568a3fe2af9433c6919ae888d94">EyeStereo::DepthTrain::g_pOpacity</a></div><div class="ttdeci">ID3D10EffectScalarVariable * g_pOpacity</div><div class="ttdef"><b>Definition:</b> DepthTrain.hpp:26</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_depth_train_html_a38b577f295fe01292196a595e7606b4b"><div class="ttname"><a href="class_eye_stereo_1_1_depth_train.html#a38b577f295fe01292196a595e7606b4b">EyeStereo::DepthTrain::g_ObjectsName</a></div><div class="ttdeci">std::vector&lt; WCHAR * &gt; g_ObjectsName</div><div class="ttdef"><b>Definition:</b> DepthTrain.hpp:56</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_depth_train_html_a27f7f074f4bc73381fc8fab9ed34801a"><div class="ttname"><a href="class_eye_stereo_1_1_depth_train.html#a27f7f074f4bc73381fc8fab9ed34801a">EyeStereo::DepthTrain::g_earthMesh</a></div><div class="ttdeci">CMeshLoader10 g_earthMesh</div><div class="ttdef"><b>Definition:</b> DepthTrain.hpp:59</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_depth_train_html_ae7e87335c4e526018a87129b0276c002"><div class="ttname"><a href="class_eye_stereo_1_1_depth_train.html#ae7e87335c4e526018a87129b0276c002">EyeStereo::DepthTrain::pStereoSetting</a></div><div class="ttdeci">StereoSetting * pStereoSetting</div><div class="ttdef"><b>Definition:</b> DepthTrain.hpp:42</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_depth_train_html_a989f268f0b4a58a8f7f826f253302402"><div class="ttname"><a href="class_eye_stereo_1_1_depth_train.html#a989f268f0b4a58a8f7f826f253302402">EyeStereo::DepthTrain::g_pWorldViewProjection</a></div><div class="ttdeci">ID3D10EffectMatrixVariable * g_pWorldViewProjection</div><div class="ttdef"><b>Definition:</b> DepthTrain.hpp:33</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_depth_train_html_a98d8f3479497f172488b6b84982910ac"><div class="ttname"><a href="class_eye_stereo_1_1_depth_train.html#a98d8f3479497f172488b6b84982910ac">EyeStereo::DepthTrain::g_ObjectsPosition</a></div><div class="ttdeci">std::vector&lt; D3DXVECTOR3 &gt; g_ObjectsPosition</div><div class="ttdef"><b>Definition:</b> DepthTrain.hpp:57</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_depth_train_html_adb16c6bab1d02cc9e225a4c9d102c9c2"><div class="ttname"><a href="class_eye_stereo_1_1_depth_train.html#adb16c6bab1d02cc9e225a4c9d102c9c2">EyeStereo::DepthTrain::g_brightness_right</a></div><div class="ttdeci">float g_brightness_right</div><div class="ttdef"><b>Definition:</b> DepthTrain.hpp:65</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_depth_train_html_a19edad68c54666de670e464635784c89"><div class="ttname"><a href="class_eye_stereo_1_1_depth_train.html#a19edad68c54666de670e464635784c89">EyeStereo::DepthTrain::init</a></div><div class="ttdeci">bool init(ID3D10Device *pd3d, StereoSetting *pstereo, CModelViewerCamera *pcamera)</div><div class="ttdef"><b>Definition:</b> DepthTrain.cpp:13</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_depth_train_html_a2a7e7415ce067217b4bd822a777856ed"><div class="ttname"><a href="class_eye_stereo_1_1_depth_train.html#a2a7e7415ce067217b4bd822a777856ed">EyeStereo::DepthTrain::DepthTrain</a></div><div class="ttdeci">DepthTrain()</div><div class="ttdef"><b>Definition:</b> DepthTrain.cpp:5</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_depth_train_html_a624ca8b2299151202bae163e6bfa9483"><div class="ttname"><a href="class_eye_stereo_1_1_depth_train.html#a624ca8b2299151202bae163e6bfa9483">EyeStereo::DepthTrain::pSolidState</a></div><div class="ttdeci">ID3D10RasterizerState * pSolidState</div><div class="ttdef"><b>Definition:</b> DepthTrain.hpp:52</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_depth_train_html_a9b369417ed32cf2930da949917e40f93"><div class="ttname"><a href="class_eye_stereo_1_1_depth_train.html#a9b369417ed32cf2930da949917e40f93">EyeStereo::DepthTrain::pSwapChain</a></div><div class="ttdeci">IDXGISwapChain * pSwapChain</div><div class="ttdef"><b>Definition:</b> DepthTrain.hpp:37</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_depth_train_html_a114ae578ade2e7be5ec02711246b347e"><div class="ttname"><a href="class_eye_stereo_1_1_depth_train.html#a114ae578ade2e7be5ec02711246b347e">EyeStereo::DepthTrain::g_pSpecularPower</a></div><div class="ttdeci">ID3D10EffectScalarVariable * g_pSpecularPower</div><div class="ttdef"><b>Definition:</b> DepthTrain.hpp:27</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_depth_train_html_abdf56c9e7c0b2c02121120cbf39e3dcd"><div class="ttname"><a href="class_eye_stereo_1_1_depth_train.html#abdf56c9e7c0b2c02121120cbf39e3dcd">EyeStereo::DepthTrain::pCamera</a></div><div class="ttdeci">CModelViewerCamera * pCamera</div><div class="ttdef"><b>Definition:</b> DepthTrain.hpp:39</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_depth_train_html_a9bb1aaad5e8c4424f5198c51de949edb"><div class="ttname"><a href="class_eye_stereo_1_1_depth_train.html#a9bb1aaad5e8c4424f5198c51de949edb">EyeStereo::DepthTrain::~DepthTrain</a></div><div class="ttdeci">~DepthTrain()</div><div class="ttdef"><b>Definition:</b> DepthTrain.cpp:338</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_depth_train_html_a0bf9ef408f5a0855bd94597dbf84a0d8"><div class="ttname"><a href="class_eye_stereo_1_1_depth_train.html#a0bf9ef408f5a0855bd94597dbf84a0d8">EyeStereo::DepthTrain::g_ObjectsMesh</a></div><div class="ttdeci">std::vector&lt; CMeshLoader10 * &gt; g_ObjectsMesh</div><div class="ttdef"><b>Definition:</b> DepthTrain.hpp:55</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_depth_train_html_a1f7486d5d32e57399e8c20977156136e"><div class="ttname"><a href="class_eye_stereo_1_1_depth_train.html#a1f7486d5d32e57399e8c20977156136e">EyeStereo::DepthTrain::g_ptxDiffuseVariable</a></div><div class="ttdeci">ID3D10EffectShaderResourceVariable * g_ptxDiffuseVariable</div><div class="ttdef"><b>Definition:</b> DepthTrain.hpp:22</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_depth_train_html_a07e656be233509a11c00679d997f46ce"><div class="ttname"><a href="class_eye_stereo_1_1_depth_train.html#a07e656be233509a11c00679d997f46ce">EyeStereo::DepthTrain::g_pLightPosition</a></div><div class="ttdeci">ID3D10EffectVectorVariable * g_pLightPosition</div><div class="ttdef"><b>Definition:</b> DepthTrain.hpp:29</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_depth_train_html_a17fad3d3ac399fa4b451e9bfdb63853cae650f20735f6d354fbe94e86bb5bed95"><div class="ttname"><a href="class_eye_stereo_1_1_depth_train.html#a17fad3d3ac399fa4b451e9bfdb63853cae650f20735f6d354fbe94e86bb5bed95">EyeStereo::DepthTrain::MAX_OBJECTS</a></div><div class="ttdef"><b>Definition:</b> DepthTrain.hpp:54</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_depth_train_html_a4b11228a8666539d2bf5974315ba2b6d"><div class="ttname"><a href="class_eye_stereo_1_1_depth_train.html#a4b11228a8666539d2bf5974315ba2b6d">EyeStereo::DepthTrain::mShareChanged</a></div><div class="ttdeci">bool * mShareChanged</div><div class="ttdef"><b>Definition:</b> DepthTrain.hpp:50</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_depth_train_html_a62effa59374597b3b94fcf44958fea1c"><div class="ttname"><a href="class_eye_stereo_1_1_depth_train.html#a62effa59374597b3b94fcf44958fea1c">EyeStereo::DepthTrain::initRadius</a></div><div class="ttdeci">float initRadius</div><div class="ttdef"><b>Definition:</b> DepthTrain.hpp:48</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_depth_train_html_a1dd1285f710b61ebd45ba8c5c2f6ac86"><div class="ttname"><a href="class_eye_stereo_1_1_depth_train.html#a1dd1285f710b61ebd45ba8c5c2f6ac86">EyeStereo::DepthTrain::g_pDiffuse</a></div><div class="ttdeci">ID3D10EffectVectorVariable * g_pDiffuse</div><div class="ttdef"><b>Definition:</b> DepthTrain.hpp:24</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_depth_train_html_a70f24dd8ef12b0b1d1fd55e0b54dbd8e"><div class="ttname"><a href="class_eye_stereo_1_1_depth_train.html#a70f24dd8ef12b0b1d1fd55e0b54dbd8e">EyeStereo::DepthTrain::g_pCameraPosition</a></div><div class="ttdeci">ID3D10EffectVectorVariable * g_pCameraPosition</div><div class="ttdef"><b>Definition:</b> DepthTrain.hpp:30</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_depth_train_html_a89df50d828281a46e30737825b802cdd"><div class="ttname"><a href="class_eye_stereo_1_1_depth_train.html#a89df50d828281a46e30737825b802cdd">EyeStereo::DepthTrain::HandMessages</a></div><div class="ttdeci">void HandMessages(UINT uMsg, LPARAM lParam)</div><div class="ttdef"><b>Definition:</b> DepthTrain.cpp:323</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_depth_train_html"><div class="ttname"><a href="class_eye_stereo_1_1_depth_train.html">EyeStereo::DepthTrain</a></div><div class="ttdef"><b>Definition:</b> DepthTrain.hpp:12</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_depth_train_html_a5ec6831e8e97d91446041fe27d59babe"><div class="ttname"><a href="class_eye_stereo_1_1_depth_train.html#a5ec6831e8e97d91446041fe27d59babe">EyeStereo::DepthTrain::pick</a></div><div class="ttdeci">void pick(int sx, int sy)</div><div class="ttdef"><b>Definition:</b> DepthTrain.cpp:267</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_depth_train_html_ad1a541752d9d6949979c8274be966b59"><div class="ttname"><a href="class_eye_stereo_1_1_depth_train.html#ad1a541752d9d6949979c8274be966b59">EyeStereo::DepthTrain::g_ObjectResize</a></div><div class="ttdeci">std::vector&lt; D3DXVECTOR3 &gt; g_ObjectResize</div><div class="ttdef"><b>Definition:</b> DepthTrain.hpp:58</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_depth_train_html_a06f1afd2ee355fd9be02b72134ab63e3"><div class="ttname"><a href="class_eye_stereo_1_1_depth_train.html#a06f1afd2ee355fd9be02b72134ab63e3">EyeStereo::DepthTrain::pInputLayout</a></div><div class="ttdeci">ID3D10InputLayout * pInputLayout</div><div class="ttdef"><b>Definition:</b> DepthTrain.hpp:19</div></div>
+<div class="ttc" id="_mesh_loader10_8h_html"><div class="ttname"><a href="_mesh_loader10_8h.html">MeshLoader10.h</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2014年 六月 27日 星期五 15:19:00 , 为 数字式立体视觉刺激系统使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.7
+</small></address>
+</body>
+</html>

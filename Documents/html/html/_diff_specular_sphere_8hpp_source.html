@@ -1,0 +1,151 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.7"/>
+<title>数字式立体视觉刺激系统: G:/交接/EyeStereo/Source/Geometry/DiffSpecularSphere.hpp 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">数字式立体视觉刺激系统
+   &#160;<span id="projectnumber">1.0.1</span>
+   </div>
+   <div id="projectbrief">Digital Stereo System</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.7 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="pages.html"><span>相关页面</span></a></li>
+      <li><a href="modules.html"><span>模块</span></a></li>
+      <li><a href="namespaces.html"><span>命名空间</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
+    </ul>
+  </div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_74389ed8173ad57b461b9d623a1f3867.html">Source</a></li><li class="navelem"><a class="el" href="dir_985b62d4e26a26570b9333149bab298a.html">Geometry</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">DiffSpecularSphere.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_diff_specular_sphere_8hpp.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//--------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">// This file is a portion of the Eye Stereo Project.  It is distributed</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">// under the MIT License, available in the root of this distribution and </span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">// at the following URL:</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">// http://www.opensource.org/licenses/mit-license.php</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">// Copyright (c) Luxuia</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">//---------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#ifndef __SPHERE_H__</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#define __SPHERE_H__</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_p_c_h_8h.html">Utility/PCH.h</a>&quot;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_vertex_8h.html">Geometry/Vertex.h</a>&quot;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">namespace </span>EyeStereo {</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_diff_specular_sphere.html">   19</a></span>&#160;    <span class="keyword">class </span><a class="code" href="class_eye_stereo_1_1_diff_specular_sphere.html">DiffSpecularSphere</a> {</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_diff_specular_sphere.html#a0d9da91a0dc9b4989eb6b5aad2cf6482">   23</a></span>&#160;        <span class="keywordtype">float</span> <a class="code" href="class_eye_stereo_1_1_diff_specular_sphere.html#a0d9da91a0dc9b4989eb6b5aad2cf6482">mRadius</a>;</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_diff_specular_sphere.html#a7efe2df6ed389fb34b9fda9b17ed5e13">   24</a></span>&#160;        UINT  <a class="code" href="class_eye_stereo_1_1_diff_specular_sphere.html#a7efe2df6ed389fb34b9fda9b17ed5e13">mNumSlices</a>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_diff_specular_sphere.html#a01fc9750ecf597c7b92d0ad2b9566e03">   25</a></span>&#160;        UINT  <a class="code" href="class_eye_stereo_1_1_diff_specular_sphere.html#a01fc9750ecf597c7b92d0ad2b9566e03">mNumStacks</a>;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_diff_specular_sphere.html#a2b17cb572a4754e11c61141778e4d84f">   27</a></span>&#160;        DWORD <a class="code" href="class_eye_stereo_1_1_diff_specular_sphere.html#a2b17cb572a4754e11c61141778e4d84f">mNumVertices</a>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_diff_specular_sphere.html#a280e1dea00fc2245b5cdfe468bc75800">   28</a></span>&#160;        DWORD <a class="code" href="class_eye_stereo_1_1_diff_specular_sphere.html#a280e1dea00fc2245b5cdfe468bc75800">mNumFaces</a>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_diff_specular_sphere.html#ae566ec8c3d1451681ad2399392893b51">   30</a></span>&#160;        ID3D10Device* <a class="code" href="class_eye_stereo_1_1_diff_specular_sphere.html#ae566ec8c3d1451681ad2399392893b51">md3dDevice</a>;</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_diff_specular_sphere.html#af17f17095d485dda1a996ac75f50f2d6">   31</a></span>&#160;        ID3D10Buffer* <a class="code" href="class_eye_stereo_1_1_diff_specular_sphere.html#af17f17095d485dda1a996ac75f50f2d6">mVB</a>;</div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_diff_specular_sphere.html#aedcc2bbc55ec4f7df5d2437bd48bb8fd">   32</a></span>&#160;        ID3D10Buffer* <a class="code" href="class_eye_stereo_1_1_diff_specular_sphere.html#aedcc2bbc55ec4f7df5d2437bd48bb8fd">mIB</a>;</div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_diff_specular_sphere.html#a8b26c0865492b05143cbb3f78c81a2bf">   33</a></span>&#160;        ID3DX10Mesh*  <a class="code" href="class_eye_stereo_1_1_diff_specular_sphere.html#a8b26c0865492b05143cbb3f78c81a2bf">mMesh</a>;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_diff_specular_sphere.html#a4d0e8dcbbd1adb81f253a22283815b17">   35</a></span>&#160;        std::vector&lt;Vertex14&gt; <a class="code" href="class_eye_stereo_1_1_diff_specular_sphere.html#a4d0e8dcbbd1adb81f253a22283815b17">vertices</a>;</div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_diff_specular_sphere.html#a4d963355de8ac9c041eae86a25c7e99a">   36</a></span>&#160;        std::vector&lt;DWORD&gt; <a class="code" href="class_eye_stereo_1_1_diff_specular_sphere.html#a4d963355de8ac9c041eae86a25c7e99a">indices</a>;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_diff_specular_sphere.html#a7057b09cf99f4580a6a646b96223f55a">   38</a></span>&#160;        D3DXCOLOR <a class="code" href="class_eye_stereo_1_1_diff_specular_sphere.html#a7057b09cf99f4580a6a646b96223f55a">mDiffColor</a>;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_diff_specular_sphere.html#a08f75324466a3e1f8ab3485c30e7d4ab">   40</a></span>&#160;        <a class="code" href="class_eye_stereo_1_1_diff_specular_sphere.html#a08f75324466a3e1f8ab3485c30e7d4ab">DiffSpecularSphere</a>():<a class="code" href="class_eye_stereo_1_1_diff_specular_sphere.html#a7057b09cf99f4580a6a646b96223f55a">mDiffColor</a>(<a class="code" href="_p_c_h_8h.html#aa150435780d8ad5de8af21ef6c858fd6">GREEN</a>), <a class="code" href="class_eye_stereo_1_1_diff_specular_sphere.html#ae566ec8c3d1451681ad2399392893b51">md3dDevice</a>(NULL), <a class="code" href="class_eye_stereo_1_1_diff_specular_sphere.html#af17f17095d485dda1a996ac75f50f2d6">mVB</a>(NULL), <a class="code" href="class_eye_stereo_1_1_diff_specular_sphere.html#aedcc2bbc55ec4f7df5d2437bd48bb8fd">mIB</a>(NULL), <a class="code" href="class_eye_stereo_1_1_diff_specular_sphere.html#a8b26c0865492b05143cbb3f78c81a2bf">mMesh</a>(NULL) {</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        }</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <a class="code" href="class_eye_stereo_1_1_diff_specular_sphere.html#aa9568135ddc80e7eb27aec83ae8169ec">~DiffSpecularSphere</a>();</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_eye_stereo_1_1_diff_specular_sphere.html#a389d2d0fafc547a354197b6173f25de7">setColor</a>(D3DXCOLOR color);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_eye_stereo_1_1_diff_specular_sphere.html#abc226d3d333054378dc9393f3093991e">init</a>(ID3D10Device* device, <span class="keywordtype">float</span> radius, UINT numSlices, UINT numStacks);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_eye_stereo_1_1_diff_specular_sphere.html#af0103410f13ef0b89c7726984f7d73f1">draw</a>();</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_eye_stereo_1_1_diff_specular_sphere.html#a9c16ffdc336161cce07bf8c03aa3cf7b">buildStacks</a>(std::vector&lt;Vertex14&gt; &amp; <a class="code" href="class_eye_stereo_1_1_diff_specular_sphere.html#a4d0e8dcbbd1adb81f253a22283815b17">vertices</a>, std::vector&lt;DWORD&gt; &amp; <a class="code" href="class_eye_stereo_1_1_diff_specular_sphere.html#a4d963355de8ac9c041eae86a25c7e99a">indices</a>);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="class_eye_stereo_1_1_diff_specular_sphere.html#a6798d726a54d233199a6ad8e765283b9">CreateMesh</a>(<span class="keyword">const</span> D3D10_INPUT_ELEMENT_DESC* layout);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        ID3DX10Mesh* <a class="code" href="class_eye_stereo_1_1_diff_specular_sphere.html#aeb25246d44ae6b4460b2f9bb9e2e25a8">GetD3D10Mesh</a>();</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    };</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;}</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="preprocessor">#endif// __SPHERE_H__</span></div>
+<div class="ttc" id="class_eye_stereo_1_1_diff_specular_sphere_html_a7057b09cf99f4580a6a646b96223f55a"><div class="ttname"><a href="class_eye_stereo_1_1_diff_specular_sphere.html#a7057b09cf99f4580a6a646b96223f55a">EyeStereo::DiffSpecularSphere::mDiffColor</a></div><div class="ttdeci">D3DXCOLOR mDiffColor</div><div class="ttdef"><b>Definition:</b> DiffSpecularSphere.hpp:38</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_diff_specular_sphere_html_a2b17cb572a4754e11c61141778e4d84f"><div class="ttname"><a href="class_eye_stereo_1_1_diff_specular_sphere.html#a2b17cb572a4754e11c61141778e4d84f">EyeStereo::DiffSpecularSphere::mNumVertices</a></div><div class="ttdeci">DWORD mNumVertices</div><div class="ttdef"><b>Definition:</b> DiffSpecularSphere.hpp:27</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_diff_specular_sphere_html_af17f17095d485dda1a996ac75f50f2d6"><div class="ttname"><a href="class_eye_stereo_1_1_diff_specular_sphere.html#af17f17095d485dda1a996ac75f50f2d6">EyeStereo::DiffSpecularSphere::mVB</a></div><div class="ttdeci">ID3D10Buffer * mVB</div><div class="ttdef"><b>Definition:</b> DiffSpecularSphere.hpp:31</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_diff_specular_sphere_html_aa9568135ddc80e7eb27aec83ae8169ec"><div class="ttname"><a href="class_eye_stereo_1_1_diff_specular_sphere.html#aa9568135ddc80e7eb27aec83ae8169ec">EyeStereo::DiffSpecularSphere::~DiffSpecularSphere</a></div><div class="ttdeci">~DiffSpecularSphere()</div><div class="ttdef"><b>Definition:</b> DiffSpecularSphere.cpp:17</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_diff_specular_sphere_html_a01fc9750ecf597c7b92d0ad2b9566e03"><div class="ttname"><a href="class_eye_stereo_1_1_diff_specular_sphere.html#a01fc9750ecf597c7b92d0ad2b9566e03">EyeStereo::DiffSpecularSphere::mNumStacks</a></div><div class="ttdeci">UINT mNumStacks</div><div class="ttdef"><b>Definition:</b> DiffSpecularSphere.hpp:25</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_diff_specular_sphere_html_aeb25246d44ae6b4460b2f9bb9e2e25a8"><div class="ttname"><a href="class_eye_stereo_1_1_diff_specular_sphere.html#aeb25246d44ae6b4460b2f9bb9e2e25a8">EyeStereo::DiffSpecularSphere::GetD3D10Mesh</a></div><div class="ttdeci">ID3DX10Mesh * GetD3D10Mesh()</div><div class="ttdef"><b>Definition:</b> DiffSpecularSphere.cpp:173</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_diff_specular_sphere_html_a4d963355de8ac9c041eae86a25c7e99a"><div class="ttname"><a href="class_eye_stereo_1_1_diff_specular_sphere.html#a4d963355de8ac9c041eae86a25c7e99a">EyeStereo::DiffSpecularSphere::indices</a></div><div class="ttdeci">std::vector&lt; DWORD &gt; indices</div><div class="ttdef"><b>Definition:</b> DiffSpecularSphere.hpp:36</div></div>
+<div class="ttc" id="_p_c_h_8h_html"><div class="ttname"><a href="_p_c_h_8h.html">PCH.h</a></div></div>
+<div class="ttc" id="class_eye_stereo_1_1_diff_specular_sphere_html_abc226d3d333054378dc9393f3093991e"><div class="ttname"><a href="class_eye_stereo_1_1_diff_specular_sphere.html#abc226d3d333054378dc9393f3093991e">EyeStereo::DiffSpecularSphere::init</a></div><div class="ttdeci">void init(ID3D10Device *device, float radius, UINT numSlices, UINT numStacks)</div><div class="ttdef"><b>Definition:</b> DiffSpecularSphere.cpp:31</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_diff_specular_sphere_html_a7efe2df6ed389fb34b9fda9b17ed5e13"><div class="ttname"><a href="class_eye_stereo_1_1_diff_specular_sphere.html#a7efe2df6ed389fb34b9fda9b17ed5e13">EyeStereo::DiffSpecularSphere::mNumSlices</a></div><div class="ttdeci">UINT mNumSlices</div><div class="ttdef"><b>Definition:</b> DiffSpecularSphere.hpp:24</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_diff_specular_sphere_html_ae566ec8c3d1451681ad2399392893b51"><div class="ttname"><a href="class_eye_stereo_1_1_diff_specular_sphere.html#ae566ec8c3d1451681ad2399392893b51">EyeStereo::DiffSpecularSphere::md3dDevice</a></div><div class="ttdeci">ID3D10Device * md3dDevice</div><div class="ttdef"><b>Definition:</b> DiffSpecularSphere.hpp:30</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_diff_specular_sphere_html_a4d0e8dcbbd1adb81f253a22283815b17"><div class="ttname"><a href="class_eye_stereo_1_1_diff_specular_sphere.html#a4d0e8dcbbd1adb81f253a22283815b17">EyeStereo::DiffSpecularSphere::vertices</a></div><div class="ttdeci">std::vector&lt; Vertex14 &gt; vertices</div><div class="ttdef"><b>Definition:</b> DiffSpecularSphere.hpp:35</div></div>
+<div class="ttc" id="_vertex_8h_html"><div class="ttname"><a href="_vertex_8h.html">Vertex.h</a></div></div>
+<div class="ttc" id="class_eye_stereo_1_1_diff_specular_sphere_html_a08f75324466a3e1f8ab3485c30e7d4ab"><div class="ttname"><a href="class_eye_stereo_1_1_diff_specular_sphere.html#a08f75324466a3e1f8ab3485c30e7d4ab">EyeStereo::DiffSpecularSphere::DiffSpecularSphere</a></div><div class="ttdeci">DiffSpecularSphere()</div><div class="ttdef"><b>Definition:</b> DiffSpecularSphere.hpp:40</div></div>
+<div class="ttc" id="_p_c_h_8h_html_aa150435780d8ad5de8af21ef6c858fd6"><div class="ttname"><a href="_p_c_h_8h.html#aa150435780d8ad5de8af21ef6c858fd6">GREEN</a></div><div class="ttdeci">const D3DXCOLOR GREEN(0.0f, 1.0f, 0.0f, 1.0f)</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_diff_specular_sphere_html_af0103410f13ef0b89c7726984f7d73f1"><div class="ttname"><a href="class_eye_stereo_1_1_diff_specular_sphere.html#af0103410f13ef0b89c7726984f7d73f1">EyeStereo::DiffSpecularSphere::draw</a></div><div class="ttdeci">void draw()</div><div class="ttdef"><b>Definition:</b> DiffSpecularSphere.cpp:66</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_diff_specular_sphere_html_a9c16ffdc336161cce07bf8c03aa3cf7b"><div class="ttname"><a href="class_eye_stereo_1_1_diff_specular_sphere.html#a9c16ffdc336161cce07bf8c03aa3cf7b">EyeStereo::DiffSpecularSphere::buildStacks</a></div><div class="ttdeci">void buildStacks(std::vector&lt; Vertex14 &gt; &amp;vertices, std::vector&lt; DWORD &gt; &amp;indices)</div><div class="ttdef"><b>Definition:</b> DiffSpecularSphere.cpp:74</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_diff_specular_sphere_html_a8b26c0865492b05143cbb3f78c81a2bf"><div class="ttname"><a href="class_eye_stereo_1_1_diff_specular_sphere.html#a8b26c0865492b05143cbb3f78c81a2bf">EyeStereo::DiffSpecularSphere::mMesh</a></div><div class="ttdeci">ID3DX10Mesh * mMesh</div><div class="ttdef"><b>Definition:</b> DiffSpecularSphere.hpp:33</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_diff_specular_sphere_html"><div class="ttname"><a href="class_eye_stereo_1_1_diff_specular_sphere.html">EyeStereo::DiffSpecularSphere</a></div><div class="ttdef"><b>Definition:</b> DiffSpecularSphere.hpp:19</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_diff_specular_sphere_html_a6798d726a54d233199a6ad8e765283b9"><div class="ttname"><a href="class_eye_stereo_1_1_diff_specular_sphere.html#a6798d726a54d233199a6ad8e765283b9">EyeStereo::DiffSpecularSphere::CreateMesh</a></div><div class="ttdeci">bool CreateMesh(const D3D10_INPUT_ELEMENT_DESC *layout)</div><div class="ttdef"><b>Definition:</b> DiffSpecularSphere.cpp:156</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_diff_specular_sphere_html_a0d9da91a0dc9b4989eb6b5aad2cf6482"><div class="ttname"><a href="class_eye_stereo_1_1_diff_specular_sphere.html#a0d9da91a0dc9b4989eb6b5aad2cf6482">EyeStereo::DiffSpecularSphere::mRadius</a></div><div class="ttdeci">float mRadius</div><div class="ttdef"><b>Definition:</b> DiffSpecularSphere.hpp:23</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_diff_specular_sphere_html_aedcc2bbc55ec4f7df5d2437bd48bb8fd"><div class="ttname"><a href="class_eye_stereo_1_1_diff_specular_sphere.html#aedcc2bbc55ec4f7df5d2437bd48bb8fd">EyeStereo::DiffSpecularSphere::mIB</a></div><div class="ttdeci">ID3D10Buffer * mIB</div><div class="ttdef"><b>Definition:</b> DiffSpecularSphere.hpp:32</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_diff_specular_sphere_html_a280e1dea00fc2245b5cdfe468bc75800"><div class="ttname"><a href="class_eye_stereo_1_1_diff_specular_sphere.html#a280e1dea00fc2245b5cdfe468bc75800">EyeStereo::DiffSpecularSphere::mNumFaces</a></div><div class="ttdeci">DWORD mNumFaces</div><div class="ttdef"><b>Definition:</b> DiffSpecularSphere.hpp:28</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_diff_specular_sphere_html_a389d2d0fafc547a354197b6173f25de7"><div class="ttname"><a href="class_eye_stereo_1_1_diff_specular_sphere.html#a389d2d0fafc547a354197b6173f25de7">EyeStereo::DiffSpecularSphere::setColor</a></div><div class="ttdeci">void setColor(D3DXCOLOR color)</div><div class="ttdef"><b>Definition:</b> DiffSpecularSphere.cpp:27</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2014年 六月 27日 星期五 15:19:07 , 为 数字式立体视觉刺激系统使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.7
+</small></address>
+</body>
+</html>

@@ -1,0 +1,889 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.7"/>
+<title>数字式立体视觉刺激系统: EyeStereo::DepthTrain类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">数字式立体视觉刺激系统
+   &#160;<span id="projectnumber">1.0.1</span>
+   </div>
+   <div id="projectbrief">Digital Stereo System</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.7 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="pages.html"><span>相关页面</span></a></li>
+      <li><a href="namespaces.html"><span>命名空间</span></a></li>
+      <li class="current"><a href="annotated.html"><span>类</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>类列表</span></a></li>
+      <li><a href="classes.html"><span>类索引</span></a></li>
+      <li><a href="hierarchy.html"><span>类继承关系</span></a></li>
+      <li><a href="functions.html"><span>类成员</span></a></li>
+    </ul>
+  </div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespace_eye_stereo.html">EyeStereo</a></li><li class="navelem"><a class="el" href="class_eye_stereo_1_1_depth_train.html">DepthTrain</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Public 类型</a> &#124;
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-attribs">Public 属性</a> &#124;
+<a href="class_eye_stereo_1_1_depth_train-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">EyeStereo::DepthTrain类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_depth_train_8hpp_source.html">DepthTrain.hpp</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public 类型</h2></td></tr>
+<tr class="memitem:a17fad3d3ac399fa4b451e9bfdb63853c"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <a class="el" href="class_eye_stereo_1_1_depth_train.html#a17fad3d3ac399fa4b451e9bfdb63853cae650f20735f6d354fbe94e86bb5bed95">MAX_OBJECTS</a> = 10
+ }</td></tr>
+<tr class="separator:a17fad3d3ac399fa4b451e9bfdb63853c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a2a7e7415ce067217b4bd822a777856ed"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_eye_stereo_1_1_depth_train.html#a2a7e7415ce067217b4bd822a777856ed">DepthTrain</a> ()</td></tr>
+<tr class="separator:a2a7e7415ce067217b4bd822a777856ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19edad68c54666de670e464635784c89"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_eye_stereo_1_1_depth_train.html#a19edad68c54666de670e464635784c89">init</a> (ID3D10Device *pd3d, <a class="el" href="class_eye_stereo_1_1_stereo_setting.html">StereoSetting</a> *pstereo, CModelViewerCamera *pcamera)</td></tr>
+<tr class="separator:a19edad68c54666de670e464635784c89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b150002fb26e56734db10fed1f98e3d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_eye_stereo_1_1_depth_train.html#a8b150002fb26e56734db10fed1f98e3d">stereoRender</a> (float fTime)</td></tr>
+<tr class="separator:a8b150002fb26e56734db10fed1f98e3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a617f7eb7fbea83fcb345cbf33fbb3add"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_eye_stereo_1_1_depth_train.html#a617f7eb7fbea83fcb345cbf33fbb3add">RenderSubset</a> (UINT id, UINT iSubSet)</td></tr>
+<tr class="separator:a617f7eb7fbea83fcb345cbf33fbb3add"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ec6831e8e97d91446041fe27d59babe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_eye_stereo_1_1_depth_train.html#a5ec6831e8e97d91446041fe27d59babe">pick</a> (int sx, int sy)</td></tr>
+<tr class="memdesc:a5ec6831e8e97d91446041fe27d59babe"><td class="mdescLeft">&#160;</td><td class="mdescRight">根据鼠标在窗口上的坐标确定选中的物体  <a href="#a5ec6831e8e97d91446041fe27d59babe">更多...</a><br /></td></tr>
+<tr class="separator:a5ec6831e8e97d91446041fe27d59babe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89df50d828281a46e30737825b802cdd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_eye_stereo_1_1_depth_train.html#a89df50d828281a46e30737825b802cdd">HandMessages</a> (UINT uMsg, LPARAM lParam)</td></tr>
+<tr class="separator:a89df50d828281a46e30737825b802cdd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64e1813b96678dd510d9e02e1e5fd042"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_eye_stereo_1_1_depth_train.html#a64e1813b96678dd510d9e02e1e5fd042">ShareMessage</a> (WCHAR *sharestr, bool *sharechanged)</td></tr>
+<tr class="separator:a64e1813b96678dd510d9e02e1e5fd042"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9bb1aaad5e8c4424f5198c51de949edb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_eye_stereo_1_1_depth_train.html#a9bb1aaad5e8c4424f5198c51de949edb">~DepthTrain</a> ()</td></tr>
+<tr class="separator:a9bb1aaad5e8c4424f5198c51de949edb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1bd5996ca4d77d6985c4f53b58fbc925"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_eye_stereo_1_1_depth_train.html#a1bd5996ca4d77d6985c4f53b58fbc925">ClearScreen</a> (ID3D10Device *<a class="el" href="class_eye_stereo_1_1_depth_train.html#a7f706b8bd0cd2f97c28d913f5a5d06f4">pd3dDevice</a>)</td></tr>
+<tr class="separator:a1bd5996ca4d77d6985c4f53b58fbc925"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public 属性</h2></td></tr>
+<tr class="memitem:a7f706b8bd0cd2f97c28d913f5a5d06f4"><td class="memItemLeft" align="right" valign="top">ID3D10Device *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_eye_stereo_1_1_depth_train.html#a7f706b8bd0cd2f97c28d913f5a5d06f4">pd3dDevice</a></td></tr>
+<tr class="separator:a7f706b8bd0cd2f97c28d913f5a5d06f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aedbc411425d73ad9d12c57c23d14eab4"><td class="memItemLeft" align="right" valign="top">ID3D10Effect *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_eye_stereo_1_1_depth_train.html#aedbc411425d73ad9d12c57c23d14eab4">pEffect</a></td></tr>
+<tr class="separator:aedbc411425d73ad9d12c57c23d14eab4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56e81ba62b868264efaece4ad88c8179"><td class="memItemLeft" align="right" valign="top">ID3D10EffectTechnique *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_eye_stereo_1_1_depth_train.html#a56e81ba62b868264efaece4ad88c8179">pTech</a></td></tr>
+<tr class="separator:a56e81ba62b868264efaece4ad88c8179"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06f1afd2ee355fd9be02b72134ab63e3"><td class="memItemLeft" align="right" valign="top">ID3D10InputLayout *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_eye_stereo_1_1_depth_train.html#a06f1afd2ee355fd9be02b72134ab63e3">pInputLayout</a></td></tr>
+<tr class="separator:a06f1afd2ee355fd9be02b72134ab63e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f7486d5d32e57399e8c20977156136e"><td class="memItemLeft" align="right" valign="top">ID3D10EffectShaderResourceVariable *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_eye_stereo_1_1_depth_train.html#a1f7486d5d32e57399e8c20977156136e">g_ptxDiffuseVariable</a></td></tr>
+<tr class="separator:a1f7486d5d32e57399e8c20977156136e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d57eab55802f85359c2d25431865a42"><td class="memItemLeft" align="right" valign="top">ID3D10EffectVectorVariable *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_eye_stereo_1_1_depth_train.html#a0d57eab55802f85359c2d25431865a42">g_pAmbient</a></td></tr>
+<tr class="separator:a0d57eab55802f85359c2d25431865a42"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1dd1285f710b61ebd45ba8c5c2f6ac86"><td class="memItemLeft" align="right" valign="top">ID3D10EffectVectorVariable *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_eye_stereo_1_1_depth_train.html#a1dd1285f710b61ebd45ba8c5c2f6ac86">g_pDiffuse</a></td></tr>
+<tr class="separator:a1dd1285f710b61ebd45ba8c5c2f6ac86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa7624b6de127a320ee12dcae489f8fb2"><td class="memItemLeft" align="right" valign="top">ID3D10EffectVectorVariable *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_eye_stereo_1_1_depth_train.html#aa7624b6de127a320ee12dcae489f8fb2">g_pSpecular</a></td></tr>
+<tr class="separator:aa7624b6de127a320ee12dcae489f8fb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8faf6568a3fe2af9433c6919ae888d94"><td class="memItemLeft" align="right" valign="top">ID3D10EffectScalarVariable *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_eye_stereo_1_1_depth_train.html#a8faf6568a3fe2af9433c6919ae888d94">g_pOpacity</a></td></tr>
+<tr class="separator:a8faf6568a3fe2af9433c6919ae888d94"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a114ae578ade2e7be5ec02711246b347e"><td class="memItemLeft" align="right" valign="top">ID3D10EffectScalarVariable *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_eye_stereo_1_1_depth_train.html#a114ae578ade2e7be5ec02711246b347e">g_pSpecularPower</a></td></tr>
+<tr class="separator:a114ae578ade2e7be5ec02711246b347e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff517c72ca567a3633813d7d93f779f8"><td class="memItemLeft" align="right" valign="top">ID3D10EffectVectorVariable *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_eye_stereo_1_1_depth_train.html#aff517c72ca567a3633813d7d93f779f8">g_pLightColor</a></td></tr>
+<tr class="separator:aff517c72ca567a3633813d7d93f779f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07e656be233509a11c00679d997f46ce"><td class="memItemLeft" align="right" valign="top">ID3D10EffectVectorVariable *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_eye_stereo_1_1_depth_train.html#a07e656be233509a11c00679d997f46ce">g_pLightPosition</a></td></tr>
+<tr class="separator:a07e656be233509a11c00679d997f46ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70f24dd8ef12b0b1d1fd55e0b54dbd8e"><td class="memItemLeft" align="right" valign="top">ID3D10EffectVectorVariable *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_eye_stereo_1_1_depth_train.html#a70f24dd8ef12b0b1d1fd55e0b54dbd8e">g_pCameraPosition</a></td></tr>
+<tr class="separator:a70f24dd8ef12b0b1d1fd55e0b54dbd8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1edec3ad0fedbc3ec24848ba3a61e230"><td class="memItemLeft" align="right" valign="top">ID3D10EffectScalarVariable *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_eye_stereo_1_1_depth_train.html#a1edec3ad0fedbc3ec24848ba3a61e230">g_pTime</a></td></tr>
+<tr class="separator:a1edec3ad0fedbc3ec24848ba3a61e230"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad8d29a975dcfd60787f428522212ed2"><td class="memItemLeft" align="right" valign="top">ID3D10EffectMatrixVariable *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_eye_stereo_1_1_depth_train.html#aad8d29a975dcfd60787f428522212ed2">g_pWorld</a></td></tr>
+<tr class="separator:aad8d29a975dcfd60787f428522212ed2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a989f268f0b4a58a8f7f826f253302402"><td class="memItemLeft" align="right" valign="top">ID3D10EffectMatrixVariable *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_eye_stereo_1_1_depth_train.html#a989f268f0b4a58a8f7f826f253302402">g_pWorldViewProjection</a></td></tr>
+<tr class="separator:a989f268f0b4a58a8f7f826f253302402"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3590667bb043ced9e83a67ed6d747c4"><td class="memItemLeft" align="right" valign="top">ID3D10EffectShaderResourceVariable *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_eye_stereo_1_1_depth_train.html#af3590667bb043ced9e83a67ed6d747c4">pShaderRV</a></td></tr>
+<tr class="separator:af3590667bb043ced9e83a67ed6d747c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b369417ed32cf2930da949917e40f93"><td class="memItemLeft" align="right" valign="top">IDXGISwapChain *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_eye_stereo_1_1_depth_train.html#a9b369417ed32cf2930da949917e40f93">pSwapChain</a></td></tr>
+<tr class="separator:a9b369417ed32cf2930da949917e40f93"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abdf56c9e7c0b2c02121120cbf39e3dcd"><td class="memItemLeft" align="right" valign="top">CModelViewerCamera *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_eye_stereo_1_1_depth_train.html#abdf56c9e7c0b2c02121120cbf39e3dcd">pCamera</a></td></tr>
+<tr class="separator:abdf56c9e7c0b2c02121120cbf39e3dcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a014f4a2299d289af8adb03bbf48295ee"><td class="memItemLeft" align="right" valign="top">long int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_eye_stereo_1_1_depth_train.html#a014f4a2299d289af8adb03bbf48295ee">windowsWidth</a></td></tr>
+<tr class="separator:a014f4a2299d289af8adb03bbf48295ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9070b69b021db5f780fa51d52c7ef4fb"><td class="memItemLeft" align="right" valign="top">long int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_eye_stereo_1_1_depth_train.html#a9070b69b021db5f780fa51d52c7ef4fb">windowsHeight</a></td></tr>
+<tr class="separator:a9070b69b021db5f780fa51d52c7ef4fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae7e87335c4e526018a87129b0276c002"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_eye_stereo_1_1_stereo_setting.html">StereoSetting</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_eye_stereo_1_1_depth_train.html#ae7e87335c4e526018a87129b0276c002">pStereoSetting</a></td></tr>
+<tr class="separator:ae7e87335c4e526018a87129b0276c002"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af06deec954410fab3e88074587f380a7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_eye_stereo_1_1_depth_train.html#af06deec954410fab3e88074587f380a7">bactive</a></td></tr>
+<tr class="separator:af06deec954410fab3e88074587f380a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa42ac3011e853408dcf2db6cfb802ac"><td class="memItemLeft" align="right" valign="top">D3DXVECTOR3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_eye_stereo_1_1_depth_train.html#afa42ac3011e853408dcf2db6cfb802ac">eyePos</a></td></tr>
+<tr class="separator:afa42ac3011e853408dcf2db6cfb802ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f634aa5e1ecadbf02c65fc474cbfa3f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_eye_stereo_1_1_depth_train.html#a0f634aa5e1ecadbf02c65fc474cbfa3f">bStereo</a></td></tr>
+<tr class="separator:a0f634aa5e1ecadbf02c65fc474cbfa3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0eea9294787ad7828588f72da8790f7d"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_eye_stereo_1_1_depth_train.html#a0eea9294787ad7828588f72da8790f7d">initDepth</a></td></tr>
+<tr class="separator:a0eea9294787ad7828588f72da8790f7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62effa59374597b3b94fcf44958fea1c"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_eye_stereo_1_1_depth_train.html#a62effa59374597b3b94fcf44958fea1c">initRadius</a></td></tr>
+<tr class="separator:a62effa59374597b3b94fcf44958fea1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0846c0c81ef8e662ef856329943f33ff"><td class="memItemLeft" align="right" valign="top">WCHAR *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_eye_stereo_1_1_depth_train.html#a0846c0c81ef8e662ef856329943f33ff">mShareMessage</a></td></tr>
+<tr class="separator:a0846c0c81ef8e662ef856329943f33ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b11228a8666539d2bf5974315ba2b6d"><td class="memItemLeft" align="right" valign="top">bool *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_eye_stereo_1_1_depth_train.html#a4b11228a8666539d2bf5974315ba2b6d">mShareChanged</a></td></tr>
+<tr class="separator:a4b11228a8666539d2bf5974315ba2b6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a624ca8b2299151202bae163e6bfa9483"><td class="memItemLeft" align="right" valign="top">ID3D10RasterizerState *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_eye_stereo_1_1_depth_train.html#a624ca8b2299151202bae163e6bfa9483">pSolidState</a></td></tr>
+<tr class="separator:a624ca8b2299151202bae163e6bfa9483"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0bf9ef408f5a0855bd94597dbf84a0d8"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="class_c_mesh_loader10.html">CMeshLoader10</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_eye_stereo_1_1_depth_train.html#a0bf9ef408f5a0855bd94597dbf84a0d8">g_ObjectsMesh</a></td></tr>
+<tr class="separator:a0bf9ef408f5a0855bd94597dbf84a0d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38b577f295fe01292196a595e7606b4b"><td class="memItemLeft" align="right" valign="top">std::vector&lt; WCHAR * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_eye_stereo_1_1_depth_train.html#a38b577f295fe01292196a595e7606b4b">g_ObjectsName</a></td></tr>
+<tr class="separator:a38b577f295fe01292196a595e7606b4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98d8f3479497f172488b6b84982910ac"><td class="memItemLeft" align="right" valign="top">std::vector&lt; D3DXVECTOR3 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_eye_stereo_1_1_depth_train.html#a98d8f3479497f172488b6b84982910ac">g_ObjectsPosition</a></td></tr>
+<tr class="separator:a98d8f3479497f172488b6b84982910ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1a541752d9d6949979c8274be966b59"><td class="memItemLeft" align="right" valign="top">std::vector&lt; D3DXVECTOR3 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_eye_stereo_1_1_depth_train.html#ad1a541752d9d6949979c8274be966b59">g_ObjectResize</a></td></tr>
+<tr class="separator:ad1a541752d9d6949979c8274be966b59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27f7f074f4bc73381fc8fab9ed34801a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_mesh_loader10.html">CMeshLoader10</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_eye_stereo_1_1_depth_train.html#a27f7f074f4bc73381fc8fab9ed34801a">g_earthMesh</a></td></tr>
+<tr class="separator:a27f7f074f4bc73381fc8fab9ed34801a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa7b6b36fc11aa3f0f4487f6d12b47a82"><td class="memItemLeft" align="right" valign="top">ID3D10EffectScalarVariable *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_eye_stereo_1_1_depth_train.html#aa7b6b36fc11aa3f0f4487f6d12b47a82">g_pBrightness_left</a></td></tr>
+<tr class="memdesc:aa7b6b36fc11aa3f0f4487f6d12b47a82"><td class="mdescLeft">&#160;</td><td class="mdescRight">左眼亮度  <a href="#aa7b6b36fc11aa3f0f4487f6d12b47a82">更多...</a><br /></td></tr>
+<tr class="separator:aa7b6b36fc11aa3f0f4487f6d12b47a82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab275071712794f872fdb0dacc6bf46b1"><td class="memItemLeft" align="right" valign="top">ID3D10EffectScalarVariable *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_eye_stereo_1_1_depth_train.html#ab275071712794f872fdb0dacc6bf46b1">g_pBrightness_right</a></td></tr>
+<tr class="memdesc:ab275071712794f872fdb0dacc6bf46b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">右眼亮度  <a href="#ab275071712794f872fdb0dacc6bf46b1">更多...</a><br /></td></tr>
+<tr class="separator:ab275071712794f872fdb0dacc6bf46b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a547e7939b6cc2d37897d25ac5ee28aab"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_eye_stereo_1_1_depth_train.html#a547e7939b6cc2d37897d25ac5ee28aab">g_brightness_left</a></td></tr>
+<tr class="separator:a547e7939b6cc2d37897d25ac5ee28aab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb16c6bab1d02cc9e225a4c9d102c9c2"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_eye_stereo_1_1_depth_train.html#adb16c6bab1d02cc9e225a4c9d102c9c2">g_brightness_right</a></td></tr>
+<tr class="separator:adb16c6bab1d02cc9e225a4c9d102c9c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">成员枚举类型说明</h2>
+<a class="anchor" id="a17fad3d3ac399fa4b451e9bfdb63853c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">anonymous enum</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a class="anchor" id="a17fad3d3ac399fa4b451e9bfdb63853cae650f20735f6d354fbe94e86bb5bed95"></a>MAX_OBJECTS&#160;</td><td class="fielddoc">
+</td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">构造及析构函数说明</h2>
+<a class="anchor" id="a2a7e7415ce067217b4bd822a777856ed"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DepthTrain::DepthTrain </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a9bb1aaad5e8c4424f5198c51de949edb"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DepthTrain::~DepthTrain </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a class="anchor" id="a1bd5996ca4d77d6985c4f53b58fbc925"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DepthTrain::ClearScreen </td>
+          <td>(</td>
+          <td class="paramtype">ID3D10Device *&#160;</td>
+          <td class="paramname"><em>pd3dDevice</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a89df50d828281a46e30737825b802cdd"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DepthTrain::HandMessages </td>
+          <td>(</td>
+          <td class="paramtype">UINT&#160;</td>
+          <td class="paramname"><em>uMsg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">LPARAM&#160;</td>
+          <td class="paramname"><em>lParam</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a19edad68c54666de670e464635784c89"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool DepthTrain::init </td>
+          <td>(</td>
+          <td class="paramtype">ID3D10Device *&#160;</td>
+          <td class="paramname"><em>pd3d</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_eye_stereo_1_1_stereo_setting.html">StereoSetting</a> *&#160;</td>
+          <td class="paramname"><em>pstereo</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">CModelViewerCamera *&#160;</td>
+          <td class="paramname"><em>pcamera</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a5ec6831e8e97d91446041fe27d59babe"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DepthTrain::pick </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>sx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>sy</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>根据鼠标在窗口上的坐标确定选中的物体 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">sx</td><td>屏幕x轴坐标 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">sy</td><td>屏幕y轴坐标，左上角为0 将鼠标坐标从投影坐标-&gt;视坐标-&gt;世界坐标。发射射线判断碰撞，取最近的物体作为选取的点。 </td></tr>
+  </table>
+  </dd>
+</dl>
+<p>for "inverseW" tmp usage ; </p>
+
+</div>
+</div>
+<a class="anchor" id="a617f7eb7fbea83fcb345cbf33fbb3add"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DepthTrain::RenderSubset </td>
+          <td>(</td>
+          <td class="paramtype">UINT&#160;</td>
+          <td class="paramname"><em>id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">UINT&#160;</td>
+          <td class="paramname"><em>iSubSet</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a64e1813b96678dd510d9e02e1e5fd042"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DepthTrain::ShareMessage </td>
+          <td>(</td>
+          <td class="paramtype">WCHAR *&#160;</td>
+          <td class="paramname"><em>sharestr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool *&#160;</td>
+          <td class="paramname"><em>sharechanged</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a8b150002fb26e56734db10fed1f98e3d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DepthTrain::stereoRender </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>fTime</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a class="anchor" id="af06deec954410fab3e88074587f380a7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool EyeStereo::DepthTrain::bactive</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a0f634aa5e1ecadbf02c65fc474cbfa3f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool EyeStereo::DepthTrain::bStereo</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="afa42ac3011e853408dcf2db6cfb802ac"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">D3DXVECTOR3 EyeStereo::DepthTrain::eyePos</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a547e7939b6cc2d37897d25ac5ee28aab"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float EyeStereo::DepthTrain::g_brightness_left</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="adb16c6bab1d02cc9e225a4c9d102c9c2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float EyeStereo::DepthTrain::g_brightness_right</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a27f7f074f4bc73381fc8fab9ed34801a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_c_mesh_loader10.html">CMeshLoader10</a> EyeStereo::DepthTrain::g_earthMesh</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ad1a541752d9d6949979c8274be966b59"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;D3DXVECTOR3&gt; EyeStereo::DepthTrain::g_ObjectResize</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a0bf9ef408f5a0855bd94597dbf84a0d8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="class_c_mesh_loader10.html">CMeshLoader10</a>*&gt; EyeStereo::DepthTrain::g_ObjectsMesh</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a38b577f295fe01292196a595e7606b4b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;WCHAR*&gt; EyeStereo::DepthTrain::g_ObjectsName</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a98d8f3479497f172488b6b84982910ac"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;D3DXVECTOR3&gt; EyeStereo::DepthTrain::g_ObjectsPosition</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a0d57eab55802f85359c2d25431865a42"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ID3D10EffectVectorVariable* EyeStereo::DepthTrain::g_pAmbient</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aa7b6b36fc11aa3f0f4487f6d12b47a82"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ID3D10EffectScalarVariable* EyeStereo::DepthTrain::g_pBrightness_left</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>左眼亮度 </p>
+
+</div>
+</div>
+<a class="anchor" id="ab275071712794f872fdb0dacc6bf46b1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ID3D10EffectScalarVariable* EyeStereo::DepthTrain::g_pBrightness_right</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>右眼亮度 </p>
+
+</div>
+</div>
+<a class="anchor" id="a70f24dd8ef12b0b1d1fd55e0b54dbd8e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ID3D10EffectVectorVariable* EyeStereo::DepthTrain::g_pCameraPosition</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a1dd1285f710b61ebd45ba8c5c2f6ac86"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ID3D10EffectVectorVariable* EyeStereo::DepthTrain::g_pDiffuse</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aff517c72ca567a3633813d7d93f779f8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ID3D10EffectVectorVariable* EyeStereo::DepthTrain::g_pLightColor</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a07e656be233509a11c00679d997f46ce"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ID3D10EffectVectorVariable* EyeStereo::DepthTrain::g_pLightPosition</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a8faf6568a3fe2af9433c6919ae888d94"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ID3D10EffectScalarVariable* EyeStereo::DepthTrain::g_pOpacity</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aa7624b6de127a320ee12dcae489f8fb2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ID3D10EffectVectorVariable* EyeStereo::DepthTrain::g_pSpecular</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a114ae578ade2e7be5ec02711246b347e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ID3D10EffectScalarVariable* EyeStereo::DepthTrain::g_pSpecularPower</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a1edec3ad0fedbc3ec24848ba3a61e230"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ID3D10EffectScalarVariable* EyeStereo::DepthTrain::g_pTime</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a1f7486d5d32e57399e8c20977156136e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ID3D10EffectShaderResourceVariable* EyeStereo::DepthTrain::g_ptxDiffuseVariable</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aad8d29a975dcfd60787f428522212ed2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ID3D10EffectMatrixVariable* EyeStereo::DepthTrain::g_pWorld</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a989f268f0b4a58a8f7f826f253302402"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ID3D10EffectMatrixVariable* EyeStereo::DepthTrain::g_pWorldViewProjection</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a0eea9294787ad7828588f72da8790f7d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float EyeStereo::DepthTrain::initDepth</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a62effa59374597b3b94fcf44958fea1c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float EyeStereo::DepthTrain::initRadius</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a4b11228a8666539d2bf5974315ba2b6d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool* EyeStereo::DepthTrain::mShareChanged</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a0846c0c81ef8e662ef856329943f33ff"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">WCHAR* EyeStereo::DepthTrain::mShareMessage</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="abdf56c9e7c0b2c02121120cbf39e3dcd"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CModelViewerCamera* EyeStereo::DepthTrain::pCamera</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a7f706b8bd0cd2f97c28d913f5a5d06f4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ID3D10Device* EyeStereo::DepthTrain::pd3dDevice</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aedbc411425d73ad9d12c57c23d14eab4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ID3D10Effect* EyeStereo::DepthTrain::pEffect</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a06f1afd2ee355fd9be02b72134ab63e3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ID3D10InputLayout* EyeStereo::DepthTrain::pInputLayout</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="af3590667bb043ced9e83a67ed6d747c4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ID3D10EffectShaderResourceVariable* EyeStereo::DepthTrain::pShaderRV</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a624ca8b2299151202bae163e6bfa9483"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ID3D10RasterizerState* EyeStereo::DepthTrain::pSolidState</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ae7e87335c4e526018a87129b0276c002"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_eye_stereo_1_1_stereo_setting.html">StereoSetting</a>* EyeStereo::DepthTrain::pStereoSetting</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a9b369417ed32cf2930da949917e40f93"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">IDXGISwapChain* EyeStereo::DepthTrain::pSwapChain</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a56e81ba62b868264efaece4ad88c8179"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ID3D10EffectTechnique* EyeStereo::DepthTrain::pTech</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a9070b69b021db5f780fa51d52c7ef4fb"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">long int EyeStereo::DepthTrain::windowsHeight</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a014f4a2299d289af8adb03bbf48295ee"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">long int EyeStereo::DepthTrain::windowsWidth</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>E:/Project/final/EyeStereo/Applications/DepthTestProject/<a class="el" href="_depth_train_8hpp_source.html">DepthTrain.hpp</a></li>
+<li>E:/Project/final/EyeStereo/Applications/DepthTestProject/<a class="el" href="_depth_train_8cpp.html">DepthTrain.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2014年 六月 27日 星期五 16:12:02 , 为 数字式立体视觉刺激系统使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.7
+</small></address>
+</body>
+</html>

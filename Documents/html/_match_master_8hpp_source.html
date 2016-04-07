@@ -1,0 +1,275 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.7"/>
+<title>数字式立体视觉刺激系统: E:/Project/final/EyeStereo/Applications/MatchMasterProject/MatchMaster.hpp 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">数字式立体视觉刺激系统
+   &#160;<span id="projectnumber">1.0.1</span>
+   </div>
+   <div id="projectbrief">Digital Stereo System</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.7 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="pages.html"><span>相关页面</span></a></li>
+      <li><a href="namespaces.html"><span>命名空间</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
+    </ul>
+  </div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_8c1195e4829fa17630c4278c41da729a.html">Applications</a></li><li class="navelem"><a class="el" href="dir_8d45f9171585674fa141a3b06f440568.html">MatchMasterProject</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">MatchMaster.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_match_master_8hpp.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef __Match_Master__</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define __Match_Master__</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_p_c_h_8h.html">Utility/PCH.h</a>&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_stereo_setting_8h.html">Stereo/StereoSetting.h</a>&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_light_8h.html">Geometry/Light.h</a>&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_mesh_loader10_8h.html">Helper/MeshLoader10.h</a>&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_match_master_object_8h.html">MatchMasterObject.h</a>&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">namespace </span>EyeStereo {</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_match_master.html">   14</a></span>&#160;    <span class="keyword">class </span><a class="code" href="class_eye_stereo_1_1_match_master.html">MatchMaster</a> {</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_match_master.html#a40f76ddb66f4a7f2f2d8638fb3118c4f">   18</a></span>&#160;        ID3D10Device*                   <a class="code" href="class_eye_stereo_1_1_match_master.html#a40f76ddb66f4a7f2f2d8638fb3118c4f">pd3dDevice</a>;</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_match_master.html#a4a9881fe8990954dcdf855517d3be10a">   19</a></span>&#160;        ID3D10Effect*                   <a class="code" href="class_eye_stereo_1_1_match_master.html#a4a9881fe8990954dcdf855517d3be10a">pEffect</a>;</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_match_master.html#a931710cf1ec03d10113df07875286642">   20</a></span>&#160;        ID3D10EffectTechnique*          <a class="code" href="class_eye_stereo_1_1_match_master.html#a931710cf1ec03d10113df07875286642">pTech</a>;</div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_match_master.html#ab1ae91be2109316cdcbd6c4b03a83e37">   21</a></span>&#160;        ID3D10InputLayout*              <a class="code" href="class_eye_stereo_1_1_match_master.html#ab1ae91be2109316cdcbd6c4b03a83e37">pInputLayout</a>;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_match_master.html#a7c3b5eb0b89038d94dcf1f5c76d4b933">   24</a></span>&#160;        ID3D10EffectShaderResourceVariable* <a class="code" href="class_eye_stereo_1_1_match_master.html#a7c3b5eb0b89038d94dcf1f5c76d4b933">g_ptxDiffuseVariable</a>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_match_master.html#a77b7e3109d18fb89859f4637f7c56b21">   25</a></span>&#160;        ID3D10EffectVectorVariable*         <a class="code" href="class_eye_stereo_1_1_match_master.html#a77b7e3109d18fb89859f4637f7c56b21">g_pAmbient</a>;</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_match_master.html#aec40ca3a732a28fdebe1d8d214cacf84">   26</a></span>&#160;        ID3D10EffectVectorVariable*         <a class="code" href="class_eye_stereo_1_1_match_master.html#aec40ca3a732a28fdebe1d8d214cacf84">g_pDiffuse</a>;</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_match_master.html#a474dedeb5df67727868052888fbbb6df">   27</a></span>&#160;        ID3D10EffectVectorVariable*         <a class="code" href="class_eye_stereo_1_1_match_master.html#a474dedeb5df67727868052888fbbb6df">g_pSpecular</a>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_match_master.html#a9c392f7f28828195a732e510c80fd35e">   28</a></span>&#160;        ID3D10EffectScalarVariable*         <a class="code" href="class_eye_stereo_1_1_match_master.html#a9c392f7f28828195a732e510c80fd35e">g_pOpacity</a>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_match_master.html#a839352f935ef3ef2aa3206b517e34180">   29</a></span>&#160;        ID3D10EffectScalarVariable*         <a class="code" href="class_eye_stereo_1_1_match_master.html#a839352f935ef3ef2aa3206b517e34180">g_pSpecularPower</a>;</div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_match_master.html#a347e8eb48f76324ffe3ec7e817c716d8">   30</a></span>&#160;        ID3D10EffectVectorVariable*         <a class="code" href="class_eye_stereo_1_1_match_master.html#a347e8eb48f76324ffe3ec7e817c716d8">g_pLightColor</a>;</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_match_master.html#a8868fbee935365a1521dfc24cfc0c9fe">   31</a></span>&#160;        ID3D10EffectVectorVariable*         <a class="code" href="class_eye_stereo_1_1_match_master.html#a8868fbee935365a1521dfc24cfc0c9fe">g_pLightPosition</a>;</div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_match_master.html#afa6026964af3641e2900d2d6e8982058">   32</a></span>&#160;        ID3D10EffectVectorVariable*         <a class="code" href="class_eye_stereo_1_1_match_master.html#afa6026964af3641e2900d2d6e8982058">g_pCameraPosition</a>;</div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_match_master.html#a027c1a340fe498dff9429223bd2fa7bb">   33</a></span>&#160;        ID3D10EffectScalarVariable*         <a class="code" href="class_eye_stereo_1_1_match_master.html#a027c1a340fe498dff9429223bd2fa7bb">g_pTime</a>;</div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_match_master.html#a162a52f4026473361c76d3184a922563">   34</a></span>&#160;        ID3D10EffectMatrixVariable*         <a class="code" href="class_eye_stereo_1_1_match_master.html#a162a52f4026473361c76d3184a922563">g_pWorld</a>;</div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_match_master.html#aed94ae09fe42961cdb94ad20bb0ae98d">   35</a></span>&#160;        ID3D10EffectMatrixVariable*         <a class="code" href="class_eye_stereo_1_1_match_master.html#aed94ae09fe42961cdb94ad20bb0ae98d">g_pWorldViewProjection</a>;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_match_master.html#a050ec345080998f17ddd86ffffbe35e4">   37</a></span>&#160;        ID3D10EffectShaderResourceVariable* <a class="code" href="class_eye_stereo_1_1_match_master.html#a050ec345080998f17ddd86ffffbe35e4">pShaderRV</a>;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_match_master.html#a86639c4d59e78133cb02c6548f34248e">   39</a></span>&#160;        IDXGISwapChain*                 <a class="code" href="class_eye_stereo_1_1_match_master.html#a86639c4d59e78133cb02c6548f34248e">pSwapChain</a>;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_match_master.html#af6337b1f4fae789847547c1b3a5edcaa">   41</a></span>&#160;        CModelViewerCamera*             <a class="code" href="class_eye_stereo_1_1_match_master.html#af6337b1f4fae789847547c1b3a5edcaa">pCamera</a>;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_match_master.html#abafa219444f8e13b4b3778df1396aee1">   43</a></span>&#160;        <span class="keywordtype">long</span> <span class="keywordtype">int</span>                        <a class="code" href="class_eye_stereo_1_1_match_master.html#abafa219444f8e13b4b3778df1396aee1">windowsWidth</a>, <a class="code" href="class_eye_stereo_1_1_match_master.html#af958c6305f2047a75f1eaa5c331d7d6c">windowsHeight</a>;</div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_match_master.html#a6299768f87dc603ec94d3ee47fdbad75">   44</a></span>&#160;        <a class="code" href="class_eye_stereo_1_1_stereo_setting.html">StereoSetting</a>*                  <a class="code" href="class_eye_stereo_1_1_match_master.html#a6299768f87dc603ec94d3ee47fdbad75">pStereoSetting</a>;</div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_match_master.html#a2b9ddecc48724041589b9ca58c607067">   45</a></span>&#160;        <span class="keywordtype">bool</span>                            <a class="code" href="class_eye_stereo_1_1_match_master.html#a2b9ddecc48724041589b9ca58c607067">bactive</a>;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_match_master.html#a8aad40371e800e165bed51605ecddec0">   47</a></span>&#160;        D3DXVECTOR3                     <a class="code" href="class_eye_stereo_1_1_match_master.html#a8aad40371e800e165bed51605ecddec0">eyePos</a>;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_match_master.html#a4a7d5168327f8041d095bea6fe5f233a">   49</a></span>&#160;        <span class="keywordtype">bool</span>                            <a class="code" href="class_eye_stereo_1_1_match_master.html#a4a7d5168327f8041d095bea6fe5f233a">bStereo</a>;</div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_match_master.html#aa4416dac4ec0467ff327e0032142231d">   50</a></span>&#160;        <span class="keywordtype">float</span>                           <a class="code" href="class_eye_stereo_1_1_match_master.html#abe08b673627cc5002181d000d527f67e">initDepth</a>, <a class="code" href="class_eye_stereo_1_1_match_master.html#aa4416dac4ec0467ff327e0032142231d">initRadius</a>;</div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_match_master.html#af6e1ee32ffeed3aa04f113d7fd755f4f">   51</a></span>&#160;        WCHAR*                          <a class="code" href="class_eye_stereo_1_1_match_master.html#af6e1ee32ffeed3aa04f113d7fd755f4f">mShareMessage</a>;</div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_match_master.html#a03b34f3eb92671ea68806b77e56e5017">   52</a></span>&#160;        <span class="keywordtype">bool</span>*                           <a class="code" href="class_eye_stereo_1_1_match_master.html#a03b34f3eb92671ea68806b77e56e5017">mShareChanged</a>;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_match_master.html#ac062e7c07f20f5a20a7f3cd1686e345f">   54</a></span>&#160;        ID3D10RasterizerState*          <a class="code" href="class_eye_stereo_1_1_match_master.html#ac062e7c07f20f5a20a7f3cd1686e345f">pSolidState</a>;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_match_master.html#afccd3d555799f085ef8d52a56076e775">   56</a></span>&#160;        <a class="code" href="class_eye_stereo_1_1_match_master_object.html">MatchMasterObject</a>*              <a class="code" href="class_eye_stereo_1_1_match_master.html#afccd3d555799f085ef8d52a56076e775">MatchMasterObj</a>;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        </div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_match_master.html#a8bc545ab5ab6c72133297808c6352b19a33e74b7fe6dee1b8ad7c8ce84dceb3ad">   58</a></span>&#160;        <span class="keyword">enum</span>{ <a class="code" href="class_eye_stereo_1_1_match_master.html#a8bc545ab5ab6c72133297808c6352b19a33e74b7fe6dee1b8ad7c8ce84dceb3ad">MAX_OBJECTS</a> = 20 };</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_match_master.html#a8f109d5cd315616852ffd11702ad6395">   61</a></span>&#160;        <a class="code" href="class_c_mesh_loader10.html">CMeshLoader10</a>                   <a class="code" href="class_eye_stereo_1_1_match_master.html#a8f109d5cd315616852ffd11702ad6395">g_earthMesh</a>;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_match_master.html#a464838e4744824a16299e66f836e0fd2">   63</a></span>&#160;        ID3D10EffectScalarVariable*         <a class="code" href="class_eye_stereo_1_1_match_master.html#a464838e4744824a16299e66f836e0fd2">g_pBrightness_left</a>; <span class="comment">// ���� ����        ID3D10EffectScalarVariable*         g_pBrightness_right; // ���� ����
+      float g_brightness_left;
+        float g_brightness_right;
+
+        UINT                            Choose_ID[2],pick_cnt = 1;
+
+        UINT                            Score = 0;
+
+        MatchMaster();
+
+        bool init(ID3D10Device* pd3d, StereoSetting* pstereo, CModelViewerCamera *pcamera);
+
+        void stereoRender(float fTime);
+
+        void RenderSubset(UINT id, UINT iSubSet);
+
+        void pick(int sx, int sy);
+
+        void HandMessages(UINT uMsg, LPARAM lParam);
+
+        void ShareMessage(WCHAR* sharestr, bool *sharechanged);
+
+        ~MatchMaster();
+
+        void ClearScreen(ID3D10Device *pd3dDevice);
+
+    };
+
+}
+
+#endif //__SELECT_STEREO_H__</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_match_master.html#aac57760d517812dce81e295aac023450">   64</a></span>&#160;        ID3D10EffectScalarVariable*         <a class="code" href="class_eye_stereo_1_1_match_master.html#aac57760d517812dce81e295aac023450">g_pBrightness_right</a>; <span class="comment">// ���� ����       float g_brightness_left;
+        float g_brightness_right;
+
+        UINT                            Choose_ID[2],pick_cnt = 1;
+
+        UINT                            Score = 0;
+
+        MatchMaster();
+
+        bool init(ID3D10Device* pd3d, StereoSetting* pstereo, CModelViewerCamera *pcamera);
+
+        void stereoRender(float fTime);
+
+        void RenderSubset(UINT id, UINT iSubSet);
+
+        void pick(int sx, int sy);
+
+        void HandMessages(UINT uMsg, LPARAM lParam);
+
+        void ShareMessage(WCHAR* sharestr, bool *sharechanged);
+
+        ~MatchMaster();
+
+        void ClearScreen(ID3D10Device *pd3dDevice);
+
+    };
+
+}
+
+#endif //__SELECT_STEREO_H__</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_match_master.html#a7a6d6a78dbe0e5ea58cd91135ef7ff71">   65</a></span>&#160;        <span class="keywordtype">float</span> <a class="code" href="class_eye_stereo_1_1_match_master.html#a7a6d6a78dbe0e5ea58cd91135ef7ff71">g_brightness_left</a>;</div>
+<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_match_master.html#a5a97bec7fd9f48d40537fd35d6a32190">   66</a></span>&#160;        <span class="keywordtype">float</span> <a class="code" href="class_eye_stereo_1_1_match_master.html#a5a97bec7fd9f48d40537fd35d6a32190">g_brightness_right</a>;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_match_master.html#ae228591d5cab3ad0fc08d1372be856bd">   68</a></span>&#160;        UINT                            <a class="code" href="class_eye_stereo_1_1_match_master.html#af42fe49b8d52e125093da2f6e4765b05">Choose_ID</a>[2],<a class="code" href="class_eye_stereo_1_1_match_master.html#ae228591d5cab3ad0fc08d1372be856bd">pick_cnt</a> = 1;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
+<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_match_master.html#ae68cd6ef0b84bf333fee98d459f0bb70">   70</a></span>&#160;        UINT                            <a class="code" href="class_eye_stereo_1_1_match_master.html#ae68cd6ef0b84bf333fee98d459f0bb70">Score</a> = 0;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <a class="code" href="class_eye_stereo_1_1_match_master.html#a26f619393d36a3ba542768261f25ec5f">MatchMaster</a>();</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="class_eye_stereo_1_1_match_master.html#afee9f63d7cea4b3985968ad0da6e54c0">init</a>(ID3D10Device* pd3d, <a class="code" href="class_eye_stereo_1_1_stereo_setting.html">StereoSetting</a>* pstereo, CModelViewerCamera *pcamera);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_eye_stereo_1_1_match_master.html#ae1dd451e5de6ad517a358e5730ea16ec">stereoRender</a>(<span class="keywordtype">float</span> fTime);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_eye_stereo_1_1_match_master.html#a7b409e242a4eee49219b4d46e8ccf453">RenderSubset</a>(UINT <span class="keywordtype">id</span>, UINT iSubSet);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_eye_stereo_1_1_match_master.html#ad9614c9d505439389517f974db158214">pick</a>(<span class="keywordtype">int</span> sx, <span class="keywordtype">int</span> sy);</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_eye_stereo_1_1_match_master.html#a100c098f20c6c0edb178dc46c59f94ec">HandMessages</a>(UINT uMsg, LPARAM lParam);</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_eye_stereo_1_1_match_master.html#a23825a85f08622a07aece9a2228fdac5">ShareMessage</a>(WCHAR* sharestr, <span class="keywordtype">bool</span> *sharechanged);</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <a class="code" href="class_eye_stereo_1_1_match_master.html#a8a59476b08e04bd564348bc567e88abf">~MatchMaster</a>();</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_eye_stereo_1_1_match_master.html#af1e9bbcce2e055f3c75337de818284f6">ClearScreen</a>(ID3D10Device *<a class="code" href="class_eye_stereo_1_1_match_master.html#a40f76ddb66f4a7f2f2d8638fb3118c4f">pd3dDevice</a>);</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    };</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;}</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="preprocessor">#endif //__SELECT_STEREO_H__</span></div>
+<div class="ttc" id="class_eye_stereo_1_1_match_master_html_af1e9bbcce2e055f3c75337de818284f6"><div class="ttname"><a href="class_eye_stereo_1_1_match_master.html#af1e9bbcce2e055f3c75337de818284f6">EyeStereo::MatchMaster::ClearScreen</a></div><div class="ttdeci">void ClearScreen(ID3D10Device *pd3dDevice)</div><div class="ttdef"><b>Definition:</b> MatchMaster.cpp:382</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_match_master_html_a9c392f7f28828195a732e510c80fd35e"><div class="ttname"><a href="class_eye_stereo_1_1_match_master.html#a9c392f7f28828195a732e510c80fd35e">EyeStereo::MatchMaster::g_pOpacity</a></div><div class="ttdeci">ID3D10EffectScalarVariable * g_pOpacity</div><div class="ttdef"><b>Definition:</b> MatchMaster.hpp:28</div></div>
+<div class="ttc" id="_stereo_setting_8h_html"><div class="ttname"><a href="_stereo_setting_8h.html">StereoSetting.h</a></div></div>
+<div class="ttc" id="class_eye_stereo_1_1_match_master_html_a4a9881fe8990954dcdf855517d3be10a"><div class="ttname"><a href="class_eye_stereo_1_1_match_master.html#a4a9881fe8990954dcdf855517d3be10a">EyeStereo::MatchMaster::pEffect</a></div><div class="ttdeci">ID3D10Effect * pEffect</div><div class="ttdef"><b>Definition:</b> MatchMaster.hpp:19</div></div>
+<div class="ttc" id="class_c_mesh_loader10_html"><div class="ttname"><a href="class_c_mesh_loader10.html">CMeshLoader10</a></div><div class="ttdef"><b>Definition:</b> MeshLoader10.h:59</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_match_master_html_a4a7d5168327f8041d095bea6fe5f233a"><div class="ttname"><a href="class_eye_stereo_1_1_match_master.html#a4a7d5168327f8041d095bea6fe5f233a">EyeStereo::MatchMaster::bStereo</a></div><div class="ttdeci">bool bStereo</div><div class="ttdef"><b>Definition:</b> MatchMaster.hpp:49</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_match_master_html_a8a59476b08e04bd564348bc567e88abf"><div class="ttname"><a href="class_eye_stereo_1_1_match_master.html#a8a59476b08e04bd564348bc567e88abf">EyeStereo::MatchMaster::~MatchMaster</a></div><div class="ttdeci">~MatchMaster()</div><div class="ttdef"><b>Definition:</b> MatchMaster.cpp:365</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_match_master_html_af42fe49b8d52e125093da2f6e4765b05"><div class="ttname"><a href="class_eye_stereo_1_1_match_master.html#af42fe49b8d52e125093da2f6e4765b05">EyeStereo::MatchMaster::Choose_ID</a></div><div class="ttdeci">UINT Choose_ID[2]</div><div class="ttdef"><b>Definition:</b> MatchMaster.hpp:68</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_match_master_html_ae1dd451e5de6ad517a358e5730ea16ec"><div class="ttname"><a href="class_eye_stereo_1_1_match_master.html#ae1dd451e5de6ad517a358e5730ea16ec">EyeStereo::MatchMaster::stereoRender</a></div><div class="ttdeci">void stereoRender(float fTime)</div><div class="ttdef"><b>Definition:</b> MatchMaster.cpp:146</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_match_master_html_a7c3b5eb0b89038d94dcf1f5c76d4b933"><div class="ttname"><a href="class_eye_stereo_1_1_match_master.html#a7c3b5eb0b89038d94dcf1f5c76d4b933">EyeStereo::MatchMaster::g_ptxDiffuseVariable</a></div><div class="ttdeci">ID3D10EffectShaderResourceVariable * g_ptxDiffuseVariable</div><div class="ttdef"><b>Definition:</b> MatchMaster.hpp:24</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_match_master_html_a8bc545ab5ab6c72133297808c6352b19a33e74b7fe6dee1b8ad7c8ce84dceb3ad"><div class="ttname"><a href="class_eye_stereo_1_1_match_master.html#a8bc545ab5ab6c72133297808c6352b19a33e74b7fe6dee1b8ad7c8ce84dceb3ad">EyeStereo::MatchMaster::MAX_OBJECTS</a></div><div class="ttdef"><b>Definition:</b> MatchMaster.hpp:58</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_match_master_html"><div class="ttname"><a href="class_eye_stereo_1_1_match_master.html">EyeStereo::MatchMaster</a></div><div class="ttdef"><b>Definition:</b> MatchMaster.hpp:14</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_match_master_object_html"><div class="ttname"><a href="class_eye_stereo_1_1_match_master_object.html">EyeStereo::MatchMasterObject</a></div><div class="ttdef"><b>Definition:</b> MatchMasterObject.h:11</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_match_master_html_a2b9ddecc48724041589b9ca58c607067"><div class="ttname"><a href="class_eye_stereo_1_1_match_master.html#a2b9ddecc48724041589b9ca58c607067">EyeStereo::MatchMaster::bactive</a></div><div class="ttdeci">bool bactive</div><div class="ttdef"><b>Definition:</b> MatchMaster.hpp:45</div></div>
+<div class="ttc" id="_p_c_h_8h_html"><div class="ttname"><a href="_p_c_h_8h.html">PCH.h</a></div></div>
+<div class="ttc" id="class_eye_stereo_1_1_match_master_html_a347e8eb48f76324ffe3ec7e817c716d8"><div class="ttname"><a href="class_eye_stereo_1_1_match_master.html#a347e8eb48f76324ffe3ec7e817c716d8">EyeStereo::MatchMaster::g_pLightColor</a></div><div class="ttdeci">ID3D10EffectVectorVariable * g_pLightColor</div><div class="ttdef"><b>Definition:</b> MatchMaster.hpp:30</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_match_master_html_af958c6305f2047a75f1eaa5c331d7d6c"><div class="ttname"><a href="class_eye_stereo_1_1_match_master.html#af958c6305f2047a75f1eaa5c331d7d6c">EyeStereo::MatchMaster::windowsHeight</a></div><div class="ttdeci">long int windowsHeight</div><div class="ttdef"><b>Definition:</b> MatchMaster.hpp:43</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_stereo_setting_html"><div class="ttname"><a href="class_eye_stereo_1_1_stereo_setting.html">EyeStereo::StereoSetting</a></div><div class="ttdef"><b>Definition:</b> StereoSetting.h:9</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_match_master_html_aec40ca3a732a28fdebe1d8d214cacf84"><div class="ttname"><a href="class_eye_stereo_1_1_match_master.html#aec40ca3a732a28fdebe1d8d214cacf84">EyeStereo::MatchMaster::g_pDiffuse</a></div><div class="ttdeci">ID3D10EffectVectorVariable * g_pDiffuse</div><div class="ttdef"><b>Definition:</b> MatchMaster.hpp:26</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_match_master_html_a77b7e3109d18fb89859f4637f7c56b21"><div class="ttname"><a href="class_eye_stereo_1_1_match_master.html#a77b7e3109d18fb89859f4637f7c56b21">EyeStereo::MatchMaster::g_pAmbient</a></div><div class="ttdeci">ID3D10EffectVectorVariable * g_pAmbient</div><div class="ttdef"><b>Definition:</b> MatchMaster.hpp:25</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_match_master_html_af6e1ee32ffeed3aa04f113d7fd755f4f"><div class="ttname"><a href="class_eye_stereo_1_1_match_master.html#af6e1ee32ffeed3aa04f113d7fd755f4f">EyeStereo::MatchMaster::mShareMessage</a></div><div class="ttdeci">WCHAR * mShareMessage</div><div class="ttdef"><b>Definition:</b> MatchMaster.hpp:51</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_match_master_html_a027c1a340fe498dff9429223bd2fa7bb"><div class="ttname"><a href="class_eye_stereo_1_1_match_master.html#a027c1a340fe498dff9429223bd2fa7bb">EyeStereo::MatchMaster::g_pTime</a></div><div class="ttdeci">ID3D10EffectScalarVariable * g_pTime</div><div class="ttdef"><b>Definition:</b> MatchMaster.hpp:33</div></div>
+<div class="ttc" id="_light_8h_html"><div class="ttname"><a href="_light_8h.html">Light.h</a></div></div>
+<div class="ttc" id="class_eye_stereo_1_1_match_master_html_a03b34f3eb92671ea68806b77e56e5017"><div class="ttname"><a href="class_eye_stereo_1_1_match_master.html#a03b34f3eb92671ea68806b77e56e5017">EyeStereo::MatchMaster::mShareChanged</a></div><div class="ttdeci">bool * mShareChanged</div><div class="ttdef"><b>Definition:</b> MatchMaster.hpp:52</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_match_master_html_a474dedeb5df67727868052888fbbb6df"><div class="ttname"><a href="class_eye_stereo_1_1_match_master.html#a474dedeb5df67727868052888fbbb6df">EyeStereo::MatchMaster::g_pSpecular</a></div><div class="ttdeci">ID3D10EffectVectorVariable * g_pSpecular</div><div class="ttdef"><b>Definition:</b> MatchMaster.hpp:27</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_match_master_html_a6299768f87dc603ec94d3ee47fdbad75"><div class="ttname"><a href="class_eye_stereo_1_1_match_master.html#a6299768f87dc603ec94d3ee47fdbad75">EyeStereo::MatchMaster::pStereoSetting</a></div><div class="ttdeci">StereoSetting * pStereoSetting</div><div class="ttdef"><b>Definition:</b> MatchMaster.hpp:44</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_match_master_html_a050ec345080998f17ddd86ffffbe35e4"><div class="ttname"><a href="class_eye_stereo_1_1_match_master.html#a050ec345080998f17ddd86ffffbe35e4">EyeStereo::MatchMaster::pShaderRV</a></div><div class="ttdeci">ID3D10EffectShaderResourceVariable * pShaderRV</div><div class="ttdef"><b>Definition:</b> MatchMaster.hpp:37</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_match_master_html_a8aad40371e800e165bed51605ecddec0"><div class="ttname"><a href="class_eye_stereo_1_1_match_master.html#a8aad40371e800e165bed51605ecddec0">EyeStereo::MatchMaster::eyePos</a></div><div class="ttdeci">D3DXVECTOR3 eyePos</div><div class="ttdef"><b>Definition:</b> MatchMaster.hpp:47</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_match_master_html_ab1ae91be2109316cdcbd6c4b03a83e37"><div class="ttname"><a href="class_eye_stereo_1_1_match_master.html#ab1ae91be2109316cdcbd6c4b03a83e37">EyeStereo::MatchMaster::pInputLayout</a></div><div class="ttdeci">ID3D10InputLayout * pInputLayout</div><div class="ttdef"><b>Definition:</b> MatchMaster.hpp:21</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_match_master_html_a100c098f20c6c0edb178dc46c59f94ec"><div class="ttname"><a href="class_eye_stereo_1_1_match_master.html#a100c098f20c6c0edb178dc46c59f94ec">EyeStereo::MatchMaster::HandMessages</a></div><div class="ttdeci">void HandMessages(UINT uMsg, LPARAM lParam)</div><div class="ttdef"><b>Definition:</b> MatchMaster.cpp:350</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_match_master_html_a40f76ddb66f4a7f2f2d8638fb3118c4f"><div class="ttname"><a href="class_eye_stereo_1_1_match_master.html#a40f76ddb66f4a7f2f2d8638fb3118c4f">EyeStereo::MatchMaster::pd3dDevice</a></div><div class="ttdeci">ID3D10Device * pd3dDevice</div><div class="ttdef"><b>Definition:</b> MatchMaster.hpp:18</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_match_master_html_a23825a85f08622a07aece9a2228fdac5"><div class="ttname"><a href="class_eye_stereo_1_1_match_master.html#a23825a85f08622a07aece9a2228fdac5">EyeStereo::MatchMaster::ShareMessage</a></div><div class="ttdeci">void ShareMessage(WCHAR *sharestr, bool *sharechanged)</div><div class="ttdef"><b>Definition:</b> MatchMaster.cpp:359</div></div>
+<div class="ttc" id="_match_master_object_8h_html"><div class="ttname"><a href="_match_master_object_8h.html">MatchMasterObject.h</a></div></div>
+<div class="ttc" id="class_eye_stereo_1_1_match_master_html_a26f619393d36a3ba542768261f25ec5f"><div class="ttname"><a href="class_eye_stereo_1_1_match_master.html#a26f619393d36a3ba542768261f25ec5f">EyeStereo::MatchMaster::MatchMaster</a></div><div class="ttdeci">MatchMaster()</div><div class="ttdef"><b>Definition:</b> MatchMaster.cpp:5</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_match_master_html_aa4416dac4ec0467ff327e0032142231d"><div class="ttname"><a href="class_eye_stereo_1_1_match_master.html#aa4416dac4ec0467ff327e0032142231d">EyeStereo::MatchMaster::initRadius</a></div><div class="ttdeci">float initRadius</div><div class="ttdef"><b>Definition:</b> MatchMaster.hpp:50</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_match_master_html_a7a6d6a78dbe0e5ea58cd91135ef7ff71"><div class="ttname"><a href="class_eye_stereo_1_1_match_master.html#a7a6d6a78dbe0e5ea58cd91135ef7ff71">EyeStereo::MatchMaster::g_brightness_left</a></div><div class="ttdeci">float g_brightness_left</div><div class="ttdef"><b>Definition:</b> MatchMaster.hpp:65</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_match_master_html_a464838e4744824a16299e66f836e0fd2"><div class="ttname"><a href="class_eye_stereo_1_1_match_master.html#a464838e4744824a16299e66f836e0fd2">EyeStereo::MatchMaster::g_pBrightness_left</a></div><div class="ttdeci">ID3D10EffectScalarVariable * g_pBrightness_left</div><div class="ttdef"><b>Definition:</b> MatchMaster.hpp:63</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_match_master_html_afee9f63d7cea4b3985968ad0da6e54c0"><div class="ttname"><a href="class_eye_stereo_1_1_match_master.html#afee9f63d7cea4b3985968ad0da6e54c0">EyeStereo::MatchMaster::init</a></div><div class="ttdeci">bool init(ID3D10Device *pd3d, StereoSetting *pstereo, CModelViewerCamera *pcamera)</div><div class="ttdef"><b>Definition:</b> MatchMaster.cpp:13</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_match_master_html_a931710cf1ec03d10113df07875286642"><div class="ttname"><a href="class_eye_stereo_1_1_match_master.html#a931710cf1ec03d10113df07875286642">EyeStereo::MatchMaster::pTech</a></div><div class="ttdeci">ID3D10EffectTechnique * pTech</div><div class="ttdef"><b>Definition:</b> MatchMaster.hpp:20</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_match_master_html_a839352f935ef3ef2aa3206b517e34180"><div class="ttname"><a href="class_eye_stereo_1_1_match_master.html#a839352f935ef3ef2aa3206b517e34180">EyeStereo::MatchMaster::g_pSpecularPower</a></div><div class="ttdeci">ID3D10EffectScalarVariable * g_pSpecularPower</div><div class="ttdef"><b>Definition:</b> MatchMaster.hpp:29</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_match_master_html_abe08b673627cc5002181d000d527f67e"><div class="ttname"><a href="class_eye_stereo_1_1_match_master.html#abe08b673627cc5002181d000d527f67e">EyeStereo::MatchMaster::initDepth</a></div><div class="ttdeci">float initDepth</div><div class="ttdef"><b>Definition:</b> MatchMaster.hpp:50</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_match_master_html_a5a97bec7fd9f48d40537fd35d6a32190"><div class="ttname"><a href="class_eye_stereo_1_1_match_master.html#a5a97bec7fd9f48d40537fd35d6a32190">EyeStereo::MatchMaster::g_brightness_right</a></div><div class="ttdeci">float g_brightness_right</div><div class="ttdef"><b>Definition:</b> MatchMaster.hpp:66</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_match_master_html_aed94ae09fe42961cdb94ad20bb0ae98d"><div class="ttname"><a href="class_eye_stereo_1_1_match_master.html#aed94ae09fe42961cdb94ad20bb0ae98d">EyeStereo::MatchMaster::g_pWorldViewProjection</a></div><div class="ttdeci">ID3D10EffectMatrixVariable * g_pWorldViewProjection</div><div class="ttdef"><b>Definition:</b> MatchMaster.hpp:35</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_match_master_html_a8868fbee935365a1521dfc24cfc0c9fe"><div class="ttname"><a href="class_eye_stereo_1_1_match_master.html#a8868fbee935365a1521dfc24cfc0c9fe">EyeStereo::MatchMaster::g_pLightPosition</a></div><div class="ttdeci">ID3D10EffectVectorVariable * g_pLightPosition</div><div class="ttdef"><b>Definition:</b> MatchMaster.hpp:31</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_match_master_html_af6337b1f4fae789847547c1b3a5edcaa"><div class="ttname"><a href="class_eye_stereo_1_1_match_master.html#af6337b1f4fae789847547c1b3a5edcaa">EyeStereo::MatchMaster::pCamera</a></div><div class="ttdeci">CModelViewerCamera * pCamera</div><div class="ttdef"><b>Definition:</b> MatchMaster.hpp:41</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_match_master_html_ae228591d5cab3ad0fc08d1372be856bd"><div class="ttname"><a href="class_eye_stereo_1_1_match_master.html#ae228591d5cab3ad0fc08d1372be856bd">EyeStereo::MatchMaster::pick_cnt</a></div><div class="ttdeci">UINT pick_cnt</div><div class="ttdef"><b>Definition:</b> MatchMaster.hpp:68</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_match_master_html_afa6026964af3641e2900d2d6e8982058"><div class="ttname"><a href="class_eye_stereo_1_1_match_master.html#afa6026964af3641e2900d2d6e8982058">EyeStereo::MatchMaster::g_pCameraPosition</a></div><div class="ttdeci">ID3D10EffectVectorVariable * g_pCameraPosition</div><div class="ttdef"><b>Definition:</b> MatchMaster.hpp:32</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_match_master_html_a162a52f4026473361c76d3184a922563"><div class="ttname"><a href="class_eye_stereo_1_1_match_master.html#a162a52f4026473361c76d3184a922563">EyeStereo::MatchMaster::g_pWorld</a></div><div class="ttdeci">ID3D10EffectMatrixVariable * g_pWorld</div><div class="ttdef"><b>Definition:</b> MatchMaster.hpp:34</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_match_master_html_ac062e7c07f20f5a20a7f3cd1686e345f"><div class="ttname"><a href="class_eye_stereo_1_1_match_master.html#ac062e7c07f20f5a20a7f3cd1686e345f">EyeStereo::MatchMaster::pSolidState</a></div><div class="ttdeci">ID3D10RasterizerState * pSolidState</div><div class="ttdef"><b>Definition:</b> MatchMaster.hpp:54</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_match_master_html_a8f109d5cd315616852ffd11702ad6395"><div class="ttname"><a href="class_eye_stereo_1_1_match_master.html#a8f109d5cd315616852ffd11702ad6395">EyeStereo::MatchMaster::g_earthMesh</a></div><div class="ttdeci">CMeshLoader10 g_earthMesh</div><div class="ttdef"><b>Definition:</b> MatchMaster.hpp:61</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_match_master_html_afccd3d555799f085ef8d52a56076e775"><div class="ttname"><a href="class_eye_stereo_1_1_match_master.html#afccd3d555799f085ef8d52a56076e775">EyeStereo::MatchMaster::MatchMasterObj</a></div><div class="ttdeci">MatchMasterObject * MatchMasterObj</div><div class="ttdef"><b>Definition:</b> MatchMaster.hpp:56</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_match_master_html_ae68cd6ef0b84bf333fee98d459f0bb70"><div class="ttname"><a href="class_eye_stereo_1_1_match_master.html#ae68cd6ef0b84bf333fee98d459f0bb70">EyeStereo::MatchMaster::Score</a></div><div class="ttdeci">UINT Score</div><div class="ttdef"><b>Definition:</b> MatchMaster.hpp:70</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_match_master_html_a7b409e242a4eee49219b4d46e8ccf453"><div class="ttname"><a href="class_eye_stereo_1_1_match_master.html#a7b409e242a4eee49219b4d46e8ccf453">EyeStereo::MatchMaster::RenderSubset</a></div><div class="ttdeci">void RenderSubset(UINT id, UINT iSubSet)</div><div class="ttdef"><b>Definition:</b> MatchMaster.cpp:234</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_match_master_html_ad9614c9d505439389517f974db158214"><div class="ttname"><a href="class_eye_stereo_1_1_match_master.html#ad9614c9d505439389517f974db158214">EyeStereo::MatchMaster::pick</a></div><div class="ttdeci">void pick(int sx, int sy)</div><div class="ttdef"><b>Definition:</b> MatchMaster.cpp:257</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_match_master_html_abafa219444f8e13b4b3778df1396aee1"><div class="ttname"><a href="class_eye_stereo_1_1_match_master.html#abafa219444f8e13b4b3778df1396aee1">EyeStereo::MatchMaster::windowsWidth</a></div><div class="ttdeci">long int windowsWidth</div><div class="ttdef"><b>Definition:</b> MatchMaster.hpp:43</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_match_master_html_aac57760d517812dce81e295aac023450"><div class="ttname"><a href="class_eye_stereo_1_1_match_master.html#aac57760d517812dce81e295aac023450">EyeStereo::MatchMaster::g_pBrightness_right</a></div><div class="ttdeci">ID3D10EffectScalarVariable * g_pBrightness_right</div><div class="ttdef"><b>Definition:</b> MatchMaster.hpp:64</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_match_master_html_a86639c4d59e78133cb02c6548f34248e"><div class="ttname"><a href="class_eye_stereo_1_1_match_master.html#a86639c4d59e78133cb02c6548f34248e">EyeStereo::MatchMaster::pSwapChain</a></div><div class="ttdeci">IDXGISwapChain * pSwapChain</div><div class="ttdef"><b>Definition:</b> MatchMaster.hpp:39</div></div>
+<div class="ttc" id="_mesh_loader10_8h_html"><div class="ttname"><a href="_mesh_loader10_8h.html">MeshLoader10.h</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2014年 六月 27日 星期五 16:12:02 , 为 数字式立体视觉刺激系统使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.7
+</small></address>
+</body>
+</html>

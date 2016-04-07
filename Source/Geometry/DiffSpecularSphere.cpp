@@ -10,7 +10,7 @@
 
 
 #include "DiffSpecularSphere.hpp"
-#include "Geometry/Vertex.h"
+
 
 using namespace EyeStereo;
 
@@ -21,8 +21,6 @@ DiffSpecularSphere::~DiffSpecularSphere() {
 	SAFE_RELEASE(mMesh);
 	indices.clear();
 	vertices.clear();
-	SAFE_RELEASE(md3dDevice);
-
 }
 
 

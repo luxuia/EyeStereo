@@ -41,6 +41,15 @@
     <ClCompile Include="..\..\Source\Geometry\DiffSpecularSphere.cpp">
       <Filter>Lib</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\Mathematic\Vector2f.cpp">
+      <Filter>Lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Mathematic\Vector3f.cpp">
+      <Filter>Lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Utility\Timer.cpp">
+      <Filter>Lib</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\Dependencies\DXUT\Optional\DXUTsettingsdlg.h">
@@ -90,6 +99,15 @@
       <Filter>Lib</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\Geometry\DiffSpecularSphere.hpp">
+      <Filter>Lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Mathematic\Vector2f.h">
+      <Filter>Lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Mathematic\Vector3f.h">
+      <Filter>Lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Utility\Timer.h">
       <Filter>Lib</Filter>
     </ClInclude>
   </ItemGroup>

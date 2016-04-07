@@ -1,0 +1,1022 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.7"/>
+<title>数字式立体视觉刺激系统: E:/Project/final/EyeStereo/Source/Helper/MeshFromOBJ10.cpp 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">数字式立体视觉刺激系统
+   &#160;<span id="projectnumber">1.0.1</span>
+   </div>
+   <div id="projectbrief">Digital Stereo System</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.7 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="pages.html"><span>相关页面</span></a></li>
+      <li><a href="namespaces.html"><span>命名空间</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
+    </ul>
+  </div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_74389ed8173ad57b461b9d623a1f3867.html">Source</a></li><li class="navelem"><a class="el" href="dir_f18351aed2c2400c459377e19e71c488.html">Helper</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">宏定义</a> &#124;
+<a href="#func-members">函数</a> &#124;
+<a href="#var-members">变量</a>  </div>
+  <div class="headertitle">
+<div class="title">MeshFromOBJ10.cpp 文件参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;DXUT.h&quot;</code><br />
+<code>#include &quot;DXUTcamera.h&quot;</code><br />
+<code>#include &quot;DXUTsettingsdlg.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="_mesh_loader10_8h_source.html">meshloader10.h</a>&quot;</code><br />
+<code>#include &quot;SDKmisc.h&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+宏定义</h2></td></tr>
+<tr class="memitem:ac93033490bc8943cfc82ec3b40e5cd74"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_mesh_from_o_b_j10_8cpp.html#ac93033490bc8943cfc82ec3b40e5cd74">IDC_STATIC</a>&#160;&#160;&#160;-1</td></tr>
+<tr class="separator:ac93033490bc8943cfc82ec3b40e5cd74"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d4013f9d77f70730fe7225a327194e1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_mesh_from_o_b_j10_8cpp.html#a8d4013f9d77f70730fe7225a327194e1">IDC_TOGGLEFULLSCREEN</a>&#160;&#160;&#160;1</td></tr>
+<tr class="separator:a8d4013f9d77f70730fe7225a327194e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae79f8b1640739866bb120487741ffd87"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_mesh_from_o_b_j10_8cpp.html#ae79f8b1640739866bb120487741ffd87">IDC_TOGGLEREF</a>&#160;&#160;&#160;3</td></tr>
+<tr class="separator:ae79f8b1640739866bb120487741ffd87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5546813d0cd627df89dc98493df1ccf"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_mesh_from_o_b_j10_8cpp.html#af5546813d0cd627df89dc98493df1ccf">IDC_CHANGEDEVICE</a>&#160;&#160;&#160;4</td></tr>
+<tr class="separator:af5546813d0cd627df89dc98493df1ccf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a82ae6538b0763e9d2cf67cdaee3cd28e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_mesh_from_o_b_j10_8cpp.html#a82ae6538b0763e9d2cf67cdaee3cd28e">IDC_SUBSET</a>&#160;&#160;&#160;5</td></tr>
+<tr class="separator:a82ae6538b0763e9d2cf67cdaee3cd28e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62895df6ff964a2b02d88a6a4fb5dfc7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_mesh_from_o_b_j10_8cpp.html#a62895df6ff964a2b02d88a6a4fb5dfc7">IDC_TOGGLEWARP</a>&#160;&#160;&#160;6</td></tr>
+<tr class="separator:a62895df6ff964a2b02d88a6a4fb5dfc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:a02910df0652ca886c8d5d6916a0a50db"><td class="memItemLeft" align="right" valign="top">bool CALLBACK&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_mesh_from_o_b_j10_8cpp.html#a02910df0652ca886c8d5d6916a0a50db">IsD3D10DeviceAcceptable</a> (UINT Adapter, UINT Output, D3D10_DRIVER_TYPE DeviceType, DXGI_FORMAT BufferFormat, bool bWindowed, void *pUserContext)</td></tr>
+<tr class="separator:a02910df0652ca886c8d5d6916a0a50db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02b2ec6773c8bf93546c6d5366522939"><td class="memItemLeft" align="right" valign="top">HRESULT CALLBACK&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_mesh_from_o_b_j10_8cpp.html#a02b2ec6773c8bf93546c6d5366522939">OnD3D10CreateDevice</a> (ID3D10Device *pd3dDevice, const DXGI_SURFACE_DESC *pBufferSurfaceDesc, void *pUserContext)</td></tr>
+<tr class="separator:a02b2ec6773c8bf93546c6d5366522939"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f4babb98b525d3dfe8d980c71634233"><td class="memItemLeft" align="right" valign="top">HRESULT CALLBACK&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_mesh_from_o_b_j10_8cpp.html#a0f4babb98b525d3dfe8d980c71634233">OnD3D10ResizedSwapChain</a> (ID3D10Device *pd3dDevice, IDXGISwapChain *pSwapChain, const DXGI_SURFACE_DESC *pBufferSurfaceDesc, void *pUserContext)</td></tr>
+<tr class="separator:a0f4babb98b525d3dfe8d980c71634233"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ca12c08450b4af425ddb8183e7ae8b1"><td class="memItemLeft" align="right" valign="top">void CALLBACK&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_mesh_from_o_b_j10_8cpp.html#a5ca12c08450b4af425ddb8183e7ae8b1">OnD3D10ReleasingSwapChain</a> (void *pUserContext)</td></tr>
+<tr class="separator:a5ca12c08450b4af425ddb8183e7ae8b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02847e513d50b80eae5f192febba1e60"><td class="memItemLeft" align="right" valign="top">void CALLBACK&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_mesh_from_o_b_j10_8cpp.html#a02847e513d50b80eae5f192febba1e60">OnD3D10DestroyDevice</a> (void *pUserContext)</td></tr>
+<tr class="separator:a02847e513d50b80eae5f192febba1e60"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37a004b591b26ed3f0573aacee95ba30"><td class="memItemLeft" align="right" valign="top">void CALLBACK&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_mesh_from_o_b_j10_8cpp.html#a37a004b591b26ed3f0573aacee95ba30">OnD3D10FrameRender</a> (ID3D10Device *pd3dDevice, double fTime, float fElapsedTime, void *pUserContext)</td></tr>
+<tr class="separator:a37a004b591b26ed3f0573aacee95ba30"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada41d7c415ad7ca4b598647357eabd63"><td class="memItemLeft" align="right" valign="top">LRESULT CALLBACK&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_mesh_from_o_b_j10_8cpp.html#ada41d7c415ad7ca4b598647357eabd63">MsgProc</a> (HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam, bool *pbNoFurtherProcessing, void *pUserContext)</td></tr>
+<tr class="separator:ada41d7c415ad7ca4b598647357eabd63"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae79049acd0b91e83565f0d9ce043818c"><td class="memItemLeft" align="right" valign="top">void CALLBACK&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_mesh_from_o_b_j10_8cpp.html#ae79049acd0b91e83565f0d9ce043818c">OnKeyboard</a> (UINT nChar, bool bKeyDown, bool bAltDown, void *pUserContext)</td></tr>
+<tr class="separator:ae79049acd0b91e83565f0d9ce043818c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add3ace77d5c37eca78905a74c0137ceb"><td class="memItemLeft" align="right" valign="top">void CALLBACK&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_mesh_from_o_b_j10_8cpp.html#add3ace77d5c37eca78905a74c0137ceb">OnGUIEvent</a> (UINT nEvent, int nControlID, CDXUTControl *pControl, void *pUserContext)</td></tr>
+<tr class="separator:add3ace77d5c37eca78905a74c0137ceb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d4e4ab587efbf01181968761bf890a9"><td class="memItemLeft" align="right" valign="top">void CALLBACK&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_mesh_from_o_b_j10_8cpp.html#a7d4e4ab587efbf01181968761bf890a9">OnFrameMove</a> (double fTime, float fElapsedTime, void *pUserContext)</td></tr>
+<tr class="separator:a7d4e4ab587efbf01181968761bf890a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a79d96e8a2df763750048caa0e51fe590"><td class="memItemLeft" align="right" valign="top">bool CALLBACK&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_mesh_from_o_b_j10_8cpp.html#a79d96e8a2df763750048caa0e51fe590">ModifyDeviceSettings</a> (DXUTDeviceSettings *pDeviceSettings, void *pUserContext)</td></tr>
+<tr class="separator:a79d96e8a2df763750048caa0e51fe590"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6115808ec1fe71451658e0a343e2b2c0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_mesh_from_o_b_j10_8cpp.html#a6115808ec1fe71451658e0a343e2b2c0">InitApp</a> ()</td></tr>
+<tr class="separator:a6115808ec1fe71451658e0a343e2b2c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef4c3c54db2b37a5905002b70dd8c927"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_mesh_from_o_b_j10_8cpp.html#aef4c3c54db2b37a5905002b70dd8c927">RenderText</a> ()</td></tr>
+<tr class="separator:aef4c3c54db2b37a5905002b70dd8c927"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a82b41ee09f5d70a048a9282ac85e1984"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_mesh_from_o_b_j10_8cpp.html#a82b41ee09f5d70a048a9282ac85e1984">RenderSubset</a> (UINT iSubset)</td></tr>
+<tr class="separator:a82b41ee09f5d70a048a9282ac85e1984"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa511bcfbb73f198c14d1f0b194fdbae8"><td class="memItemLeft" align="right" valign="top">INT WINAPI&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_mesh_from_o_b_j10_8cpp.html#aa511bcfbb73f198c14d1f0b194fdbae8">wWinMain</a> (HINSTANCE, HINSTANCE, LPWSTR, int)</td></tr>
+<tr class="separator:aa511bcfbb73f198c14d1f0b194fdbae8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+变量</h2></td></tr>
+<tr class="memitem:adb56986276642c3d32ae732404ba1be1"><td class="memItemLeft" align="right" valign="top">ID3DX10Font *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_mesh_from_o_b_j10_8cpp.html#adb56986276642c3d32ae732404ba1be1">g_pFont10</a> = NULL</td></tr>
+<tr class="separator:adb56986276642c3d32ae732404ba1be1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37f81f7603db2e26982b8700f11a0695"><td class="memItemLeft" align="right" valign="top">ID3DX10Sprite *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_mesh_from_o_b_j10_8cpp.html#a37f81f7603db2e26982b8700f11a0695">g_pSprite10</a> = NULL</td></tr>
+<tr class="separator:a37f81f7603db2e26982b8700f11a0695"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd50d4c8e9ad7868797901e7ecb428f8"><td class="memItemLeft" align="right" valign="top">CDXUTTextHelper *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_mesh_from_o_b_j10_8cpp.html#afd50d4c8e9ad7868797901e7ecb428f8">g_pTxtHelper</a> = NULL</td></tr>
+<tr class="separator:afd50d4c8e9ad7868797901e7ecb428f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a780191b766ce41e35ae0486a2448ecf5"><td class="memItemLeft" align="right" valign="top">ID3D10Effect *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_mesh_from_o_b_j10_8cpp.html#a780191b766ce41e35ae0486a2448ecf5">g_pEffect10</a> = NULL</td></tr>
+<tr class="separator:a780191b766ce41e35ae0486a2448ecf5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa79b59ae24a15010a1552fc93da165c8"><td class="memItemLeft" align="right" valign="top">ID3D10InputLayout *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_mesh_from_o_b_j10_8cpp.html#aa79b59ae24a15010a1552fc93da165c8">g_pVertexLayout</a> = NULL</td></tr>
+<tr class="separator:aa79b59ae24a15010a1552fc93da165c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb7e54c5175a9b2517e0b8b29a6f9c6b"><td class="memItemLeft" align="right" valign="top">ID3D10EffectTechnique *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_mesh_from_o_b_j10_8cpp.html#adb7e54c5175a9b2517e0b8b29a6f9c6b">g_pTechnique</a> = NULL</td></tr>
+<tr class="separator:adb7e54c5175a9b2517e0b8b29a6f9c6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c4186608080786bb24d438ce2630728"><td class="memItemLeft" align="right" valign="top">ID3D10EffectShaderResourceVariable *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_mesh_from_o_b_j10_8cpp.html#a8c4186608080786bb24d438ce2630728">g_ptxDiffuseVariable</a> = NULL</td></tr>
+<tr class="separator:a8c4186608080786bb24d438ce2630728"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30fe71629511552ce69a0af0b88b76bd"><td class="memItemLeft" align="right" valign="top">ID3D10EffectVectorVariable *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_mesh_from_o_b_j10_8cpp.html#a30fe71629511552ce69a0af0b88b76bd">g_pAmbient</a> = NULL</td></tr>
+<tr class="separator:a30fe71629511552ce69a0af0b88b76bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1991fa34fd311639d40010d54ed77eaf"><td class="memItemLeft" align="right" valign="top">ID3D10EffectVectorVariable *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_mesh_from_o_b_j10_8cpp.html#a1991fa34fd311639d40010d54ed77eaf">g_pDiffuse</a> = NULL</td></tr>
+<tr class="separator:a1991fa34fd311639d40010d54ed77eaf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad248d81ba5ddee8945fab6cdeb23b4fa"><td class="memItemLeft" align="right" valign="top">ID3D10EffectVectorVariable *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_mesh_from_o_b_j10_8cpp.html#ad248d81ba5ddee8945fab6cdeb23b4fa">g_pSpecular</a> = NULL</td></tr>
+<tr class="separator:ad248d81ba5ddee8945fab6cdeb23b4fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9109eb18aae80f235689206e97c63b7d"><td class="memItemLeft" align="right" valign="top">ID3D10EffectScalarVariable *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_mesh_from_o_b_j10_8cpp.html#a9109eb18aae80f235689206e97c63b7d">g_pOpacity</a> = NULL</td></tr>
+<tr class="separator:a9109eb18aae80f235689206e97c63b7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a740e311d96c6d6acd007ee4193628c39"><td class="memItemLeft" align="right" valign="top">ID3D10EffectScalarVariable *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_mesh_from_o_b_j10_8cpp.html#a740e311d96c6d6acd007ee4193628c39">g_pSpecularPower</a> = NULL</td></tr>
+<tr class="separator:a740e311d96c6d6acd007ee4193628c39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85f107f54ea99032bcfd301054905f76"><td class="memItemLeft" align="right" valign="top">ID3D10EffectVectorVariable *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_mesh_from_o_b_j10_8cpp.html#a85f107f54ea99032bcfd301054905f76">g_pLightColor</a> = NULL</td></tr>
+<tr class="separator:a85f107f54ea99032bcfd301054905f76"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a49a4d300f9ec3a2b4aa9618d0c7013"><td class="memItemLeft" align="right" valign="top">ID3D10EffectVectorVariable *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_mesh_from_o_b_j10_8cpp.html#a9a49a4d300f9ec3a2b4aa9618d0c7013">g_pLightPosition</a> = NULL</td></tr>
+<tr class="separator:a9a49a4d300f9ec3a2b4aa9618d0c7013"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d4d71947f5ec898222e621dbfcdf1f3"><td class="memItemLeft" align="right" valign="top">ID3D10EffectVectorVariable *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_mesh_from_o_b_j10_8cpp.html#a2d4d71947f5ec898222e621dbfcdf1f3">g_pCameraPosition</a> = NULL</td></tr>
+<tr class="separator:a2d4d71947f5ec898222e621dbfcdf1f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d49bfa475a1450dbd8b05246596b212"><td class="memItemLeft" align="right" valign="top">ID3D10EffectScalarVariable *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_mesh_from_o_b_j10_8cpp.html#a2d49bfa475a1450dbd8b05246596b212">g_pTime</a> = NULL</td></tr>
+<tr class="separator:a2d49bfa475a1450dbd8b05246596b212"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59332256c6e2817750aedea899c17514"><td class="memItemLeft" align="right" valign="top">ID3D10EffectMatrixVariable *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_mesh_from_o_b_j10_8cpp.html#a59332256c6e2817750aedea899c17514">g_pWorld</a> = NULL</td></tr>
+<tr class="separator:a59332256c6e2817750aedea899c17514"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba9a8dbe0bbab0a8b8fd97e5d3578354"><td class="memItemLeft" align="right" valign="top">ID3D10EffectMatrixVariable *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_mesh_from_o_b_j10_8cpp.html#aba9a8dbe0bbab0a8b8fd97e5d3578354">g_pWorldViewProjection</a> = NULL</td></tr>
+<tr class="separator:aba9a8dbe0bbab0a8b8fd97e5d3578354"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a682ef0d378207b8a08bd4e4c20909721"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_mesh_from_o_b_j10_8cpp.html#a682ef0d378207b8a08bd4e4c20909721">g_bShowHelp</a> = true</td></tr>
+<tr class="separator:a682ef0d378207b8a08bd4e4c20909721"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf29a08a95b3b41bd90b7485ec14ff47"><td class="memItemLeft" align="right" valign="top">CDXUTDialogResourceManager&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_mesh_from_o_b_j10_8cpp.html#abf29a08a95b3b41bd90b7485ec14ff47">g_DialogResourceManager</a></td></tr>
+<tr class="separator:abf29a08a95b3b41bd90b7485ec14ff47"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1b010f6b7bf6af8cfb5321b981d7b54"><td class="memItemLeft" align="right" valign="top">CD3DSettingsDlg&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_mesh_from_o_b_j10_8cpp.html#ad1b010f6b7bf6af8cfb5321b981d7b54">g_SettingsDlg</a></td></tr>
+<tr class="separator:ad1b010f6b7bf6af8cfb5321b981d7b54"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a396dea30b12ed5ab16e2ea938f5928"><td class="memItemLeft" align="right" valign="top">CDXUTDialog&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_mesh_from_o_b_j10_8cpp.html#a3a396dea30b12ed5ab16e2ea938f5928">g_HUD</a></td></tr>
+<tr class="separator:a3a396dea30b12ed5ab16e2ea938f5928"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d0289d5e109f9d1f80dca73bdaa5e11"><td class="memItemLeft" align="right" valign="top">CDXUTDialog&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_mesh_from_o_b_j10_8cpp.html#a8d0289d5e109f9d1f80dca73bdaa5e11">g_SampleUI</a></td></tr>
+<tr class="separator:a8d0289d5e109f9d1f80dca73bdaa5e11"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1121259d1ad586799f869b446b56ada3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_mesh_loader10.html">CMeshLoader10</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_mesh_from_o_b_j10_8cpp.html#a1121259d1ad586799f869b446b56ada3">g_MeshLoader</a></td></tr>
+<tr class="separator:a1121259d1ad586799f869b446b56ada3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad98d149a42094dc6d0fcddc70de9017c"><td class="memItemLeft" align="right" valign="top">CModelViewerCamera&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_mesh_from_o_b_j10_8cpp.html#ad98d149a42094dc6d0fcddc70de9017c">g_Camera</a></td></tr>
+<tr class="separator:ad98d149a42094dc6d0fcddc70de9017c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43e98249b5bbe44dfa96d435bebafb67"><td class="memItemLeft" align="right" valign="top">WCHAR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_mesh_from_o_b_j10_8cpp.html#a43e98249b5bbe44dfa96d435bebafb67">g_strFileSaveMessage</a> [MAX_PATH] = {0}</td></tr>
+<tr class="separator:a43e98249b5bbe44dfa96d435bebafb67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">宏定义说明</h2>
+<a class="anchor" id="af5546813d0cd627df89dc98493df1ccf"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define IDC_CHANGEDEVICE&#160;&#160;&#160;4</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ac93033490bc8943cfc82ec3b40e5cd74"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define IDC_STATIC&#160;&#160;&#160;-1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a82ae6538b0763e9d2cf67cdaee3cd28e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define IDC_SUBSET&#160;&#160;&#160;5</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a8d4013f9d77f70730fe7225a327194e1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define IDC_TOGGLEFULLSCREEN&#160;&#160;&#160;1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ae79f8b1640739866bb120487741ffd87"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define IDC_TOGGLEREF&#160;&#160;&#160;3</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a62895df6ff964a2b02d88a6a4fb5dfc7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define IDC_TOGGLEWARP&#160;&#160;&#160;6</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">函数说明</h2>
+<a class="anchor" id="a6115808ec1fe71451658e0a343e2b2c0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void InitApp </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a02910df0652ca886c8d5d6916a0a50db"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CALLBACK IsD3D10DeviceAcceptable </td>
+          <td>(</td>
+          <td class="paramtype">UINT&#160;</td>
+          <td class="paramname"><em>Adapter</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">UINT&#160;</td>
+          <td class="paramname"><em>Output</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">D3D10_DRIVER_TYPE&#160;</td>
+          <td class="paramname"><em>DeviceType</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">DXGI_FORMAT&#160;</td>
+          <td class="paramname"><em>BufferFormat</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>bWindowed</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>pUserContext</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a79d96e8a2df763750048caa0e51fe590"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CALLBACK ModifyDeviceSettings </td>
+          <td>(</td>
+          <td class="paramtype">DXUTDeviceSettings *&#160;</td>
+          <td class="paramname"><em>pDeviceSettings</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>pUserContext</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ada41d7c415ad7ca4b598647357eabd63"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">LRESULT CALLBACK MsgProc </td>
+          <td>(</td>
+          <td class="paramtype">HWND&#160;</td>
+          <td class="paramname"><em>hWnd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">UINT&#160;</td>
+          <td class="paramname"><em>uMsg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">WPARAM&#160;</td>
+          <td class="paramname"><em>wParam</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">LPARAM&#160;</td>
+          <td class="paramname"><em>lParam</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool *&#160;</td>
+          <td class="paramname"><em>pbNoFurtherProcessing</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>pUserContext</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a02b2ec6773c8bf93546c6d5366522939"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">HRESULT CALLBACK OnD3D10CreateDevice </td>
+          <td>(</td>
+          <td class="paramtype">ID3D10Device *&#160;</td>
+          <td class="paramname"><em>pd3dDevice</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const DXGI_SURFACE_DESC *&#160;</td>
+          <td class="paramname"><em>pBufferSurfaceDesc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>pUserContext</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a02847e513d50b80eae5f192febba1e60"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CALLBACK OnD3D10DestroyDevice </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>pUserContext</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a37a004b591b26ed3f0573aacee95ba30"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CALLBACK OnD3D10FrameRender </td>
+          <td>(</td>
+          <td class="paramtype">ID3D10Device *&#160;</td>
+          <td class="paramname"><em>pd3dDevice</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>fTime</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>fElapsedTime</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>pUserContext</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a5ca12c08450b4af425ddb8183e7ae8b1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CALLBACK OnD3D10ReleasingSwapChain </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>pUserContext</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a0f4babb98b525d3dfe8d980c71634233"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">HRESULT CALLBACK OnD3D10ResizedSwapChain </td>
+          <td>(</td>
+          <td class="paramtype">ID3D10Device *&#160;</td>
+          <td class="paramname"><em>pd3dDevice</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">IDXGISwapChain *&#160;</td>
+          <td class="paramname"><em>pSwapChain</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const DXGI_SURFACE_DESC *&#160;</td>
+          <td class="paramname"><em>pBufferSurfaceDesc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>pUserContext</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a7d4e4ab587efbf01181968761bf890a9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CALLBACK OnFrameMove </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>fTime</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>fElapsedTime</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>pUserContext</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="add3ace77d5c37eca78905a74c0137ceb"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CALLBACK OnGUIEvent </td>
+          <td>(</td>
+          <td class="paramtype">UINT&#160;</td>
+          <td class="paramname"><em>nEvent</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nControlID</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">CDXUTControl *&#160;</td>
+          <td class="paramname"><em>pControl</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>pUserContext</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ae79049acd0b91e83565f0d9ce043818c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CALLBACK OnKeyboard </td>
+          <td>(</td>
+          <td class="paramtype">UINT&#160;</td>
+          <td class="paramname"><em>nChar</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>bKeyDown</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>bAltDown</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>pUserContext</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a82b41ee09f5d70a048a9282ac85e1984"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RenderSubset </td>
+          <td>(</td>
+          <td class="paramtype">UINT&#160;</td>
+          <td class="paramname"><em>iSubset</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aef4c3c54db2b37a5905002b70dd8c927"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RenderText </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aa511bcfbb73f198c14d1f0b194fdbae8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">INT WINAPI wWinMain </td>
+          <td>(</td>
+          <td class="paramtype">HINSTANCE&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">HINSTANCE&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">LPWSTR&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">变量说明</h2>
+<a class="anchor" id="a682ef0d378207b8a08bd4e4c20909721"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool g_bShowHelp = true</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ad98d149a42094dc6d0fcddc70de9017c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CModelViewerCamera g_Camera</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="abf29a08a95b3b41bd90b7485ec14ff47"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CDXUTDialogResourceManager g_DialogResourceManager</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a3a396dea30b12ed5ab16e2ea938f5928"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CDXUTDialog g_HUD</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a1121259d1ad586799f869b446b56ada3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_c_mesh_loader10.html">CMeshLoader10</a> g_MeshLoader</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a30fe71629511552ce69a0af0b88b76bd"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ID3D10EffectVectorVariable* g_pAmbient = NULL</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a2d4d71947f5ec898222e621dbfcdf1f3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ID3D10EffectVectorVariable* g_pCameraPosition = NULL</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a1991fa34fd311639d40010d54ed77eaf"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ID3D10EffectVectorVariable* g_pDiffuse = NULL</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a780191b766ce41e35ae0486a2448ecf5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ID3D10Effect* g_pEffect10 = NULL</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="adb56986276642c3d32ae732404ba1be1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ID3DX10Font* g_pFont10 = NULL</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a85f107f54ea99032bcfd301054905f76"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ID3D10EffectVectorVariable* g_pLightColor = NULL</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a9a49a4d300f9ec3a2b4aa9618d0c7013"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ID3D10EffectVectorVariable* g_pLightPosition = NULL</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a9109eb18aae80f235689206e97c63b7d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ID3D10EffectScalarVariable* g_pOpacity = NULL</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ad248d81ba5ddee8945fab6cdeb23b4fa"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ID3D10EffectVectorVariable* g_pSpecular = NULL</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a740e311d96c6d6acd007ee4193628c39"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ID3D10EffectScalarVariable* g_pSpecularPower = NULL</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a37f81f7603db2e26982b8700f11a0695"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ID3DX10Sprite* g_pSprite10 = NULL</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="adb7e54c5175a9b2517e0b8b29a6f9c6b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ID3D10EffectTechnique* g_pTechnique = NULL</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a2d49bfa475a1450dbd8b05246596b212"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ID3D10EffectScalarVariable* g_pTime = NULL</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a8c4186608080786bb24d438ce2630728"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ID3D10EffectShaderResourceVariable* g_ptxDiffuseVariable = NULL</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="afd50d4c8e9ad7868797901e7ecb428f8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CDXUTTextHelper* g_pTxtHelper = NULL</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aa79b59ae24a15010a1552fc93da165c8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ID3D10InputLayout* g_pVertexLayout = NULL</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a59332256c6e2817750aedea899c17514"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ID3D10EffectMatrixVariable* g_pWorld = NULL</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aba9a8dbe0bbab0a8b8fd97e5d3578354"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ID3D10EffectMatrixVariable* g_pWorldViewProjection = NULL</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a8d0289d5e109f9d1f80dca73bdaa5e11"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CDXUTDialog g_SampleUI</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ad1b010f6b7bf6af8cfb5321b981d7b54"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CD3DSettingsDlg g_SettingsDlg</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a43e98249b5bbe44dfa96d435bebafb67"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">WCHAR g_strFileSaveMessage[MAX_PATH] = {0}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2014年 六月 27日 星期五 16:12:02 , 为 数字式立体视觉刺激系统使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.7
+</small></address>
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.7"/>
+<title>数字式立体视觉刺激系统: G:/交接/EyeStereo/Source/Render/Application.hpp 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">数字式立体视觉刺激系统
+   &#160;<span id="projectnumber">1.0.1</span>
+   </div>
+   <div id="projectbrief">Digital Stereo System</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.7 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="pages.html"><span>相关页面</span></a></li>
+      <li><a href="modules.html"><span>模块</span></a></li>
+      <li><a href="namespaces.html"><span>命名空间</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
+    </ul>
+  </div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_74389ed8173ad57b461b9d623a1f3867.html">Source</a></li><li class="navelem"><a class="el" href="dir_cf5a548d8bfcaf85ec66658893a134bb.html">Render</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Application.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_application_8hpp.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef __Main_Application__</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define __Main_Application__</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_p_c_h_8h.html">Utility/PCH.h</a>&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_log_8h.html">Utility/Log.h</a>&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_timer_8h.html">Utility/Timer.h</a>&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_event_2_basic_event_type_8h.html">Event/BasicEventType.h</a>&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_key_board_state_8h.html">Event/KeyBoardState.h</a>&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">namespace </span>EyeStereo {</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="_application_8hpp.html#a00c9dad6cd91a4abb6062ea1efc82bd9">   13</a></span>&#160;<span class="preprocessor">#define Version 0.9</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="_application_8hpp.html#a97a54a9d2162b8481529e1ca573d6928">   14</a></span>&#160;<span class="preprocessor">#define CopyRight L&quot;UESTC_LIFE_EYE_PROJECT&quot;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_application.html">   16</a></span>&#160;    <span class="keyword">class </span><a class="code" href="class_eye_stereo_1_1_application.html">Application</a> {</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <a class="code" href="class_eye_stereo_1_1_application.html#afa8cc05ce6b6092be5ecdfdae44e05f8">Application</a>();</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <span class="keyword">virtual</span> <a class="code" href="class_eye_stereo_1_1_application.html#a748bca84fefb9c12661cfaa2f623748d">~Application</a>();</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <span class="keyword">static</span> <a class="code" href="class_eye_stereo_1_1_application.html">Application</a>* <a class="code" href="class_eye_stereo_1_1_application.html#abebc3cf0a6abd71ccf20eb4b7f59e9e3">getApplication</a>();</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_eye_stereo_1_1_application.html#a0e17badd646c15b3e28facc589a6743d">initCommon</a>();</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_eye_stereo_1_1_application.html#ac3fa5d4a2f804458229d9e039c71ed7f">initApp</a>();</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_eye_stereo_1_1_application.html#a8db898cbc8d396b0239185fb52296fb7">mainloop</a>();</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="class_eye_stereo_1_1_application.html#ae447c62cb4c67f81f4b2112c181df23c">returnCode</a>();</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <span class="keyword">virtual</span> HRESULT CALLBACK <a class="code" href="class_eye_stereo_1_1_application.html#afc3ead446bc744cd6ad707dec4bb1f77">OnD3D10CreateDevice</a>( ID3D10Device* pd3dDevice, <span class="keyword">const</span> DXGI_SURFACE_DESC* pBackBufferSurfaceDesc,</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;                                              <span class="keywordtype">void</span>* pUserContext ) ;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <span class="keyword">virtual</span> HRESULT CALLBACK <a class="code" href="class_eye_stereo_1_1_application.html#a51d2ae6f83946e843d9155a605aaee3c">OnD3D10ResizedSwapChain</a>( ID3D10Device* pd3dDevice, IDXGISwapChain* pSwapChain,</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;                                                  <span class="keyword">const</span> DXGI_SURFACE_DESC* pBackBufferSurfaceDesc, <span class="keywordtype">void</span>* pUserContext ) ;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> CALLBACK <a class="code" href="class_eye_stereo_1_1_application.html#a55d8f64e4439c9030dbd7084bd0b9c30">OnD3D10FrameRender</a>( ID3D10Device* pd3dDevice, <span class="keywordtype">double</span> fTime, <span class="keywordtype">float</span> fElapsedTime, <span class="keywordtype">void</span>* pUserContext ) ;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> CALLBACK <a class="code" href="class_eye_stereo_1_1_application.html#a8dfe61e075adeb5c54f79868e4b6491d">OnD3D10DestroyDevice</a>( <span class="keywordtype">void</span>* pUserContext );</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> CALLBACK <a class="code" href="class_eye_stereo_1_1_application.html#a9a48faf1b8cc1bc1884df75f13787ab8">ModifyDeviceSettings</a>( DXUTDeviceSettings* pDeviceSettings, <span class="keywordtype">void</span>* pUserContext );</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> CALLBACK <a class="code" href="class_eye_stereo_1_1_application.html#a7061321308a81e625c703afa9286f247">OnUpdateScene</a>( <span class="keywordtype">double</span> fTime, <span class="keywordtype">float</span> fElapsedTime, <span class="keywordtype">void</span>* pUserContext );</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="keyword">virtual</span> LRESULT CALLBACK <a class="code" href="class_eye_stereo_1_1_application.html#a76ce70110e4b834788f68a9dd04db427">MsgProc</a>( HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam, <span class="keywordtype">bool</span>* pbNoFurtherProcessing,</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                                  <span class="keywordtype">void</span>* pUserContext );</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> CALLBACK <a class="code" href="class_eye_stereo_1_1_application.html#a53031d4b2819d535a4030a14923ba0c4">OnKeyboard</a>(UINT nChar, <span class="keywordtype">bool</span> bKeyDown, <span class="keywordtype">bool</span> bAltDown, <span class="keywordtype">void</span>* pUserContext);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> CALLBACK <a class="code" href="class_eye_stereo_1_1_application.html#acb6159095c33f47a2ecce3d301295186">OnGUIEvent</a>(UINT nEvent, <span class="keywordtype">int</span> nControlID, CDXUTControl* pControl, <span class="keywordtype">void</span>* pUserContext);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_application.html#a7cb2a5b4bfc58ce6e3a4ef4ac561b0e4">   49</a></span>&#160;        <a class="code" href="struct_eye_stereo_1_1_key_board.html">KeyBoard</a>*                   <a class="code" href="class_eye_stereo_1_1_application.html#a7cb2a5b4bfc58ce6e3a4ef4ac561b0e4">pKeyBoard</a> = NULL;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_application.html#a6185410da0ada16ac5f0b4368288d0d4">   51</a></span>&#160;        WCHAR*                      <a class="code" href="class_eye_stereo_1_1_application.html#a6185410da0ada16ac5f0b4368288d0d4">pShareMessage</a>;</div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_application.html#ac252a1a8e90f2a7f70a1dcc35961993d">   52</a></span>&#160;        <span class="keywordtype">bool</span>                        <a class="code" href="class_eye_stereo_1_1_application.html#ac252a1a8e90f2a7f70a1dcc35961993d">bShareChanged</a>;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_application.html#a1c6efbcccaf3f7952d867f224b5b4bae">   55</a></span>&#160;        <span class="keyword">static</span> <a class="code" href="class_eye_stereo_1_1_application.html">Application</a> *<a class="code" href="class_eye_stereo_1_1_application.html#a1c6efbcccaf3f7952d867f224b5b4bae">m_app</a>;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    };</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;}</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="class_eye_stereo_1_1_application_html_a8db898cbc8d396b0239185fb52296fb7"><div class="ttname"><a href="class_eye_stereo_1_1_application.html#a8db898cbc8d396b0239185fb52296fb7">EyeStereo::Application::mainloop</a></div><div class="ttdeci">virtual void mainloop()</div><div class="ttdef"><b>Definition:</b> Application.cpp:34</div></div>
+<div class="ttc" id="_event_2_basic_event_type_8h_html"><div class="ttname"><a href="_event_2_basic_event_type_8h.html">BasicEventType.h</a></div></div>
+<div class="ttc" id="class_eye_stereo_1_1_application_html_abebc3cf0a6abd71ccf20eb4b7f59e9e3"><div class="ttname"><a href="class_eye_stereo_1_1_application.html#abebc3cf0a6abd71ccf20eb4b7f59e9e3">EyeStereo::Application::getApplication</a></div><div class="ttdeci">static Application * getApplication()</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_application_html_ac3fa5d4a2f804458229d9e039c71ed7f"><div class="ttname"><a href="class_eye_stereo_1_1_application.html#ac3fa5d4a2f804458229d9e039c71ed7f">EyeStereo::Application::initApp</a></div><div class="ttdeci">virtual void initApp()</div><div class="ttdef"><b>Definition:</b> Application.cpp:30</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_application_html_afa8cc05ce6b6092be5ecdfdae44e05f8"><div class="ttname"><a href="class_eye_stereo_1_1_application.html#afa8cc05ce6b6092be5ecdfdae44e05f8">EyeStereo::Application::Application</a></div><div class="ttdeci">Application()</div><div class="ttdef"><b>Definition:</b> Application.cpp:9</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_application_html_a7cb2a5b4bfc58ce6e3a4ef4ac561b0e4"><div class="ttname"><a href="class_eye_stereo_1_1_application.html#a7cb2a5b4bfc58ce6e3a4ef4ac561b0e4">EyeStereo::Application::pKeyBoard</a></div><div class="ttdeci">KeyBoard * pKeyBoard</div><div class="ttdef"><b>Definition:</b> Application.hpp:49</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_application_html_a0e17badd646c15b3e28facc589a6743d"><div class="ttname"><a href="class_eye_stereo_1_1_application.html#a0e17badd646c15b3e28facc589a6743d">EyeStereo::Application::initCommon</a></div><div class="ttdeci">virtual void initCommon()</div><div class="ttdef"><b>Definition:</b> Application.cpp:17</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_application_html_ac252a1a8e90f2a7f70a1dcc35961993d"><div class="ttname"><a href="class_eye_stereo_1_1_application.html#ac252a1a8e90f2a7f70a1dcc35961993d">EyeStereo::Application::bShareChanged</a></div><div class="ttdeci">bool bShareChanged</div><div class="ttdef"><b>Definition:</b> Application.hpp:52</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_application_html_a9a48faf1b8cc1bc1884df75f13787ab8"><div class="ttname"><a href="class_eye_stereo_1_1_application.html#a9a48faf1b8cc1bc1884df75f13787ab8">EyeStereo::Application::ModifyDeviceSettings</a></div><div class="ttdeci">virtual bool CALLBACK ModifyDeviceSettings(DXUTDeviceSettings *pDeviceSettings, void *pUserContext)</div><div class="ttdef"><b>Definition:</b> Application.cpp:58</div></div>
+<div class="ttc" id="struct_eye_stereo_1_1_key_board_html"><div class="ttname"><a href="struct_eye_stereo_1_1_key_board.html">EyeStereo::KeyBoard</a></div><div class="ttdef"><b>Definition:</b> KeyBoardState.h:19</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_application_html_afc3ead446bc744cd6ad707dec4bb1f77"><div class="ttname"><a href="class_eye_stereo_1_1_application.html#afc3ead446bc744cd6ad707dec4bb1f77">EyeStereo::Application::OnD3D10CreateDevice</a></div><div class="ttdeci">virtual HRESULT CALLBACK OnD3D10CreateDevice(ID3D10Device *pd3dDevice, const DXGI_SURFACE_DESC *pBackBufferSurfaceDesc, void *pUserContext)</div><div class="ttdef"><b>Definition:</b> Application.cpp:43</div></div>
+<div class="ttc" id="_p_c_h_8h_html"><div class="ttname"><a href="_p_c_h_8h.html">PCH.h</a></div></div>
+<div class="ttc" id="class_eye_stereo_1_1_application_html_a51d2ae6f83946e843d9155a605aaee3c"><div class="ttname"><a href="class_eye_stereo_1_1_application.html#a51d2ae6f83946e843d9155a605aaee3c">EyeStereo::Application::OnD3D10ResizedSwapChain</a></div><div class="ttdeci">virtual HRESULT CALLBACK OnD3D10ResizedSwapChain(ID3D10Device *pd3dDevice, IDXGISwapChain *pSwapChain, const DXGI_SURFACE_DESC *pBackBufferSurfaceDesc, void *pUserContext)</div><div class="ttdef"><b>Definition:</b> Application.cpp:48</div></div>
+<div class="ttc" id="_log_8h_html"><div class="ttname"><a href="_log_8h.html">Log.h</a></div></div>
+<div class="ttc" id="class_eye_stereo_1_1_application_html_a7061321308a81e625c703afa9286f247"><div class="ttname"><a href="class_eye_stereo_1_1_application.html#a7061321308a81e625c703afa9286f247">EyeStereo::Application::OnUpdateScene</a></div><div class="ttdeci">virtual void CALLBACK OnUpdateScene(double fTime, float fElapsedTime, void *pUserContext)</div><div class="ttdef"><b>Definition:</b> Application.cpp:61</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_application_html_a55d8f64e4439c9030dbd7084bd0b9c30"><div class="ttname"><a href="class_eye_stereo_1_1_application.html#a55d8f64e4439c9030dbd7084bd0b9c30">EyeStereo::Application::OnD3D10FrameRender</a></div><div class="ttdeci">virtual void CALLBACK OnD3D10FrameRender(ID3D10Device *pd3dDevice, double fTime, float fElapsedTime, void *pUserContext)</div><div class="ttdef"><b>Definition:</b> Application.cpp:53</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_application_html_a76ce70110e4b834788f68a9dd04db427"><div class="ttname"><a href="class_eye_stereo_1_1_application.html#a76ce70110e4b834788f68a9dd04db427">EyeStereo::Application::MsgProc</a></div><div class="ttdeci">virtual LRESULT CALLBACK MsgProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam, bool *pbNoFurtherProcessing, void *pUserContext)</div><div class="ttdef"><b>Definition:</b> Application.cpp:64</div></div>
+<div class="ttc" id="_timer_8h_html"><div class="ttname"><a href="_timer_8h.html">Timer.h</a></div></div>
+<div class="ttc" id="class_eye_stereo_1_1_application_html_a748bca84fefb9c12661cfaa2f623748d"><div class="ttname"><a href="class_eye_stereo_1_1_application.html#a748bca84fefb9c12661cfaa2f623748d">EyeStereo::Application::~Application</a></div><div class="ttdeci">virtual ~Application()</div><div class="ttdef"><b>Definition:</b> Application.cpp:13</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_application_html_a6185410da0ada16ac5f0b4368288d0d4"><div class="ttname"><a href="class_eye_stereo_1_1_application.html#a6185410da0ada16ac5f0b4368288d0d4">EyeStereo::Application::pShareMessage</a></div><div class="ttdeci">WCHAR * pShareMessage</div><div class="ttdef"><b>Definition:</b> Application.hpp:51</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_application_html"><div class="ttname"><a href="class_eye_stereo_1_1_application.html">EyeStereo::Application</a></div><div class="ttdef"><b>Definition:</b> Application.hpp:16</div></div>
+<div class="ttc" id="_key_board_state_8h_html"><div class="ttname"><a href="_key_board_state_8h.html">KeyBoardState.h</a></div></div>
+<div class="ttc" id="class_eye_stereo_1_1_application_html_a1c6efbcccaf3f7952d867f224b5b4bae"><div class="ttname"><a href="class_eye_stereo_1_1_application.html#a1c6efbcccaf3f7952d867f224b5b4bae">EyeStereo::Application::m_app</a></div><div class="ttdeci">static Application * m_app</div><div class="ttdef"><b>Definition:</b> Application.hpp:55</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_application_html_a53031d4b2819d535a4030a14923ba0c4"><div class="ttname"><a href="class_eye_stereo_1_1_application.html#a53031d4b2819d535a4030a14923ba0c4">EyeStereo::Application::OnKeyboard</a></div><div class="ttdeci">virtual void CALLBACK OnKeyboard(UINT nChar, bool bKeyDown, bool bAltDown, void *pUserContext)</div><div class="ttdef"><b>Definition:</b> Application.cpp:69</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_application_html_ae447c62cb4c67f81f4b2112c181df23c"><div class="ttname"><a href="class_eye_stereo_1_1_application.html#ae447c62cb4c67f81f4b2112c181df23c">EyeStereo::Application::returnCode</a></div><div class="ttdeci">virtual int returnCode()</div><div class="ttdef"><b>Definition:</b> Application.cpp:38</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_application_html_a8dfe61e075adeb5c54f79868e4b6491d"><div class="ttname"><a href="class_eye_stereo_1_1_application.html#a8dfe61e075adeb5c54f79868e4b6491d">EyeStereo::Application::OnD3D10DestroyDevice</a></div><div class="ttdeci">virtual void CALLBACK OnD3D10DestroyDevice(void *pUserContext)</div><div class="ttdef"><b>Definition:</b> Application.cpp:56</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_application_html_acb6159095c33f47a2ecce3d301295186"><div class="ttname"><a href="class_eye_stereo_1_1_application.html#acb6159095c33f47a2ecce3d301295186">EyeStereo::Application::OnGUIEvent</a></div><div class="ttdeci">virtual void CALLBACK OnGUIEvent(UINT nEvent, int nControlID, CDXUTControl *pControl, void *pUserContext)</div><div class="ttdef"><b>Definition:</b> Application.cpp:89</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2014年 六月 27日 星期五 15:19:09 , 为 数字式立体视觉刺激系统使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.7
+</small></address>
+</body>
+</html>

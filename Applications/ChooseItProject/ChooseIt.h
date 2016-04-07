@@ -1,48 +1,56 @@
-#ifndef __SELECT_STEREO_H__
+﻿#ifndef __SELECT_STEREO_H__
 #define __SELECT_STEREO_H__
 
+/** @file
+	@brief 四选一项目，让用户在四个球中选出真立体的求
+*/
 
 #include "Utility/PCH.h"
-#include "Geometry/DiffSpecularSphere.hpp"
-#include "Geometry/Background.h"
-#include "Geometry/Light.h"
+#include "Geometry/DiffSpecularSphere.hpp"   //< 带有漫反射和高光的球体
+#include "Geometry/Background.h"			//< 带有颜色的长方体
+#include "Geometry/Light.h"					//< 光渲染辅助模块
 
 
 using namespace EyeStereo;
+
+/** 
+	@class ChooseItRender
+
+*/
 
 class ChooseItRender {
 
 public:
 
-	ID3D10Device*					pd3dDevice;
-	ID3D10Effect*					pEffect;
-	ID3D10EffectTechnique*			pTech;
-	ID3D10InputLayout*				pInputLayout;
+	ID3D10Device*					pd3dDevice = NULL;
+	ID3D10Effect*					pEffect = NULL;
+	ID3D10EffectTechnique*			pTech = NULL;
+	ID3D10InputLayout*				pInputLayout = NULL;
 	
 	
 			
 	ID3D10EffectMatrixVariable*		mfxWVP;
 	ID3D10EffectMatrixVariable*		mfxWorld;
 	ID3D10EffectVariable*			mfxEyePosVal;
-	ID3D10EffectVariable*			mfxLightVal[3];
-	ID3D10EffectScalarVariable*		mfxLightType;
+	ID3D10EffectVariable*			mfxLightVal[3];  ///< 光的属性，平行光，点光，锥形光
+	ID3D10EffectScalarVariable*		mfxLightType;    ///< 光的类型
 
-	ID3D10EffectShaderResourceVariable* pShaderRV;
+	ID3D10EffectShaderResourceVariable* pShaderRV = NULL;
 	
 	D3DXMATRIX						matWorld;
 	D3DXMATRIX						matWorldViewProjection;
 
-	IDXGISwapChain*					pSwapChain;
+	IDXGISwapChain*					pSwapChain = NULL;
 
 	CModelViewerCamera*				pCamera;
 	//Box*							pBox;
-	DiffSpecularSphere*				pSphere;
-	Background*						pBackground;
+	DiffSpecularSphere*				pSphere = NULL;
+	Background*						pBackground = NULL;
 
 	long int						windowsWidth, windowsHeight;
 	StereoSetting*					pStereoSetting;
 	bool							bactive;
-
+	Vector3f*						pSpherePos = NULL;
 
 	Light							lights[3];
 	int								lightType;
@@ -52,17 +60,15 @@ public:
 	float							initDepth, initRadius;
 	
 
-	ID3D10RasterizerState*			pSolidState;
+	ID3D10RasterizerState*			pSolidState = NULL;
 
 	ChooseItRender() {
 		initRadius = 2;
 		initDepth = 4;
-		pd3dDevice = NULL;
 	}
 
 	bool init(ID3D10Device* pd3d, StereoSetting* pstereo, CModelViewerCamera *pcamera) {
 		pd3dDevice = pd3d;
-		pd3d->AddRef();
 
 		HRESULT hr;
 		V_RETURN( D3DX10CreateEffectFromFile( L"../Data/Shader/DiffSpecular.fx", NULL, NULL, "fx_4_0", 
@@ -79,15 +85,6 @@ public:
 		mfxLightVal[2] = pEffect->GetVariableByName("gSpotLight");
 		mfxLightType= pEffect->GetVariableByName("gLightType")->AsScalar();
 
-		/*
-		pShaderRV = pEffect->GetVariableByName("g_MeshTexture")->AsShaderResource();
-		ID3D10ShaderResourceView*	shaderResourceView;
-		D3DX10CreateShaderResourceViewFromFile( pd3dDevice, 
-			L"texture.png", 0, 0, &shaderResourceView, 0 );
-		//g_pfxBoxMapVar->SetResource( NULL );
-		pShaderRV->SetResource( shaderResourceView );
-		shaderResourceView->Release();
-		*/
 		D3D10_INPUT_ELEMENT_DESC layout[] = {
 
 			{ "POSITION", 0, DXGI_FORMAT_R32G32B32_FLOAT,	0,  0,	D3D10_INPUT_PER_VERTEX_DATA, 0}, 
@@ -96,7 +93,6 @@ public:
 			{ "SPECULAR", 0, DXGI_FORMAT_R32G32B32A32_FLOAT,	0,	40, D3D10_INPUT_PER_VERTEX_DATA, 0},
 		};
 
-		//glutSolidSphere()
 
 		UINT numElements = sizeof(layout) / sizeof(layout[0]);
 
@@ -104,11 +100,6 @@ public:
 		pTech->GetPassByIndex(0)->GetDesc( &PassDesc );
 		pd3d->CreateInputLayout( layout, numElements, 
 			PassDesc.pIAInputSignature, PassDesc.IAInputSignatureSize, &pInputLayout);
-
-
-		//pBox = new Box;
-
-	//	pBox->init(pd3dDevice, 1);
 
 		pSphere = new DiffSpecularSphere();
 		pSphere->init(pd3dDevice, 1, 40, 40);
@@ -131,23 +122,20 @@ public:
 		initLight();
 		eyePos = D3DXVECTOR3(0, 0, -5);
 		
-		
-
 		D3D10_RASTERIZER_DESC rsDesc;
 		ZeroMemory(&rsDesc, sizeof(D3D10_RASTERIZER_DESC));
 
-		
 		rsDesc.FillMode = D3D10_FILL_SOLID;
 		rsDesc.CullMode = D3D10_CULL_BACK;
 		rsDesc.FrontCounterClockwise = false;
 
 		pd3dDevice->CreateRasterizerState(&rsDesc, &pSolidState);
-		
 		return true;
-
 	}
 
-
+	/**
+		
+	*/
 	void initLight() {
 		lightType = 2;
 
@@ -182,6 +170,10 @@ public:
 
 	}
 
+
+	/**
+		变化投影矩阵的参数，改变camera。具体见附件3D_Stereo_Rendering_Using_OpenGL_(and_GLUT)
+	*/
 	void stereoRender(float fTime) {
 
 		pd3dDevice->IASetInputLayout(pInputLayout);
@@ -200,20 +192,9 @@ public:
 		D3DXMATRIX mView;
 		D3DXMATRIX mPorject;
 
-		static float theta = 0;
-		
-		if (theta > 2*D3DX_PI) {
-			theta = 0;
-		}
-		
-		theta += fTime;
-
 		// ----Draw a Stereo Sphere
-		Vector3 poss[] = {Vector3(-2, -2, 4), Vector3(2, -2, 4), Vector3(-2, 2, 4)};
-
-		//Vector3 pos = GetPosition2(theta);
-		Vector3 pos = Vector3(2, 2, 4);
-		D3DXMatrixTranslation(&matWorld, pos.x, pos.y, pos.z);
+		
+		D3DXMatrixTranslation(&matWorld, pSpherePos[0].x, pSpherePos[0].y, pSpherePos[0].z);
 
 		mView = *pCamera->GetViewMatrix();
 		mPorject = *pCamera->GetProjMatrix();
@@ -248,9 +229,9 @@ public:
 		//  ----Draw 3 unStereo Sphere
 		mPorject = *pCamera->GetProjMatrix();
 		//printMatrix((float*)&(mPorject.m));
-		for (int i = 0; i < 3; i++) {
+		for (int i = 1; i < 4; i++) {
 
-			D3DXMatrixTranslation(&matWorld, poss[i].x, poss[i].y, poss[i].z);
+			D3DXMatrixTranslation(&matWorld, pSpherePos[i].x, pSpherePos[i].y, pSpherePos[i].z);
 			mfxWorld->SetMatrix((float*)&matWorld);
 			matWorldViewProjection = matWorld*mView*mPorject;
 			mfxWVP->SetMatrix((float*)&matWorldViewProjection);
@@ -265,7 +246,7 @@ public:
 		//Begin Render Right Eye
 
 
-		D3DXMatrixTranslation(&matWorld, pos.x, pos.y, pos.z);
+		D3DXMatrixTranslation(&matWorld, pSpherePos[0].x, pSpherePos[0].y, pSpherePos[0].z);
 		
 		mPorject = *pCamera->GetProjMatrix();
 		mPorject._31 = mPorject._31 - currentSeparaion;
@@ -286,21 +267,20 @@ public:
 		drawBacground();
 
 		mPorject = *pCamera->GetProjMatrix();
-		for (int i = 0; i < 3; i++) {
+		for (int i = 1; i < 4; i++) {
 
-			D3DXMatrixTranslation(&matWorld, poss[i].x, poss[i].y, poss[i].z);
+			D3DXMatrixTranslation(&matWorld, pSpherePos[i].x, pSpherePos[i].y, pSpherePos[i].z);
 			mfxWorld->SetMatrix((float*)&matWorld);
 			matWorldViewProjection = matWorld*mView*mPorject;
 			mfxWVP->SetMatrix((float*)&matWorldViewProjection);
 			renderLeft(fTime);
-
 		}
 
 		pStereoSetting->draw(pd3dDevice, pStereoSetting->RIGHT_EYE);
 
 
 
-		//��Stereo ʱ�������ע�͵� 
+		//非Stereo 时把下面的注释掉 
 		
 		if (bStereo) {
 			ClearScreen(pd3dDevice);
@@ -343,7 +323,6 @@ public:
 
 
 	~ChooseItRender() {
-		SAFE_RELEASE(pd3dDevice);
 		SAFE_RELEASE(pEffect);
 		//pTech;
 		SAFE_RELEASE(pInputLayout);
@@ -351,8 +330,8 @@ public:
 		SAFE_RELEASE(pSolidState);
 		//SAFE_RELEASE(pShaderRV);
 		//delete pBox;
-		delete pSphere;
-		delete pBackground;
+		SAFE_DELETE( pSphere);
+		SAFE_DELETE( pBackground);
 		
 	}
 

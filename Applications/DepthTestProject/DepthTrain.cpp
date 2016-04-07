@@ -1,4 +1,4 @@
-#include "DepthTrain.hpp"
+﻿#include "DepthTrain.hpp"
 
 using namespace EyeStereo;
 
@@ -232,7 +232,7 @@ void DepthTrain::stereoRender(float fTime) {
 
 
 
-	//��Stereo ʱ�������ע�͵� 
+	//非Stereo 时把下面的注释掉 
 
 	if (bStereo) {
 		ClearScreen(pd3dDevice);
@@ -263,7 +263,11 @@ void DepthTrain::RenderSubset(UINT id, UINT iSubSet) {
 
 }
 
-
+/**
+	@param[in] sx 屏幕x轴坐标
+	@param[in] sy 屏幕y轴坐标，左上角为0
+	将鼠标坐标从投影坐标->视坐标->世界坐标。发射射线判断碰撞，取最近的物体作为选取的点。
+*/
 void DepthTrain::pick(int sx, int sy) {
 	printf("call pick function\n");
 	D3DXMATRIX P = *pCamera->GetProjMatrix();
@@ -284,9 +288,6 @@ void DepthTrain::pick(int sx, int sy) {
 	D3DXVec3TransformCoord(&rayOrigin, &rayOrigin, &inverseV);
 	D3DXVec3TransformNormal(&rayDir, &rayDir, &inverseV);
 
-
-
-
 	UINT hitCount;
 	float dist, maxDist = INT_MAX;
 	int maxIndex = -1;
@@ -300,6 +301,7 @@ void DepthTrain::pick(int sx, int sy) {
 	for (unsigned i = 0; i < g_ObjectsPosition.size(); i++) {
 		ID3DX10Mesh* d3dxmesh = g_ObjectsMesh[i]->GetMesh();
 		D3DXMatrixTranslation(&msword, g_ObjectsPosition[i].x, g_ObjectsPosition[i].y, g_ObjectsPosition[i].z);
+		msword *= *D3DXMatrixScaling(&inverseW, g_ObjectResize[i].x, g_ObjectResize[i].y, g_ObjectResize[i].z);/// for "inverseW" tmp usage ;
 		D3DXMatrixInverse(&inverseW, 0, &msword);
 		D3DXVECTOR3 torigin(rayOrigin), tdir(rayDir);
 
@@ -318,7 +320,7 @@ void DepthTrain::pick(int sx, int sy) {
 			}
 		}
 	}
-	swprintf(mShareMessage, L"��ѡ����%s\n", g_ObjectsName[maxIndex]);
+	swprintf(mShareMessage, L"你选中了%s\n", g_ObjectsName[maxIndex]);
 	*mShareChanged = true;
 }
 

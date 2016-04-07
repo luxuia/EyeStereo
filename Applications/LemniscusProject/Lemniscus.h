@@ -1,13 +1,15 @@
 #ifndef __LEMNISCUS_H__
 #define __LEMNISCUS_H__
 
-
 #include "Utility/PCH.h"
 #include "Geometry/Light.h"
 #include "Geometry/DiffSpecularSphere.hpp"
 #include "Geometry/Background.h"
 
-
+/** @file
+	@class Lemniscus
+	八字舞项目，一个立体球会在窗口内的不同深度做往复运动
+*/
 using namespace EyeStereo;
 class Lemniscus {
 
@@ -95,8 +97,6 @@ public:
 			{ "SPECULAR", 0, DXGI_FORMAT_R32G32B32A32_FLOAT,	0,	40, D3D10_INPUT_PER_VERTEX_DATA, 0},
 		};
 
-		//glutSolidSphere()
-
 		UINT numElements = sizeof(layout) / sizeof(layout[0]);
 
 		D3D10_PASS_DESC PassDesc;
@@ -104,17 +104,11 @@ public:
 		pd3d->CreateInputLayout( layout, numElements, 
 			PassDesc.pIAInputSignature, PassDesc.IAInputSignatureSize, &pInputLayout);
 
-
-		//pBox = new Box;
-
-	//	pBox->init(pd3dDevice, 1);
-
 		pSphere = new DiffSpecularSphere();
 		pSphere->init(pd3dDevice, 1, 40, 40);
 
 		pBackground = new Background();
 		pBackground->init(pd3dDevice, 20, 10, 10);
-
 
 		pSwapChain = DXUTGetDXGISwapChain();
 		pSwapChain->AddRef();
@@ -130,12 +124,9 @@ public:
 		initLight();
 		eyePos = D3DXVECTOR3(0, 0, -5);
 		
-		
-
 		D3D10_RASTERIZER_DESC rsDesc;
 		ZeroMemory(&rsDesc, sizeof(D3D10_RASTERIZER_DESC));
 
-		
 		rsDesc.FillMode = D3D10_FILL_SOLID;
 		rsDesc.CullMode = D3D10_CULL_BACK;
 		rsDesc.FrontCounterClockwise = false;
@@ -194,11 +185,7 @@ public:
 		}
 		mfxEyePosVal->SetRawValue(&eyePos, 0, sizeof(D3DXVECTOR3));
 
-
-
 		pCamera->SetViewParams(&D3DXVECTOR3(0, 0, -5), &D3DXVECTOR3(0, 0, 0));
-
-
 
 		D3DXMATRIX mView;
 		D3DXMATRIX mPorject;
@@ -211,7 +198,7 @@ public:
 		
 		theta += fTime;
 
-		Vector3 pos = GetPosition2(theta);
+		Vector3f pos = GetPosition2(theta);
 
 		D3DXMatrixTranslation(&matWorld, pos.x, pos.y, pos.z);
 
@@ -239,11 +226,8 @@ public:
 		drawBacground();
 
 		pStereoSetting->draw(pd3dDevice, pStereoSetting->LEFT_EYE);
-
-
+		
 		//Begin Render Right Eye
-
-
 		D3DXMatrixTranslation(&matWorld, pos.x, pos.y, pos.z);
 		
 		mPorject = *pCamera->GetProjMatrix();
@@ -265,9 +249,7 @@ public:
 
 		pStereoSetting->draw(pd3dDevice, pStereoSetting->RIGHT_EYE);
 
-
-
-		//��Stereo ʱ�������ע���� 
+		//非Stereo 时把下面的注销掉 
 		
 		if (bStereo) {
 			ClearScreen(pd3dDevice);
@@ -295,7 +277,6 @@ public:
 			pSphere->draw();
 			//pBox->draw(pd3dDevice);
 		}
-
 	}
 
 	void renderRight(float fTime) {
@@ -309,6 +290,12 @@ public:
 	}
 
 
+/**
+	@param[in] x 球的x值
+	@param[in] y 求的y值
+	@return 球的z坐标
+	这个是获得Z坐标的最普通实现，只是返回默认的深度
+*/
 	float GetZ(float x, float y) {
 
 		float z = initDepth;
@@ -320,16 +307,23 @@ public:
 	}
 
 
+/**
+	@param[in] x 球的x值
+	@param[in] y y
+	@param[in] state 0在近层，1随x变化而增大，2远层，3随x变化而减小
+	@return 球的z坐标
+
+*/
 	float GetZ(float x, float y, int state) {
 		float z = initDepth;
 
 		switch (state) {
 		case 0: {
 			return z;
-				}
+		}
 		case 1: {
 			return x+initDepth+2*initRadius;
-				}
+		}
 		case 2:
 			return initDepth+2*initRadius+2*initRadius;
 		case 3:
@@ -339,14 +333,18 @@ public:
 		}
 	}
 
-
-	Vector3 GetPosition1(float theta) {
+/**
+	@param[in]  theta 角度
+	@return 三维坐标
+	根据角度(本程序中角度由时间获得)得到三维坐标， 深度唯一
+*/
+	Vector3f GetPosition1(float theta) {
 	
 		const float p = initRadius;
 
 		float cos2theta;
 
-		Vector3 pos;
+		Vector3f pos;
 
 		if ((cos2theta = cos(2*theta)) < 0) {
 			pos.x = p*sqrt(abs(cos2theta))*cos(theta);
@@ -359,8 +357,13 @@ public:
 		return pos;
 	}
 
-
-	Vector3 GetPosition2(float theta) {
+/**
+	@param[in] theta 角度
+	@return 三维坐标
+	根据角度(本程序中角度由时间获得)得到三维坐标， 深度会变化
+	当圆球运行到八字舞的边界时改变state值，改变Z轴坐标的获取函数
+*/
+	Vector3f GetPosition2(float theta) {
 
 		const float p = initRadius;
 
@@ -370,7 +373,7 @@ public:
 		cosin = cos(theta);
 		sinin = sin(theta);
 
-		Vector3 pos;
+		Vector3f pos;
 		
 		
 		if (theta < D3DX_PI/2 || theta > 3*D3DX_PI/2) {
@@ -381,10 +384,8 @@ public:
 			pos.y = 2*p*cosin*sinin;
 		}
 
-		
-
 		if ((theta < Elapse ||  theta > D3DX_PI*2-Elapse) || (oldtheta < D3DX_PI+Elapse && theta > D3DX_PI-Elapse )) {
-			state = (++state)%4;
+			state = (++state)%4; 
 			printf("oldtheta(%0.2f), theta(%0.2f), state(%d)\n", oldtheta, theta, state);
 		}
 		

@@ -1,0 +1,169 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.7"/>
+<title>数字式立体视觉刺激系统: E:/Project/final/EyeStereo/Applications/RandomDot/RandDoter.hpp 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">数字式立体视觉刺激系统
+   &#160;<span id="projectnumber">1.0.1</span>
+   </div>
+   <div id="projectbrief">Digital Stereo System</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.7 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="pages.html"><span>相关页面</span></a></li>
+      <li><a href="namespaces.html"><span>命名空间</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
+    </ul>
+  </div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_8c1195e4829fa17630c4278c41da729a.html">Applications</a></li><li class="navelem"><a class="el" href="dir_981ae3beb82319626e5aabb9fd06882f.html">RandomDot</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">RandDoter.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_rand_doter_8hpp.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//--------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">// This file is a portion of the Eye Stereo Project.  It is distributed</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">// under the MIT License, available in the root of this distribution and </span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">// at the following URL:</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">// http://www.opensource.org/licenses/mit-license.php</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">// Copyright (c) Luxuia</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">//---------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">//--------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">// RandomDot</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">// Used for Generate Random Dot Buffer from Geometry</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">//--------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#ifndef __RANDOMDOT__</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#define __RANDOMDOT__</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_p_c_h_8h.html">Utility/PCH.h</a>&quot;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_vertex_8h.html">Geometry/vertex.h</a>&quot;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_geometry_8h.html">Geometry/Geometry.h</a>&quot;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">namespace </span>EyeStereo {</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keyword">class </span>Vector3f;</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_random_dot.html">   27</a></span>&#160;    <span class="keyword">class </span><a class="code" href="class_eye_stereo_1_1_random_dot.html">RandomDot</a> {</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <a class="code" href="class_eye_stereo_1_1_random_dot.html#ab64483a06f91456dd8cced43ac36ab06">RandomDot</a>(<span class="keywordtype">int</span> maxbound);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <a class="code" href="class_eye_stereo_1_1_random_dot.html#aca29aaa1ccdeaf64cf036d5fa118bcd0">~RandomDot</a>();</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="class_eye_stereo_1_1_random_dot.html#a7d772785370b3572d0bdccd2b2e4a4d9">init</a>(ID3D10Device *pDevice, <span class="keywordtype">float</span> x, <span class="keywordtype">float</span> y, <span class="keywordtype">int</span> cnt, <a class="code" href="class_eye_stereo_1_1_geometry.html">Geometry</a>* gout);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_eye_stereo_1_1_random_dot.html#aa0938c4d6dbba6221ca6c500d148e073">draw</a>();</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_eye_stereo_1_1_random_dot.html#a69a38ebbf048104535b04f535563d90f">dotShiftNumber</a>(<a class="code" href="struct_eye_stereo_1_1_vertex.html">Vertex</a>** <a class="code" href="class_eye_stereo_1_1_random_dot.html#a0de26cab0fbd7e306b551834bc37e534">vertices</a>);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_eye_stereo_1_1_random_dot.html#a1dd0f2779b2ba50d699b324770e0470c">makeRandomDot</a>(<a class="code" href="struct_eye_stereo_1_1_vertex.html">Vertex</a>** vertices, <span class="keywordtype">float</span> x, <span class="keywordtype">float</span> y);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_eye_stereo_1_1_random_dot.html#ad1f28a26e805488a02b6554d64e7f764">makeRandomDotTest</a>(<a class="code" href="struct_eye_stereo_1_1_vertex.html">Vertex</a>** vertices, <span class="keywordtype">float</span> x, <span class="keywordtype">float</span> y);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="class_eye_stereo_1_1_random_dot.html#a19fb1ab70e4192cbf1ca15a4ee439405">inGeometry</a>(<a class="code" href="struct_eye_stereo_1_1_vertex.html">Vertex</a> &amp;p, <a class="code" href="class_eye_stereo_1_1_geometry.html">Geometry</a> *g);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="class_eye_stereo_1_1_random_dot.html#a19fb1ab70e4192cbf1ca15a4ee439405">inGeometry</a>(<span class="keywordtype">float</span> x, <span class="keywordtype">float</span> y, <span class="keywordtype">float</span> z, <a class="code" href="class_eye_stereo_1_1_geometry.html">Geometry</a> *g);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="class_eye_stereo_1_1_random_dot.html#aedd824005244c4ef68d354a2b9d35543">updateVertex</a>(<span class="keywordtype">float</span> ftime);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="class_eye_stereo_1_1_random_dot.html#abe7f846f0fdbada046c487171ea7a9b0">updateBuffer</a>();</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="class_eye_stereo_1_1_random_dot.html#a7288b1ce410fba2ffc3e26898204b6b4">outBound</a>(<a class="code" href="class_eye_stereo_1_1_vector3f.html">Vector3f</a>, <a class="code" href="class_eye_stereo_1_1_vector3f.html">Vector3f</a>&amp;, <span class="keywordtype">int</span> );</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
+<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_random_dot.html#ac899b1faaa5f478df2ee247a25c2a624">   71</a></span>&#160;        ID3D10Device*   <a class="code" href="class_eye_stereo_1_1_random_dot.html#ac899b1faaa5f478df2ee247a25c2a624">pd3dDevice</a>;</div>
+<div class="line"><a name="l00072"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_random_dot.html#adcb07a09493f2eb1d474f5f151f97047">   72</a></span>&#160;        ID3D10Buffer*   <a class="code" href="class_eye_stereo_1_1_random_dot.html#adcb07a09493f2eb1d474f5f151f97047">vBuffer</a>[2];</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <span class="comment">//vector&lt; Vector3 &gt; randomForce;</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_random_dot.html#ae22eb9a393c56bb8d0c61bba8fb03a7a">   75</a></span>&#160;        <span class="keywordtype">bool</span>*           <a class="code" href="class_eye_stereo_1_1_random_dot.html#ae22eb9a393c56bb8d0c61bba8fb03a7a">binGeometry</a>;</div>
+<div class="line"><a name="l00076"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_random_dot.html#a332887c0b3fac34704892dc0fef1606d">   76</a></span>&#160;        <a class="code" href="class_eye_stereo_1_1_vector3f.html">Vector3f</a>*       <a class="code" href="class_eye_stereo_1_1_random_dot.html#a332887c0b3fac34704892dc0fef1606d">pointStat</a>;</div>
+<div class="line"><a name="l00077"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_random_dot.html#a0de26cab0fbd7e306b551834bc37e534">   77</a></span>&#160;        <a class="code" href="struct_eye_stereo_1_1_vertex.html">Vertex</a>*         vertices[2];</div>
+<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_random_dot.html#ab3301eec7c53d04552ac3113d184c7e9">   78</a></span>&#160;        <a class="code" href="class_eye_stereo_1_1_vector3f.html">Vector3f</a>*       <a class="code" href="class_eye_stereo_1_1_random_dot.html#ab3301eec7c53d04552ac3113d184c7e9">velocity</a>;</div>
+<div class="line"><a name="l00079"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_random_dot.html#ae429d09ca309e58dc35cd05b93e1308b">   79</a></span>&#160;        <a class="code" href="class_eye_stereo_1_1_vector3f.html">Vector3f</a>*       <a class="code" href="class_eye_stereo_1_1_random_dot.html#ae429d09ca309e58dc35cd05b93e1308b">velocityL</a>;</div>
+<div class="line"><a name="l00080"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_random_dot.html#ab7a320c88532b9fdd9dbf7dc5399fff1">   80</a></span>&#160;        <a class="code" href="class_eye_stereo_1_1_geometry.html">Geometry</a>*       <a class="code" href="class_eye_stereo_1_1_random_dot.html#ab7a320c88532b9fdd9dbf7dc5399fff1">pGeo</a>;</div>
+<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_random_dot.html#a56aa64d73c3b192784800e552ee7b541">   81</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="class_eye_stereo_1_1_random_dot.html#a56aa64d73c3b192784800e552ee7b541">iVertexNum</a>;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
+<div class="line"><a name="l00084"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_random_dot.html#a090b80e60b2712b9aded89fed6680e3c">   84</a></span>&#160;        <span class="keywordtype">float</span> <a class="code" href="class_eye_stereo_1_1_random_dot.html#a9692266dca2f488f2c7b5f0c89b53b09">boundX</a>, <a class="code" href="class_eye_stereo_1_1_random_dot.html#a090b80e60b2712b9aded89fed6680e3c">boundY</a>;</div>
+<div class="line"><a name="l00085"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_random_dot.html#ad9d0bd11926fedddf678dd55b1725b67">   85</a></span>&#160;        <span class="keywordtype">float</span> <a class="code" href="class_eye_stereo_1_1_random_dot.html#ad9d0bd11926fedddf678dd55b1725b67">dotDist</a>;</div>
+<div class="line"><a name="l00086"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_random_dot.html#aaad2a3f673c39dc7ef17f35ba8ac925d">   86</a></span>&#160;        <span class="keywordtype">float</span> <a class="code" href="class_eye_stereo_1_1_random_dot.html#aaad2a3f673c39dc7ef17f35ba8ac925d">pointSize</a> ;</div>
+<div class="line"><a name="l00087"></a><span class="lineno"><a class="line" href="class_eye_stereo_1_1_random_dot.html#a2a0ffd6c05a7c9ec96c9934e9407bf29">   87</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="class_eye_stereo_1_1_random_dot.html#a2a0ffd6c05a7c9ec96c9934e9407bf29">maxPointNum</a>;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    };</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;}</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="preprocessor">#endif //__RANDOMDOT__</span></div>
+<div class="ttc" id="class_eye_stereo_1_1_random_dot_html_ad1f28a26e805488a02b6554d64e7f764"><div class="ttname"><a href="class_eye_stereo_1_1_random_dot.html#ad1f28a26e805488a02b6554d64e7f764">EyeStereo::RandomDot::makeRandomDotTest</a></div><div class="ttdeci">void makeRandomDotTest(Vertex **vertices, float x, float y)</div><div class="ttdef"><b>Definition:</b> RandDoter.cpp:87</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_random_dot_html_ae22eb9a393c56bb8d0c61bba8fb03a7a"><div class="ttname"><a href="class_eye_stereo_1_1_random_dot.html#ae22eb9a393c56bb8d0c61bba8fb03a7a">EyeStereo::RandomDot::binGeometry</a></div><div class="ttdeci">bool * binGeometry</div><div class="ttdef"><b>Definition:</b> RandDoter.hpp:75</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_random_dot_html_a0de26cab0fbd7e306b551834bc37e534"><div class="ttname"><a href="class_eye_stereo_1_1_random_dot.html#a0de26cab0fbd7e306b551834bc37e534">EyeStereo::RandomDot::vertices</a></div><div class="ttdeci">Vertex * vertices[2]</div><div class="ttdef"><b>Definition:</b> RandDoter.hpp:77</div></div>
+<div class="ttc" id="struct_eye_stereo_1_1_vertex_html"><div class="ttname"><a href="struct_eye_stereo_1_1_vertex.html">EyeStereo::Vertex</a></div><div class="ttdef"><b>Definition:</b> Vertex.h:9</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_random_dot_html_a332887c0b3fac34704892dc0fef1606d"><div class="ttname"><a href="class_eye_stereo_1_1_random_dot.html#a332887c0b3fac34704892dc0fef1606d">EyeStereo::RandomDot::pointStat</a></div><div class="ttdeci">Vector3f * pointStat</div><div class="ttdef"><b>Definition:</b> RandDoter.hpp:76</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_random_dot_html_ab64483a06f91456dd8cced43ac36ab06"><div class="ttname"><a href="class_eye_stereo_1_1_random_dot.html#ab64483a06f91456dd8cced43ac36ab06">EyeStereo::RandomDot::RandomDot</a></div><div class="ttdeci">RandomDot(int maxbound)</div><div class="ttdef"><b>Definition:</b> RandDoter.cpp:11</div></div>
+<div class="ttc" id="_geometry_8h_html"><div class="ttname"><a href="_geometry_8h.html">Geometry.h</a></div></div>
+<div class="ttc" id="class_eye_stereo_1_1_random_dot_html_a7288b1ce410fba2ffc3e26898204b6b4"><div class="ttname"><a href="class_eye_stereo_1_1_random_dot.html#a7288b1ce410fba2ffc3e26898204b6b4">EyeStereo::RandomDot::outBound</a></div><div class="ttdeci">bool outBound(Vector3f, Vector3f &amp;, int)</div><div class="ttdoc">判断是否出了边界 </div><div class="ttdef"><b>Definition:</b> RandDoter.cpp:147</div></div>
+<div class="ttc" id="_p_c_h_8h_html"><div class="ttname"><a href="_p_c_h_8h.html">PCH.h</a></div></div>
+<div class="ttc" id="class_eye_stereo_1_1_random_dot_html_ac899b1faaa5f478df2ee247a25c2a624"><div class="ttname"><a href="class_eye_stereo_1_1_random_dot.html#ac899b1faaa5f478df2ee247a25c2a624">EyeStereo::RandomDot::pd3dDevice</a></div><div class="ttdeci">ID3D10Device * pd3dDevice</div><div class="ttdef"><b>Definition:</b> RandDoter.hpp:71</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_vector3f_html"><div class="ttname"><a href="class_eye_stereo_1_1_vector3f.html">EyeStereo::Vector3f</a></div><div class="ttdef"><b>Definition:</b> Vector3f.h:23</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_random_dot_html_abe7f846f0fdbada046c487171ea7a9b0"><div class="ttname"><a href="class_eye_stereo_1_1_random_dot.html#abe7f846f0fdbada046c487171ea7a9b0">EyeStereo::RandomDot::updateBuffer</a></div><div class="ttdeci">bool updateBuffer()</div><div class="ttdoc">更新顶点缓冲区 </div><div class="ttdef"><b>Definition:</b> RandDoter.cpp:192</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_random_dot_html_ab3301eec7c53d04552ac3113d184c7e9"><div class="ttname"><a href="class_eye_stereo_1_1_random_dot.html#ab3301eec7c53d04552ac3113d184c7e9">EyeStereo::RandomDot::velocity</a></div><div class="ttdeci">Vector3f * velocity</div><div class="ttdef"><b>Definition:</b> RandDoter.hpp:78</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_random_dot_html"><div class="ttname"><a href="class_eye_stereo_1_1_random_dot.html">EyeStereo::RandomDot</a></div><div class="ttdef"><b>Definition:</b> RandDoter.hpp:27</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_geometry_html"><div class="ttname"><a href="class_eye_stereo_1_1_geometry.html">EyeStereo::Geometry</a></div><div class="ttdef"><b>Definition:</b> Geometry.h:9</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_random_dot_html_ae429d09ca309e58dc35cd05b93e1308b"><div class="ttname"><a href="class_eye_stereo_1_1_random_dot.html#ae429d09ca309e58dc35cd05b93e1308b">EyeStereo::RandomDot::velocityL</a></div><div class="ttdeci">Vector3f * velocityL</div><div class="ttdef"><b>Definition:</b> RandDoter.hpp:79</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_random_dot_html_a19fb1ab70e4192cbf1ca15a4ee439405"><div class="ttname"><a href="class_eye_stereo_1_1_random_dot.html#a19fb1ab70e4192cbf1ca15a4ee439405">EyeStereo::RandomDot::inGeometry</a></div><div class="ttdeci">bool inGeometry(Vertex &amp;p, Geometry *g)</div><div class="ttdef"><b>Definition:</b> RandDoter.cpp:27</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_random_dot_html_a69a38ebbf048104535b04f535563d90f"><div class="ttname"><a href="class_eye_stereo_1_1_random_dot.html#a69a38ebbf048104535b04f535563d90f">EyeStereo::RandomDot::dotShiftNumber</a></div><div class="ttdeci">void dotShiftNumber(Vertex **vertices)</div><div class="ttdef"><b>Definition:</b> RandDoter.cpp:102</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_random_dot_html_a56aa64d73c3b192784800e552ee7b541"><div class="ttname"><a href="class_eye_stereo_1_1_random_dot.html#a56aa64d73c3b192784800e552ee7b541">EyeStereo::RandomDot::iVertexNum</a></div><div class="ttdeci">int iVertexNum</div><div class="ttdef"><b>Definition:</b> RandDoter.hpp:81</div></div>
+<div class="ttc" id="_vertex_8h_html"><div class="ttname"><a href="_vertex_8h.html">Vertex.h</a></div></div>
+<div class="ttc" id="class_eye_stereo_1_1_random_dot_html_a090b80e60b2712b9aded89fed6680e3c"><div class="ttname"><a href="class_eye_stereo_1_1_random_dot.html#a090b80e60b2712b9aded89fed6680e3c">EyeStereo::RandomDot::boundY</a></div><div class="ttdeci">float boundY</div><div class="ttdef"><b>Definition:</b> RandDoter.hpp:84</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_random_dot_html_aca29aaa1ccdeaf64cf036d5fa118bcd0"><div class="ttname"><a href="class_eye_stereo_1_1_random_dot.html#aca29aaa1ccdeaf64cf036d5fa118bcd0">EyeStereo::RandomDot::~RandomDot</a></div><div class="ttdeci">~RandomDot()</div><div class="ttdef"><b>Definition:</b> RandDoter.cpp:13</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_random_dot_html_ad9d0bd11926fedddf678dd55b1725b67"><div class="ttname"><a href="class_eye_stereo_1_1_random_dot.html#ad9d0bd11926fedddf678dd55b1725b67">EyeStereo::RandomDot::dotDist</a></div><div class="ttdeci">float dotDist</div><div class="ttdef"><b>Definition:</b> RandDoter.hpp:85</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_random_dot_html_ab7a320c88532b9fdd9dbf7dc5399fff1"><div class="ttname"><a href="class_eye_stereo_1_1_random_dot.html#ab7a320c88532b9fdd9dbf7dc5399fff1">EyeStereo::RandomDot::pGeo</a></div><div class="ttdeci">Geometry * pGeo</div><div class="ttdef"><b>Definition:</b> RandDoter.hpp:80</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_random_dot_html_a1dd0f2779b2ba50d699b324770e0470c"><div class="ttname"><a href="class_eye_stereo_1_1_random_dot.html#a1dd0f2779b2ba50d699b324770e0470c">EyeStereo::RandomDot::makeRandomDot</a></div><div class="ttdeci">void makeRandomDot(Vertex **vertices, float x, float y)</div><div class="ttdef"><b>Definition:</b> RandDoter.cpp:75</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_random_dot_html_aa0938c4d6dbba6221ca6c500d148e073"><div class="ttname"><a href="class_eye_stereo_1_1_random_dot.html#aa0938c4d6dbba6221ca6c500d148e073">EyeStereo::RandomDot::draw</a></div><div class="ttdeci">void draw()</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_random_dot_html_aedd824005244c4ef68d354a2b9d35543"><div class="ttname"><a href="class_eye_stereo_1_1_random_dot.html#aedd824005244c4ef68d354a2b9d35543">EyeStereo::RandomDot::updateVertex</a></div><div class="ttdeci">bool updateVertex(float ftime)</div><div class="ttdoc">更新随机点位置 </div><div class="ttdef"><b>Definition:</b> RandDoter.cpp:167</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_random_dot_html_a7d772785370b3572d0bdccd2b2e4a4d9"><div class="ttname"><a href="class_eye_stereo_1_1_random_dot.html#a7d772785370b3572d0bdccd2b2e4a4d9">EyeStereo::RandomDot::init</a></div><div class="ttdeci">bool init(ID3D10Device *pDevice, float x, float y, int cnt, Geometry *gout)</div><div class="ttdef"><b>Definition:</b> RandDoter.cpp:115</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_random_dot_html_a9692266dca2f488f2c7b5f0c89b53b09"><div class="ttname"><a href="class_eye_stereo_1_1_random_dot.html#a9692266dca2f488f2c7b5f0c89b53b09">EyeStereo::RandomDot::boundX</a></div><div class="ttdeci">float boundX</div><div class="ttdef"><b>Definition:</b> RandDoter.hpp:84</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_random_dot_html_aaad2a3f673c39dc7ef17f35ba8ac925d"><div class="ttname"><a href="class_eye_stereo_1_1_random_dot.html#aaad2a3f673c39dc7ef17f35ba8ac925d">EyeStereo::RandomDot::pointSize</a></div><div class="ttdeci">float pointSize</div><div class="ttdef"><b>Definition:</b> RandDoter.hpp:86</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_random_dot_html_adcb07a09493f2eb1d474f5f151f97047"><div class="ttname"><a href="class_eye_stereo_1_1_random_dot.html#adcb07a09493f2eb1d474f5f151f97047">EyeStereo::RandomDot::vBuffer</a></div><div class="ttdeci">ID3D10Buffer * vBuffer[2]</div><div class="ttdef"><b>Definition:</b> RandDoter.hpp:72</div></div>
+<div class="ttc" id="class_eye_stereo_1_1_random_dot_html_a2a0ffd6c05a7c9ec96c9934e9407bf29"><div class="ttname"><a href="class_eye_stereo_1_1_random_dot.html#a2a0ffd6c05a7c9ec96c9934e9407bf29">EyeStereo::RandomDot::maxPointNum</a></div><div class="ttdeci">int maxPointNum</div><div class="ttdef"><b>Definition:</b> RandDoter.hpp:87</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2014年 六月 27日 星期五 16:12:02 , 为 数字式立体视觉刺激系统使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.7
+</small></address>
+</body>
+</html>

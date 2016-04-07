@@ -37,6 +37,12 @@
     </ClCompile>
     <ClCompile Include="PingPang.cpp" />
     <ClCompile Include="..\..\Source\Geometry\DiffSpecularSphere.cpp" />
+    <ClCompile Include="..\..\Source\Mathematic\Vector3f.cpp">
+      <Filter>Lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Mathematic\Vector2f.cpp">
+      <Filter>Lib</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\Dependencies\DXUT\Optional\DXUTsettingsdlg.h">
@@ -74,6 +80,12 @@
     </ClInclude>
     <ClInclude Include="PingPang.hpp" />
     <ClInclude Include="..\..\Source\Geometry\DiffSpecularSphere.hpp" />
+    <ClInclude Include="..\..\Source\Mathematic\Vector3f.h">
+      <Filter>Lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Mathematic\Vector2f.h">
+      <Filter>Lib</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="DXUT">

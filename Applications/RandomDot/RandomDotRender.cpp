@@ -37,7 +37,7 @@ void RandomDotRender::makeDot(float dotDist) {
 	_geo->Scale(0.5);
 	_geo->Pos(0.5, 0.5);
 	_geo->generate();
-	_geo->random();
+	_geo->Select();
 	pRandomDot = new RandomDot(maxPointNum);
 
 	pRandomDot->dotDist = dotDist;
@@ -106,7 +106,8 @@ bool RandomDotRender::init(ID3D10Device* pd3d, StereoSetting* pstereo, CModelVie
 
 	pd3dDevice->CreateRasterizerState(&rsDesc, &pWireFrameRS);
 
-	x = y = 0;
+	y = 0;
+	x = -4;
 
 	makeDot(dotDist);
 	return true;
@@ -163,7 +164,7 @@ bool RandomDotRender::renderLeft() {
 	pd3dDevice->IASetInputLayout(pInputLayout);
 	pd3dDevice->IASetPrimitiveTopology(D3D10_PRIMITIVE_TOPOLOGY_POINTLIST);
 
-	D3DXMatrixTranslation(&matWorld, 0, 0, 0);
+	D3DXMatrixTranslation(&matWorld, x1, y1, 0);
 
 
 	pMatWorldVarible->SetMatrix((float *)matWorld);
