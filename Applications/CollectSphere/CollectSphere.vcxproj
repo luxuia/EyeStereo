@@ -11,10 +11,10 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{24B1288A-2E65-48F3-B9C5-7C45AEC52464}</ProjectGuid>
+    <ProjectGuid>{B3BA72A0-F1A2-4ECB-B3E6-B60AF75A7616}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>BlendStereo</RootNamespace>
-    <ProjectName>PingPangProject</ProjectName>
+    <ProjectName>CollectSphere</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -97,12 +97,11 @@
     <ClCompile Include="..\..\Dependencies\DXUT\Optional\SDKmesh.cpp" />
     <ClCompile Include="..\..\Dependencies\DXUT\Optional\SDKmisc.cpp" />
     <ClCompile Include="..\..\Dependencies\DXUT\Optional\SDKwavefile.cpp" />
-    <ClCompile Include="..\..\Source\Geometry\DiffSpecularSphere.cpp" />
-    <ClCompile Include="..\..\Source\Mathematic\Vector2f.cpp" />
-    <ClCompile Include="..\..\Source\Mathematic\Vector3f.cpp" />
+    <ClCompile Include="..\..\Source\Helper\MeshLoader10.cpp" />
+    <ClCompile Include="..\..\Source\Helper\WavAudioPlayer.cpp" />
     <ClCompile Include="..\..\Source\Utility\Log.cpp" />
     <ClCompile Include="App.cpp" />
-    <ClCompile Include="PingPang.cpp" />
+    <ClCompile Include="CollectSphere.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\Dependencies\DXUT\Core\DXUT.h" />
@@ -115,11 +114,12 @@
     <ClInclude Include="..\..\Dependencies\DXUT\Optional\SDKmesh.h" />
     <ClInclude Include="..\..\Dependencies\DXUT\Optional\SDKmisc.h" />
     <ClInclude Include="..\..\Dependencies\DXUT\Optional\SDKwavefile.h" />
-    <ClInclude Include="..\..\Source\Geometry\DiffSpecularSphere.hpp" />
     <ClInclude Include="..\..\Source\Geometry\Vertex.h" />
-    <ClInclude Include="..\..\Source\Mathematic\Vector2f.h" />
-    <ClInclude Include="..\..\Source\Mathematic\Vector3f.h" />
-    <ClInclude Include="PingPang.hpp" />
+    <ClInclude Include="..\..\Source\Helper\MeshHelper.h" />
+    <ClInclude Include="..\..\Source\Helper\MeshLoader10.h" />
+    <ClInclude Include="..\..\Source\Helper\WavAudioPlayer.h" />
+    <ClInclude Include="..\..\Source\Utility\Log.h" />
+    <ClInclude Include="CollectSphere.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

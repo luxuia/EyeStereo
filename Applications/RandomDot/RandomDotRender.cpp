@@ -148,13 +148,13 @@ bool RandomDotRender::stereoRender(float fTime) {
 
 void RandomDotRender::updatePosition(float fTime) {
 	if ((*pKeyBoard)[3])
-		x -= 0.5*fTime;
+		x -= 0.5f*fTime;
 	if ((*pKeyBoard)[0])
-		y += 0.5*fTime;
+		y += 0.5f*fTime;
 	if ((*pKeyBoard)[2])
-		x += 0.5*fTime;
+		x += 0.5f*fTime;
 	if ((*pKeyBoard)[1])
-		y -= 0.5*fTime;
+		y -= 0.5f*fTime;
 }
 
 
