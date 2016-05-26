@@ -10,8 +10,10 @@ CollectSphere::CollectSphere() {
 	bStereo = false;
 }
 
-bool CollectSphere::init(ID3D10Device* pd3d, StereoSetting* pstereo, CModelViewerCamera *pcamera) {
+bool CollectSphere::init(ID3D10Device* pd3d, StereoSetting* pstereo, CModelViewerCamera *pcamera, KeyBoard* key) {
 	printf("%s init start... \n", __FILE__);
+
+	pKeyBoard = key;
 
 	pd3dDevice = pd3d;
 	pd3d->AddRef();
@@ -126,7 +128,7 @@ bool CollectSphere::init(ID3D10Device* pd3d, StereoSetting* pstereo, CModelViewe
 	return true;
 
 }
-#define TOTAL_OBJ_COUNT 3
+#define TOTAL_OBJ_COUNT 1
 void CollectSphere::createNewObj()
 {
 	int idx = rand() % TOTAL_OBJ_COUNT;
@@ -143,20 +145,17 @@ void CollectSphere::createNewObj()
 
 void CollectSphere::reset()
 {
-	g_ObjectsName = std::vector<WCHAR*>(1, L"../Data/Object/cup.obj");
-	g_ObjectsPrintName = std::vector<WCHAR*>(1, L"杯子");
+	g_ObjectsName = std::vector<WCHAR*>(1, L"../Data/Object/sphere.obj");
+	g_ObjectsPrintName = std::vector<WCHAR*>(1, L"球");
 	g_ObjectsResize = std::vector<D3DXVECTOR3>(1, D3DXVECTOR3(1, 1, 1));
 
-	g_ObjectsSpeed = std::vector<D3DXVECTOR3>(TOTAL_OBJ_COUNT, D3DXVECTOR3(0, 0, 0));
+	g_ObjectsSpeed = std::vector<D3DXVECTOR3>(TOTAL_OBJ_COUNT+1, D3DXVECTOR3(0, 0, 0));
 	g_ObjectsPosition = std::vector<D3DXVECTOR3>(TOTAL_OBJ_COUNT, D3DXVECTOR3(-100, 0, 0));
 
-	g_ObjectsName.push_back(L"../Data/Object/sphere.obj");
-	g_ObjectsPrintName.push_back(L"球");
+	g_ObjectsPosition.push_back(D3DXVECTOR3(0, -5, 5));
+	g_ObjectsName.push_back(L"../Data/Object/cup.obj");
+	g_ObjectsPrintName.push_back(L"杯子");
 	g_ObjectsResize.push_back(D3DXVECTOR3(1, 1, 1));
-
-	g_ObjectsName.push_back(L"../Data/Object/chair.obj");
-	g_ObjectsPrintName.push_back(L"椅子");
-	g_ObjectsResize.push_back(D3DXVECTOR3(1,1,1));
 
 
 // 	g_ObjectsName.push_back(L"../Data/Object/bear.obj");
@@ -167,10 +166,43 @@ void CollectSphere::reset()
 
 void CollectSphere::logicUpdate(float fTime) 
 {
-	for (UINT i = 0; i < g_ObjectsPosition.size(); ++i) {
+	D3DXVECTOR3 collidePos = g_ObjectsPosition[1];
+
+	for (UINT i = g_ObjectsPosition.size()-1; i > 1; i--)
+	{
+		if (i == 1) continue;
+
 		g_ObjectsPosition[i] += fTime * g_ObjectsSpeed[i];
 
 		g_ObjectsSpeed[i] += fTime*D3DXVECTOR3(0, -1, 0);
+
+		if (D3DXVec3Length((const D3DXVECTOR3*)(&(g_ObjectsPosition[i] - collidePos))) < 2) 
+		{
+			swprintf(mShareMessage, L"你射中了%s\n", g_ObjectsPrintName[i]);
+			*mShareChanged = true;
+
+			g_ObjectsMesh.erase(g_ObjectsMesh.begin() + i);
+			g_ObjectsPosition.erase(g_ObjectsPosition.begin() + i);
+			g_ObjectsSpeed.erase(g_ObjectsSpeed.begin() + i);
+			g_ObjectsPrintName.erase(g_ObjectsPrintName.begin() + i);
+			g_ObjectsResize.erase(g_ObjectsResize.begin() + i);
+			g_ObjectsName.erase(g_ObjectsName.begin() + i);
+
+			printf("%f %d", D3DXVec3Length((const D3DXVECTOR3*)(&(g_ObjectsPosition[i] - collidePos))), i);
+		}
+	}
+
+	if ((*pKeyBoard)[2]) {
+		g_ObjectsPosition[1].x += 0.2;
+	}
+	else if ((*pKeyBoard)[3]) {
+		g_ObjectsPosition[1].x -= 0.2;
+	}
+	else if ((*pKeyBoard)[0]) {
+		g_ObjectsPosition[1].z += 0.2;
+	}
+	else if ((*pKeyBoard)[1]) {
+		g_ObjectsPosition[1].z -= 0.2;
 	}
 	
 	if (RandF() < 0.05) {
@@ -265,9 +297,9 @@ void CollectSphere::stereoRender(float fTime) {
 	}
 	
 	pStereoSetting->draw(pd3dDevice, pStereoSetting->RIGHT_EYE);
-
-
-
+	
+	
+	
 	//非Stereo 时把下面的注释掉 
 	
 	if (bStereo) {

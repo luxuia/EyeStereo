@@ -10,7 +10,7 @@
 #include "Geometry/Light.h"
 #include "Geometry/DiffSpecularBox.h"
 #include "Helper/MeshLoader10.h"
-
+#include "Event\KeyBoardState.h"
 
 /**
 	@class DepthTrain
@@ -77,10 +77,11 @@ namespace EyeStereo {
 		float g_brightness_left;
 		float g_brightness_right;
 		//	float g_contrast;
+		KeyBoard*						pKeyBoard;
 
 		CollectSphere();
 
-		bool init(ID3D10Device* pd3d, StereoSetting* pstereo, CModelViewerCamera *pcamera);
+		bool init(ID3D10Device* pd3d, StereoSetting* pstereo, CModelViewerCamera *pcamera, KeyBoard* key);
 
 		void reset();
 

@@ -273,7 +273,7 @@ HRESULT CALLBACK OnD3D10CreateDevice( ID3D10Device* pd3dDevice, const DXGI_SURFA
 	g_pStereoSetting->init(pd3dDevice);
 	//g_pStereoSetting->makeBigTexture(pd3dDevice);
 
-	g_pCollectSphere->init(pd3dDevice, g_pStereoSetting, &g_Camera);
+	g_pCollectSphere->init(pd3dDevice, g_pStereoSetting, &g_Camera, g_pKeyBoard);
 	g_pCollectSphere->ShareMessage(g_pShareMessage, &g_bShareChanged);
 
 
